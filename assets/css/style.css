@@ -720,14 +720,18 @@ table.sehir-tablo { width: 100%; border-collapse: collapse; font-size: 0.93rem; 
 
 /* ---------- Mobil menü ---------- */
 #menu-dugme { display: none; background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; }
-@media (max-width: 860px) {
+@media (max-width: 1240px) {
+  .site-nav { gap: .75rem; }
+  .site-nav a { font-size: .88rem; }
+}
+@media (max-width: 1024px) {
   #menu-dugme { display: block; }
   .site-nav {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--lacivert-koyu); flex-direction: column; padding: .5rem 1.25rem 1rem;
   }
   .site-nav.acik { display: flex; }
-  .site-nav a { padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .site-nav a { padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.12); font-size: 0.95rem; }
 }
 .site-header { position: sticky; top: 0; z-index: 50; }
 .header-inner { position: relative; }
@@ -813,3 +817,54 @@ article p, article li, .sss p { overflow-wrap: break-word; }
   .tablo-kaydir table { font-size: 0.85rem; }
   .tablo-kaydir th, .tablo-kaydir td { padding: 0.5rem 0.6rem; }
 }
+
+/* ---------- Ehliyet deneme sınavı ---------- */
+.deneme-ust {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; flex-wrap: wrap; margin: 1.2rem 0;
+  padding: 0.8rem 1rem; background: #f1f5fc; border-radius: 0.6rem;
+}
+.deneme-sure { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.deneme-sure.sure-az { color: #b03a3a; }
+.deneme-soru {
+  border: 1px solid #dfe6f3; border-radius: 0.6rem;
+  padding: 1rem 1.1rem; margin: 1rem 0; background: #fff;
+}
+.deneme-soru-baslik { margin: 0 0 0.5rem; font-weight: 700; }
+.soru-no { color: #1c2740; }
+.soru-ders {
+  font-size: 0.78rem; font-weight: 700; color: #7a5b16;
+  background: #fff3d6; border-radius: 999px; padding: 0.15rem 0.6rem;
+  margin-left: 0.4rem; white-space: nowrap;
+}
+.deneme-soru-metni { font-weight: 600; margin: 0.4rem 0 0.7rem; }
+.deneme-siklar { display: grid; gap: 0.4rem; }
+.deneme-sik {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  padding: 0.6rem 0.8rem; border: 1px solid #e6ebf5; border-radius: 0.5rem;
+  cursor: pointer; line-height: 1.45;
+}
+.deneme-sik:hover { background: #f7fafd; border-color: #b9c7e2; }
+.deneme-sik input { margin-top: 0.25rem; width: 1.1rem; height: 1.1rem; flex: none; }
+.sik-harf { font-weight: 700; color: #1c2740; }
+.deneme-sonuc-ozet {
+  border: 1px solid #dfe6f3; border-radius: 0.7rem; padding: 1.2rem 1.3rem;
+  margin: 1.2rem 0; background: #f8fafd;
+}
+.deneme-puan-buyuk { font-size: 2rem; font-weight: 800; margin: 0.4rem 0; }
+.deneme-yanlis {
+  border-left: 4px solid #e0a3a3; background: #fff8f8;
+  border-radius: 0 0.5rem 0.5rem 0; padding: 0.9rem 1rem; margin: 0.9rem 0;
+}
+.deneme-yanlis p { margin: 0.35rem 0; }
+.deneme-aciklama { color: #3d4a68; font-size: 0.95rem; }
+.ders-kartlar { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); margin: 1.2rem 0; }
+@media (max-width: 560px) { .ders-kartlar { grid-template-columns: 1fr; } }
+.ders-kart {
+  border: 1px solid #dfe6f3; border-radius: 0.7rem; padding: 1.1rem 1.2rem;
+  background: #fff; text-decoration: none; color: inherit; display: block;
+}
+.ders-kart:hover { border-color: #b9c7e2; }
+.ders-kart h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.ders-kart p { margin: 0.25rem 0; font-size: 0.95rem; }
+.ders-kart .ders-kart-sayi { font-size: 1.5rem; font-weight: 800; color: #1c2740; }
