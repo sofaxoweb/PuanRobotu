@@ -49,6 +49,17 @@
 - Harici font, harici JS kütüphanesi, görsel placeholder kullanma.
 - "Kesin puan", "garantili" gibi vaatler YASAK — her sonuç tahmini.
 
+## Sayfa tipleri (tasarım kararı)
+
+- **Araç sayfaları** (22 adet): tam makale yapısını izler — tanım, yöntem, formül +
+  çalışılmış örnek, kullanım adımları, sonuç okuma, boşluk dolduran özgün H2'ler,
+  sınırlamalar, karşılaştırma, SSS (8–12), FAQPage JSON-LD.
+- **Şehir sayfaları** (`lgs/taban-puanlari/*.html`, 81 adet): **tasarım gereği veri
+  sayfasıdır** — okul tabloları + kısa açıklama + 2 diyagram. Tam makale yapısı
+  (uzun SSS, tanım blokları vb.) UYGULANMAZ. Bunları "eksik içerik" diye
+  genişletmeye çalışma; tablo verisi sayfanın özüdür.
+- **Hub sayfaları** (6 adet): kategori özeti + araç kartları, kısa SSS ile.
+
 ## Sayfa bitince (ZORUNLU son adım)
 
 Sayfayı template'den doldurduktan sonra kök dizinde şunu çalıştır:
