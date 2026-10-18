@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vize–Final Hesaplama | PuanRobotu</title>
-<meta name="description" content="Vize notundan dersten geçmek için finalden kaç alman gerektiğini hesapla. Vize %40 / final %60 ağırlıkları ayarlanabilir. Ücretsiz vize-final hesaplama aracı.">
+<meta name="description" content="Vize notundan finalden kaç alman gerektiğini hesapla: çift yönlü araç, ayarlanabilir ağırlıklar, bütünleme kuralları ve hedef kontrolü. Ücretsiz, anında sonuç.">
 <link rel="canonical" href="https://puanrobotu.com/universite-not/vize-final-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Vize–Final Hesaplama | PuanRobotu">
-<meta property="og:description" content="Vize notundan dersten geçmek için finalden kaç alman gerektiğini hesapla. Ağırlıklar ayarlanabilir, ücretsiz.">
+<meta property="og:description" content="Vize notundan finalden kaç alman gerektiğini hesapla: ayarlanabilir ağırlıklar, bütünleme ve baraj kurallarıyla ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/universite-not/vize-final-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Finalden kaç almam gerekiyor?", "acceptedAnswer": {"@type": "Answer", "text": "Vize notunu, hedeflediğin ortalamayı ve okulunun vize-final ağırlıklarını gir; araç gereken final notunu hesaplar: Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı."}},
-    {"@type": "Question", "name": "Vize %40, final %60 ağırlığı her üniversitede aynı mı?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. En yaygın dağılım %40/%60'tır ama oranları her üniversitenin senatosu belirler; %30/%70 ve %50/%50 kullanan okullar da var. Bu araçta ağırlıkları kendi okuluna göre ayarlayabilirsin."}},
-    {"@type": "Question", "name": "Bütünleme (büt) sınavı finalin yerine geçer mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, genellikle bütünleme finalin yerine geçer ve aynı ağırlıkla hesaplanır. Yani bu araçta bulduğun gereken final notu, bütünleme sınavı için de geçerlidir."}},
-    {"@type": "Question", "name": "Vizem çok düşükse dersi geçmem mümkün mü?", "acceptedAnswer": {"@type": "Answer", "text": "Bazen değildir: gereken final 100'ü aşıyorsa hedefe bu ağırlıklarla ulaşılamaz ve araç bunu açıkça söyler. Bu durumda hedefi düşürmek ya da dersi tekrar almak gerekir."}},
-    {"@type": "Question", "name": "Final barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bazı üniversiteler, ortalaman ne olursa olsun finalden belirli bir not almanı şart koşar. Bu baraj okuldan okula değişir; kesin bilgi için öğrenci işleri yönetmeliğine bak."}},
-    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "Finalden kaç almam gerekiyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vize notunu, hedeflediğin ortalamayı ve okulunun vize-final ağırlıklarını gir; araç gereken final notunu hesaplar: Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı. Sonuç 100'ü aşıyorsa hedef bu ağırlıklarla ulaşılamaz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vize %40, final %60 ağırlığı her üniversitede aynı mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. En yaygın dağılım %40/%60'tır ama oranları her üniversitenin senatosu belirler; %30/%70 ve %50/%50 kullanan okullar da var. Bu araçta ağırlıkları kendi okuluna göre ayarlayabilirsin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bütünleme (büt) sınavı finalin yerine geçer mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Genelde evet: bütünleme finalin yerine geçer ve aynı ağırlıkla hesaplanır. Ancak giriş koşulları (devamsızlık, vizeye girme şartı) ve harf tavanı uygulamaları okuldan okula değişir; ders izlenceni kontrol et."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vizem 0 olursa ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vize 0 ise tüm yük finale biner: %40/%60 ağırlıkta 50 ortalama için finalden (50 − 0) ÷ 0,60 = 83,3 alman gerekir. Hedefin 70 ise gereken final 116,7 olur — imkânsız; hedefi düşür ya da bütünlemeye hazırlan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gereken final 100'den büyük çıkarsa ne yapmalıyım?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hedefe bu ağırlıklarla ulaşamazsın. Üç seçeneğin var: hedefi düşür (örn. 80 yerine 70), bütünlemeye hazırlan ya da yaz okulunda dersi tekrar al."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ağırlıklarım %40/%60 değilse ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kutulardaki ağırlıkları değiştirmen yeterli. Toplam 100 değilse araç otomatik normalize eder: her ağırlık toplama bölünür, sonuç yine 100 üzerinden çıkar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İki ara sınavım varsa vize notum nasıl bulunur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Önce ara sınavlarının ortalaması alınır; çoğu yönetmelikte buçuklu sonuç tam sayıya yuvarlanır. Bulduğun değeri vize kutusuna yazman yeterli."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Final barajı nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bazı üniversiteler, ortalaman ne olursa olsun finalden belirli bir not almanı şart koşar. Bu baraj okuldan okula değişir; kesin bilgi için öğrenci işleri yönetmeliğine bak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Devamsızlıktan kalırsam bu hesaplama geçerli mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Devamsızlık sınırını aşan öğrenci final sınavına giremez; önce devam koşulunu sağlaman gerekir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim notlar bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +143,8 @@
     <article>
       <p class="kicker">📝 Üniversite Notları</p>
       <h1>Vize–Final Hesaplama</h1>
-      <p class="lede">Vizeni yaz, hedefini seç: dersten geçmek için <strong>finalden kaç alman gerektiğini</strong> saniyeler içinde öğren. Ağırlıklar okuluna göre ayarlanabilir.</p>
+      <p class="lede">Vize–final hesaplaması, dersten geçmek için <strong>finalden kaç alman gerektiğini</strong> bulur: Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı. Vizeni ve hedefini yaz, sonucu saniyeler içinde gör; ağırlıklar okuluna göre ayarlanabilir.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -106,44 +181,126 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>Nasıl Hesaplanır?</h2>
-      <p>Üniversitelerin çoğunda ders başarı notu, vizenin ve finalin ağırlıklı ortalamasıdır. En yaygın model <strong>Başarı Notu = Vize × 0,40 + Final × 0,60</strong> şeklindedir (ör. Yozgat Bozok Üniversitesi yönetmeliği). Ancak %30/%70 ve %50/%50 kullanan okullar da vardır — oranları her üniversitenin senatosu belirler.</p>
-      <p>"Finalden kaç almalıyım?" sorusunun cevabı, bu formülün finale göre çözülmüş halidir:</p>
-      <p><strong>Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı</strong></p>
-      <p>Geçme notu çoğu okulda 50'dir; bazılarında 60'tır. Ayrıca bazı üniversiteler final barajı uygular: ortalaman tutsa bile finalden belirli bir notun altında alırsan kalırsın.</p>
+<div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
+<ul>
+<li><strong>Gerekli final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı.</strong> Bu sayfa hem ortalamanı hem de hedefe ulaşmak için finalden kaç alman gerektiğini hesaplar.</li>
+<li>Varsayılan ağırlık <strong>%40 vize / %60 final</strong>; okulunun oranları farklıysa kutulardan değiştir.</li>
+<li>Gereken final <strong>100'ü aşıyorsa</strong> hedef bu ağırlıklarla ulaşılamaz — araç bunu açıkça söyler.</li>
+<li>Bileşenler 100'ü tutmuyorsa (%40+%20+%60 gibi) araç ağırlıkları otomatik normalize eder.</li>
+<li>Bütünleme genelde finalin yerine geçer; ama giriş koşulları ve harf tavanı okuldan okula değişir.</li>
+</ul>
+</div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>Vizen 50, hedefin 50 ortalama, ağırlıklar %40/%60 olsun:</p>
-      <ul>
-        <li>Vizenin katkısı: 50 × 0,40 = <strong>20</strong></li>
-        <li>Kalan: 50 − 20 = <strong>30</strong></li>
-        <li>Gerekli final: 30 ÷ 0,60 = <strong>50</strong></li>
-      </ul>
-      <p>Yani finalden <strong>50</strong> alman yeterli. Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+<h2>Vize–Final Sistemi Nedir?</h2>
+<p><strong>Vize–final sistemi, ders başarı notunun ara sınav (vize) ve dönem sonu sınavı (final) notlarının ağırlıklı ortalamasıyla belirlendiği değerlendirme modelidir.</strong> Türkiye'deki üniversitelerin çoğunda ders geçme, bu iki sınavın belirlenen oranlarla birleştirilmesine dayanır.</p>
+<p>En yaygın dağılım <strong>%40 vize + %60 final</strong> şeklindedir. Bu oran bir gelenek değil, her üniversitenin senatosunun aldığı bir karardır: %30/%70 ve %50/%50 uygulayan okullar da vardır. Bazı derslerde ödev, proje veya laboratuvar notu üçüncü bir bileşen olarak eklenir.</p>
+<p>Geçme notu çoğu okulda <strong>50</strong>, bazılarında <strong>60</strong>'tır. Bu eşiğin altında kalan ağırlıklı ortalama, harf notu ne olursa olsun dersi tekrarlatır.</p>
 
-      <h2>İpuçları</h2>
-      <ul>
-        <li>Ağırlıkları dersin izlencesinden (syllabus) teyit et; varsayılan %40/%60 her okulda geçerli değildir.</li>
-        <li>Hedefini "geçme notu" olarak değil, istediğin harf olarak koy (ör. BB için 80).</li>
-        <li>Final barajı olan okullarda önce barajı garantile, sonra ortalamaya oyna.</li>
-        <li>Bütünleme genelde finalin yerine geçer — ilk final kötü geçerse ikinci şansın var.</li>
-        <li>Vizen düşükse final öncesi konuları ağırlık ve soru sayısına göre önceliklendir.</li>
-      </ul>
+<h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+<p><strong>Bu hesaplayıcı iki yönlü çalışır: ortalamanı hesaplar ve hedeflediğin ortalamaya ulaşmak için finalden kaç alman gerektiğini bulur.</strong> Her iki yön de aynı formülün iki farklı çözümüdür.</p>
+<p>Temel formül: <strong>Başarı Notu = Vize × vize ağırlığı + Final × final ağırlığı</strong>. Ağırlıklar ondalık yazılır: %40 → 0,40.</p>
+<p>Ters yön ("finalden kaç almalıyım") için formül finale göre çözülür: <strong>Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı</strong>.</p>
+<p>Ağırlıkların toplamı 100 değilse araç önce <strong>normalizasyon</strong> yapar: her ağırlık toplam ağırlığa bölünür. Örneğin vize %40 + ödev %20 + final %60 = %120 ise vize ağırlığı 40/120 = 0,333 olur. Rakip sayfaların neredeyse hiçbiri bu adımı açıklamaz.</p>
 
-      <h2>Sonraki Adımlar</h2>
-      <ul>
-        <li>Dönem sonunda tüm derslerinle genel ortalamanı merak ediyorsan <a href="../gano-hesaplama/">GANO Hesaplama</a> aracıyla harf notlarını ve kredileri topla.</li>
-        <li>Finalden aldığın 100'lük notun harf karşılığını öğrenmek için <a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracına bak.</li>
-      </ul>
+<h2>Formül ve Çalışılmış Örnek</h2>
+<p><strong>Vizen 50, hedefin 50 ortalama, ağırlıklar %40/%60 ise finalden 50 alman gerekir.</strong> Hesap adımları:</p>
+<ul>
+<li>Vizenin katkısı: 50 × 0,40 = <strong>20</strong></li>
+<li>Kalan: 50 − 20 = <strong>30</strong></li>
+<li>Gerekli final: 30 ÷ 0,60 = <strong>50</strong></li>
+</ul>
+<p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin. Formülün düz yönünü de test edebilirsin: vize 50 + final 50 → 50 × 0,40 + 50 × 0,60 = 20 + 30 = <strong>50</strong>.</p>
+
+<h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+<ol>
+<li><strong>Vizeni yaz.</strong> Birden fazla ara sınavın varsa önce ortalamasını al (çoğu okulda buçuklu ortalama tam sayıya yuvarlanır).</li>
+<li><strong>Hedef ortalamanı yaz.</strong> Geçme notun (50 veya 60) ya da istediğin harfin alt sınırı (BB için 80).</li>
+<li><strong>Ağırlıkları kontrol et.</strong> Ders izlencendeki oranları kutulara yaz; %40/%60 varsayılandır.</li>
+<li><strong>Sonucu oku.</strong> "Gerekli final" kutusu, hedefe ulaşmak için finalden alman gereken en düşük notu gösterir.</li>
+</ol>
+
+<h2>Sonucunu Nasıl Okursun?</h2>
+<p><strong>Sonuç üç banttan birine düşer; her bandın anlamı farklıdır.</strong></p>
+<table class="bilgi-tablosu">
+<caption>Gerekli final sonucunun anlamı</caption>
+<thead><tr><th>Sonuç</th><th>Anlamı</th><th>Sıradaki adım</th></tr></thead>
+<tbody>
+<tr><td>0–100 arası bir not</td><td>Hedefe ulaşmak mümkün</td><td>Finale bu notu hedefleyerek çalış</td></tr>
+<tr><td>100'den büyük</td><td>Hedef bu ağırlıklarla <strong>ulaşılamaz</strong></td><td>Hedefi düşür ya da bütünleme/yaz okulu planla</td></tr>
+<tr><td>0 veya altında</td><td>Hedef zaten tutmuş</td><td>Finale girmen yeterli (baraj varsa barajı geç)</td></tr>
+</tbody>
+</table>
+<p>Örnek: vizen 30, hedefin 50, ağırlıklar %40/%60 ise gereken final (50 − 12) ÷ 0,60 = <strong>63,3</strong> olur. Vizen 20 olsaydı gereken final (50 − 8) ÷ 0,60 = <strong>70</strong> olurdu.</p>
+
+<h2>Ağırlıklar 100'ü Tutmuyorsa: Normalizasyon</h2>
+<p><strong>Bileşen ağırlıkları 100'ü tutmuyorsa her ağırlık toplama bölünerek normalize edilir.</strong> Örnek: vize %40 + ödev %20 + final %60 = %120.</p>
+<p>Normalize ağırlıklar: vize 40/120 = <strong>0,333</strong>, ödev 20/120 = <strong>0,167</strong>, final 60/120 = <strong>0,500</strong>. Başarı notu = Vize × 0,333 + Ödev × 0,167 + Final × 0,500.</p>
+<p>Bu adımı atlayan hesaplamalar 120 üzerinden sonuç üretir ve yanlış olur. Hiçbir rakip sayfa bu normalizasyonu açıklamaz.</p>
+<p>İki ara sınavın varsa önce vize ortalamanı bul: (Ara1 + Ara2) ÷ 2. Çoğu yönetmelikte buçuklu ortalama tam sayıya yuvarlanır.</p>
+
+<h2>Gereken Final 100'ü Aşıyorsa Ne Yapmalısın?</h2>
+<p><strong>Gereken final 100'ü aşıyorsa hedefe bu dönem ulaşamazsın; planı değiştirmen gerekir.</strong> Üç seçeneğin var:</p>
+<ol>
+<li><strong>Hedefi düşür.</strong> BB (80) yerine CC (70) hedefle; gereken finali yeniden hesapla.</li>
+<li><strong>Bütünlemeye hazırlan.</strong> Bütünleme finalin yerine geçer; aşağıdaki büt kurallarını oku.</li>
+<li><strong>Yaz okulunda tekrar al.</strong> Yaz okulu notu genelde GANO'ya yeni harfle işlenir.</li>
+</ol>
+<p>Örnek: vizen 10, hedefin 50, %40/%60 ağırlıkta gereken final (50 − 4) ÷ 0,60 = <strong>76,7</strong> — ulaşılabilir. Ama hedefin 90 olsaydı (90 − 4) ÷ 0,60 = <strong>143,3</strong> — imkânsız. Araç bu ikinci durumda "ulaşılamaz" der.</p>
+
+<h2>Bütünleme: Kimler Girebilir, Kurallar Neler?</h2>
+<p><strong>Bütünleme (büt) genelde finalin yerine geçer ve aynı ağırlıkla hesaplanır; ama giriş koşulları okuldan okula değişir.</strong></p>
+<p>Üç kritik kuralı ders izlencenden teyit et:</p>
+<ul>
+<li><strong>Giriş hakkı:</strong> Çoğu okul finalden kalan herkese büt hakkı tanır; bazıları vizeye girmeyene veya devamsızlık sınırını aşana tanımaz.</li>
+<li><strong>Harf tavanı:</strong> Bazı üniversiteler bütle alınan notun harfini sınırlar (örn. en fazla CC). Bu kural varsa bütle BB hedefleyemezsin.</li>
+<li><strong>Notun yerine geçmesi:</strong> Standart uygulama, büt notunun final notunun yerine geçmesidir; finalle ortalaması alınmaz.</li>
+</ul>
+<p>Bu sayfadaki hesaplayıcıyı bütünleme için de kullanabilirsin: "final" kutusuna büt hedefini yazman yeterli — matematik aynıdır.</p>
+
+<h2>Sınırlamalar</h2>
+<p><strong>Bu araç ham başarı notunu hesaplar; harf notunu ve geçme kararını okulunun kuralları belirler.</strong></p>
+<ul>
+<li><strong>Final barajı:</strong> Bazı okullar, ortalaman tutsa bile finalden belirli bir not (ör. 50) almanı şart koşar. Barajı geçemezsen ortalama tek başına kurtarmaz.</li>
+<li><strong>Yuvarlama:</strong> 43,5 → 44 gibi buçuklu yuvarlama kuralları okuldan okula değişir; araç ham değeri verir.</li>
+<li><strong>Devamsızlık:</strong> Devamsızlık sınırını aşan öğrenci final sınavına giremez; bu durumda hesaplama anlamsızlaşır.</li>
+<li><strong>Çan eğrisi:</strong> Dersin bağıl değerlendirme ile notlandırılıyorsa ham notun harfe dönüşümü sınıf dağılımına göre yapılır — formülü <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> sayfasında bulursun.</li>
+<li><strong>AÖF:</strong> Açıköğretimde ağırlıklar %30/%70'tir ve 35 barajı vardır; bu sayfadaki %40/%60 varsayımı AÖF'ye uymaz — <a href="../aof-not-hesaplama/">AÖF Not Hesaplama</a> sayfasını kullan.</li>
+</ul>
+
+<h2>Vize–Final, Çan Eğrisi ve AÖF: Hangisi Sana Uygun?</h2>
+<p><strong>Doğru hesaplayıcıyı seçmek, doğru sistemi bilmekle başlar.</strong></p>
+<table class="bilgi-tablosu">
+<caption>Üç not sisteminin karşılaştırması</caption>
+<thead><tr><th>Sistem</th><th>Ağırlıklar</th><th>Harf nasıl belirlenir?</th><th>Doğru araç</th></tr></thead>
+<tbody>
+<tr><td>Standart (mutlak)</td><td>%40 vize / %60 final (değişir)</td><td>Ham not → sabit aralık tablosu</td><td>Bu sayfa + <a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a></td></tr>
+<tr><td>Çan eğrisi (bağıl)</td><td>Aynı ağırlıklar</td><td>Ham not → sınıf dağılımına göre (z/T)</td><td><a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></td></tr>
+<tr><td>AÖF</td><td>%30 ara / %70 dönem sonu</td><td>35 baraj + bağıl harf</td><td><a href="../aof-not-hesaplama/">AÖF Not Hesaplama</a></td></tr>
+</tbody>
+</table>
+
+<h2>İpuçları</h2>
+<ul>
+<li>Ağırlıkları ders izlencesinden teyit et; varsayılan %40/%60 her okulda geçerli değildir.</li>
+<li>Hedefini geçme notu olarak değil, istediğin harfin alt sınırı olarak koy (BB için 80).</li>
+<li>Final barajı olan okullarda önce barajı garantile, sonra ortalamaya oyna.</li>
+<li>Vizen düşükse final öncesi konuları soru ağırlığına göre önceliklendir.</li>
+<li>Dönem sonu genel ortalaman için <a href="../gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</li>
+</ul>
 
       <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>Finalden kaç almam gerekiyor?</summary><p>Vize notunu, hedeflediğin ortalamayı ve okulunun vize-final ağırlıklarını gir; araç gereken final notunu hesaplar: Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı.</p></details>
+        <details><summary>Finalden kaç almam gerekiyor?</summary><p>Vize notunu, hedeflediğin ortalamayı ve okulunun vize-final ağırlıklarını gir; araç gereken final notunu hesaplar: Gerekli Final = (Hedef − Vize × vize ağırlığı) ÷ final ağırlığı. Sonuç 100'ü aşıyorsa hedef bu ağırlıklarla ulaşılamaz.</p></details>
         <details><summary>Vize %40, final %60 ağırlığı her üniversitede aynı mı?</summary><p>Hayır. En yaygın dağılım %40/%60'tır ama oranları her üniversitenin senatosu belirler; %30/%70 ve %50/%50 kullanan okullar da var. Bu araçta ağırlıkları kendi okuluna göre ayarlayabilirsin.</p></details>
-        <details><summary>Bütünleme (büt) sınavı finalin yerine geçer mi?</summary><p>Evet, genellikle bütünleme finalin yerine geçer ve aynı ağırlıkla hesaplanır. Yani bu araçta bulduğun gereken final notu, bütünleme sınavı için de geçerlidir.</p></details>
-        <details><summary>Vizem çok düşükse dersi geçmem mümkün mü?</summary><p>Bazen değildir: gereken final 100'ü aşıyorsa hedefe bu ağırlıklarla ulaşılamaz ve araç bunu açıkça söyler. Bu durumda hedefi düşürmek ya da dersi tekrar almak gerekir.</p></details>
+        <details><summary>Bütünleme (büt) sınavı finalin yerine geçer mi?</summary><p>Genelde evet: bütünleme finalin yerine geçer ve aynı ağırlıkla hesaplanır. Ancak giriş koşulları (devamsızlık, vizeye girme şartı) ve harf tavanı uygulamaları okuldan okula değişir; ders izlenceni kontrol et.</p></details>
+        <details><summary>Vizem 0 olursa ne olur?</summary><p>Vize 0 ise tüm yük finale biner: %40/%60 ağırlıkta 50 ortalama için finalden (50 − 0) ÷ 0,60 = 83,3 alman gerekir. Hedefin 70 ise gereken final 116,7 olur — imkânsız; hedefi düşür ya da bütünlemeye hazırlan.</p></details>
+        <details><summary>Gereken final 100'den büyük çıkarsa ne yapmalıyım?</summary><p>Hedefe bu ağırlıklarla ulaşamazsın. Üç seçeneğin var: hedefi düşür (örn. 80 yerine 70), bütünlemeye hazırlan ya da yaz okulunda dersi tekrar al.</p></details>
+        <details><summary>Ağırlıklarım %40/%60 değilse ne olur?</summary><p>Kutulardaki ağırlıkları değiştirmen yeterli. Toplam 100 değilse araç otomatik normalize eder: her ağırlık toplama bölünür, sonuç yine 100 üzerinden çıkar.</p></details>
+        <details><summary>İki ara sınavım varsa vize notum nasıl bulunur?</summary><p>Önce ara sınavlarının ortalaması alınır; çoğu yönetmelikte buçuklu sonuç tam sayıya yuvarlanır. Bulduğun değeri vize kutusuna yazman yeterli.</p></details>
         <details><summary>Final barajı nedir?</summary><p>Bazı üniversiteler, ortalaman ne olursa olsun finalden belirli bir not almanı şart koşar. Bu baraj okuldan okula değişir; kesin bilgi için öğrenci işleri yönetmeliğine bak.</p></details>
+        <details><summary>Devamsızlıktan kalırsam bu hesaplama geçerli mi?</summary><p>Hayır. Devamsızlık sınırını aşan öğrenci final sınavına giremez; önce devam koşulunu sağlaman gerekir.</p></details>
         <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
       </section>
     </article>

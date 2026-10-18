@@ -3,17 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ortaokul Hesaplama Araçları — LGS Puan, Tercih Robotu, Taban Puanlar | PuanRobotu</title>
-<meta name="description" content="Ortaokul düzeyi hesaplama araçları: LGS puan hesaplama, LGS tercih robotu, 81 il taban puanları, bursluluk (İOKBS) ve takdir-teşekkür hesaplama. Ücretsiz.">
+<title>LGS Puan Hesaplama ve Tercih Araçları | PuanRobotu</title>
+<meta name="description" content="LGS puan hesaplama, tercih robotu, 81 il taban puanları, bursluluk ve takdir-teşekkür: 5 ücretsiz araç tek sayfada. Hemen MEB formülüne uygun hesapla.">
 <link rel="canonical" href="https://puanrobotu.com/lgs/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Ortaokul Hesaplama Araçları | PuanRobotu">
+<meta property="og:title" content="LGS Puan Hesaplama ve Tercih Araçları | PuanRobotu">
 <meta property="og:url" content="https://puanrobotu.com/lgs/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Önce hangi aracı kullanmalıyım?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Deneme netlerin varsa önce LGS Puan Hesaplama ile tahmini puan ve dilimini öğren. Sonucun belli olduktan sonra LGS Taban Puanları ile okulları incele, LGS Tercih Robotu ile listeni kur."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "LGS'de yanlış doğruyu götürür mü?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. MEB kılavuzuna göre her testte 3 yanlış, 1 doğruyu götürür (Net = Doğru − Yanlış ÷ 3)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Yüzdelik dilim mi puan mı daha önemli?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tercihlerde yüzdelik dilim daha önemlidir; çünkü puanlar sınav zorluğuna göre değişirken dilim, sınava girenler arasındaki gerçek sıralamanı gösterir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bursluluk sınavı (İOKBS) ile LGS aynı mı?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. İOKBS, maddi destek bursu için yapılan ayrı bir sınavdır; LGS ise lise yerleştirme sınavıdır. İkisinin de hesaplama aracı yukarıda mevcuttur."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Tercih robotu yerleşmeyi garanti eder mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Robot, geçen yıl verilerine göre ön eleme yapar; resmi tercih e-Okul üzerinden yapılır ve sonuç kontenjan ile başvuru yoğunluğuna göre şekillenir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Deneme netim gerçek puanımı tutar mı?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yaklaşık tutar, birebir tutmaz. Deneme sınavlarının zorluğu MEB sınavından farklıdır; ayrıca gerçek puan o yılın ulusal istatistiklerine göre hesaplanır. Denemeyi trend takibi için kullan."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -36,9 +92,10 @@
   <div class="wrap"><p class="kirinti"><a href="../">Ana Sayfa</a> › Ortaokul</p></div>
   <section class="hero hero-kisa">
     <div class="wrap">
-      <p class="kicker">🎒 Ortaokul</p>
-      <h1>Ortaokul Hesaplama Araçları</h1>
-      <p class="lede">LGS puanı, lise tercihi, taban puanlar ve bursluluk — ortaokul yolculuğundaki tüm hesaplamalar burada.</p>
+      <p class="kicker">🎒 Ortaokul · LGS</p>
+      <h1>LGS Puan Hesaplama ve Tercih Araçları</h1>
+      <p class="lede"><strong>LGS yolculuğundaki 5 hesaplamayı tek sayfada topla:</strong> tahmini puanını hesapla, yüzdelik dilimini anla, 81 ilin taban puanlarıyla karşılaştır, tercih listeni kur. Bursluluk ve takdir-teşekkür hesapları da burada.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
     </div>
   </section>
   <section class="bolum">
@@ -47,20 +104,55 @@
       <div class="arac-kartlari" data-kategori-kartlar="lgs"></div>
     </div>
   </section>
-  <section class="bolum bolum-soluk">
+  <section class="bolum">
     <div class="wrap">
-      <h2>LGS ve Ortaokul Puanlama Sistemi</h2>
-      <p>Liselere Geçiş Sistemi (LGS), 8. sınıf öğrencilerinin merkezi sınavla nitelikli liselere yerleştiği sistemdir. Sınavda her dersin neti, <strong>Net = Doğru − (Yanlış ÷ 3)</strong> formülüyle bulunur; yani 3 yanlış, 1 doğruyu götürür. Türkçe, Matematik ve Fen Bilimleri derslerinin katsayısı 4, diğer derslerin katsayısı 1'dir.</p>
-      <p>MEB, ağırlıklı net toplamını Türkiye geneli ortalama ve standart sapmayı kullanarak 100–500 aralığında puana dönüştürür. Bu yüzden ham puan yerine <strong>yüzdelik dilim</strong>, lise tercihlerinde asıl belirleyicidir: puanlar sınavın zorluğuna göre yıldan yıla değişirken dilim daha istikrarlıdır.</p>
-      <p>Yukarıdaki araçlarla önce tahmini puanını hesapla, sonra <a href="tercih-robotu/">Tercih Robotu</a> ile sana uygun liseleri, <a href="taban-puanlari/">Taban Puanlar</a> sayfasıyla da okulların geçmiş yıl verilerini incele.</p>
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>5 araç, 1 yolculuk:</strong> puan hesapla → dilimi anla → tabanlarla karşılaştır → tercih listeni kur.</li>
+          <li><strong>En güvenilir veri taban puanlarıdır</strong> (geçmiş yıl gerçeği); en oynak tahmin yüzdelik dilim tahminidir.</li>
+          <li><strong>3 yanlış 1 doğruyu götürür;</strong> OBP merkezi puana eklenmez.</li>
+          <li>Tüm araçlar ücretsizdir ve hesaplama tarayıcında yapılır — veri gönderilmez.</li>
+        </ul>
+      </div>
+      <h2>Hangi Araç Ne İçin? (LGS Yol Haritası)</h2>
+      <p><strong>Araçları LGS yolculuğunun sırasına göre kullan:</strong></p>
+      <ol>
+        <li><strong>Sınav öncesi:</strong> deneme netlerini <a href="puan-hesaplama/">LGS Puan Hesaplama</a> aracına gir, tahmini puan ve dilim aralığını gör. Hedef okulun geçen yılki taban dilimiyle arandaki farkı kapatmaya odaklan.</li>
+        <li><strong>Sonuç haftası:</strong> resmi puanın ve dilimin belli olur. Dilimini not et — tercihte puandan değil, dilimden yola çıkacaksın.</li>
+        <li><strong>Tercih haftası:</strong> <a href="taban-puanlari/">LGS Taban Puanları</a> sayfasında ilindeki okulların taban dilimlerini incele; sonra <a href="tercih-robotu/">LGS Tercih Robotu</a> ile sana uygun okulları listele ve 10 tercih hakkını güvenli–hedef–zorlu dengesinde dağıt.</li>
+        <li><strong>Paralel yollar:</strong> 5–8. sınıftaysan <a href="bursluluk-puan-hesaplama/">Bursluluk (İOKBS) Puan Hesaplama</a> ile burs şansını, karne döneminde <a href="takdir-tesekkur-hesaplama/">Takdir–Teşekkür Hesaplama</a> ile belge durumunu kontrol et.</li>
+      </ol>
+      <h2>Tahmin Dürüstlüğü: Hangi Araç Ne Kadar Güvenilir?</h2>
+      <p><strong>5 aracın güvenilirliği aynı değildir — neyin veri, neyin model olduğunu bil:</strong></p>
+      <table class="bilgi-tablosu">
+        <caption>Araç güvenilirlik sıralaması</caption>
+        <thead><tr><th scope="col">Araç</th><th scope="col">Çıktı türü</th><th scope="col">Güvenilirlik</th></tr></thead>
+        <tbody>
+          <tr><td>Taban puanları</td><td>Geçmiş yıl gerçekleşmesi</td><td>En yüksek — hard data</td></tr>
+          <tr><td>Takdir–teşekkür</td><td>Kural kontrolü (kesin eşikler)</td><td>Yüksek — yönetmelik nettir</td></tr>
+          <tr><td>Puan hesaplama</td><td>Model tahmini</td><td>Orta — katsayılar sınavdan önce bilinmez</td></tr>
+          <tr><td>Tercih robotu</td><td>Model + geçen yıl verisi</td><td>Orta — ön eleme içindir</td></tr>
+          <tr><td>Yüzdelik dilim tahmini</td><td>Model tahmini</td><td>En oynak — dağılıma en duyarlı çıktı</td></tr>
+        </tbody>
+      </table>
+      <h2>Doğru Bilinen 3 Yanlış</h2>
+      <ul>
+        <li><strong>"4 yanlış 1 doğruyu götürür."</strong> Yanlış — MEB kılavuzundaki oran <strong>3:1</strong>'dir. İnternetteki birçok sayfa bu oranı hatalı yazar.</li>
+        <li><strong>"OBP, LGS puanına eklenir."</strong> Yanlış — OBP merkezi yerleştirmede puana eklenmez; yalnızca eşitlik bozma ve yerel yerleştirmede kullanılır.</li>
+        <li><strong>"Taban puanın üstündeysem kesin yerleşirim."</strong> Yanlış — taban puan geçen yılın sonucudur; kontenjan ve başvuru yoğunluğu değişince bu yılın tabanı da değişir.</li>
+      </ul>
     </div>
   </section>
   <section class="bolum sss">
     <div class="wrap">
       <h2>Sık Sorulan Sorular</h2>
+      <details><summary>Önce hangi aracı kullanmalıyım?</summary><p>Deneme netlerin varsa önce LGS Puan Hesaplama ile tahmini puan ve dilimini öğren. Sonucun belli olduktan sonra LGS Taban Puanları ile okulları incele, LGS Tercih Robotu ile listeni kur.</p></details>
       <details><summary>LGS'de yanlış doğruyu götürür mü?</summary><p>Evet. MEB kılavuzuna göre her testte 3 yanlış, 1 doğruyu götürür (Net = Doğru − Yanlış ÷ 3).</p></details>
       <details><summary>Yüzdelik dilim mi puan mı daha önemli?</summary><p>Tercihlerde yüzdelik dilim daha önemlidir; çünkü puanlar sınav zorluğuna göre değişirken dilim, sınava girenler arasındaki gerçek sıralamanı gösterir.</p></details>
       <details><summary>Bursluluk sınavı (İOKBS) ile LGS aynı mı?</summary><p>Hayır. İOKBS, maddi destek bursu için yapılan ayrı bir sınavdır; LGS ise lise yerleştirme sınavıdır. İkisinin de hesaplama aracı yukarıda mevcuttur.</p></details>
+      <details><summary>Tercih robotu yerleşmeyi garanti eder mi?</summary><p>Hayır. Robot, geçen yıl verilerine göre ön eleme yapar; resmi tercih e-Okul üzerinden yapılır ve sonuç kontenjan ile başvuru yoğunluğuna göre şekillenir.</p></details>
+      <details><summary>Deneme netim gerçek puanımı tutar mı?</summary><p>Yaklaşık tutar, birebir tutmaz. Deneme sınavlarının zorluğu MEB sınavından farklıdır; ayrıca gerçek puan o yılın ulusal istatistiklerine göre hesaplanır. Denemeyi trend takibi için kullan.</p></details>
     </div>
   </section>
 </main>

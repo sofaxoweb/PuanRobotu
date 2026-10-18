@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DUS Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="DUS puan hesaplama: TBT ve KBT doğru–yanlışlarını gir, tahmini K/T puanlarını ve 45 baraj durumunu öğren. 120 soruluk 2026 formatına uygun.">
+<meta name="description" content="DUS puan hesaplama: TBT ve KBT doğru-yanlışlarını gir, tahmini K/T puanlarını ve 45 baraj durumunu öğren. 120 soruluk 2026 formatına uygun ücretsiz araç.">
 <link rel="canonical" href="https://puanrobotu.com/kamu-sinavlari/dus-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="DUS Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="TBT ve KBT netlerinden tahmini DUS K/T puanını hesapla. 45 baraj, 85 tavanı yok.">
+<meta property="og:description" content="DUS puan hesaplama: TBT ve KBT doğru-yanlışlarını gir, tahmini K/T puanlarını ve 45 baraj durumunu öğren. 120 soruluk 2026 formatına uygun ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/kamu-sinavlari/dus-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -38,7 +38,10 @@
     {"@type": "Question", "name": "K ve T puanından hangisi kullanılır?", "acceptedAnswer": {"@type": "Answer", "text": "Oral Patoloji T puanını kullanır; diğer tüm branşlar K puanıyla tercih yapar. K = TBT %40 + KBT %60; T = TBT %60 + KBT %40 ağırlıkla hesaplanır."}},
     {"@type": "Question", "name": "DUS'ta 85 tavanı var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. TUS'tan farklı olarak DUS kılavuzunda 85'e dönüştürme formülü yoktur; DUS puanı, ağırlıklı standart puanın kendisidir."}},
     {"@type": "Question", "name": "45 barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "İlgili puan türünden 45'in altında alan aday yerleştirme tercihi yapamaz."}},
-    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi puan, sınav sonrası oturum istatistikleriyle (ortalama 50, standart sapma 10) hesaplanır. Bu araç, ham puanı şeffaf varsayımsal dönem istatistikleriyle standart puana çevirir; gerçek puanınız ÖSYM sonuç belgesinde yazar."}}
+    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi puan, sınav sonrası oturum istatistikleriyle (ortalama 50, standart sapma 10) hesaplanır. Bu araç, ham puanı şeffaf varsayımsal dönem istatistikleriyle standart puana çevirir; gerçek puanınız ÖSYM sonuç belgesinde yazar."}},
+    {"@type": "Question", "name": "DUS puanı ile TUS puanı aynı şey mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. İkisi de K/T ağırlıklı puan kullansa da TUS'ta 85 tavanı varken DUS'ta tavan yoktur; soru sayıları da farklıdır (TUS 200, DUS 120). Birinin formülünü diğerine uygulama."}},
+    {"@type": "Question", "name": "Oral Patoloji için hangi puan geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "T puanı. DUS'ta Oral Patoloji dışındaki tüm branşlar K puanıyla tercih yapar; yalnızca Oral Patoloji T puanını kullanır. Hedefin buysa TBT ağırlıklı çalış."}},
+    {"@type": "Question", "name": "DUS'ta diploma notu ekleniyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. DUS puanı %100 sınav performansına dayanır; OBP veya diploma notu eklenmez."}}
   ]
 }
 </script>
@@ -69,6 +72,7 @@
     <article>
       <p class="kicker">Kamu Sınavları</p>
       <h1>DUS Puan Hesaplama</h1>
+      <p class="yazar">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
       <p class="lede">Temel Bilimler (TBT) ve Klinik Bilimler (KBT) testlerindeki <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>tahmini K ve T puanlarını</strong> ile <strong>45 baraj</strong> durumunu öğren.</p>
 
       <!-- ============ HESAPLAYICI ============ -->
@@ -109,52 +113,128 @@
         <strong>Önemli:</strong> Bu sonuçlar birer <strong>tahmindir</strong>. ÖSYM, resmi puanı sınav sonrası hesaplar: ham puanlar önce standart puana çevrilir (ortalama 50, standart sapma 10), sonra branşın ağırlıklarıyla birleştirilir. Bu dönüşümdeki oturum istatistikleri sınavdan önce bilinemez; bu araç şeffaf varsayımsal istatistikler kullanır.
       </div>
 
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>DUS puanı</strong>, TBT ve KBT ham puanlarının standart puana çevrilip ağırlıklandırılmasıyla bulunur. 4 yanlış, 1 doğruyu götürür.</li>
+          <li><strong>K = TBT %40 + KBT %60</strong> (tüm branşlar, Oral Patoloji hariç), <strong>T = TBT %60 + KBT %40</strong> (yalnızca Oral Patoloji).</li>
+          <li><strong>DUS'ta 85 tavanı yoktur;</strong> puan, ağırlıklı standart puanın kendisidir. Tercih için <strong>45 barajı</strong> vardır.</li>
+          <li>Sınav tek oturumda <strong>120 soru / 150 dakika</strong> yapılır (TBT 40 + KBT 80).</li>
+          <li>Bu sayfadaki sonuçlar <strong>tahmindir</strong>; gerçek puanı ÖSYM sınav sonrası açıklar.</li>
+        </ul>
+      </div>
+
       <!-- ============ REHBER İÇERİK ============ -->
+      <h2>DUS Puanı Nedir?</h2>
+      <p><strong>DUS puanı</strong>, Diş Hekimliğinde Uzmanlık Eğitimi Giriş Sınavı'ndaki performansın standart puan karşılığıdır. TUS'tan kritik bir farkla: <strong>DUS'ta 85 tavanı yoktur</strong>; puan, ağırlıklı standart puanın kendisidir. İki puan türü vardır: çoğu branşın kullandığı <strong>K puanı</strong> ve yalnızca Oral Patoloji'nin kullandığı <strong>T puanı</strong>.</p>
+
       <h2>DUS Puanı Nasıl Hesaplanır?</h2>
-      <p>DUS, tek oturumda <strong>120 soru / 150 dakika</strong> olarak yapılır: <strong>Temel Bilimler Testi (TBT)</strong> 40 soru (Anatomi, Fizyoloji, Biyokimya, Mikrobiyoloji, Patoloji, Farmakoloji ve diğer temel bilimler) ve <strong>Klinik Bilimler Testi (KBT)</strong> 80 soru (8 klinik alan × 10 soru: Restoratif, Protetik, Cerrahi, Radyoloji, Periodontoloji, Ortodonti, Endodonti, Çocuk Diş Hekimliği).</p>
+      <p><strong>DUS puanı 3 adımda hesaplanır:</strong> ham puan bulma, standart puana çevirme ve ağırlıklandırma. TUS'taki 4. adım (85 tavanı) DUS'ta yoktur.</p>
       <h3>Adım 1 — Ham puanları bul</h3>
       <p>Her test için: <strong>Ham Puan = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. Yanlışlar doğruyu götürür; boşlar etkilemez.</p>
-      <h3>Adım 2 — Standart puana çevir (ÖSYM yapar)</h3>
+      <h3>Adım 2 — Standart puana çevir</h3>
       <p>Her testin ham puanı, o oturumun ortalaması 50 ve standart sapması 10 olacak şekilde standart puana dönüştürülür: <strong>SP = 50 + 10 × (Ham − Ortalama) ÷ Standart Sapma</strong>.</p>
       <h3>Adım 3 — Ağırlıklı puanı bul</h3>
-      <p>Resmi ağırlıklar (2026 DUS kılavuzu):</p>
+      <p>Resmi ağırlıklar:</p>
       <ul>
         <li><strong>K Puanı</strong> = TBT × %40 + KBT × %60 — <strong>Oral Patoloji hariç tüm branşlar</strong> bu puanla tercih yapar</li>
         <li><strong>T Puanı</strong> = TBT × %60 + KBT × %40 — yalnızca <strong>Oral Patoloji</strong> bu puanı kullanır</li>
       </ul>
-      <h3>85 tavanı yok — doğrulanmış fark</h3>
-      <p>TUS'tan farklı olarak <strong>DUS kılavuzunda 85'e dönüştürme formülü yoktur</strong>; DUS puanı, ağırlıklı standart puanın kendisidir. Bu araç da sonucu dönüştürmeden, doğrudan ağırlıklı puan olarak verir.</p>
-      <h3>Tahmin yöntemi</h3>
-      <p>Resmi istatistikler sınav sonrası açıklandığı için bu araç, ham puanı şeffaf <strong>varsayımsal dönem istatistikleriyle</strong> standart puana çevirir: TBT ortalama 22 / standart sapma 6; KBT ortalama 42 / standart sapma 10. Bu değerler bir varsayımdır; gerçek oturum istatistikleri farklı olabilir.</p>
-      <h3>45 barajı</h3>
-      <p>Tercih yapabilmek için ilgili puan türünden <strong>en az 45</strong> almak gerekir. Ayrıca yerleştirme için son 5 yıl içinde alınmış <strong>en az 50 YDS</strong> (veya eşdeğeri) puanı şarttır. DUS puanına OBP eklenmez.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>85 Tavanı Yok: TUS'tan Kritik Fark</h2>
+      <p><strong>DUS kılavuzunda 85'e dönüştürme formülü yoktur; DUS puanı, ağırlıklı standart puanın kendisidir.</strong> Bu araç da sonucu dönüştürmeden, doğrudan ağırlıklı puan olarak verir.</p>
+      <p>Neden önemli? TUS'ta 85 tavanı, en üstteki adayları 85'te eşitler; DUS'ta böyle bir sıkıştırma olmaz. İnternetteki bazı genel "uzmanlık puanı" yazıları TUS formülünü DUS'a da uyguluyor; bu yanlıştır. İki sınavın puanı aynı ölçekte okunmaz.</p>
+
+      <h2>Kaç Net Kaç Puan Eder? (Dürüst Tablo)</h2>
+      <p><strong>Aşağıdaki tablo, bu sayfadaki hesaplayıcının modeliyle üretilmiş tahmini karşılıklardır.</strong> Arama sonuçlarındaki sayfalar puan hesabı değil taban puanı tablosu yayımlıyor; netten puana giden yolu hiçbiri göstermiyor.</p>
+      <table class="bilgi-tablosu">
+        <caption>Ham puan → tahmini DUS puanı (dengeli ham dağılımı varsayımıyla)</caption>
+        <thead><tr><th scope="col">TBT Ham</th><th scope="col">KBT Ham</th><th scope="col">Tahmini K</th><th scope="col">2026 Taban Bandı (yaklaşık)</th></tr></thead>
+        <tbody>
+          <tr><td>16</td><td>32</td><td>40,00</td><td>Baraj altı — tercih yok</td></tr>
+          <tr><td>20</td><td>40</td><td>47,47</td><td>Endodonti alt bandına yakın (48,97)</td></tr>
+          <tr><td>24</td><td>48</td><td>54,93</td><td>Endodonti orta bandı</td></tr>
+          <tr><td>28</td><td>56</td><td>62,40</td><td>Çene Cerrahisi bandı (62–72)</td></tr>
+          <tr><td>32</td><td>64</td><td>69,87</td><td>Ortodonti bandı (65–66 üstü)</td></tr>
+        </tbody>
+      </table>
+      <p>Taban aralıkları, 2026 dönemi için yayımlanmış taban puanı tablolarından alınmıştır (Endodonti 48,97–64,69; Ortodonti ~65–66; Çene Cerrahisi ~62–72). Bunlar tahmini eşleşmelerdir; kesin yerleşme için ilgili dönemin resmi tablosuna bak.</p>
+
+      <h2>Formül ve Çalışılmış Örnek</h2>
+      <p>Bu araç, ham puanı şeffaf <strong>varsayımsal dönem istatistikleriyle</strong> standart puana çevirir: TBT ortalama 22 / standart sapma 6; KBT ortalama 42 / standart sapma 10. Bu değerler bir varsayımdır; gerçek oturum istatistikleri farklı olabilir.</p>
       <p>Bir adayın sonuçları: TBT 28 doğru 8 yanlış, KBT 55 doğru 20 yanlış.</p>
       <ul>
         <li>TBT ham: 28 − (8 ÷ 4) = <strong>26</strong> / 40</li>
         <li>KBT ham: 55 − (20 ÷ 4) = <strong>50</strong> / 80</li>
         <li>Standart puanlar (varsayımsal istatistikle): TBT ≈ 56,67; KBT = 58,00</li>
-        <li>Tahmini K: (0,40 × 56,67) + (0,60 × 58) = <strong>≈ 57,47</strong> ✓ 45 baraj üstü — tercih yapabilir</li>
+        <li>Tahmini K: (0,40 × 56,67) + (0,60 × 58) = <strong>≈ 57,47</strong> ✓ 45 baraj üstü</li>
         <li>Tahmini T: <strong>≈ 57,20</strong> (yalnızca Oral Patoloji için)</li>
       </ul>
       <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+      <h2>Bu Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>TBT doğru sayını yaz.</strong> Temel Bilimler testindeki doğru sayını gir (0–40).</li>
+        <li><strong>TBT yanlış sayını yaz.</strong> Aynı testteki yanlış sayını gir.</li>
+        <li><strong>KBT doğru ve yanlışlarını yaz.</strong> Klinik test için aynı iki değeri gir (0–80).</li>
+        <li><strong>Hesapla'ya bas.</strong> Tahmini K ve T puanın ile 45 baraj durumun görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Nasıl Okumalısın?</h2>
+      <p><strong>Puanın, hedef branşın taban puanıyla karşılaştırıldığında anlam kazanır.</strong> Popüler branşlarda tabanlar 65–72 bandına çıkarken, kontenjanı geniş branşlarda 50'li değerlere düşer.</p>
+      <ul>
+        <li><strong>Baraj altı (&lt;45):</strong> tercih yapamazsın; ham puanı yükseltmen şart.</li>
+        <li><strong>45–55:</strong> alt bant branşlar mümkün; taban tablolarını izle.</li>
+        <li><strong>55–65:</strong> çoğu branş için rekabetçi aralık.</li>
+        <li><strong>65+:</strong> Ortodonti gibi popüler branşlar için yarışır aralık.</li>
+      </ul>
+
+      <h2>İnternetteki Yanlış DUS Bilgileri</h2>
+      <p><strong>İki yaygın hata, adayları yanlış yönlendiriyor.</strong></p>
+      <ul>
+        <li><strong>"DUS 200 soru, 250 dakika":</strong> Doğrusu 120 soru / 150 dakikadır (TBT 40 + KBT 80). 200 yazan sayfalar TUS ile karıştırıyor.</li>
+        <li><strong>"Puan iki testin ortalaması":</strong> Doğrusu ağırlıklı puandır: K için TBT %40 + KBT %60. Basit ortalama, K/T ayrımını yok sayar.</li>
+      </ul>
+
+      <h2>Sınırlamalar</h2>
+      <p><strong>Bu araç ÖSYM'nin yerini tutmaz; 3 somut sınırı vardır.</strong></p>
+      <ul>
+        <li><strong>Oturum istatistikleri varsayımsaldır.</strong> TBT ortalama 22 / SS 6, KBT ortalama 42 / SS 10 değerleri şeffaf bir varsayımdır; gerçek değerler farklı olabilir.</li>
+        <li><strong>85 tavanı yoktur.</strong> Model sonucu dönüştürmez; bu, kılavuzla uyumludur.</li>
+        <li><strong>Taban eşleşmeleri yaklaşıktır.</strong> Branş tabanları her dönem kontenjana göre değişir.</li>
+      </ul>
+
+      <h2>TUS mu, DUS mu?</h2>
+      <p><strong>Mezuniyetin hangi sınavı gerektiriyorsa onu hesapla.</strong></p>
+      <table class="bilgi-tablosu">
+        <caption>TUS ve DUS puanlama karşılaştırması</caption>
+        <thead><tr><th scope="col"></th><th scope="col">TUS</th><th scope="col">DUS</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Kimler girer?</strong></td><td>Tıp fakültesi mezunları</td><td>Diş hekimliği mezunları</td></tr>
+          <tr><td><strong>Soru sayısı</strong></td><td>200 (100 + 100)</td><td>120 (40 + 80)</td></tr>
+          <tr><td><strong>Puan türleri</strong></td><td>K (%40–%60), T (%60–%40)</td><td>K (%40–%60), T (%60–%40)</td></tr>
+          <tr><td><strong>Tavan</strong></td><td><strong>85</strong></td><td><strong>Yok</strong></td></tr>
+          <tr><td><strong>Baraj</strong></td><td>45</td><td>45</td></tr>
+        </tbody>
+      </table>
+      <p>Tıp mezunuysan puanını <a href="../tus-puan-hesaplama/">TUS puan hesaplama</a> aracımızla tahmin et; DUS formülleri sana uymaz.</p>
 
       <h2>İpuçları</h2>
       <ul>
         <li><strong>KBT'ye ağırlık ver:</strong> Çoğu branş K puanıyla aldığı ve KBT'nin K'daki ağırlığı %60 olduğu için klinik testteki her net daha değerlidir.</li>
         <li><strong>Branşını bil:</strong> Oral Patoloji hedefliyorsan T puanına odaklan; diğer tüm branşlarda K puanı geçerli.</li>
         <li><strong>Yanlışların maliyetini bil:</strong> 4 yanlış 1 doğruyu götürür; bilmediğin soruda rastgele işaretleme ham puanını eritir.</li>
-        <li><strong>Taban puanları takip et:</strong> Popüler branşlarda (ör. Ortodonti) taban puanlar 60'ların üzerine çıkabilir; kontenjan artışları puanları aşağı çeker.</li>
+        <li><strong>Taban puanları takip et:</strong> Kontenjan artışları tabanları aşağı çeker; tercih döneminde güncel tabloyu kullan.</li>
       </ul>
 
       <h2>Sonraki Adımlar</h2>
       <ul>
-        <li><a href="../tus-puan-hesaplama/"><strong>TUS Puan Hesaplama</strong></a> — tıpta uzmanlık için K/T puanı tahmini</li>
-        <li><a href="../kpss-puan-hesaplama/"><strong>KPSS Puan Hesaplama</strong></a> — kamu kadroları için P1/P2/P3 tahmini</li>
+        <li>Tıpta uzmanlık için K/T puanı tahminini <a href="../tus-puan-hesaplama/">TUS puan hesaplama</a> sayfamızda yap.</li>
+        <li>Kamu kadroları için P1/P2/P3 tahminini <a href="../kpss-puan-hesaplama/">KPSS puan hesaplama</a> sayfamızda bul.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
+      <p><small>Yasal uyarı: Bu sayfadaki araç ve içerik bilgilendirme amaçlıdır; ÖSYM'nin resmi hesaplama ve yerleştirme süreçlerinin yerini tutmaz. Başvuru koşulları için güncel DUS kılavuzunu esas al.</small></p>
+            <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>DUS kaç soru, kaç dakika?</summary><p>Tek oturumda 120 soru, 150 dakika: Temel Bilimler Testi 40 soru, Klinik Bilimler Testi 80 soru.</p></details>
@@ -163,6 +243,9 @@
         <details><summary>DUS'ta 85 tavanı var mı?</summary><p>Hayır. TUS'tan farklı olarak DUS kılavuzunda 85'e dönüştürme formülü yoktur; DUS puanı, ağırlıklı standart puanın kendisidir.</p></details>
         <details><summary>45 barajı nedir?</summary><p>İlgili puan türünden 45'in altında alan aday yerleştirme tercihi yapamaz.</p></details>
         <details><summary>Sonuç neden “tahmini”?</summary><p>Resmi puan, sınav sonrası oturum istatistikleriyle (ortalama 50, standart sapma 10) hesaplanır. Bu araç, ham puanı şeffaf varsayımsal dönem istatistikleriyle standart puana çevirir; gerçek puanınız ÖSYM sonuç belgesinde yazar.</p></details>
+        <details><summary>DUS puanı ile TUS puanı aynı şey mi?</summary><p>Hayır. İkisi de K/T ağırlıklı puan kullansa da TUS'ta 85 tavanı varken DUS'ta tavan yoktur; soru sayıları da farklıdır (TUS 200, DUS 120). Birinin formülünü diğerine uygulama.</p></details>
+        <details><summary>Oral Patoloji için hangi puan geçerli?</summary><p>T puanı. DUS'ta Oral Patoloji dışındaki tüm branşlar K puanıyla tercih yapar; yalnızca Oral Patoloji T puanını kullanır. Hedefin buysa TBT ağırlıklı çalış.</p></details>
+        <details><summary>DUS'ta diploma notu ekleniyor mu?</summary><p>Hayır. DUS puanı %100 sınav performansına dayanır; OBP veya diploma notu eklenmez.</p></details>
       </section>
     </article>
 

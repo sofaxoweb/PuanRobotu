@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YDS Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan.">
+<title>YDS Puan Hesaplama 2026: Doğru Sayısı × 1,25 | PuanRobotu</title>
+<meta name="description" content="YDS puanını kesin olarak hesapla: doğru sayını 1,25 ile çarp, A–E seviyeni öğren. 80 soru, yanlış cezası yok. 55 ve 70 puan için kaç doğru gerekir? Hemen öğren.">
 <link rel="canonical" href="https://puanrobotu.com/lisansustu/yds-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="YDS Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan.">
+<meta property="og:title" content="YDS Puan Hesaplama 2026: Doğru Sayısı × 1,25 | PuanRobotu">
+<meta property="og:description" content="YDS puanını kesin olarak hesapla: doğru sayını 1,25 ile çarp, A–E seviyeni öğren. 80 soru, yanlış cezası yok. 55 ve 70 puan için kaç doğru gerekir? Hemen öğren.">
 <meta property="og:url" content="https://puanrobotu.com/lisansustu/yds-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -25,7 +25,7 @@
   "operatingSystem": "Web",
   "inLanguage": "tr",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
-  "description": "YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan."
+  "description": "YDS puanını kesin olarak hesapla: doğru sayını 1,25 ile çarp, A–E seviyeni öğren. 80 soru, yanlış cezası yok. 55 ve 70 puan için kaç doğru gerekir? Hemen öğren."
 }
 </script>
 <script type="application/ld+json">
@@ -33,12 +33,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "YDS'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. ÖSYM kılavuzuna göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur."}},
-    {"@type": "Question", "name": "YDS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder."}},
-    {"@type": "Question", "name": "e-YDS puanı normal YDS ile aynı mı hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, formül aynıdır: doğru sayısı × 1,25. e-YDS'deki deneme (pilot) sorular puanlamaya katılmaz."}},
-    {"@type": "Question", "name": "YDS puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "Kullanım yerine göre değişir: TUS, DUS ve EUS yerleştirmelerinde sonuç, sınav tarihinden itibaren 5 yıl geçerlidir."}},
-    {"@type": "Question", "name": "A, B, C, D, E seviyeleri ne anlama gelir?", "acceptedAnswer": {"@type": "Answer", "text": "A 90–100, B 80–89, C 70–79, D 60–69, E 50–59 puan aralıklarına denk gelir. Çoğu kurum en az C seviyesi veya 70 puan ister."}},
-    {"@type": "Question", "name": "70 puan için kaç doğru gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "56 doğru gerekir (56 × 1,25 = 70). Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru yeterlidir."}}
+    {
+      "@type": "Question",
+      "name": "YDS'de yanlış doğruyu götürür mü?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. ÖSYM kılavuzunun 3.8 maddesine göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur. Bazı siteler YKS'deki 'doğru − yanlış/4' formülünü YDS'ye de yazar; bu yanlıştır. YDS'de net kavramı yoktur, doğru sayın neyse puanın odur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YDS puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder. Yanlış cezası ve standart sapma dönüşümü olmadığı için bu sonuç kesindir; resmi sonuç belgendeki puanla birebir aynı çıkar, dönemden döneme değişmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "70 puan için kaç doğru gerekir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "56 doğru gerekir (56 × 1,25 = 70). C seviyesinin alt sınırıdır ve dil tazminatı eşiğidir. Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru gerekir. B seviyesine ulaşmak için 64, A seviyesi için 72 doğru yapman gerekir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A, B, C, D, E seviyeleri ne anlama gelir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resmi yönetmelikteki seviyelerdir: A 90–100, B 80–89, C 70–79, D 60–69, E 50–59. 50 puanın altında seviye verilmez. İnternetteki CEFR eşlemeleri (B2, C1 gibi) resmi değildir; kurumlar başvuruda harf seviyesini ister, bu yüzden doğru ölçeği kullan. Yanlış ölçekle hedef belirlemek hayal kırıklığı yaratır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YDS puanı kaç yıl geçerli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tek bir süre yoktur; her kurum kendi kuralını yazar. TUS, DUS ve EUS yerleştirmelerinde sonuç sınav tarihinden itibaren 5 yıl geçerlidir. Dil tazminatında 5 yıl, ÜAK doçentlikte süre sınırı yoktur. Başvuracağın kurumun kılavuzunu mutlaka kontrol et. Genel '5 yıl' genellemesi eksik bilgi verir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "e-YDS puanı normal YDS ile aynı mı hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, formül aynıdır: doğru sayısı × 1,25 ve yanlış cezası yoktur. Tek fark, e-YDS'deki deneme (pilot) soruların puanlamaya katılmamasıdır. Bu sorulara harcadığın süre geri gelmez, bu yüzden deneme sorusunu ayırt etmeye çalışma, tüm sorulara aynı ciddiyetle yaklaş. Sınav bilgisayar başında yapılır ve sonuçlar daha hızlı açıklanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İptal edilen soru puanımı nasıl etkiler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ÖSYM soru iptal ederse formül değişir: puan = doğru sayısı × (100 ÷ geçerli soru sayısı). 2 soru iptalinde her doğru 1,282 puan eder; 60 doğrusu olan aday 75,00 yerine 76,92 alır. İptal edilmeyen sınavlarda klasik 1,25 katsayısı geçerlidir, değişiklik olmaz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YDS sonucum neden kesin, tahmin değil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ALES, DGS ve KPSS'de puan o yılın istatistikleriyle standart sapmaya göre hesaplandığı için sonuç ancak tahmin edilir. YDS'de böyle bir dönüşüm yoktur; kılavuz formülü (doğru × 1,25) doğrudan uygular. Aynı doğruyu yapan herkes, her dönem aynı puanı alır; bu yüzden hesaplayıcı tahmini değil kesin sonuç verir."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +127,8 @@
     <article>
       <p class="kicker">Lisansüstü</p>
       <h1>YDS Puan Hesaplama</h1>
-      <p class="lede">YDS'de kaç doğru yaptığını yaz, 100 üzerinden puanını ve A–E dil seviyeni anında öğren. Yanlış cevap puanı düşürmez.</p>
+      <p class="lede"><strong>YDS puanın = doğru sayın × 1,25.</strong> Yanlış cevap cezası yoktur; 80 soruda yaptığın her doğru 1,25 puan eder. Doğru sayını gir, 100 üzerinden puanını ve A–E dil seviyeni anında öğren.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -103,49 +162,110 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>YDS Puanı Nasıl Hesaplanır?</h2>
-      <p>YDS (Yabancı Dil Bilgisi Seviye Tespit Sınavı) 80 çoktan seçmeli sorudan oluşur ve süresi 180 dakikadır. Puanlama, ÖSYM'nin başvuru kılavuzunda açıkça yazdığı tek bir kurala dayanır:</p>
-      <p><strong>YDS Puanı = Doğru Sayısı × 1,25</strong></p>
-      <p>Yani her doğru cevap 1,25 puan eder; 80 doğrunun tamamı 100 puana denk gelir. En kritik nokta şudur: <strong>YDS'de yanlış cevap cezası yoktur.</strong> Kılavuzun 3.8 maddesi şöyle der: "Değerlendirme sırasında yalnız doğru cevaplar dikkate alınacak, yanlış cevaplar dikkate alınmayacaktır." Bu yüzden boş bıraktığın sorular da yanlışların da puanı etkilemez.</p>
-      <h3>YDS Dil Seviyeleri</h3>
-      <table class="bilgi-tablosu">
-        <thead><tr><th>Seviye</th><th>Puan Aralığı</th></tr></thead>
-        <tbody>
-          <tr><td>A</td><td>90 – 100</td></tr>
-          <tr><td>B</td><td>80 – 89</td></tr>
-          <tr><td>C</td><td>70 – 79</td></tr>
-          <tr><td>D</td><td>60 – 69</td></tr>
-          <tr><td>E</td><td>50 – 59</td></tr>
-        </tbody>
-      </table>
-      <p>Puanın kullanım yerine göre barajlar değişir: doktora ve doçentlik başvurularında genellikle en az <strong>55 puan</strong> istenir. TUS, DUS ve EUS yerleştirmelerinde ise yabancı dil sonucunun <strong>sınav tarihinden itibaren 5 yıl</strong> içinde alınmış olması gerekir. e-YDS'de de aynı formül geçerlidir; yalnızca puanlamaya katılmayan deneme (pilot) sorular bulunur.</p>
-      <p>İngilizce dışında bir alanda sınava gireceksen <a href="../yokdil-puan-hesaplama/">YÖKDİL puan hesaplama</a> aracını, akademik kariyer için gereken diğer sınavda <a href="../ales-puan-hesaplama/">ALES puan hesaplama</a> aracını kullanabilirsin.</p>
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>YDS puanı = doğru sayısı × 1,25.</strong> 80 soruda 80 doğru, 100 puan eder.</li>
+          <li><strong>Yanlış cevap cezası yoktur</strong> (ÖSYM kılavuzu, madde 3.8). YDS'de "net" kavramı yoktur.</li>
+          <li>Dil seviyeleri: <strong>A 90–100, B 80–89, C 70–79, D 60–69, E 50–59.</strong></li>
+          <li>Doktora ve doçentlik barajı <strong>55 puan</strong> — 44 doğru gerekir.</li>
+          <li>Bu sayfadaki sonuç <strong>kesindir, tahmin değildir:</strong> resmi sonuç belgendeki puanla birebir aynı çıkar.</li>
+        </ul>
+      </div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>Bir adayın 52 doğrusu, 20 yanlışı ve 8 boşu olsun:</p>
+      <h2>YDS Nedir?</h2>
+      <p><strong>YDS (Yabancı Dil Bilgisi Seviye Tespit Sınavı),</strong> ÖSYM'nin düzenlediği 80 soruluk yabancı dil seviye sınavıdır. Süresi 180 dakikadır. Kamu kurumları, üniversiteler ile TUS, DUS ve EUS yerleştirmeleri YDS sonucunu dil yeterliliği kanıtı olarak ister. Puan 100 üzerinden hesaplanır ve A ile E arasında 5 dil seviyesinden birine denk gelir.</p>
+
+      <h2>YDS Puanı Nasıl Hesaplanır?</h2>
+      <p><strong>YDS puanı = doğru sayısı × 1,25.</strong> Her doğru cevap 1,25 puan eder; 80 sorunun tamamını doğru yapan 100 puan alır.</p>
+      <p>Formülün ikinci yarısı en az ilki kadar önemlidir: <strong>yanlış cevaplar puanı düşürmez.</strong> ÖSYM kılavuzunun 3.8 maddesi nettir: "Değerlendirme sırasında yalnız doğru cevaplar dikkate alınacak, yanlış cevaplar dikkate alınmayacaktır." Boş bıraktığın sorular da yanlış işaretlediklerin de sonucu değiştirmez.</p>
+      <p>Burada kritik bir ayrım var: <strong>YDS'de "net" kavramı yoktur.</strong> YKS ve LGS'deki "doğru − yanlış/4" hesabı YDS'ye uygulanmaz; bazı siteler bu formülü YDS'ye de yazar ama bu yanlıştır. YDS'de doğru sayın neyse puanın odur: 52 doğru = 65,00 puan, herkes için, her dönem.</p>
+
+      <h2>Formül ve Çalışılmış Örnek</h2>
+      <p>52 doğrusu, 20 yanlışı ve 8 boşu olan bir aday:</p>
       <ul>
         <li>Yanlış cezası olmadığı için yanlışlar ve boşlar hesaba katılmaz.</li>
-        <li>Puan = 52 × 1,25 = <strong>65,00</strong></li>
-        <li>65 puan, 60–69 aralığına girdiği için <strong>D seviyesi</strong> demektir.</li>
+        <li><strong>Puan = 52 × 1,25 = 65,00.</strong></li>
+        <li>65 puan 60–69 aralığına girer: <strong>D seviyesi.</strong></li>
       </ul>
 
-      <h2>İpuçları</h2>
+      <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>Doğru sayını</strong> gir (0–80 arası).</li>
+        <li><strong>Yanlış sayını</strong> gir — bilgi amaçlıdır, puanı etkilemez.</li>
+        <li><strong>Hesapla</strong> düğmesine bas: puanın ve dil seviyen anında görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Oku: Seviyeler ve Barajlar</h2>
+      <p>Puanın 50'nin altındaysa dil seviyesi verilmez; 50 ve üzeri 5 seviyeye ayrılır:</p>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Seviye</th><th>Puan Aralığı</th><th>Tipik Kullanım</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>90 – 100</td><td>Üst düzey yeterlilik</td></tr>
+          <tr><td>B</td><td>80 – 89</td><td>Akademik kadrolar</td></tr>
+          <tr><td>C</td><td>70 – 79</td><td>Çoğu kurumun istediği düzey</td></tr>
+          <tr><td>D</td><td>60 – 69</td><td>Temel yeterlilik</td></tr>
+          <tr><td>E</td><td>50 – 59</td><td>Asgari seviye</td></tr>
+        </tbody>
+      </table>
+      <p>Bu A–E ölçeği <strong>resmi yönetmelikteki</strong> seviyelerdir. İnternette görülen "80–100 = C seviyesi / B2" gibi CEFR eşlemeleri resmi değildir; bazı siteler bu iki ölçeği karıştırır. Başvuracağın kurumun istediği, yönetmelikteki harf seviyesidir.</p>
+      <p>Doktora ve doçentlik başvurularında baraj genellikle <strong>55 puandır</strong> — 44 doğru gerekir. "65 gerekir" diyen kaynaklar eski dönem kuralını veya tekil üniversite atama kriterlerini genelleştirir; ÜAK doçentlik eşiği 2018'den beri 55'tir.</p>
+
+      <h2>Neden Bu Sonuç Kesindir, Tahmin Değil?</h2>
+      <p>ALES, DGS ve KPSS'de puan, o yılın istatistiklerine göre standart sapmayla hesaplanır; bu yüzden sonuç ancak tahmin edilir. <strong>YDS'de böyle bir dönüşüm yoktur.</strong> Kılavuz formülü doğrudan uygular: doğru × 1,25. Sınav istatistiği, çan eğrisi, katsayı — hiçbiri yoktur. Aynı doğru sayısını yapan iki aday, farklı dönemlerde bile aynı puanı alır. Buradaki sonuç, resmi sonuç belgendeki puanla birebir aynı çıkar.</p>
+
+      <h2>İptal Edilen Soru Olursa Ne Olur?</h2>
+      <p>ÖSYM bazen hatalı soruları iptal eder. Bu durumda formül değişir: <strong>puan = doğru sayısı × (100 ÷ geçerli soru sayısı).</strong> Örneğin 2 soru iptal edilirse her doğru 100 ÷ 78 = <strong>1,282</strong> puan eder. 60 doğrusu olan bir aday normalde 75,00 alırken, 2 iptalli sınavda <strong>76,92</strong> alır. İptal yoksa klasik 1,25 geçerlidir.</p>
+
+      <h2>Kaç Puan İçin Kaç Doğru Gerekir?</h2>
+      <p>Hedefine göre kaç doğru yapman gerektiğini önceden bil:</p>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Hedef Puan</th><th>Gerekli Doğru</th><th>Not</th></tr></thead>
+        <tbody>
+          <tr><td>40</td><td>32</td><td>Baraj altı</td></tr>
+          <tr><td>50</td><td>40</td><td>Seviye alt sınırı (E)</td></tr>
+          <tr><td>55</td><td>44</td><td>Doktora / doçentlik barajı</td></tr>
+          <tr><td>60</td><td>48</td><td>D seviyesi alt sınırı</td></tr>
+          <tr><td>65</td><td>52</td><td>D seviyesi</td></tr>
+          <tr><td>70</td><td>56</td><td>C seviyesi alt sınırı — dil tazminatı eşiği</td></tr>
+          <tr><td>80</td><td>64</td><td>B seviyesi alt sınırı</td></tr>
+          <tr><td>90</td><td>72</td><td>A seviyesi alt sınırı</td></tr>
+        </tbody>
+      </table>
+      <p>Dil tazminatı için en az <strong>70 puan (C seviyesi)</strong> gerekir; D ve E seviyeleri tazminat almaz.</p>
+
+      <h2>Sınırlamalar</h2>
       <ul>
-        <li>Yanlış cezası olmadığı için <strong>hiçbir soruyu boş bırakma</strong>; emin olmadıklarında bile işaretle.</li>
-        <li>Doktora veya doçentlik hedefin varsa baraj 55 — hedefini 60+ olarak koy, sınırda kalma.</li>
-        <li>e-YDS'deki deneme soruları puana etki etmez; zor bir soruyla karşılaşınca moralini bozma.</li>
-        <li>Kelime bilgisi ve okuduğunu anlama soruları toplamın yarısından fazlasını oluşturur; çalışmanı buraya yoğunlaştır.</li>
+        <li>Geçerlilik süresi tek değildir: ÖSYM genel bir süre koymaz, <strong>her kurum kendi kuralını</strong> yazar. TUS, DUS ve EUS yerleştirmelerinde 5 yıl; dil tazminatında 5 yıl; ÜAK doçentlikte süre sınırı yoktur. "5 yıl geçerlidir" genellemesi eksiktir.</li>
+        <li>e-YDS'deki <strong>pilot (deneme) sorular</strong> puanlamaya katılmaz; formül aynı kalır ama bu sorulara harcadığın süre geri gelmez.</li>
+        <li>Seviye eşikleri küsurata duyarlıdır: 69,99 D seviyesidir, C değil.</li>
+        <li>Sonuç belgeni ÖSYM AİS sonuç sayfasından alırsın; belgede doğru sayın ve puanın yazar.</li>
+        <li>Kılavuz her dönem güncellenir; bu sayfa 2026-YDS/1 kılavuzunun 3.8 maddesine göre hazırlanmıştır.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
-      <section class="sss" aria-labelledby="sss-baslik">
+      <h2>YDS mi YÖKDİL mi?</h2>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Ölçüt</th><th>YDS</th><th>YÖKDİL</th></tr></thead>
+        <tbody>
+          <tr><td>Kapsam</td><td>Genel yabancı dil</td><td>Alan odaklı (Fen / Sağlık / Sosyal)</td></tr>
+          <tr><td>Formül</td><td>Doğru × 1,25</td><td>Doğru × 1,25</td></tr>
+          <tr><td>Yanlış cezası</td><td>Yok</td><td>Yok</td></tr>
+          <tr><td>Geçerlilik</td><td>Kuruma göre (TUS/DUS/EUS: 5 yıl)</td><td>Lisansüstü: 5 yıl; öğretim görevlisi/doçentlik: süresiz</td></tr>
+        </tbody>
+      </table>
+      <p>İki sınavın puanlama mantığı aynıdır ama her kurum ikisini de kabul etmez: dil tazminatı ve bazı kamu atamaları <strong>yalnızca YDS/e-YDS</strong> ister. Başvuracağın kurumun şartını kontrol et. Alan odaklı sınava gireceksen <a href="../yokdil-puan-hesaplama/">YÖKDİL puan hesaplama</a> aracını, akademik kariyerin diğer basamağı için <a href="../ales-puan-hesaplama/">ALES puan hesaplama</a> aracını kullan.</p>
+
+<!-- ============ SSS ============ -->
+            <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>YDS'de yanlış doğruyu götürür mü?</summary><p>Hayır. ÖSYM kılavuzuna göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur.</p></details>
-        <details><summary>YDS puanı nasıl hesaplanır?</summary><p>Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder.</p></details>
-        <details><summary>e-YDS puanı normal YDS ile aynı mı hesaplanır?</summary><p>Evet, formül aynıdır: doğru sayısı × 1,25. e-YDS'deki deneme (pilot) sorular puanlamaya katılmaz.</p></details>
-        <details><summary>YDS puanı kaç yıl geçerli?</summary><p>Kullanım yerine göre değişir: TUS, DUS ve EUS yerleştirmelerinde sonuç, sınav tarihinden itibaren 5 yıl geçerlidir.</p></details>
-        <details><summary>A, B, C, D, E seviyeleri ne anlama gelir?</summary><p>A 90–100, B 80–89, C 70–79, D 60–69, E 50–59 puan aralıklarına denk gelir. Çoğu kurum en az C seviyesi veya 70 puan ister.</p></details>
-        <details><summary>70 puan için kaç doğru gerekir?</summary><p>56 doğru gerekir (56 × 1,25 = 70). Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru yeterlidir.</p></details>
+        <details><summary>YDS'de yanlış doğruyu götürür mü?</summary><p>Hayır. ÖSYM kılavuzunun 3.8 maddesine göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur. Bazı siteler YKS'deki 'doğru − yanlış/4' formülünü YDS'ye de yazar; bu yanlıştır. YDS'de net kavramı yoktur, doğru sayın neyse puanın odur.</p></details>
+        <details><summary>YDS puanı nasıl hesaplanır?</summary><p>Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder. Yanlış cezası ve standart sapma dönüşümü olmadığı için bu sonuç kesindir; resmi sonuç belgendeki puanla birebir aynı çıkar, dönemden döneme değişmez.</p></details>
+        <details><summary>70 puan için kaç doğru gerekir?</summary><p>56 doğru gerekir (56 × 1,25 = 70). C seviyesinin alt sınırıdır ve dil tazminatı eşiğidir. Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru gerekir. B seviyesine ulaşmak için 64, A seviyesi için 72 doğru yapman gerekir.</p></details>
+        <details><summary>A, B, C, D, E seviyeleri ne anlama gelir?</summary><p>Resmi yönetmelikteki seviyelerdir: A 90–100, B 80–89, C 70–79, D 60–69, E 50–59. 50 puanın altında seviye verilmez. İnternetteki CEFR eşlemeleri (B2, C1 gibi) resmi değildir; kurumlar başvuruda harf seviyesini ister, bu yüzden doğru ölçeği kullan. Yanlış ölçekle hedef belirlemek hayal kırıklığı yaratır.</p></details>
+        <details><summary>YDS puanı kaç yıl geçerli?</summary><p>Tek bir süre yoktur; her kurum kendi kuralını yazar. TUS, DUS ve EUS yerleştirmelerinde sonuç sınav tarihinden itibaren 5 yıl geçerlidir. Dil tazminatında 5 yıl, ÜAK doçentlikte süre sınırı yoktur. Başvuracağın kurumun kılavuzunu mutlaka kontrol et. Genel '5 yıl' genellemesi eksik bilgi verir.</p></details>
+        <details><summary>e-YDS puanı normal YDS ile aynı mı hesaplanır?</summary><p>Evet, formül aynıdır: doğru sayısı × 1,25 ve yanlış cezası yoktur. Tek fark, e-YDS'deki deneme (pilot) soruların puanlamaya katılmamasıdır. Bu sorulara harcadığın süre geri gelmez, bu yüzden deneme sorusunu ayırt etmeye çalışma, tüm sorulara aynı ciddiyetle yaklaş. Sınav bilgisayar başında yapılır ve sonuçlar daha hızlı açıklanır.</p></details>
+        <details><summary>İptal edilen soru puanımı nasıl etkiler?</summary><p>ÖSYM soru iptal ederse formül değişir: puan = doğru sayısı × (100 ÷ geçerli soru sayısı). 2 soru iptalinde her doğru 1,282 puan eder; 60 doğrusu olan aday 75,00 yerine 76,92 alır. İptal edilmeyen sınavlarda klasik 1,25 katsayısı geçerlidir, değişiklik olmaz.</p></details>
+        <details><summary>YDS sonucum neden kesin, tahmin değil?</summary><p>ALES, DGS ve KPSS'de puan o yılın istatistikleriyle standart sapmaya göre hesaplandığı için sonuç ancak tahmin edilir. YDS'de böyle bir dönüşüm yoktur; kılavuz formülü (doğru × 1,25) doğrudan uygular. Aynı doğruyu yapan herkes, her dönem aynı puanı alır; bu yüzden hesaplayıcı tahmini değil kesin sonuç verir.</p></details>
       </section>
     </article>
 

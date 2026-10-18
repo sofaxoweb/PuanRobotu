@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Çan Eğrisi Hesaplama | PuanRobotu</title>
-<meta name="description" content="Sınıf ortalaması ve standart sapmayla z ve T puanını bul, çan eğrisine göre harf notunu tahmin et. Bağıl değerlendirme için ücretsiz hesaplama aracı.">
+<meta name="description" content="Z ve T puanınla çan eğrisinde harfini tahmin et: çalışılmış sınıf örneği, 7-düzey dağılım tablosu, alt limit ve sınıf mevcudu kuralları. Ücretsiz, anında sonuç.">
 <link rel="canonical" href="https://puanrobotu.com/universite-not/can-egrisi-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Çan Eğrisi Hesaplama | PuanRobotu">
-<meta property="og:description" content="z ve T puanını bul, çan eğrisine göre harf notunu tahmin et. Bağıl değerlendirme aracı, ücretsiz.">
+<meta property="og:description" content="Z ve T puanınla çan eğrisinde harfini tahmin et: sınıf ortalaması ve standart sapmayla ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/universite-not/can-egrisi-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Çan eğrisi nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50."}},
-    {"@type": "Question", "name": "Aynı not farklı derste farklı harf getirir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, çan eğrisinde bu normaldir. Kolay sınavda sınıf ortalaması yüksekse 70 puan düşük harf getirebilir; zor sınavda aynı 70 yüksek harf getirebilir."}},
-    {"@type": "Question", "name": "T puanından harfe nasıl geçilir?", "acceptedAnswer": {"@type": "Answer", "text": "Her üniversitenin senatosu T aralıklarını kendisi belirler; ulusal tek tablo yoktur. Bu araçtaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir ve düzenlenebilir."}},
-    {"@type": "Question", "name": "Standart sapma neyi gösterir?", "acceptedAnswer": {"@type": "Answer", "text": "Sınıfın notlarının ortalamadan ne kadar dağıldığını gösterir. Sapma büyükse notlar yaygındır, küçükse herkes birbirine yakındır."}},
-    {"@type": "Question", "name": "z puanı negatifse ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altında olduğunu gösterir; T puanın 40 olur."}},
-    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "Çan eğrisi nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "z puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma. Örneğin notun 70, ortalama 55, sapma 10 ise z = 1,5 olur; yani ortalamanın 1,5 sapma üstündesin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "T puanı ne anlama gelir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "T = 10 × z + 50; z'yi 50 ortalamalı bir ölçeğe taşır. Sınıf ortalaması her zaman T=50'dir; T=65, ortalamanın 1,5 sapma üstü demektir. Farklı dersler bu ölçekte kıyaslanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aynı not farklı derste farklı harf getirir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, çan eğrisinde bu normaldir. 70 puan, ortalaması 55 olan sınıfta AA getirirken ortalaması 75 olan sınıfta CC getirir. Harf sınıfa göre belirlenir, ham puana göre değil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sınıf ortalaması çok yüksekse ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yüksek ortalama, eğriyi yukarı taşır: iyi ham puanlar bile vasat harf getirebilir. Örneğin ortalama 75, sapma 10 iken 70 puan z=−0,5 ve T=45 olur; örnek aralıkta CC demektir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dersimde çan eğrisi var mı, nasıl öğrenirim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ders izlencesine bak; değerlendirme bölümünde 'bağıl değerlendirme' yazıyorsa çan uygulanır. Yazmıyorsa hocana ya da öğrenci işlerine sor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sınıf mevcudu azsa çan uygulanır mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Genelde hayır. Bağıl değerlendirme istatistiksel anlamlılık için yeterli mevcuda ihtiyaç duyar; yaygın kural 30 kişinin altındaki sınıflarda mutlak sisteme dönülmesidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Final barajı çan eğrisini ezer mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Okulun final barajı varsa eğri onu kaldırmaz: barajın altındaki not eğriye girmeden FF olur. Uygulama yönergeye göre değişir; kesin kuralı öğrenci işlerinden öğren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "z puanım negatifse ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altı demektir; T puanın 40 olur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim notlar bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +143,8 @@
     <article>
       <p class="kicker">📝 Üniversite Notları</p>
       <h1>Çan Eğrisi Hesaplama</h1>
-      <p class="lede">Notunu, sınıf ortalamasını ve standart sapmayı gir: <strong>z puanın</strong>, <strong>T puanın</strong> ve sınıf içindeki göreli konumunla birlikte <strong>tahmini harf notunu</strong> gör.</p>
+      <p class="lede">Çan eğrisi (bağıl değerlendirme), <strong>harf notunun ham puana değil sınıf içindeki konumuna göre belirlendiği sistemdir</strong>: z = (Notun − Ortalama) ÷ Standart Sapma, T = 10 × z + 50. Notunu, sınıf ortalamasını ve sapmayı yaz; z/T puanını ve tahmini harfini gör.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -106,43 +181,131 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>Nasıl Hesaplanır?</h2>
-      <p>Çan eğrisi (bağıl değerlendirme), notunu sınıfın dağılımına göre standartlaştırır. Standart model (İnönü Üniversitesi'nin yayımladığı yöntem):</p>
-      <p><strong>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma</strong></p>
-      <p><strong>T = 10 × z + 50</strong></p>
-      <p>z puanı, notunun ortalamadan kaç "standart sapma" uzakta olduğunu gösterir. T puanı ise bunu 50 ortalama, 10 sapma ölçeğine taşır — böylece farklı dersler karşılaştırılabilir hale gelir.</p>
+<div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
+<ul>
+<li><strong>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma; T = 10 × z + 50.</strong> z, ortalamadan kaç sapma uzakta olduğunu gösterir.</li>
+<li><strong>Aynı 70 puan, ortalaması 55 olan sınıfta AA getirir; ortalaması 75 olan sınıfta CC getirir.</strong> Çan eğrisinde mutlak nota değil konuma bakılır.</li>
+<li>T→harf aralıklarını her üniversitenin senatosu belirler; bu sayfadaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir.</li>
+<li>Sınıf mevcudu küçükse (genelde 30'un altı) çan uygulanmaz; mutlak sisteme dönülür.</li>
+<li>z ve T matematiksel olarak kesindir; harf tahmini, örnek aralığa göre yapılır.</li>
+</ul>
+</div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>Notun 70, sınıf ortalaması 55, standart sapma 10 olsun:</p>
-      <ul>
-        <li>z = (70 − 55) ÷ 10 = <strong>1,5</strong></li>
-        <li>T = 10 × 1,5 + 50 = <strong>65</strong></li>
-        <li>Örnek aralıkta T ≥ 65 → tahmini harf <strong>AA</strong>; sınıfın en üst dilimindesin.</li>
-      </ul>
-      <p>Göreliliğin gücüne dikkat: aynı 70 puan, sınıf ortalaması 75 olsaydı z = −0,5 ve T = 45 olurdu — yani aynı not, kolay bir sınıfta ortalamanın altında kalırdı. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+<h2>Çan Eğrisi (Bağıl Değerlendirme) Nedir?</h2>
+<p><strong>Çan eğrisi, harf notunun öğrencinin ham puanına değil, sınıfın not dağılımı içindeki göreli konumuna göre belirlendiği değerlendirme sistemidir.</strong> Sınav zorduysa sınıf ortalaması düşer ve düşük ham puanlar bile yüksek harf getirebilir; sınav kolaysa tersi olur.</p>
+<p>Sistemin mantığı: her not önce standart bir puana (önce z, sonra T) dönüştürülür; harfler bu standart puanın aralıklarına göre dağıtılır. Böylece farklı zorluktaki sınavların notları karşılaştırılabilir hâle gelir.</p>
+<p>Çan eğrisi bir "puan yükseltme" değildir: sınıfın yarısı her zaman ortalamanın altında kalır. Kolay sınavda yüksek ham puan, eğride vasat bir konuma denk gelebilir.</p>
 
-      <h2>İpuçları</h2>
-      <ul>
-        <li>Dersin çan eğrisiyle mi yoksa mutlak sistemle mi değerlendirildiğini dönem başında hocana sor.</li>
-        <li>Eğri varsa mutlak nota değil, sınıf içindeki konumuna odaklan: ortalamanın 1 sapma üstü genelde üst harfleri getirir.</li>
-        <li>Standart sapma küçükse (herkes birbirine yakınsa) 1-2 puanlık fark bile harfi değiştirebilir.</li>
-        <li>T→harf aralıklarını okulunun senato kararından teyit et; bu sayfadaki aralıklar örnektir.</li>
-      </ul>
+<h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+<p><strong>Notunu, sınıf ortalamasını ve standart sapmayı alır; z ve T puanını hesaplar, örnek harf aralığına göre tahmini harfi gösterir.</strong></p>
+<p><strong>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma.</strong> z=1,5 demek "ortalamanın 1,5 sapma üstündesin" demektir. z=0 tam ortalamadır; negatif z ortalamanın altındadır.</p>
+<p><strong>T = 10 × z + 50.</strong> T, z'yi herkesin anlayacağı bir ölçeğe taşır: sınıf ortalaması her zaman T=50 olur, 1 sapma üstü T=60'tır. Farklı derslerin notları bu ölçekte kıyaslanabilir.</p>
+<p>Harf adımı: T puanın, sayfadaki örnek aralık tablosundaki (AA≥65, BB≥55, CC≥45, DD≥35) yerine göre harfe çevrilir. Bu aralıkları kendi okuluna göre düzenleyebilirsin.</p>
 
-      <h2>Sonraki Adımlar</h2>
-      <ul>
-        <li>Mutlak sistemle değerlendirilen derslerde 100'lük notunun harf karşılığı için <a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracını kullan.</li>
-        <li>Tüm derslerinin harfleriyle genel ortalamanı bulmak istersen <a href="../gano-hesaplama/">GANO Hesaplama</a> aracına bak.</li>
-      </ul>
+<h2>Formül ve Çalışılmış Örnek</h2>
+<p><strong>Notun 70, sınıf ortalaması 55, standart sapma 10 ise z=1,5, T=65 olur ve örnek aralıkta AA getirir.</strong></p>
+<ul>
+<li>z = (70 − 55) ÷ 10 = <strong>1,5</strong></li>
+<li>T = 10 × 1,5 + 50 = <strong>65</strong></li>
+<li>Örnek aralıkta T ≥ 65 → tahmini harf <strong>AA</strong>; sınıfın en üst dilimindesin.</li>
+</ul>
+<p>Bu örneği yukarıdaki araca girerek doğrulayabilirsin. Şimdi göreliliğin gücüne dikkat: aynı 70 puan, sınıf ortalaması 75 olsaydı z = (70−75)÷10 = <strong>−0,5</strong> ve T = <strong>45</strong> olurdu — yani aynı not, kolay bir sınıfta ortalamanın altında kalırdı ve CC getirirdi.</p>
+
+<h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+<ol>
+<li><strong>Notunu yaz.</strong> Ham başarı notunu (vize+final ağırlıklı) gir.</li>
+<li><strong>Sınıf ortalamasını yaz.</strong> Hocanın açıkladığı ya da öğrenci sistemindeki sınıf ortalaması.</li>
+<li><strong>Standart sapmayı yaz.</strong> Bilmiyorsan tipik değer 8–12 aralığındadır; ama gerçek değeri hocandan öğren.</li>
+<li><strong>z, T ve harfi oku.</strong> T→harf aralıklarını okuluna göre düzenleyebilirsin.</li>
+</ol>
+
+<h2>Sonucunu Nasıl Okursun?</h2>
+<p><strong>z, konumunu; T, ölçeği; harf, tahmini sonucu gösterir.</strong></p>
+<table class="bilgi-tablosu">
+<caption>z/T puanının anlamı (örnek harf aralığıyla)</caption>
+<thead><tr><th>z Aralığı</th><th>T Aralığı</th><th>Konumun</th><th>Örnek Harf</th></tr></thead>
+<tbody>
+<tr><td>z ≥ 1,5</td><td>T ≥ 65</td><td>En üst dilim</td><td><strong>AA</strong></td></tr>
+<tr><td>0,5 ≤ z &lt; 1,5</td><td>55 – 64</td><td>Ortalamanın belirgin üstü</td><td><strong>BB</strong></td></tr>
+<tr><td>−0,5 ≤ z &lt; 0,5</td><td>45 – 54</td><td>Ortalama çevresi</td><td><strong>CC</strong></td></tr>
+<tr><td>−1,5 ≤ z &lt; −0,5</td><td>35 – 44</td><td>Ortalamanın altı</td><td><strong>DD</strong></td></tr>
+<tr><td>z &lt; −1,5</td><td>T &lt; 35</td><td>En alt dilim</td><td><strong>FF</strong></td></tr>
+</tbody>
+</table>
+<p>Tabloyu oku: z=0 (tam ortalama) her zaman T=50 verir ve örnek aralıkta CC'ye denk gelir. z'nin işareti, ortalamanın üstünde mi altında mı olduğunun en hızlı göstergesidir.</p>
+
+<h2>Aynı 70 Puan, İki Sınıf, İki Harf</h2>
+<p><strong>Çan eğrisinde notun değil, sınıfın belirler.</strong> Üç senaryoyu yan yana koy:</p>
+<table class="bilgi-tablosu">
+<caption>Aynı 70 puanın üç sınıftaki karşılığı (σ=10)</caption>
+<thead><tr><th>Senaryo</th><th>Sınıf Ort.</th><th>z</th><th>T</th><th>Örnek Harf</th></tr></thead>
+<tbody>
+<tr><td>Zor sınav</td><td>55</td><td>1,5</td><td>65</td><td><strong>AA</strong></td></tr>
+<tr><td>Normal sınav</td><td>65</td><td>0,5</td><td>55</td><td><strong>BB</strong></td></tr>
+<tr><td>Kolay sınav</td><td>75</td><td>−0,5</td><td>45</td><td><strong>CC</strong></td></tr>
+</tbody>
+</table>
+<p>Hiçbir rakip sayfa bu karşılaştırmayı sayıyla yapmaz. Pratik sonuç: çan eğrisi olan derste hedefin "yüksek not" değil, "ortalamanın üzerinde konum" olmalıdır. Ortalamanın 1 sapma üstü (z≥1) genelde üst harfleri getirir.</p>
+
+<h2>Sınıf Ortalamasına Göre Harf Dağılımı: 7-Düzey Tablosu</h2>
+<p><strong>Resmi yönergeler, sınıf ortalamasına göre harflerin yüzdesel dağılımını önceden belirler.</strong> Örnek olarak OMÜ bağıl değerlendirme yönergesindeki 7 düzeyden biri:</p>
+<table class="bilgi-tablosu">
+<caption>Örnek dağılım: sınıf ortalaması 70–79,99 ("Pekiyi" düzeyi)</caption>
+<thead><tr><th>Harf</th><th>AA</th><th>BA</th><th>BB</th><th>CB</th><th>CC</th><th>DC</th><th>DD</th><th>FF</th></tr></thead>
+<tbody><tr><td><strong>Sınıf yüzdesi</strong></td><td>%24</td><td>%15,2</td><td>%22,8</td><td>%11,6</td><td>%17,4</td><td>%4,8</td><td>%3,2</td><td>%1</td></tr></tbody>
+</table>
+<p>Tabloyu oku: ortalaması 70–79,99 olan bir sınıfta öğrencilerin %24'ü AA alır. Sınıf ortalaması düştükçe yüzdeler değişir; her üniversitenin kendi yönergesinde kendi tablosu vardır. Bu yüzdeler üniversiteden üniversiteye değişir — okulunun yönergesindeki tabloya bak.</p>
+
+<h2>Alt Limit, Sınıf Mevcudu ve Final Barajı</h2>
+<p><strong>Çan eğrisinin üç kritik kuralı vardır; hiçbir rakip sayfa üçünü bir arada anlatmaz.</strong></p>
+<ul>
+<li><strong>Alt limit:</strong> Bazı yönergelerde bağıl değerlendirme ortalaması belirli bir değerin (yaygın örnek: 30) altındaysa eğri uygulanmaz; düşük notlar doğrudan FF olur.</li>
+<li><strong>Sınıf mevcudu:</strong> Bağıl değerlendirme istatistiksel anlamlılık için yeterli mevcuda ihtiyaç duyar; yaygın kural 30 kişinin altındaki sınıflarda eğri uygulanmaması, mutlak sisteme dönülmesidir. 15–29 aralığında özel hükümler uygulanabilir.</li>
+<li><strong>Final barajı × eğri:</strong> Okulun final barajı varsa (örn. finalden en az 50), eğri bu barajı kaldırmaz: barajın altındaki not eğriye girmeden FF olur. Uygulama yönergeye göre değişir.</li>
+</ul>
+
+<h2>Sınırlamalar</h2>
+<p><strong>z ve T puanları matematiksel olarak kesindir; ama harf adımında üç sınır vardır.</strong></p>
+<ul>
+<li><strong>T→harf aralıkları örnektir.</strong> Gerçek aralıkları her üniversitenin senatosu belirler; ulusal tek tablo yoktur. Okulunun aralıklarını kutulardan düzenle.</li>
+<li><strong>Standart sapma kritiktir.</strong> Sapma küçükse (herkes birbirine yakınsa) 1–2 puanlık fark bile harfi değiştirir. Tahmini sapmayla karar verme.</li>
+<li><strong>AÖF'de geçersizdir.</strong> Açıköğretimde bağıl değerlendirme kaldırılmıştır; harf 35 barajı sonrası kendi sistemine göre belirlenir — <a href="../aof-not-hesaplama/">AÖF Not Hesaplama</a> sayfasına bak.</li>
+</ul>
+
+<h2>Bağıl vs Mutlak Değerlendirme</h2>
+<p><strong>Fark, harfin sabit tabloya mı sınıfa mı göre belirlendiğidir.</strong></p>
+<table class="bilgi-tablosu">
+<caption>Değerlendirme sistemleri karşılaştırması</caption>
+<thead><tr><th></th><th>Mutlak</th><th>Bağıl (Çan Eğrisi)</th></tr></thead>
+<tbody>
+<tr><td>Harf neye göre?</td><td>Sabit aralık tablosu</td><td>Sınıf ortalaması ve dağılımı (z/T)</td></tr>
+<tr><td>70 puan</td><td>Her zaman CC (yaygın)</td><td>Sınıfa göre AA da olur CC de</td></tr>
+<tr><td>Strateji</td><td>Hedef nota odaklan</td><td>Sınıf içindeki konumuna odaklan</td></tr>
+<tr><td>Doğru araç</td><td><a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a></td><td>Bu sayfa</td></tr>
+</tbody>
+</table>
+
+<h2>İpuçları</h2>
+<ul>
+<li>Dersin çan eğrisiyle mi yoksa mutlak sistemle mi değerlendirildiğini dönem başında ders izlencesinden öğren.</li>
+<li>Eğri varsa mutlak nota değil konuma odaklan: ortalamanın 1 sapma üstü genelde üst harfleri getirir.</li>
+<li>Sınıf ortalamasını ve sapmayı öğrenmeden harf tahmini yapma.</li>
+<li>T→harf aralıklarını okulunun senato kararından teyit et; bu sayfadaki aralıklar örnektir.</li>
+</ul>
 
       <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>Çan eğrisi nedir?</summary><p>Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50.</p></details>
-        <details><summary>Aynı not farklı derste farklı harf getirir mi?</summary><p>Evet, çan eğrisinde bu normaldir. Kolay sınavda sınıf ortalaması yüksekse 70 puan düşük harf getirebilir; zor sınavda aynı 70 yüksek harf getirebilir.</p></details>
-        <details><summary>T puanından harfe nasıl geçilir?</summary><p>Her üniversitenin senatosu T aralıklarını kendisi belirler; ulusal tek tablo yoktur. Bu araçtaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir ve düzenlenebilir.</p></details>
-        <details><summary>Standart sapma neyi gösterir?</summary><p>Sınıfın notlarının ortalamadan ne kadar dağıldığını gösterir. Sapma büyükse notlar yaygındır, küçükse herkes birbirine yakındır.</p></details>
-        <details><summary>z puanı negatifse ne olur?</summary><p>Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altında olduğunu gösterir; T puanın 40 olur.</p></details>
+        <details><summary>z puanı nasıl hesaplanır?</summary><p>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma. Örneğin notun 70, ortalama 55, sapma 10 ise z = 1,5 olur; yani ortalamanın 1,5 sapma üstündesin.</p></details>
+        <details><summary>T puanı ne anlama gelir?</summary><p>T = 10 × z + 50; z'yi 50 ortalamalı bir ölçeğe taşır. Sınıf ortalaması her zaman T=50'dir; T=65, ortalamanın 1,5 sapma üstü demektir. Farklı dersler bu ölçekte kıyaslanır.</p></details>
+        <details><summary>Aynı not farklı derste farklı harf getirir mi?</summary><p>Evet, çan eğrisinde bu normaldir. 70 puan, ortalaması 55 olan sınıfta AA getirirken ortalaması 75 olan sınıfta CC getirir. Harf sınıfa göre belirlenir, ham puana göre değil.</p></details>
+        <details><summary>Sınıf ortalaması çok yüksekse ne olur?</summary><p>Yüksek ortalama, eğriyi yukarı taşır: iyi ham puanlar bile vasat harf getirebilir. Örneğin ortalama 75, sapma 10 iken 70 puan z=−0,5 ve T=45 olur; örnek aralıkta CC demektir.</p></details>
+        <details><summary>Dersimde çan eğrisi var mı, nasıl öğrenirim?</summary><p>Ders izlencesine bak; değerlendirme bölümünde 'bağıl değerlendirme' yazıyorsa çan uygulanır. Yazmıyorsa hocana ya da öğrenci işlerine sor.</p></details>
+        <details><summary>Sınıf mevcudu azsa çan uygulanır mı?</summary><p>Genelde hayır. Bağıl değerlendirme istatistiksel anlamlılık için yeterli mevcuda ihtiyaç duyar; yaygın kural 30 kişinin altındaki sınıflarda mutlak sisteme dönülmesidir.</p></details>
+        <details><summary>Final barajı çan eğrisini ezer mi?</summary><p>Okulun final barajı varsa eğri onu kaldırmaz: barajın altındaki not eğriye girmeden FF olur. Uygulama yönergeye göre değişir; kesin kuralı öğrenci işlerinden öğren.</p></details>
+        <details><summary>z puanım negatifse ne olur?</summary><p>Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altı demektir; T puanın 40 olur.</p></details>
         <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
       </section>
     </article>

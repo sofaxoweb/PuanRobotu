@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OBP Hesaplama | PuanRobotu</title>
-<meta name="description" content="OBP hesaplama: diploma notunu gir, Ortaöğretim Başarı Puanını (250-500) ve YKS yerleştirme puanına katkısını öğren. Kırık OBP dahil, ücretsiz.">
+<meta name="description" content="OBP hesaplama: diploma notunu gir, Ortaöğretim Başarı Puanını (250-500) ve YKS yerleştirme puanına katkısını öğren. Kırık OBP ve net karşılığı dahil, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/yks/obp-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="OBP Hesaplama | PuanRobotu">
-<meta property="og:description" content="Diploma notundan OBP'ni ve YKS yerleştirme puanına katkısını anında hesapla.">
+<meta property="og:description" content="Diploma notundan OBP'ni, yerleştirme katkısını ve net karşılığını anında hesapla.">
 <meta property="og:url" content="https://puanrobotu.com/yks/obp-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,13 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "OBP nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "OBP (Ortaöğretim Başarı Puanı), diploma notunun (100'lük sistem) 5 katıdır. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. OBP 250–500 aralığındadır."}},
-    {"@type": "Question", "name": "OBP YKS puanına nasıl eklenir?", "acceptedAnswer": {"@type": "Answer", "text": "Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Yani OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı her puan türünde aynıdır."}},
-    {"@type": "Question", "name": "Kırık OBP nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir önceki yıl YKS ile herhangi bir yükseköğretim programına yerleşen adayların OBP katsayısı, ertesi yıl yarıya iner: ×0,06. Örneğin OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer."}},
-    {"@type": "Question", "name": "Kırık OBP ne zaman uygulanmaz?", "acceptedAnswer": {"@type": "Answer", "text": "Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak kırık OBP'ye yol açmaz. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir."}},
-    {"@type": "Question", "name": "5'lik sistemdeki diploma notumla OBP hesaplayabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, doğrudan çeviremezsin. Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin; basit bir ×20 çarpımı doğru sonuç vermez."}},
-    {"@type": "Question", "name": "OBP en fazla kaç puan getirir?", "acceptedAnswer": {"@type": "Answer", "text": "Diploma notu 100 olan birinin OBP'si 500'dür ve yerleştirme puanına en fazla 60 puan ekler (kırık OBP'de en fazla 30 puan)."}} ,
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "OBP nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>OBP = Diploma Notu × 5.</strong> Diploma notu 100'lük sistemde 50–100 aralığındadır; OBP 250–500 aralığında çıkar. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. Bu formül resmi kılavuzda yazar; tahmin değil, kesin kuraldır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OBP YKS puanına nasıl eklenir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Yerleştirme = Sınav Puanı + OBP × 0,12.</strong> OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı TYT, SAY, EA, SÖZ ve DİL puan türlerinin tamamında aynıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kırık OBP nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Bir önceki yıl bir programa yerleşen adayın OBP katsayısının yarıya inmesidir: ×0,06.</strong> OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer. Kayıp 23,4 puan, yaklaşık 7 TYT netine denktir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kırık OBP ne zaman uygulanmaz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Yerleşme gerçekleşmediyse uygulanmaz.</strong> Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak katsayıyı düşürmez. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5'lik sistemdeki diploma notumla OBP hesaplayabilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır, doğrudan çeviremezsin.</strong> Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin. 5'lik notu 20 ile çarpmak yalnızca yaklaşık bir değer verir; resmi işlemde okulun dönüşüm tablosu geçerlidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OBP en fazla kaç puan getirir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>En fazla 60 puan.</strong> Diploma notu 100 olanın OBP'si 500'dür; katkı 500 × 0,12 = 60 puandır. Kırık OBP durumunda tavan 30 puana iner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Diploma notum 50'nin altındaysa ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>50 sayılır.</strong> Diploma notu bildirilmeyen veya 50'nin altında olan notlar, ÖSYM hesaplamasında 50 kabul edilir; yani en düşük OBP 250, en düşük katkı 30 puandır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OBP kaç nete denk gelir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Diploma notundaki 10 puanlık fark, yaklaşık 1,8 TYT netine denktir.</strong> 10 diploma notu = 6 yerleştirme puanı; TYT'de 1 net ortalama 3,3 puan getirdiğinden 6 ÷ 3,3 ≈ 1,8 net eder. AYT'de katsayılar daha yüksek olduğundan denk net sayısı daha düşüktür; tam tablo aşağıdaki \"OBP Kaç Nete Denk Gelir?\" bölümündedir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Okul birinciliği OBP'yi etkiler mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>OBP formülünü değiştirmez; ancak kontenjan avantajı sağlar.</strong> Okul birincileri, bazı programlardaki özel kontenjanlardan yararlanır. Bu kontenjanların taban puanları genel kontenjana göre farklı oluşur; detay her yıl ÖSYM kılavuzunda açıklanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,10 +142,11 @@
     <div class="wrap">
       <p class="kicker">YKS 2026 hazırlık</p>
       <h1>OBP Hesaplama</h1>
-      <p class="lede">Diploma notunu gir; <strong>OBP'ni (250–500)</strong> ve <strong>YKS yerleştirme puanına katkısını</strong> anında öğren. Kırık OBP durumunu da hesaba katar.</p>
+      <p class="lede">OBP, diploma notunun 5 katıdır ve YKS yerleştirme puanına <strong>0,12 katsayısıyla</strong> eklenir. Aşağıdaki araca diploma notunu gir; <strong>OBP'ni (250–500)</strong>, <strong>puan katkını</strong> ve <strong>kırık OBP</strong> durumundaki kaybını anında gör.</p>
       <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
 
   <div class="wrap sayfa-iki-sutun">
   <article>
@@ -119,67 +193,156 @@
   <div class="tahmin-notu">
     <strong>Önemli:</strong> OBP formülü resmîdir (diploma notu × 5); ancak yerleştirme puanının tamamı sınav puanına da bağlıdır ve o <strong>tahminidir</strong>. Gerçek yerleştirme puanın ÖSYM sonuç ekranında açıklanır.
   </div>
-
   <section class="wrap content">
-    <h2>OBP Nasıl Hesaplanır?</h2>
-    <p><strong>OBP = Diploma Notu × 5.</strong> Diploma notun 100'lük sistemde 50 ile 100 arasındadır; dolayısıyla OBP 250–500 aralığında çıkar. Bu formül MEB ve ÖSYM kılavuzlarında açıkça yazar — tahmin değil, kesin kuraldır.</p>
-    <h3>Yerleştirme puanına katkısı</h3>
-    <p><strong>Yerleştirme Puanı = Sınav Puanı + OBP × 0,12.</strong> Katkı her puan türünde (TYT, SAY, EA, SÖZ, DİL) aynıdır. Diploma notu 78 olan birinin OBP'si 390, katkısı 46,8 puandır. En yüksek katkı: diploma 100 → OBP 500 → +60 puan.</p>
-    <h3>Kırık OBP</h3>
-    <p>Bir önceki yıl merkezi yerleştirme, açıköğretim veya özel yetenekle <strong>herhangi bir programa yerleşen</strong> adayda katsayı yarıya iner: <strong>×0,06</strong>. OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer — yaklaşık 23 puanlık kayıp, on binlerce sıra demektir. Sadece tercih yapıp yerleşememek veya mezuna kalmak kırık OBP yapmaz; yalnızca takip eden yıl için geçerlidir.</p>
+    <h2>Öne Çıkanlar</h2>
+    <ul>
+      <li><strong>OBP = Diploma Notu × 5</strong> (250–500 aralığı); yerleştirme puanına <strong>OBP × 0,12</strong> olarak eklenir.</li>
+      <li><strong>Diploma notundaki 10 puanlık fark ≈ 1,8 TYT netine denktir</strong> — lise notları sınavdan önce kazanılmış puandır.</li>
+      <li><strong>Kırık OBP:</strong> geçen yıl yerleşenlerde katsayı ×0,06'ya iner; 23,4 puana kadar kayıp demektir.</li>
+      <li><strong>50'nin altındaki diploma notu 50 sayılır;</strong> 5'lik sistem notunu 20 ile çarpmak resmi karşılık değildir.</li>
+      <li><strong>OBP formülü kesindir</strong> — tahmin değil, resmi kuraldır.</li>
+    </ul>
+  </section>
+  <section class="wrap content">
+    <h2>OBP Nedir?</h2>
+    <p><strong>OBP (Ortaöğretim Başarı Puanı), lise diploma notunun YKS yerleştirme puanına yansıyan halidir.</strong> Diploma notu 100'lük sistemde 5 ile çarpılarak 250–500 aralığına taşınır; bu değer 0,12 katsayısıyla yerleştirme puanına eklenir. OBP, sınavdan önce belirlenmiş bir değişkendir: lise boyunca alınan notlar, sınav gününe taşınan hazır puandır.</p>
+    <!-- [IMAGE: OBP oluşum şeması — diploma notu ×5 → OBP → ×0,12 → yerleştirme puanı. Alt: "OBP nasıl oluşur şema"] -->
 
-    <h2>Çalışılmış Örnek</h2>
-    <p>Diploma notu 78 olan bir öğrenci (MEB'in resmî örneğindeki sayılar):</p>
+    <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+    <p><strong>Resmi formülü adım adım uygular; tahmin içermez.</strong> OBP hesabı standart puan gibi istatistiğe dayanmaz — doğrudan aritmetiktir.</p>
+    <h3>Adım 1 — OBP'yi bul</h3>
+    <p><strong>OBP = Diploma Notu × 5.</strong> Diploma notun 78 ise OBP'n 390'dır. Aralık 250–500'dür.</p>
+    <h3>Adım 2 — Katkıyı hesapla</h3>
+    <p><strong>Katkı = OBP × 0,12</strong> (normal) veya <strong>OBP × 0,06</strong> (kırık OBP). OBP'si 390 olan biri normalde 46,8 puan alır.</p>
+    <h3>Adım 3 — Sonucu yerleştirme bağlamına koy</h3>
+    <p>Katkı, sınav puanına eklenerek yerleştirme puanını oluşturur. Bu araç ayrıca kaybı net cinsinden gösterir; böylece OBP'nin gerçek ağırlığını görürsün.</p>
+
+    <h2>Formül ve Çalışılmış Örnek</h2>
+    <p><strong>Formüller:</strong> OBP = Diploma Notu × 5 · Katkı = OBP × 0,12 (kırıkta × 0,06).</p>
+    <p>Diploma notu 78 olan bir öğrenci:</p>
     <ul>
       <li>OBP = 78 × 5 = <strong>390</strong></li>
       <li>Normal katkı = 390 × 0,12 = <strong>46,8 puan</strong></li>
       <li>Geçen yıl yerleşmiş olsaydı (kırık): 390 × 0,06 = <strong>23,4 puan</strong></li>
     </ul>
+    <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
-    <h2>İpuçları</h2>
+    <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+    <ol>
+      <li><strong>Yaz:</strong> 100'lük sistemdeki diploma notunu (50–100) gir.</li>
+      <li><strong>İşaretle:</strong> Geçen yıl merkezi yerleştirme ile bir programa yerleştiysen "Kırık OBP" kutusunu işaretle.</li>
+      <li><strong>Bas:</strong> "Hesapla" düğmesine bas; OBP'n ve yerleştirme katkın görünür.</li>
+      <li><strong>Karşılaştır:</strong> Sonucu <a href="../puan-hesaplama/">YKS puan hesaplama</a> aracındaki sınav puanınla topla; toplam yerleştirme puanını bul.</li>
+    </ol>
+
+    <h2>Sonucunu Nasıl Okumalısın?</h2>
+    <p><strong>Diploma notun, sınavdan önce cebinde duran puandır; tablo aralıkları gösterir.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Diploma notuna göre OBP ve katkı</caption>
+      <thead><tr><th scope="col">Diploma Notu</th><th scope="col">OBP</th><th scope="col">Katkı (×0,12)</th><th scope="col">Kırık Katkı (×0,06)</th></tr></thead>
+      <tbody>
+        <tr><td>50</td><td>250</td><td>30,0</td><td>15,0</td></tr>
+        <tr><td>60</td><td>300</td><td>36,0</td><td>18,0</td></tr>
+        <tr><td>70</td><td>350</td><td>42,0</td><td>21,0</td></tr>
+        <tr><td>78</td><td><strong>390</strong></td><td><strong>46,8</strong></td><td><strong>23,4</strong></td></tr>
+        <tr><td>85</td><td>425</td><td>51,0</td><td>25,5</td></tr>
+        <tr><td>90</td><td>450</td><td>54,0</td><td>27,0</td></tr>
+        <tr><td>100</td><td>500</td><td>60,0</td><td>30,0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>OBP Kaç Nete Denk Gelir?</h2>
+    <p><strong>Diploma notundaki 10 puanlık fark, 6 yerleştirme puanına denktir.</strong> Bu 6 puanın net karşılığı puan türüne göre değişir; çünkü her testin katsayısı farklıdır.</p>
+    <table class="bilgi-tablosu">
+      <caption>10 diploma notu farkının (≈6 puan) net karşılığı</caption>
+      <thead><tr><th scope="col">Puan Türü</th><th scope="col">1 Net ≈ Kaç Puan</th><th scope="col">6 Puan ≈ Kaç Net</th></tr></thead>
+      <tbody>
+        <tr><td><strong>TYT</strong></td><td>3,3</td><td>≈ 1,8 net</td></tr>
+        <tr><td><strong>SAY</strong></td><td>3,0 (AYT Mat)</td><td>≈ 2,0 net</td></tr>
+        <tr><td><strong>EA</strong></td><td>3,0 (AYT Mat/Ede)</td><td>≈ 2,0 net</td></tr>
+        <tr><td><strong>SÖZ</strong></td><td>3,0 (Edebiyat)</td><td>≈ 2,0 net</td></tr>
+        <tr><td><strong>DİL</strong></td><td>3,0 (YDT)</td><td>≈ 2,0 net</td></tr>
+      </tbody>
+    </table>
+    <p>Stratejik anlamı: lise son sınıfta diploma notunu 80'den 90'a çıkarmak, sınava yaklaşık 2 net önde başlamak demektir. Diploma notu 60 ile 100 arasındaki 24 puanlık fark, AYT'de yaklaşık 7–8 net değerindedir.</p>
+
+    <h2>Kırık OBP'nin Gerçek Maliyeti</h2>
+    <p><strong>"Önce bir yere yerleşeyim, seneye tekrar denerim" planı 23,4 puana kadar mal olur.</strong> Diploma notu 78 olan birinde katkı 46,8'den 23,4'e düşer; bu kayıp ≈ 7 TYT netine denktir.</p>
+    <p>Karar çerçevesi üç sorudan oluşur: (1) Yerleştiğin programı gerçekten istemiyor musun? (2) Kaybı telafi edecek +7 netlik artışı gerçekçi mi? (3) Bir yıl bekleyip mezuna kalmak, kırık OBP'den daha mı az maliyetli? Üçüncü seçenek — hiç yerleşmeden mezuna kalmak — katsayıyı düşürmez. Bu hesabı yerleşmeden önce yap; sonra değil.</p>
+
+    <h2>5'lik Sistem Tuzağı ve 50 Kuralı</h2>
+    <p><strong>5'lik notu 20 ile çarpmak resmi karşılık değildir.</strong> Okulların 5'lik sistemden 100'lük sisteme dönüşüm tabloları farklıdır; ÖSYM, okulun bildirdiği resmi 100'lük notu kullanır. Yanlış dönüşümle hesaplanan OBP, gerçek katkıdan sapar.</p>
+    <p>50 kuralı: diploma notu bildirilmeyen veya 50'nin altında olan notlar 50 sayılır. En düşük OBP 250, en düşük katkı 30 puandır; sıfır OBP diye bir şey yoktur.</p>
+
+    <h2>Sınırlamalar</h2>
     <ul>
-      <li><strong>OBP her yıl işler:</strong> Diploma notun 9. sınıftan itibaren oluşur; son yıl "nasıl olsa YKS var" diye salmak OBP'ni düşürür.</li>
-      <li><strong>Okul birinciliği avantajı:</strong> Okul birincilerine ek kontenjan avantajı vardır; detaylar her yıl kılavuzda açıklanır.</li>
-      <li><strong>Kırık OBP hesabı:</strong> "Önce bir yere yerleşeyim, seneye tekrar denerim" planı yapıyorsan kaybı önceden hesapla — <a href="../puan-hesaplama/">YKS Puan Hesaplama</a> aracında kırık OBP seçeneği de var.</li>
+      <li><strong>OBP kesindir; toplam puan tahminidir:</strong> OBP formülü resmi ve nettir, ancak yerleştirme puanının sınav ayağı tahmini olduğundan toplam sonuç da tahmini kalır.</li>
+      <li><strong>Okul verisine bağımlı:</strong> Hesaplamada esas alınan not, okulun ÖSYM'ye bildirdiği resmi diploma notudur; karnendeki dönemlik ortalamalar değil.</li>
+      <li><strong>Kılavuz her yıl teyit edilir:</strong> 0,12 katsayısı yıllardır sabit; ancak kesin kural her yıl ÖSYM kılavuzunda yazandır.</li>
     </ul>
+
+    <h2>OBP ve Benzer Kavramlar</h2>
+    <p><strong>OBP'yi benzer ad taşıyan kavramlarla karıştırmamak gerekir.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Kavram karşılaştırması</caption>
+      <thead><tr><th scope="col">Kavram</th><th scope="col">Nedir</th><th scope="col">OBP'den Farkı</th></tr></thead>
+      <tbody>
+        <tr><td><strong>OBP</strong></td><td>Diploma notu × 5 (250–500)</td><td>–</td></tr>
+        <tr><td><strong>Ek puan</strong></td><td>Meslek lisesi mezunlarına bazı programlarda eklenen puan</td><td>OBP'ye ek olarak, yalnızca tanımlı programlarda uygulanır</td></tr>
+        <tr><td><strong>Okul birinciliği kontenjanı</strong></td><td>Okul birincilerine ayrılan özel kontenjan</td><td>Puanı değiştirmez; ayrı kontenjan havuzu açar</td></tr>
+      </tbody>
+    </table>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
       <details>
         <summary>OBP nasıl hesaplanır?</summary>
-        <p>OBP (Ortaöğretim Başarı Puanı), diploma notunun (100'lük sistem) 5 katıdır. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. OBP 250–500 aralığındadır.</p>
+        <p><strong>OBP = Diploma Notu × 5.</strong> Diploma notu 100'lük sistemde 50–100 aralığındadır; OBP 250–500 aralığında çıkar. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. Bu formül resmi kılavuzda yazar; tahmin değil, kesin kuraldır.</p>
       </details>
       <details>
         <summary>OBP YKS puanına nasıl eklenir?</summary>
-        <p>Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Yani OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı her puan türünde aynıdır.</p>
+        <p><strong>Yerleştirme = Sınav Puanı + OBP × 0,12.</strong> OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı TYT, SAY, EA, SÖZ ve DİL puan türlerinin tamamında aynıdır.</p>
       </details>
       <details>
         <summary>Kırık OBP nedir?</summary>
-        <p>Bir önceki yıl YKS ile herhangi bir yükseköğretim programına yerleşen adayların OBP katsayısı, ertesi yıl yarıya iner: ×0,06. Örneğin OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer.</p>
+        <p><strong>Bir önceki yıl bir programa yerleşen adayın OBP katsayısının yarıya inmesidir: ×0,06.</strong> OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer. Kayıp 23,4 puan, yaklaşık 7 TYT netine denktir.</p>
       </details>
       <details>
         <summary>Kırık OBP ne zaman uygulanmaz?</summary>
-        <p>Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak kırık OBP'ye yol açmaz. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir.</p>
+        <p><strong>Yerleşme gerçekleşmediyse uygulanmaz.</strong> Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak katsayıyı düşürmez. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir.</p>
       </details>
       <details>
         <summary>5'lik sistemdeki diploma notumla OBP hesaplayabilir miyim?</summary>
-        <p>Hayır, doğrudan çeviremezsin. Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin; basit bir ×20 çarpımı doğru sonuç vermez.</p>
+        <p><strong>Hayır, doğrudan çeviremezsin.</strong> Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin. 5'lik notu 20 ile çarpmak yalnızca yaklaşık bir değer verir; resmi işlemde okulun dönüşüm tablosu geçerlidir.</p>
       </details>
       <details>
         <summary>OBP en fazla kaç puan getirir?</summary>
-        <p>Diploma notu 100 olan birinin OBP'si 500'dür ve yerleştirme puanına en fazla 60 puan ekler (kırık OBP'de en fazla 30 puan).</p>
+        <p><strong>En fazla 60 puan.</strong> Diploma notu 100 olanın OBP'si 500'dür; katkı 500 × 0,12 = 60 puandır. Kırık OBP durumunda tavan 30 puana iner.</p>
+      </details>
+      <details>
+        <summary>Diploma notum 50'nin altındaysa ne olur?</summary>
+        <p><strong>50 sayılır.</strong> Diploma notu bildirilmeyen veya 50'nin altında olan notlar, ÖSYM hesaplamasında 50 kabul edilir; yani en düşük OBP 250, en düşük katkı 30 puandır.</p>
+      </details>
+      <details>
+        <summary>OBP kaç nete denk gelir?</summary>
+        <p><strong>Diploma notundaki 10 puanlık fark, yaklaşık 1,8 TYT netine denktir.</strong> 10 diploma notu = 6 yerleştirme puanı; TYT'de 1 net ortalama 3,3 puan getirdiğinden 6 ÷ 3,3 ≈ 1,8 net eder. AYT'de katsayılar daha yüksek olduğundan denk net sayısı daha düşüktür; tam tablo aşağıdaki "OBP Kaç Nete Denk Gelir?" bölümündedir.</p>
+      </details>
+      <details>
+        <summary>Okul birinciliği OBP'yi etkiler mi?</summary>
+        <p><strong>OBP formülünü değiştirmez; ancak kontenjan avantajı sağlar.</strong> Okul birincileri, bazı programlardaki özel kontenjanlardan yararlanır. Bu kontenjanların taban puanları genel kontenjana göre farklı oluşur; detay her yıl ÖSYM kılavuzunda açıklanır.</p>
       </details>
       <details>
         <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
-        <p>Hayır. Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz.</p>
+        <p><strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz.</p>
       </details>
     </div>
 
     <h2>Sonraki Adımlar</h2>
     <ul>
-      <li><a href="../puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — OBP katkın dahil tahmini ham ve yerleştirme puanlarını hesapla</li>
-      <li><a href="../tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
+      <li><a href="../puan-hesaplama/"><strong>YKS puan hesaplama</strong></a> — OBP katkın dahil tahmini ham ve yerleştirme puanlarını hesapla</li>
+      <li><a href="../tercih-robotu/"><strong>YKS tercih robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
     </ul>
+    <!-- [IMAGE: OBP katkı tablosu infografik (diploma notu → OBP → katkı). Alt: "OBP katkı tablosu"] -->
   </section>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-obp" aria-label="Aynı kategorideki araçlar"></aside>

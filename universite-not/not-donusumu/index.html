@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>4,00 – 100 Not Dönüşümü | PuanRobotu</title>
-<meta name="description" content="YÖK resmi tablosuyla 4,00'lük notunu 100'lük sisteme çevir — ya da tersini. İki yönlü, enterpolasyonlu, ücretsiz not dönüşümü aracı.">
+<meta name="description" content="YÖK tablosuyla 4,00'lük notunu 100'lük sisteme çevir: çift yönlü dönüştürücü, hangi tablo kime uygun, yanlış formül uyarısı. Ücretsiz, anında ve doğru sonuç.">
 <link rel="canonical" href="https://puanrobotu.com/universite-not/not-donusumu/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="4,00 – 100 Not Dönüşümü | PuanRobotu">
-<meta property="og:description" content="YÖK resmi tablosuyla 4,00'lük notu 100'lük sisteme çevir — ya da tersini. Çift yönlü, ücretsiz.">
+<meta property="og:description" content="YÖK tablosuyla 4,00'lük notunu 100'lük sisteme çevir: çift yönlü, enterpolasyonlu ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/universite-not/not-donusumu/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "4,00'lük not 100'lük sisteme nasıl çevrilir?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK'ün resmi dönüşüm tablosuna göre birebir karşılık bulunur; tabloda olmayan ara değerler doğrusal enterpolasyonla hesaplanır. Örneğin 3,50 → 88,33."}},
-    {"@type": "Question", "name": "Bu tabloyu kim hazırladı?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK'ün yayımladığı resmi not dönüşüm tablosudur. Bazı üniversiteler kendi tablolarını kullanır; başvuru yapacağın kurumun istediği tabloyu teyit et."}},
-    {"@type": "Question", "name": "3,55 gibi ara değerler nasıl hesaplanıyor?", "acceptedAnswer": {"@type": "Answer", "text": "Tablonun iki komşu satırı arasında doğrusal enterpolasyon yapılır: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır ve 89,50 bulunur."}},
-    {"@type": "Question", "name": "100'lük notu 4,00'e çevirmek neden gerekli?", "acceptedAnswer": {"@type": "Answer", "text": "KPSS, ALES, yüksek lisans ve bazı iş başvuruları 100'lük sistem ister; diploma notun 4,00'lükse bu araçla resmi karşılığını bulursun."}},
-    {"@type": "Question", "name": "1,00'ın altı neden çevrilmiyor?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK tablosu 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; bu aralığın dışı tablo dışıdır ve araç uydurma değer üretmez."}},
-    {"@type": "Question", "name": "Girdiğim not bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "4,00'lük not 100'lük sisteme nasıl çevrilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YÖK'ün resmi dönüşüm tablosuna göre birebir karşılık bulunur; tabloda olmayan ara değerler doğrusal enterpolasyonla hesaplanır. Örneğin 3,50 → 88,33."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bu tabloyu kim hazırladı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YÖK'ün yayımladığı resmi not dönüşüm tablosudur. Bazı üniversiteler kendi tablolarını kullanır; başvuru yapacağın kurumun istediği tabloyu teyit et."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3,55 gibi ara değerler nasıl hesaplanıyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tablonun iki komşu satırı arasında doğrusal enterpolasyon yapılır: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır ve 89,50 bulunur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2,00 kaç puan olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YÖK tablosuna göre 2,00 → 53,33. Dikkat: bazı üniversite tablolarında 2,00 → 62,50'dir; başvurunun hangi tabloyu istediğini kontrol et."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "(Not−2)×20+60 formülü doğru mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Bu formül yalnızca 4,00'da doğru sonuç verir; 2,00'da 60 gösterirken resmi karşılık 53,33'tür. 2,00–3,00 bandında 3–7 puan yüksek gösterir; tabloyu kullan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi başvuruda hangi tablo kullanılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KPSS, ALES ve ÖSYM başvurularında YÖK tablosu; kendi üniversitenin iç işlemlerinde üniversitenin senato tablosu geçerlidir. İlan metni 'YÖK dönüşüm tablosu' diyorsa bu sayfadaki tabloyu kullan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "100'lük notu 4,00'e çevirmek neden gerekli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KPSS, ALES, yüksek lisans ve bazı iş başvuruları 100'lük sistem ister; diploma notun 4,00'lükse bu araçla resmi karşılığını bulursun."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "1,00'ın altı neden çevrilmiyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YÖK tablosu 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; bu aralığın dışı tablo dışıdır ve araç uydurma değer üretmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yuvarlama nasıl yapılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tablodaki değeri aynen kullan; kendi yuvarlamanı yapma. 88,33 ile 88,5 aynı şey değildir ve başvuru formunda resmi değer esastır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim not bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +143,8 @@
     <article>
       <p class="kicker">📝 Üniversite Notları</p>
       <h1>4,00 – 100 Not Dönüşümü</h1>
-      <p class="lede">YÖK'ün <strong>resmi dönüşüm tablosuna</strong> göre 4,00'lük notunu 100'lük sisteme çevir — ya da tersini. İki yönlü, ara değerlerde enterpolasyonlu.</p>
+      <p class="lede">Not dönüşümü, <strong>4,00'lük notunun YÖK'ün resmi tablosundaki 100'lük karşılığını bulmaktır</strong>: örneğin 3,50 → 88,33. Notunu yaz, çift yönlü sonucu anında gör.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -96,36 +171,116 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>Nasıl Hesaplanır?</h2>
-      <p>YÖK'ün not dönüşüm tablosu, 4,00'lük sistemdeki her değerin 100'lük karşılığını verir. Tabloda birebir yazmayan ara değerler (ör. 3,55), iki komşu satır arasında <strong>doğrusal enterpolasyonla</strong> bulunur — bu, tablonun kendi mantığıyla tutarlıdır çünkü satırlar arası artış neredeyse sabittir (0,01 başına ≈ 0,23).</p>
-      <p>Tablo 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar. Bu aralığın dışındaki değerler için araç sonuç üretmez; uydurma değer vermek yerine tablo dışını açıkça belirtir.</p>
+<div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
+<ul>
+<li><strong>3,50 (4,00'lük) = 88,33 (100'lük).</strong> Dönüşüm YÖK'ün resmi tablosuyla yapılır; "×25" çarpımı yanlıştır.</li>
+<li>Tabloda yazmayan ara değerler (3,55 gibi) iki komşu satır arasında <strong>doğrusal enterpolasyonla</strong> bulunur.</li>
+<li><strong>(Not−2)×20+60 formülü yanlıştır:</strong> 2,00'da 6,67 puan saptırır — aşağıdaki hata tablosuna bak.</li>
+<li>ÖSYM/KPSS başvurularında YÖK tablosu; okul içi işlerde üniversitenin kendi tablosu geçerlidir.</li>
+<li>Tablo 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; dışındaki değerler çevrilmez.</li>
+</ul>
+</div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>GANO'n 3,50 olsun ve KPSS başvurusu için 100'lük karşılığını öğrenmek iste:</p>
-      <ul>
-        <li>Tabloda 3,50 satırı: <strong>88,33</strong> → birebir karşılık.</li>
-        <li>Tersi de çalışır: 88,33 yaz → <strong>3,50</strong> bulunur.</li>
-        <li>Ara değer: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır → <strong>89,50</strong>.</li>
-      </ul>
-      <p>Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+<h2>Not Dönüşümü Nedir?</h2>
+<p><strong>Not dönüşümü, 4,00'lük sistemdeki bir notun 100'lük sistemdeki resmi karşılığını (veya tersini) YÖK'ün yayımladığı tabloya göre bulma işlemidir.</strong> Türkiye'de transkriptler 4,00'lük sistemle tutulur; ama KPSS, ALES ve birçok iş başvurusu 100'lük değer ister.</p>
+<p>Dönüşüm doğrusal değildir: 4,00 → 100 iken 2,00 → 53,33'tür ("×25" çarpımı 50 verirdi — yanlış). Bu yüzden ezber formüller değil, resmi tablo kullanılır.</p>
+<p>Kilit satırlar: 4,00 → 100,00 · 3,50 → 88,33 · 3,00 → 76,66 · 2,50 → 65,00 · 2,00 → 53,33 · 1,00 → 30,00.</p>
 
-      <h2>YÖK Tablosu (Kilit Satırlar)</h2>
-      <table class="bilgi-tablosu" id="yok-tablo">
-        <caption>YÖK resmi not dönüşüm tablosu — kilit satırlar</caption>
-      </table>
+<h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+<p><strong>Notunu YÖK tablosundaki satırlarla eşleştirir; birebir karşılık yoksa iki komşu satır arasında doğrusal enterpolasyon yapar.</strong> Her iki yön de desteklenir: 4,00 → 100 ve 100 → 4,00.</p>
+<p>Enterpolasyonun mantığı: tablo satırları arasındaki artış neredeyse sabittir (0,01 başına ≈ 0,23). Örneğin 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır → <strong>89,50</strong>.</p>
+<p>Tablo 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar. Bu aralığın dışındaki değerler için araç sonuç üretmez; uydurma değer vermek yerine tablo dışını açıkça belirtir.</p>
 
-      <h2>İpuçları</h2>
-      <ul>
-        <li>Başvuruda istenen tabloyu teyit et: YÖK tablosu ile üniversitenin kendi tablosu farklı sonuç verebilir.</li>
-        <li>Yuvarlama farklarına dikkat: 88,33 ile 88,5 aynı şey değildir; transkriptindeki resmi değeri kullan.</li>
-        <li>ALES/KPSS gibi sınavlarda puan türü hesaplanırken 100'lük karşılığın kullanıldığını unutma.</li>
-      </ul>
+<h2>Formül ve Çalışılmış Örnek</h2>
+<p><strong>GANO'n 3,50 ise KPSS başvurusu için 100'lük karşılığı 88,33'tür.</strong></p>
+<ul>
+<li>Tabloda 3,50 satırı: <strong>88,33</strong> → birebir karşılık.</li>
+<li>Tersi de çalışır: 88,33 yaz → <strong>3,50</strong> bulunur.</li>
+<li>Ara değer: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır → <strong>89,50</strong>.</li>
+</ul>
+<p>Bu örneği yukarıdaki araca girerek doğrulayabilirsin. "3,50 × 25 = 87,5" hesabının 0,83 puan saptığına dikkat et — küçük farklar sıralamada büyük fark yaratır.</p>
 
-      <h2>Sonraki Adımlar</h2>
-      <ul>
-        <li>Henüz GANO'nu hesaplamadıysan <a href="../gano-hesaplama/">GANO Hesaplama</a> aracıyla 4,00'lük ortalamanı bul, sonra buraya yaz.</li>
-        <li>100'lük notlarının harf karşılıkları için <a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracına bak.</li>
-      </ul>
+<h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+<ol>
+<li><strong>Yönü seç.</strong> 4,00 → 100 veya 100 → 4,00 dönüşüm yönünü belirle.</li>
+<li><strong>Notunu yaz.</strong> Ondalık değer girebilirsin (3,55 gibi).</li>
+<li><strong>Sonucu oku.</strong> Birebir karşılık veya enterpolasyon sonucu görünür; hangi yöntemin kullanıldığı belirtilir.</li>
+<li><strong>Tablo dışı uyarısına dikkat et.</strong> 1,00'ın altı veya 4,00'ın üstü değerlerde araç sonuç üretmez.</li>
+</ol>
+
+<h2>Sonucunu Nasıl Okursun?</h2>
+<p><strong>Sonuç, YÖK tablosundaki resmi karşılıktır; başvuru formuna olduğu gibi yazılır.</strong> Üç kritik nokta:</p>
+<ul>
+<li><strong>Yuvarlama:</strong> 88,33 ile 88,5 aynı şey değildir. Formda tablodaki değeri aynen kullan; kendi yuvarlamanı yapma.</li>
+<li><strong>Transkript değeri:</strong> Bazı okullar transkripte dönüşümü kendisi yazar; öyleyse formdaki değerle çakışmalıdır.</li>
+<li><strong>Ara değer işareti:</strong> Enterpolasyonla bulunan sonuçlar tablonun mantığıyla tutarlıdır; ama resmiyette "hesaplanmış değer" olduğunu bil.</li>
+</ul>
+
+<h2>Hangi Tablo Sana Uygun? YÖK vs Üniversite Tabloları</h2>
+<p><strong>Tek "doğru" tablo yoktur; doğru tablo başvurduğun kuruma göre değişir.</strong> Hiçbir rakip sayfa bu ayrımı yapmaz.</p>
+<table class="bilgi-tablosu">
+<caption>Hangi durumda hangi tablo?</caption>
+<thead><tr><th>Durum</th><th>Kullanılacak tablo</th></tr></thead>
+<tbody>
+<tr><td>KPSS, ALES, ÖSYM başvuruları</td><td><strong>YÖK tablosu</strong> (bu sayfadaki)</td></tr>
+<tr><td>Yüksek lisans başvurusu (dış üniversite)</td><td><strong>YÖK tablosu</strong> (ilan başka demedikçe)</td></tr>
+<tr><td>Kendi üniversitenin iç işlemleri</td><td><strong>Üniversitenin senato tablosu</strong></td></tr>
+</tbody>
+</table>
+<p>Farkın büyüklüğüne dikkat: <strong>2,00</strong> YÖK tablosunda <strong>53,33</strong>; bazı üniversite tablolarında <strong>62,50</strong> karşılığındadır. Yanlış tabloyla beyan edilen 9 puanlık fark, başvurunu etkiler. İlan metninde "YÖK dönüşüm tablosu" yazıyorsa bu sayfadaki tabloyu kullan.</p>
+
+<h2>Yanlış Formül Uyarısı: (Not−2)×20+60</h2>
+<p><strong>İnternette dolaşan "(4'lük not − 2,00) × 20 + 60" formülü yanlıştır.</strong> YÖK tablosuyla karşılaştır:</p>
+<table class="bilgi-tablosu">
+<caption>Yanlış formülün hata tablosu</caption>
+<thead><tr><th>4,00'lük</th><th>Formül sonucu</th><th>YÖK tablosu</th><th>Hata</th></tr></thead>
+<tbody>
+<tr><td>2,00</td><td>60,00</td><td><strong>53,33</strong></td><td>+6,67</td></tr>
+<tr><td>2,50</td><td>70,00</td><td><strong>65,00</strong></td><td>+5,00</td></tr>
+<tr><td>3,00</td><td>80,00</td><td><strong>76,66</strong></td><td>+3,34</td></tr>
+<tr><td>3,50</td><td>90,00</td><td><strong>88,33</strong></td><td>+1,67</td></tr>
+<tr><td>4,00</td><td>100,00</td><td><strong>100,00</strong></td><td>0</td></tr>
+</tbody>
+</table>
+<p>Formül yalnızca 4,00'da doğru sonuç verir; 2,00–3,00 bandında 3–7 puan <strong>yüksek</strong> gösterir. Bu formülü öneren sayfaları görürsen tabloyla karşılaştır. Hiçbir rakip bu hatayı işaretlemez.</p>
+
+<h2>Başvuru Senaryoları</h2>
+<p><strong>Dönüşümün gerçek hayattaki üç kullanımı:</strong></p>
+<ul>
+<li><strong>KPSS başvurusu:</strong> Diploma notun 4,00'lükse ÖSYM, YÖK tablosundaki karşılığı ister. GANO 3,20 → yaklaşık 80,66 (enterpolasyonla).</li>
+<li><strong>Yüksek lisans:</strong> İlan "lisans mezuniyet notu (100'lük)" istiyorsa dönüşümü bu tabloyla yap; ilan "4,00 üzerinden" istiyorsa dönüştürme.</li>
+<li><strong>İş başvurusu:</strong> Form "100 üzerinden not ortalaması" soruyorsa YÖK karşılığını yaz; yanına parantezle 4,00'lük değeri eklemek şeffaflık sağlar.</li>
+</ul>
+
+<h2>Sınırlamalar</h2>
+<p><strong>Bu araç YÖK'ün resmi tablosunu kullanır; ama üç sınırı vardır.</strong></p>
+<ul>
+<li><strong>Tablo dışı:</strong> 1,00'ın altı ve 4,00'ın üstü değerler çevrilmez; araç uydurma değer üretmez.</li>
+<li><strong>Üniversite farkı:</strong> Bazı üniversiteler kendi dönüşüm tablolarını yayımlar (farklı karşılıklar verebilir). Başvuru yapacağın kurumun hangi tabloyu istediğini teyit et.</li>
+<li><strong>Transkript önceliği:</strong> Okulun transkripte dönüşümü kendisi yazdıysa o değer esastır.</li>
+</ul>
+
+<h2>YÖK Tablosu vs Üniversite Tabloları</h2>
+<p><strong>Tablolar birbirini tutmaz; bu yüzden "hangi tablo" sorusu "kaç olur" sorusundan önce gelir.</strong></p>
+<table class="bilgi-tablosu">
+<caption>Aynı notun farklı tablolardaki karşılığı (örnek)</caption>
+<thead><tr><th>4,00'lük</th><th>YÖK tablosu</th><th>Örnek üniversite tablosu</th></tr></thead>
+<tbody>
+<tr><td>4,00</td><td>100,00</td><td>100,00</td></tr>
+<tr><td>3,00</td><td>76,66</td><td>76,66</td></tr>
+<tr><td>2,00</td><td><strong>53,33</strong></td><td><strong>62,50</strong></td></tr>
+</tbody>
+</table>
+<p>Üst bantlarda tablolar yakınsar; fark 2,00 civarında büyür. İlan "YÖK dönüşüm tablosu" diyorsa bu sayfadaki değeri kullan.</p>
+
+<h2>İpuçları</h2>
+<ul>
+<li>Başvuruda istenen tabloyu teyit et: YÖK tablosu ile üniversitenin kendi tablosu farklı sonuç verebilir.</li>
+<li>Yuvarlama farklarına dikkat: 88,33 ile 88,5 aynı şey değildir; tablodaki resmi değeri kullan.</li>
+<li>Henüz GANO'nu hesaplamadıysan <a href="../gano-hesaplama/">GANO Hesaplama</a> aracıyla 4,00'lük ortalamanı bul, sonra buraya yaz.</li>
+<li>100'lük notlarının harf karşılıkları için <a href="../harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracına bak.</li>
+</ul>
 
       <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
@@ -133,8 +288,12 @@
         <details><summary>4,00'lük not 100'lük sisteme nasıl çevrilir?</summary><p>YÖK'ün resmi dönüşüm tablosuna göre birebir karşılık bulunur; tabloda olmayan ara değerler doğrusal enterpolasyonla hesaplanır. Örneğin 3,50 → 88,33.</p></details>
         <details><summary>Bu tabloyu kim hazırladı?</summary><p>YÖK'ün yayımladığı resmi not dönüşüm tablosudur. Bazı üniversiteler kendi tablolarını kullanır; başvuru yapacağın kurumun istediği tabloyu teyit et.</p></details>
         <details><summary>3,55 gibi ara değerler nasıl hesaplanıyor?</summary><p>Tablonun iki komşu satırı arasında doğrusal enterpolasyon yapılır: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır ve 89,50 bulunur.</p></details>
+        <details><summary>2,00 kaç puan olur?</summary><p>YÖK tablosuna göre 2,00 → 53,33. Dikkat: bazı üniversite tablolarında 2,00 → 62,50'dir; başvurunun hangi tabloyu istediğini kontrol et.</p></details>
+        <details><summary>(Not−2)×20+60 formülü doğru mu?</summary><p>Hayır. Bu formül yalnızca 4,00'da doğru sonuç verir; 2,00'da 60 gösterirken resmi karşılık 53,33'tür. 2,00–3,00 bandında 3–7 puan yüksek gösterir; tabloyu kullan.</p></details>
+        <details><summary>Hangi başvuruda hangi tablo kullanılır?</summary><p>KPSS, ALES ve ÖSYM başvurularında YÖK tablosu; kendi üniversitenin iç işlemlerinde üniversitenin senato tablosu geçerlidir. İlan metni 'YÖK dönüşüm tablosu' diyorsa bu sayfadaki tabloyu kullan.</p></details>
         <details><summary>100'lük notu 4,00'e çevirmek neden gerekli?</summary><p>KPSS, ALES, yüksek lisans ve bazı iş başvuruları 100'lük sistem ister; diploma notun 4,00'lükse bu araçla resmi karşılığını bulursun.</p></details>
         <details><summary>1,00'ın altı neden çevrilmiyor?</summary><p>YÖK tablosu 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; bu aralığın dışı tablo dışıdır ve araç uydurma değer üretmez.</p></details>
+        <details><summary>Yuvarlama nasıl yapılır?</summary><p>Tablodaki değeri aynen kullan; kendi yuvarlamanı yapma. 88,33 ile 88,5 aynı şey değildir ve başvuru formunda resmi değer esastır.</p></details>
         <details><summary>Girdiğim not bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
       </section>
     </article>

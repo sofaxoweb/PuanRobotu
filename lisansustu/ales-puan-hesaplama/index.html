@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALES Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun.">
+<title>ALES Puan Hesaplama 2026 | SAY-SÖZ-EA Tahmini | PuanRobotu</title>
+<meta name="description" content="ALES puanını tahmin et: sayısal ve sözel netlerinden SAY-SÖZ-EA puanını hesapla. 70+30 formülü, 100 soru, 150 dakika. Boş bırakmak mı, işaretlemek mi?">
 <link rel="canonical" href="https://puanrobotu.com/lisansustu/ales-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="ALES Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun.">
+<meta property="og:title" content="ALES Puan Hesaplama 2026 | SAY-SÖZ-EA Tahmini | PuanRobotu">
+<meta property="og:description" content="ALES puanını tahmin et: sayısal ve sözel netlerinden SAY-SÖZ-EA puanını hesapla. 70+30 formülü, 100 soru, 150 dakika. Boş bırakmak mı, işaretlemek mi?">
 <meta property="og:url" content="https://puanrobotu.com/lisansustu/ales-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -25,7 +25,7 @@
   "operatingSystem": "Web",
   "inLanguage": "tr",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
-  "description": "ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun."
+  "description": "ALES puanını tahmin et: sayısal ve sözel netlerinden SAY-SÖZ-EA puanını hesapla. 70+30 formülü, 100 soru, 150 dakika. Boş bırakmak mı, işaretlemek mi?"
 }
 </script>
 <script type="application/ld+json">
@@ -33,12 +33,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "ALES puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür."}},
-    {"@type": "Question", "name": "ALES'te yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür."}},
-    {"@type": "Question", "name": "ALES puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "ALES puanı 5 yıl geçerlidir. Sınav yılda 3 kez yapılır."}},
-    {"@type": "Question", "name": "ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan."}},
-    {"@type": "Question", "name": "70 puan için kaç net gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine göre belirlenir."}},
-    {"@type": "Question", "name": "ALES kaç soru, kaç dakika?", "acceptedAnswer": {"@type": "Answer", "text": "100 soru (50 sayısal + 50 sözel), 150 dakika. Sınav yılda 3 kez yapılır."}}
+    {
+      "@type": "Question",
+      "name": "ALES puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür. X, S ve B o oturumun istatistikleridir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ALES'te yanlış doğruyu götürür mü?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür. 'Yanlışlar puanı düşürmez' yazan siteler yanlıştır; ALES'te ceza vardır. İki şıkka indiremediğin soruyu boş bırakmak genellikle daha güvenlidir. Körü körüne işaretlemek beklenen değeri sıfırlar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ALES puanı kaç yıl geçerli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sonuç açıklama tarihinden itibaren 5 yıl geçerlidir; '3 yıl' yazan kaynaklar yanlıştır. Yılda 3 kez yapılan sınavın her oturumu bağımsızdır — en yüksek geçerli puanın kullanılır, ortalaması alınmaz. 2026 Aralık sonuçları, Aralık 2031'e kadar başvurularda geçerlidir. 'Yılda iki kez' bilgisi de eskidir; güncel takvim üç oturumludur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan. Not: bazı kaynaklardaki 70/30 oranları eski formatındır; güncel kılavuzlardaki yaygın oran 75/25'tir. 2017 öncesi 4 testli sistemdeki katsayılar artık geçersizdir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "70 puan için kaç net gerekir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine (X, S, B) göre belirlenir. Zor sınavda aynı net daha yüksek puan getirir; kolay sınavda tersi olur, bunu unutma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Boş bırakmak mı işaretlemek mi daha iyi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hiç eleyemediğin soruda ikisi de aynıdır: 5 şıklı soruda kör işaretlemenin beklenen değeri sıfırdır (0,2×1 − 0,8×0,25 = 0). Ama tek şık bile elersen işaretlemek kazandırır: olasılık 0,25 olur, beklenen değer pozitife döner. Kural basit: en az bir şık ele, sonra işaretle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aynı net neden farklı dönemlerde farklı puan getirir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Çünkü 70+30 dönüşümündeki X (ortalama), S (standart sapma) ve B (en yüksek) her oturuma özeldir. Kolay sınavda ortalama yükselir, aynı net daha düşük puana denk gelir. 60 net bir dönem 82, başka dönem 78 getirebilir. Hesaplayıcılar bu yüzden tahmin verir; kesin sonuç yalnızca resmi belgededir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ALES'e yurt dışı başvurularında GRE yerine geçer mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bazı üniversiteler ALES yerine GRE/GMAT kabul eder; ÖSYM'nin eşdeğerlik tabloları bu dönüşümü tanımlar. Ancak karar her zaman başvurduğun üniversitenin senatosunundur — program ilanındaki 'ALES'ten en az 55' şartı, eşdeğer belgeyle de sağlanabilir. İlanı dikkatle oku. Yurt dışı programlar genellikle GRE ister, ALES'i tanımaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +127,8 @@
     <article>
       <p class="kicker">Lisansüstü</p>
       <h1>ALES Puan Hesaplama</h1>
-      <p class="lede">Sayısal ve sözel netlerini gir, tahmini ALES SAY, SÖZ ve EA puanlarını öğren.</p>
+      <p class="lede"><strong>Tahmini ALES SAY, SÖZ ve EA puanların</strong> burada: sayısal ve sözel netlerini gir, resmi 75/25 ağırlıkları ve 70+30 dönüşümüyle hesapla. 100 soru, 150 dakika formatına uygun.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -117,9 +176,23 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>Net = Doğru − Yanlış/4</strong> (her test kendi içinde; 4 yanlış 1 doğruyu götürür).</li>
+          <li>Resmi ağırlıklar: <strong>SAY 0,75/0,25 · SÖZ 0,25/0,75 · EA 0,50/0,50.</strong></li>
+          <li>Son adım <strong>70+30 dönüşümü:</strong> 70 + 30 × [2(AP−X)−S] ÷ [2(B−X)−S]; en yüksek puan 100 olur.</li>
+          <li>Sınav <strong>yılda 3 kez</strong> yapılır; puan <strong>5 yıl</strong> geçerlidir.</li>
+          <li>Bu sayfadaki sonuç <strong>tahmindir:</strong> X, S, B değerleri o oturuma özeldir.</li>
+        </ul>
+      </div>
+
+      <h2>ALES Nedir?</h2>
+      <p><strong>ALES (Akademik Personel ve Lisansüstü Eğitimi Giriş Sınavı),</strong> ÖSYM'nin yılda 3 kez düzenlediği akademik giriş sınavıdır. 100 sorudan oluşur (50 sayısal + 50 sözel), süresi 150 dakikadır. Puanı 5 yıl geçerlidir. Yüksek lisans, doktora başvuruları ile araştırma görevlisi ve öğretim görevlisi kadrolarında kullanılır.</p>
+
       <h2>ALES Puanı Nasıl Hesaplanır?</h2>
-      <p>ALES (Akademik Personel ve Lisansüstü Eğitimi Giriş Sınavı) yılda 3 kez yapılır; puanın <strong>5 yıl</strong> geçerlidir. Sınav 100 sorudan oluşur (50 sayısal + 50 sözel), süresi 150 dakikadır. Hesaplama dört adımda ilerler:</p>
-      <p><strong>1. Net:</strong> Her test kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. 4 yanlış 1 doğruyu götürür.</p>
+      <p>Hesaplama dört adımda ilerler:</p>
+      <p><strong>1. Net:</strong> Her test kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. 4 yanlış 1 doğruyu götürür. "Yanlışlar puanı düşürmez" yazan siteler yanlıştır; ALES'te ceza vardır.</p>
       <p><strong>2. Standart puan:</strong> Her testin neti, ortalaması 50 ve standart sapması 10 olan standart puana (SP) çevrilir.</p>
       <p><strong>3. Ağırlıklı puan (AP):</strong></p>
       <ul>
@@ -129,16 +202,18 @@
       </ul>
       <p><strong>4. 100'lük puana dönüşüm</strong> (resmi formül): ALES Puanı = 70 + 30 × [2(AP − X) − S] ÷ [2(B − X) − S]. En yüksek puan 100 olur.</p>
       <p class="acik"><small>Not: Bazı kaynaklarda SAY/SÖZ ağırlıkları 70/30 olarak da geçer. Bu araç, güncel kılavuzlarda ve hesaplayıcılarda yaygın kullanılan 75/25 oranını esas alır.</small></p>
+
+      <h2>70+30 Dönüşümü Nedir?</h2>
+      <p>Formüldeki harfler o oturumun istatistikleridir: <strong>X</strong> = ağırlıklı puanların ortalaması, <strong>S</strong> = standart sapması, <strong>B</strong> = en yüksek ağırlıklı puan. Formül, en yüksek AP'yi 100'e, ortalamayı 70'e sabitler; aradaki herkes göreli konumuna göre dizilir. X, S ve B her oturumda değiştiği için aynı net farklı dönemlerde farklı puan getirir — hesaplayıcılar bu yüzden yalnızca tahmin verir.</p>
       <h3>Bu Tahmin Nasıl Hesaplanıyor? (Şeffaflık)</h3>
-      <p>Standart puanlar o yılın istatistiklerine bağlı olduğu için bu araç, ÖSYM'nin yayımlanmış <strong>iki gerçek sonuç belgesine</strong> dayalı doğrusal bir enterpolasyon kullanır:</p>
+      <p>Bu araç, ÖSYM'nin yayımlanmış <strong>iki gerçek sonuç belgesine</strong> dayalı doğrusal bir enterpolasyon kullanır:</p>
       <ul>
         <li><strong>Çapa 1</strong> (20.11.2022 ALES): Sayısal 17D/5Y (net 15,75), Sözel 24D/17Y (net 19,75) → SAY 62,82 / SÖZ 65,65 / EA 65,16</li>
         <li><strong>Çapa 2</strong> (28.07.2024 ALES): Sayısal 36D/14Y (net 32,50), Sözel 41D/9Y (net 38,75) → SAY 85,22 / SÖZ 89,23 / EA 87,51</li>
       </ul>
       <p>Model, her testin netini bu iki çapa arasında doğrusal olarak standart puana çevirir, resmi ağırlıklarla birleştirir ve 70+30 dönüşümünü (X=50, S=10, B=80 varsayımıyla) uygular. Model, iki çapa noktasındaki gerçek SAY ve SÖZ puanlarını 0,05'ten küçük hatayla yeniden üretir.</p>
-      <p>Dikey geçiş hedefin için <a href="../dgs-puan-hesaplama/">DGS puan hesaplama</a> aracını, dil puanı için <a href="../yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>Formül ve Çalışılmış Örnek</h2>
       <p>Sayısalda 32 doğru 8 yanlış, sözelde 36 doğru 4 yanlış yapan bir aday:</p>
       <ul>
         <li>Sayısal net = 32 − 8/4 = <strong>30</strong>; Sözel net = 36 − 4/4 = <strong>35</strong></li>
@@ -146,23 +221,62 @@
         <li><strong>ALES-SAY ≈ 81,59</strong> · <strong>ALES-SÖZ ≈ 84,84</strong> · <strong>ALES-EA ≈ 83,21</strong> (tahmini)</li>
       </ul>
 
-      <h2>İpuçları</h2>
+      <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>Sayısal doğru ve yanlış</strong> sayılarını gir.</li>
+        <li><strong>Sözel doğru ve yanlış</strong> sayılarını gir.</li>
+        <li><strong>Hesapla</strong> düğmesine bas: SAY, SÖZ ve EA puanların anında görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Oku: Puan Türleri</h2>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Puan Türü</th><th>Ağırlık</th><th>Hedef Programlar</th></tr></thead>
+        <tbody>
+          <tr><td>ALES-SAY</td><td>Sayısal %75</td><td>Fen, mühendislik, sağlık bilimleri</td></tr>
+          <tr><td>ALES-SÖZ</td><td>Sözel %75</td><td>Sosyal bilimler, edebiyat, hukuk</td></tr>
+          <tr><td>ALES-EA</td><td>%50 – %50</td><td>İşletme, iktisat, disiplinler arası</td></tr>
+        </tbody>
+      </table>
+      <p>Program ilanındaki "ALES'ten en az 55" şartı, <strong>başvurduğun puan türünde</strong> aranır. Tezli yüksek lisans başvurularında 55, araştırma görevlisi kadrolarında 70, lisans diplomasıyla doğrudan doktorada 80 barajı yaygındır; üniversiteler bu eşikleri yükseltebilir.</p>
+
+      <h2>Aynı Net Neden Farklı Dönemlerde Farklı Puan Getirir?</h2>
+      <p>Kolay sınavda aday ortalaması (X) yükselir; aynı net, ortalamaya daha yakın kalır ve daha düşük puana denk gelir. Zor sınavda tersi olur. Örneğin 60 net bir dönem 82, başka bir dönem 78 getirebilir. Netin mutlak değil <strong>göreli</strong> değeridir — bu yüzden "şu net şu puan" tabloları dönemseldir ve hesaplayıcı tahmini aşamaz.</p>
+
+      <h2>Boş Bırakmak mı İşaretlemek mi?</h2>
+      <p>Hiç eleyemediğin soruda ikisi de aynıdır: 5 şıklı soruda kör işaretlemenin beklenen değeri <strong>sıfırdır</strong> (0,2×1 − 0,8×0,25 = 0). Ama <strong>tek şık bile elersen</strong> işaretlemek kazandırır: olasılık 0,25'e çıkar, beklenen değer pozitife döner. Kural basit: en az bir şık ele, sonra işaretle; hiç eleyemiyorsan boş bırakmakla işaretlemek arasında fark yoktur.</p>
+
+      <h2>Sınırlamalar</h2>
       <ul>
-        <li>ALES yılda 3 kez yapılır ve puanın 5 yıl geçerlidir — erken girmek, hedefini netleştirir.</li>
-        <li>Doktora başvurularında genelde 80+, araştırma görevlisi kadrolarında 70+ puan istenir; hedefini buna göre koy.</li>
-        <li>Yanlış cezası var: iki şıkka indiremediğin soruyu boş bırakmak, rastgele işaretlemekten iyidir.</li>
-        <li>EA hedefin varsa iki teste de dengeli çalış; SAY hedefin varsa sayısal nete yüklen.</li>
+        <li><strong>Eski format notu:</strong> 2017 öncesi ALES 4 testliydi ve farklı katsayılar kullanılırdı. İnternetteki eski katsayı tabloları güncel sınav için geçersizdir.</li>
+        <li>Geçerlilik <strong>sonuç açıklama tarihinden</strong> itibaren 5 yıldır; "3 yıl" yazan kaynaklar yanlıştır. "Yılda iki kez" bilgisi de eskidir — güncel takvim üç oturumludur.</li>
+        <li>ÖSYM, ALES için başarı sıralaması veya yüzdelik dilim yayımlamaz; KPSS/YKS mantığıyla sıralama bekleme.</li>
+        <li>Standart puanlar o oturumun istatistiğine bağlıdır; bu araç tahmin verir, kesin sonuç resmi belgededir.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
-      <section class="sss" aria-labelledby="sss-baslik">
+      <h2>DGS mi ALES mi?</h2>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Ölçüt</th><th>DGS</th><th>ALES</th></tr></thead>
+        <tbody>
+          <tr><td>Hedef</td><td>Ön lisans → lisans geçişi</td><td>Yüksek lisans / doktora / akademik kadro</td></tr>
+          <tr><td>Ek puan</td><td>ÖBP (diploma × 0,8)</td><td>Yok</td></tr>
+          <tr><td>Ölçek</td><td>150–350 bandı, dönüşüm yok</td><td>100'lük ölçek (70+30)</td></tr>
+          <tr><td>Geçerlilik</td><td>Yalnızca o yıl</td><td>5 yıl</td></tr>
+          <tr><td>Sıklık</td><td>Yılda 1 kez</td><td>Yılda 3 kez</td></tr>
+        </tbody>
+      </table>
+      <p>Dikey geçiş hedefin için <a href="../dgs-puan-hesaplama/">DGS puan hesaplama</a> aracını, dil puanı için <a href="../yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
+
+<!-- ============ SSS ============ -->
+            <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>ALES puanı nasıl hesaplanır?</summary><p>Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür.</p></details>
-        <details><summary>ALES'te yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür.</p></details>
-        <details><summary>ALES puanı kaç yıl geçerli?</summary><p>ALES puanı 5 yıl geçerlidir. Sınav yılda 3 kez yapılır.</p></details>
-        <details><summary>ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?</summary><p>Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan.</p></details>
-        <details><summary>70 puan için kaç net gerekir?</summary><p>Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine göre belirlenir.</p></details>
-        <details><summary>ALES kaç soru, kaç dakika?</summary><p>100 soru (50 sayısal + 50 sözel), 150 dakika. Sınav yılda 3 kez yapılır.</p></details>
+        <details><summary>ALES puanı nasıl hesaplanır?</summary><p>Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür. X, S ve B o oturumun istatistikleridir.</p></details>
+        <details><summary>ALES'te yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür. 'Yanlışlar puanı düşürmez' yazan siteler yanlıştır; ALES'te ceza vardır. İki şıkka indiremediğin soruyu boş bırakmak genellikle daha güvenlidir. Körü körüne işaretlemek beklenen değeri sıfırlar.</p></details>
+        <details><summary>ALES puanı kaç yıl geçerli?</summary><p>Sonuç açıklama tarihinden itibaren 5 yıl geçerlidir; '3 yıl' yazan kaynaklar yanlıştır. Yılda 3 kez yapılan sınavın her oturumu bağımsızdır — en yüksek geçerli puanın kullanılır, ortalaması alınmaz. 2026 Aralık sonuçları, Aralık 2031'e kadar başvurularda geçerlidir. 'Yılda iki kez' bilgisi de eskidir; güncel takvim üç oturumludur.</p></details>
+        <details><summary>ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?</summary><p>Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan. Not: bazı kaynaklardaki 70/30 oranları eski formatındır; güncel kılavuzlardaki yaygın oran 75/25'tir. 2017 öncesi 4 testli sistemdeki katsayılar artık geçersizdir.</p></details>
+        <details><summary>70 puan için kaç net gerekir?</summary><p>Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine (X, S, B) göre belirlenir. Zor sınavda aynı net daha yüksek puan getirir; kolay sınavda tersi olur, bunu unutma.</p></details>
+        <details><summary>Boş bırakmak mı işaretlemek mi daha iyi?</summary><p>Hiç eleyemediğin soruda ikisi de aynıdır: 5 şıklı soruda kör işaretlemenin beklenen değeri sıfırdır (0,2×1 − 0,8×0,25 = 0). Ama tek şık bile elersen işaretlemek kazandırır: olasılık 0,25 olur, beklenen değer pozitife döner. Kural basit: en az bir şık ele, sonra işaretle.</p></details>
+        <details><summary>Aynı net neden farklı dönemlerde farklı puan getirir?</summary><p>Çünkü 70+30 dönüşümündeki X (ortalama), S (standart sapma) ve B (en yüksek) her oturuma özeldir. Kolay sınavda ortalama yükselir, aynı net daha düşük puana denk gelir. 60 net bir dönem 82, başka dönem 78 getirebilir. Hesaplayıcılar bu yüzden tahmin verir; kesin sonuç yalnızca resmi belgededir.</p></details>
+        <details><summary>ALES'e yurt dışı başvurularında GRE yerine geçer mi?</summary><p>Bazı üniversiteler ALES yerine GRE/GMAT kabul eder; ÖSYM'nin eşdeğerlik tabloları bu dönüşümü tanımlar. Ancak karar her zaman başvurduğun üniversitenin senatosunundur — program ilanındaki 'ALES'ten en az 55' şartı, eşdeğer belgeyle de sağlanabilir. İlanı dikkatle oku. Yurt dışı programlar genellikle GRE ister, ALES'i tanımaz.</p></details>
       </section>
     </article>
 

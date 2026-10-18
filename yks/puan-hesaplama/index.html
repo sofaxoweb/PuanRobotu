@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YKS Puan Hesaplama (TYT–AYT–YDT) | PuanRobotu</title>
-<meta name="description" content="YKS puan hesaplama: TYT, AYT ve YDT doğru-yanlışlarını gir; SAY, EA, SÖZ, DİL tahmini ham ve yerleştirme puanlarını anında öğren. OBP dahil, ücretsiz.">
+<meta name="description" content="YKS puan hesaplama: TYT, AYT, YDT doğru-yanlışlarını gir; SAY, EA, SÖZ, DİL tahmini ham ve yerleştirme puanını öğren. OBP ve kırık OBP dahil, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/yks/puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="YKS Puan Hesaplama (TYT–AYT–YDT) | PuanRobotu">
-<meta property="og:description" content="TYT, AYT ve YDT netlerinden SAY, EA, SÖZ, DİL tahmini puanlarını hesapla. OBP katkısı dahil.">
+<meta property="og:description" content="TYT, AYT ve YDT netlerinden SAY, EA, SÖZ, DİL tahmini puanlarını hesapla. OBP ve kırık OBP dahil.">
 <meta property="og:url" content="https://puanrobotu.com/yks/puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,13 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "YKS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). ÖSYM bu netleri o yılın ortalaması ve standart sapmasıyla standart puana dönüştürür, puan türünün resmi ağırlıklarıyla toplar ve 100–500 ölçeğine yerleştirir. Bu araç, MEB'in yayımladığı katsayı tablolarına dayalı şeffaf bir tahmin yapar."}},
-    {"@type": "Question", "name": "SAY, EA, SÖZ ve DİL puanları nasıl oluşur?", "acceptedAnswer": {"@type": "Answer", "text": "SAY, EA ve SÖZ puanları %40 TYT + %60 AYT bileşimidir: SAY'de AYT Matematik ve Fen, EA'da AYT Matematik ve Edebiyat-Sosyal-1, SÖZ'de Edebiyat-Sosyal-1 ve Sosyal-2 ağırlıklıdır. DİL puanı ise %40 TYT + %60 YDT'dir."}},
-    {"@type": "Question", "name": "YKS'de 4 yanlış 1 doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. TYT, AYT ve YDT'nin tamamında her test için ham puan, doğru sayısından yanlış sayısının dörtte biri çıkarılarak bulunur. Yani 4 yanlış, 1 doğruyu götürür."}},
-    {"@type": "Question", "name": "OBP yerleştirme puanına nasıl eklenir?", "acceptedAnswer": {"@type": "Answer", "text": "OBP, diploma notunun (100'lük sistem) 5 katıdır ve 250–500 aralığındadır. Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Bir önceki yıl bir programa yerleşenlerde katsayı yarıya iner (kırık OBP): ×0,06."}},
-    {"@type": "Question", "name": "TYT'de baraj puanı var mı?", "acceptedAnswer": {"@type": "Answer", "text": "2022'den beri sabit bir baraj puanı yoktur. Ancak puan hesaplanabilmesi için Türkçe veya Temel Matematik testlerinden en az birinde 0,5 ham puan gerekir. Ayrıca Tıp, Hukuk, Mühendislik, Mimarlık ve Öğretmenlik programları için başarı sırası şartları devam eder."}},
-    {"@type": "Question", "name": "Bu hesaplama ne kadar güvenilir?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, MEB katsayı tablolarına ve geçmiş yıl net-puan ilişkilerine dayalı şeffaf bir tahmindir; resmi sonuç yerine geçmez."}},
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya paylaşılmaz."}}
+    {
+      "@type": "Question",
+      "name": "YKS puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Üç adımda: netler, standart puan, resmi ağırlıklar.</strong> Önce her testin neti bulunur (Net = Doğru − Yanlış ÷ 4). ÖSYM bu netleri o yılın ortalaması ve standart sapmasıyla standart puana dönüştürür, puan türünün resmi test ağırlıklarıyla toplar ve 100–500 ölçeğine yerleştirir. Yerleştirme puanı, sınav puanına OBP × 0,12 eklenmesiyle oluşur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SAY, EA, SÖZ ve DİL puanları nasıl oluşur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>%40 TYT + %60 AYT (DİL'de %60 YDT).</strong> SAY'de AYT Matematik ve Fen; EA'da AYT Matematik ve Edebiyat-Sosyal-1; SÖZ'de Edebiyat-Sosyal-1 ve Sosyal-2 ağırlıklıdır. DİL puanı TYT ile YDT'nin birleşimidir. Her puan türünün test katsayıları farklıdır; tam tablo aşağıdaki \"TYT Neti Neden İki Kez Sayılır?\" bölümündedir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YKS'de 4 yanlış 1 doğruyu götürür mü?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Evet.</strong> TYT, AYT ve YDT'nin tamamında her testin ham puanı, doğru sayısından yanlış sayısının dörtte biri çıkarılarak bulunur. Boş bırakılan sorular neti etkilemez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OBP yerleştirme puanına nasıl eklenir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Yerleştirme = Sınav Puanı + OBP × 0,12.</strong> OBP, diploma notunun 5 katıdır (250–500 aralığı). Diploma notu 85 olan birinin OBP'si 425, katkısı 51 puandır. Katkı, beş puan türünde de aynıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TYT'de baraj puanı var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır; 2022'den beri sabit baraj puanı yoktur.</strong> Ancak puan hesaplanabilmesi için Türkçe veya Temel Matematik testlerinden en az birinde 0,5 ham puan gerekir. Tıp, Hukuk, Mühendislik, Mimarlık ve Öğretmenlik programlarındaki başarı sırası şartları ise devam eder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TYT'ye girmeden AYT puanım hesaplanır mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> SAY, EA ve SÖZ puanlarının %40'ı TYT'den gelir; TYT neti olmadan bu puanlar oluşmaz. Sadece TYT'ye giren aday TYT puanıyla 2 yıllık önlisans programlarını tercih eder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YDT'ye girmezsem DİL puanım ne olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>DİL puanın hesaplanmaz.</strong> DİL puanı %40 TYT + %60 YDT bileşimidir; YDT neti olmadan bu birleşim kurulamaz. Dil bölümleri hedefliyorsan YDT'ye girmen şarttır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Neden bazı siteler farklı sonuç veriyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Çünkü bazı siteler formülü yanlış uyguluyor.</strong> Yaygın hatalar: OBP katkısını ×0,12 yerine %60 gibi göstermek, diploma notunu ×5 yerine ×0,5 ile çarpmak, 2022'de kaldırılan 150 baraj puanını hâlâ yazmak ve uydurma katsayılar kullanmak. Bu sayfa yalnızca MEB'in yayımladığı resmi katsayı tablolarını kullanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bu hesaplama ne kadar güvenilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Şeffaf bir tahmindir; resmi sonuç değildir.</strong> Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi katsayı tablolarına ve standart puan mantığına dayalı bir yaklaşımdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya paylaşılmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,10 +142,11 @@
     <div class="wrap">
       <p class="kicker">YKS 2026 hazırlık</p>
       <h1>YKS Puan Hesaplama (TYT–AYT–YDT)</h1>
-      <p class="lede">TYT, AYT ve YDT'deki <strong>doğru–yanlış</strong> sayılarını gir; <strong>SAY, EA, SÖZ ve DİL</strong> puan türlerinde <strong>tahmini ham</strong> ve <strong>tahmini yerleştirme</strong> puanlarını anında öğren. OBP katkısı dahil, hesaplama MEB'in resmi katsayı tablolarına göre yapılır.</p>
+      <p class="lede">YKS puanın üç adımda oluşur: <strong>netlerin</strong> (doğru − yanlış ÷ 4), ÖSYM'nin <strong>standart puan</strong> dönüşümü ve puan türünün <strong>resmi test ağırlıkları</strong>. Aşağıdaki araca TYT, AYT ve YDT doğru-yanlışlarını gir; SAY, EA, SÖZ ve DİL için tahmini ham ve yerleştirme puanını — OBP katkısı dahil — saniyeler içinde gör.</p>
       <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
 
   <div class="wrap sayfa-iki-sutun">
   <article>
@@ -141,24 +215,33 @@
   <div class="tahmin-notu">
     <strong>Önemli:</strong> Bu sonuçlar <strong>tahminidir</strong>. Gerçek YKS puanı, ÖSYM'nin sınav sonrası açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır; o yılın verileri sınavdan önce bilinemez. Bu araç, MEB'in yayımladığı resmi katsayı tablolarını kullanan şeffaf bir yaklaşımdır.
   </div>
-
   <section class="wrap content">
-    <h2>YKS Puanı Nasıl Hesaplanıyor?</h2>
-    <h3>Adım 1 — Netleri bul</h3>
-    <p>Her test için: <strong>Net = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. TYT, AYT ve YDT'nin tamamında 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p>
-    <h3>Adım 2 — Standart puan ve ağırlıklar</h3>
-    <p>ÖSYM, her testin netini o yılın ortalaması ve standart sapmasıyla <strong>standart puana</strong> dönüştürür. Sonra her puan türünün resmi ağırlıkları uygulanır:</p>
+    <h2>Öne Çıkanlar</h2>
     <ul>
-      <li><strong>TYT:</strong> Türkçe ×3,3 — Sosyal ×3,4 — Temel Matematik ×3,3 — Fen ×3,4</li>
-      <li><strong>SAY:</strong> TYT'nin %40'ı + (AYT Matematik ve Fen'in %60'ı)</li>
-      <li><strong>EA:</strong> TYT'nin %40'ı + (AYT Matematik ve Edebiyat–Sosyal-1'in %60'ı)</li>
-      <li><strong>SÖZ:</strong> TYT'nin %40'ı + (Edebiyat–Sosyal-1 ve Sosyal-2'nin %60'ı)</li>
-      <li><strong>DİL:</strong> TYT'nin %40'ı + (YDT'nin %60'ı)</li>
+      <li><strong>YKS puanı dört aşamada oluşur:</strong> netler → standart puan → resmi test ağırlıkları → 100–500 ölçeği. OBP, yerleştirme puanına ayrıca eklenir.</li>
+      <li><strong>4 yanlış 1 doğruyu götürür</strong> — TYT, AYT ve YDT'nin tüm testlerinde kural aynıdır.</li>
+      <li><strong>TYT neti iki kez sayılır:</strong> TYT puanında net başına ×3,3; SAY/EA/SÖZ puanlarında ×1,32.</li>
+      <li><strong>0,5 net kuralı:</strong> Türkçe veya Temel Matematik'ten en az 0,5 ham puanın yoksa TYT puanın hesaplanmaz.</li>
+      <li><strong>Bu sayfadaki sonuç tahmindir;</strong> resmi puanın yalnızca ÖSYM sonuç ekranında açıklanır.</li>
     </ul>
-    <h3>Adım 3 — 100–500 ölçeği ve OBP</h3>
-    <p>Ağırlıklı toplam 100–500 ölçeğine yerleştirilir. <strong>Yerleştirme puanı</strong> ise sınav puanına OBP katkısının eklenmesiyle bulunur: <strong>Yerleştirme = Sınav Puanı + OBP × 0,12</strong>. Diploma notunu <a href="../obp-hesaplama/">OBP Hesaplama</a> aracıyla puana çevirebilirsin.</p>
+  </section>
+<section class="wrap content">
+    <h2>YKS Puanı Nedir?</h2>
+    <p><strong>YKS puanı, adayın TYT, AYT ve YDT testlerindeki netlerinin ÖSYM tarafından standart puana dönüştürülüp puan türüne özgü resmi ağırlıklarla birleştirilmesiyle elde edilen 100–500 ölçeğindeki puandır.</strong> Yerleştirme puanı, bu sınav puanına OBP katkısının eklenmiş halidir ve tercihte esas alınan değerdir.</p>
+    <p>YKS üç oturumdan oluşur: TYT (Temel Yeterlilik Testi, 120 soru), AYT (Alan Yeterlilik Testleri) ve YDT (Yabancı Dil Testi, 80 soru). Beş puan türü hesaplanır: TYT, SAY, EA, SÖZ ve DİL. Her puan türü, farklı testleri farklı katsayılarla değerlendirir.</p>
+    <!-- [IMAGE: YKS puan oluşum akış şeması — netler → standart puan → ağırlıklar → 100-500 ölçeği → OBP eklenir. Alt: "YKS puanı nasıl oluşur akış şeması"] -->
 
-    <h2>Çalışılmış Örnek</h2>
+    <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+    <p><strong>Üç aşamalı şeffaf yöntem kullanır: net hesabı, standart puan yaklaşımı ve resmi test ağırlıkları.</strong> Her aşama aşağıda açıkça yazıyor; gizli katsayı yok.</p>
+    <h3>Adım 1 — Netleri bul</h3>
+    <p>Her test için <strong>Net = Doğru − (Yanlış ÷ 4)</strong> uygulanır. TYT, AYT ve YDT'nin tamamında 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p>
+    <h3>Adım 2 — Standart puana dönüştür</h3>
+    <p>ÖSYM, her testin netini o yılın Türkiye ortalaması ve standart sapmasıyla <strong>standart puana</strong> çevirir (ortalama 50, standart sapma 10). Bu araç, standart puan mantığını MEB'in yayımladığı resmi katsayı tablolarıyla birleştirir; o yılın gerçek ortalama ve sapma değerleri sınavdan önce bilinemez.</p>
+    <h3>Adım 3 — Resmi ağırlıkları uygula ve OBP'yi ekle</h3>
+    <p>Standart puanlar, puan türünün resmi test ağırlıklarıyla toplanır ve 100–500 ölçeğine yerleştirilir. Son adımda <strong>Yerleştirme = Sınav Puanı + OBP × 0,12</strong> formülüyle diploma katkısı eklenir. OBP hesabının detayı için <a href="../obp-hesaplama/">OBP hesaplama</a> sayfasına bak.</p>
+
+    <h2>Formül ve Çalışılmış Örnek</h2>
+    <p><strong>Formüller:</strong> Net = Doğru − (Yanlış ÷ 4) · TYT ham = 100 + Σ(net × test katsayısı) · SAY/EA/SÖZ ham = 100 + TYT parçası + Σ(AYT net × katsayı) · Yerleştirme = Ham + OBP × 0,12.</p>
     <p>Bir adayın deneme sonuçları: TYT'de Türkçe 32 doğru 8 yanlış (net 30), Sosyal 14 doğru 4 yanlış (net 13), Temel Matematik 28 doğru 8 yanlış (net 26), Fen 12 doğru 8 yanlış (net 10). AYT'de Matematik 30 doğru 8 yanlış (net 28), Fizik 10 doğru 4 yanlış (net 9), Kimya 9 doğru 4 yanlış (net 8), Biyoloji 10 doğru 4 yanlış (net 9). Diploma notu 85 (OBP 425).</p>
     <ul>
       <li>TYT parçası: 30×1,32 + 13×1,36 + 26×1,32 + 10×1,36 = <strong>105,2</strong></li>
@@ -168,62 +251,136 @@
     </ul>
     <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
-    <h2>İpuçları</h2>
-    <ul>
-      <li><strong>Hedef puan türüne odaklan:</strong> SAY hedefliyorsan AYT Matematik ve Fen; EA hedefliyorsan Matematik ve Edebiyat netlerin puanı belirler. TYT her türde %40 etkili, ihmal etme.</li>
-      <li><strong>Yanlış maliyeti:</strong> 4 yanlış 1 net götürür. Emin olmadığın sorularda rastgele işaretleme beklenen netini düşürür; en az 1–2 şıkkı eleyebiliyorsan tahmin et.</li>
-      <li><strong>OBP'yi küçümseme:</strong> Diploma notu 85 ile 70 arasındaki fark, yerleştirmede yaklaşık 9 puandır — bu binlerce sıra demektir.</li>
-      <li><strong>Kırık OBP tuzağı:</strong> Geçen yıl bir programa yerleştiysen katsayın yarıya iner. "Bir yere yerleşip dondurayım" planı pahalıya patlar.</li>
-    </ul>
+    <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+    <ol>
+      <li><strong>Gir:</strong> Her test için doğru ve yanlış sayılarını ilgili satırlara yaz. Sadece ilgilendiğin oturumu doldurman yeterli; boş testler 0 sayılır.</li>
+      <li><strong>Yaz:</strong> Diploma notunu (50–100) girersen OBP katkısı otomatik eklenir.</li>
+      <li><strong>İşaretle:</strong> Geçen yıl bir programa yerleştiysen "Kırık OBP" kutusunu işaretle; katsayı 0,06'ya iner.</li>
+      <li><strong>Bas:</strong> "Hesapla" düğmesine bas; beş puan türünde tahmini ham ve yerleştirme puanların görünür.</li>
+      <li><strong>Oku:</strong> TYT uyarısı çıkarsa 0,5 net kuralını kontrol et; sonuçların tahmini olduğunu unutma.</li>
+    </ol>
 
-    <h2>Bu Aracın Sınırları (Dürüstlük Bölümü)</h2>
+    <h2>Sonucunu Nasıl Okumalısın?</h2>
+    <p><strong>Her puan türü farklı bir kapıyı açar; tablo hangi puanın ne işe yaradığını gösterir.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Puan türleri ve kullanım alanları</caption>
+      <thead><tr><th scope="col">Puan Türü</th><th scope="col">Ne Anlama Gelir</th><th scope="col">Sonraki Adım</th></tr></thead>
+      <tbody>
+        <tr><td><strong>TYT</strong></td><td>2 yıllık önlisans programları için esas puandır</td><td>Önlisans hedefliyorsan TYT netlerine odaklan</td></tr>
+        <tr><td><strong>SAY</strong></td><td>Mühendislik, tıp, fen bölümleri için kullanılır</td><td>AYT Matematik + Fen netlerini artır</td></tr>
+        <tr><td><strong>EA</strong></td><td>Hukuk, işletme, psikoloji gibi bölümler içindir</td><td>AYT Matematik + Edebiyat dengesini kur</td></tr>
+        <tr><td><strong>SÖZ</strong></td><td>Edebiyat, tarih, öğretmenlik bölümlerine giriştir</td><td>Sosyal-2 testlerini ihmal etme</td></tr>
+        <tr><td><strong>DİL</strong></td><td>Dil bölümleri yalnızca bu puanla öğrenci alır</td><td>YDT neti olmadan DİL puanı oluşmaz</td></tr>
+      </tbody>
+    </table>
+
+    <h2>İnternetteki YKS Formüllerinde 5 Yaygın Hata</h2>
+    <p><strong>Bazı popüler hesaplama sayfaları formülü yanlış yazıyor; bu 5 hatayı bilmek seni yanlış sonuçtan korur.</strong></p>
+    <ol>
+      <li><strong>"Ham puana OBP'nin %60'ı eklenir."</strong> Yanlış. Doğrusu: Yerleştirme = Sınav Puanı + <strong>OBP × 0,12</strong>. %60 diye bir oran hiçbir resmi kılavuzda yok.</li>
+      <li><strong>"OBP = diploma notu × 0,5."</strong> Yanlış. Doğrusu: OBP = diploma notu × <strong>5</strong> (250–500 aralığı). ×0,5 kullanan hesap, katkıyı 10 kat küçük gösterir.</li>
+      <li><strong>"TYT barajı 150 puan."</strong> Güncelliğini yitirdi. 2022'den beri sabit baraj puanı yok; geçerli kural 0,5 ham puan koşuludur.</li>
+      <li><strong>"YKS Puanı = TYT×0,4 + AYT×0,4 + YDT×0,2."</strong> Böyle bir resmi formül yok. SAY/EA/SÖZ puanları TYT'nin %40'ı ile AYT'nin %60'ının birleşimidir; DİL ise TYT + YDT'dir.</li>
+      <li><strong>Uydurma katsayılar</strong> ("TYT ham puanı × 0,995" gibi). Resmi kılavuzda yazmayan hiçbir katsayı hesaba katılmaz; bu sayfa yalnızca MEB'in yayımladığı tabloyu kullanır.</li>
+    </ol>
+
+    <h2>0,5 Net Kuralı: Puanın Neden Hesaplanamayabilir?</h2>
+    <p><strong>Türkçe veya Temel Matematik testlerinden en az birinde 0,5 ham puanın yoksa TYT puanın hesaplanmaz.</strong> Bu, ÖSYM'nin resmi geçerlilik koşuludur.</p>
+    <p>Pratik anlamı: Fen ve Sosyal'i fulleyip Türkçe ile Matematiği boş bırakan adayın TYT puanı oluşmaz; dolayısıyla SAY, EA, SÖZ ve DİL puanları da oluşmaz. Sınav stratejinde en az bir temel teste mutlaka zaman ayır.</p>
+
+    <h2>TYT Neti Neden İki Kez Sayılır?</h2>
+    <p><strong>Çünkü SAY, EA ve SÖZ puanlarının %40'ı TYT'den gelir.</strong> TYT'deki 1 net, TYT puanına ×3,3 etki ederken AYT puanlarına ×1,32 (3,3 × 0,4) etki eder. TYT'yi "sadece baraj" sanmak, puanın %40'ını hafife almak demektir.</p>
+    <table class="bilgi-tablosu">
+      <caption>16 testin puan türlerindeki net başına katsayısı</caption>
+      <thead><tr><th scope="col">Test</th><th scope="col">TYT</th><th scope="col">SAY</th><th scope="col">EA</th><th scope="col">SÖZ</th><th scope="col">DİL</th></tr></thead>
+      <tbody>
+        <tr><td>Türkçe (TYT)</td><td>3,3</td><td>1,32</td><td>1,32</td><td>1,32</td><td>1,32</td></tr>
+        <tr><td>Sosyal (TYT)</td><td>3,4</td><td>1,36</td><td>1,36</td><td>1,36</td><td>1,36</td></tr>
+        <tr><td>Tem. Matematik (TYT)</td><td>3,3</td><td>1,32</td><td>1,32</td><td>1,32</td><td>1,32</td></tr>
+        <tr><td>Fen (TYT)</td><td>3,4</td><td>1,36</td><td>1,36</td><td>1,36</td><td>1,36</td></tr>
+        <tr><td>Matematik (AYT)</td><td>–</td><td>3,0</td><td>3,0</td><td>–</td><td>–</td></tr>
+        <tr><td>Fizik / Kimya / Biyoloji</td><td>–</td><td>2,85 / 3,07 / 3,07</td><td>–</td><td>–</td><td>–</td></tr>
+        <tr><td>Edebiyat</td><td>–</td><td>–</td><td>3,0</td><td>3,0</td><td>–</td></tr>
+        <tr><td>Tarih-1 / Coğrafya-1</td><td>–</td><td>–</td><td>2,8 / 3,33</td><td>2,8 / 3,33</td><td>–</td></tr>
+        <tr><td>Tarih-2 / Coğrafya-2</td><td>–</td><td>–</td><td>–</td><td>2,91 / 2,91</td><td>–</td></tr>
+        <tr><td>Felsefe / Din</td><td>–</td><td>–</td><td>–</td><td>3,0 / 3,33</td><td>–</td></tr>
+        <tr><td>YDT</td><td>–</td><td>–</td><td>–</td><td>–</td><td>3,0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Sınırlamalar</h2>
     <ul>
-      <li><strong>Tahmini sonuç:</strong> Resmi puanın yalnızca ÖSYM sonuç ekranında açıklanır. Bu araç, MEB'in yayımladığı katsayı tablolarına dayalı şeffaf bir tahmindir.</li>
-      <li><strong>Standart sapma bilinmiyor:</strong> ÖSYM'nin gerçek hesaplamasındaki ulusal ortalama ve standart sapma sınavdan önce kimse tarafından bilinemez.</li>
-      <li><strong>Sıralama tahmini yok:</strong> Bu araç puan tahmin eder; başarı sırası tahmini için yerleştirme verileri gerekir.</li>
+      <li><strong>Tahmini sonuç:</strong> Resmi puanın yalnızca ÖSYM sonuç ekranında açıklanır. Bu araç, resmi katsayı tablolarına dayalı şeffaf bir tahmindir.</li>
+      <li><strong>Standart sapma bilinmiyor:</strong> Gerçek hesaplamadaki ulusal ortalama ve standart sapma, sınavdan önce kimse tarafından bilinemez.</li>
+      <li><strong>Sıralama tahmini yok:</strong> Bu araç puan tahmin eder; başarı sırası için yerleştirme verileri gerekir.</li>
       <li><strong>Katsayılar güncellenebilir:</strong> ÖSYM her yıl kılavuzda ağırlıkları teyit eder; değişiklik olursa bu sayfa güncellenir.</li>
     </ul>
+
+    <h2>Ham Puan, Yerleştirme Puanı ve Başarı Sırası</h2>
+    <p><strong>Üçü farklı şeydir; tercihte hangisinin kullanıldığını karıştırmak en yaygın hatadır.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Üç kavramın karşılaştırması</caption>
+      <thead><tr><th scope="col">Kavram</th><th scope="col">Nedir</th><th scope="col">Ne İçin Kullanılır</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ham puan</strong></td><td>Netlerin ağırlıklı toplamı (100–500)</td><td>Sınav performansının ölçüsü; tercihte doğrudan kullanılmaz</td></tr>
+        <tr><td><strong>Yerleştirme puanı</strong></td><td>Ham puan + OBP × 0,12</td><td>Tercih listesinde esas alınan puan</td></tr>
+        <tr><td><strong>Başarı sırası</strong></td><td>Yerleştirme puanına göre Türkiye sıralaman</td><td>Tercih stratejisinin gerçek temeli; puandan daha istikrarlıdır</td></tr>
+      </tbody>
+    </table>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
       <details>
         <summary>YKS puanı nasıl hesaplanır?</summary>
-        <p>Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). ÖSYM bu netleri o yılın ortalaması ve standart sapmasıyla standart puana dönüştürür, puan türünün resmi ağırlıklarıyla toplar ve 100–500 ölçeğine yerleştirir. Bu araç, MEB'in yayımladığı katsayı tablolarına dayalı şeffaf bir tahmin yapar.</p>
+        <p><strong>Üç adımda: netler, standart puan, resmi ağırlıklar.</strong> Önce her testin neti bulunur (Net = Doğru − Yanlış ÷ 4). ÖSYM bu netleri o yılın ortalaması ve standart sapmasıyla standart puana dönüştürür, puan türünün resmi test ağırlıklarıyla toplar ve 100–500 ölçeğine yerleştirir. Yerleştirme puanı, sınav puanına OBP × 0,12 eklenmesiyle oluşur.</p>
       </details>
       <details>
         <summary>SAY, EA, SÖZ ve DİL puanları nasıl oluşur?</summary>
-        <p>SAY, EA ve SÖZ puanları %40 TYT + %60 AYT bileşimidir: SAY'de AYT Matematik ve Fen, EA'da AYT Matematik ve Edebiyat-Sosyal-1, SÖZ'de Edebiyat-Sosyal-1 ve Sosyal-2 ağırlıklıdır. DİL puanı ise %40 TYT + %60 YDT'dir.</p>
+        <p><strong>%40 TYT + %60 AYT (DİL'de %60 YDT).</strong> SAY'de AYT Matematik ve Fen; EA'da AYT Matematik ve Edebiyat-Sosyal-1; SÖZ'de Edebiyat-Sosyal-1 ve Sosyal-2 ağırlıklıdır. DİL puanı TYT ile YDT'nin birleşimidir. Her puan türünün test katsayıları farklıdır; tam tablo aşağıdaki "TYT Neti Neden İki Kez Sayılır?" bölümündedir.</p>
       </details>
       <details>
         <summary>YKS'de 4 yanlış 1 doğruyu götürür mü?</summary>
-        <p>Evet. TYT, AYT ve YDT'nin tamamında her test için ham puan, doğru sayısından yanlış sayısının dörtte biri çıkarılarak bulunur. Yani 4 yanlış, 1 doğruyu götürür.</p>
+        <p><strong>Evet.</strong> TYT, AYT ve YDT'nin tamamında her testin ham puanı, doğru sayısından yanlış sayısının dörtte biri çıkarılarak bulunur. Boş bırakılan sorular neti etkilemez.</p>
       </details>
       <details>
         <summary>OBP yerleştirme puanına nasıl eklenir?</summary>
-        <p>OBP, diploma notunun (100'lük sistem) 5 katıdır ve 250–500 aralığındadır. Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Bir önceki yıl bir programa yerleşenlerde katsayı yarıya iner (kırık OBP): ×0,06.</p>
+        <p><strong>Yerleştirme = Sınav Puanı + OBP × 0,12.</strong> OBP, diploma notunun 5 katıdır (250–500 aralığı). Diploma notu 85 olan birinin OBP'si 425, katkısı 51 puandır. Katkı, beş puan türünde de aynıdır.</p>
       </details>
       <details>
         <summary>TYT'de baraj puanı var mı?</summary>
-        <p>2022'den beri sabit bir baraj puanı yoktur. Ancak puan hesaplanabilmesi için Türkçe veya Temel Matematik testlerinden en az birinde 0,5 ham puan gerekir. Ayrıca Tıp, Hukuk, Mühendislik, Mimarlık ve Öğretmenlik programları için başarı sırası şartları devam eder.</p>
+        <p><strong>Hayır; 2022'den beri sabit baraj puanı yoktur.</strong> Ancak puan hesaplanabilmesi için Türkçe veya Temel Matematik testlerinden en az birinde 0,5 ham puan gerekir. Tıp, Hukuk, Mühendislik, Mimarlık ve Öğretmenlik programlarındaki başarı sırası şartları ise devam eder.</p>
+      </details>
+      <details>
+        <summary>TYT'ye girmeden AYT puanım hesaplanır mı?</summary>
+        <p><strong>Hayır.</strong> SAY, EA ve SÖZ puanlarının %40'ı TYT'den gelir; TYT neti olmadan bu puanlar oluşmaz. Sadece TYT'ye giren aday TYT puanıyla 2 yıllık önlisans programlarını tercih eder.</p>
+      </details>
+      <details>
+        <summary>YDT'ye girmezsem DİL puanım ne olur?</summary>
+        <p><strong>DİL puanın hesaplanmaz.</strong> DİL puanı %40 TYT + %60 YDT bileşimidir; YDT neti olmadan bu birleşim kurulamaz. Dil bölümleri hedefliyorsan YDT'ye girmen şarttır.</p>
+      </details>
+      <details>
+        <summary>Neden bazı siteler farklı sonuç veriyor?</summary>
+        <p><strong>Çünkü bazı siteler formülü yanlış uyguluyor.</strong> Yaygın hatalar: OBP katkısını ×0,12 yerine %60 gibi göstermek, diploma notunu ×5 yerine ×0,5 ile çarpmak, 2022'de kaldırılan 150 baraj puanını hâlâ yazmak ve uydurma katsayılar kullanmak. Bu sayfa yalnızca MEB'in yayımladığı resmi katsayı tablolarını kullanır.</p>
       </details>
       <details>
         <summary>Bu hesaplama ne kadar güvenilir?</summary>
-        <p>Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, MEB katsayı tablolarına ve geçmiş yıl net-puan ilişkilerine dayalı şeffaf bir tahmindir; resmi sonuç yerine geçmez.</p>
+        <p><strong>Şeffaf bir tahmindir; resmi sonuç değildir.</strong> Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi katsayı tablolarına ve standart puan mantığına dayalı bir yaklaşımdır.</p>
       </details>
       <details>
         <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
-        <p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya paylaşılmaz.</p>
+        <p><strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya paylaşılmaz.</p>
       </details>
     </div>
 
     <h2>Sonraki Adımlar</h2>
     <p>Puanını öğrendikten sonra sıradakiler:</p>
     <ul>
-      <li><a href="../obp-hesaplama/"><strong>OBP Hesaplama</strong></a> — diploma notunun yerleştirme puanına katkısını ayrıca hesapla</li>
-      <li><a href="../tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
-      <li><a href="../taban-puanlari/"><strong>Üniversite Taban Puanları</strong></a> — bölüm ve üniversite bazında taban puan tabloları</li>
-      <li><a href="../msu-puan-hesaplama/"><strong>MSÜ Puan Hesaplama</strong></a> — askeri okulları hedefliyorsan MSÜ puanını da hesapla</li>
+      <li><a href="../obp-hesaplama/"><strong>OBP hesaplama</strong></a> — diploma notunun yerleştirme puanına katkısını ayrıca hesapla</li>
+      <li><a href="../tercih-robotu/"><strong>YKS tercih robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
+      <li><a href="../taban-puanlari/"><strong>Üniversite taban puanları</strong></a> — bölüm ve üniversite bazında taban puan tabloları</li>
+      <li><a href="../msu-puan-hesaplama/"><strong>MSÜ puan hesaplama</strong></a> — askeri okulları hedefliyorsan MSÜ puanını da hesapla</li>
     </ul>
+    <!-- [IMAGE: 16 testin katsayı tablosu infografik. Alt: "YKS test katsayıları tablosu"] -->
   </section>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-puan" aria-label="Aynı kategorideki araçlar"></aside>

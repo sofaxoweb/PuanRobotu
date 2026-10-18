@@ -3,17 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Üniversite Giriş Araçları — YKS, OBP, Tercih Robotu, MSÜ | PuanRobotu</title>
-<meta name="description" content="YKS (TYT–AYT–YDT) puan hesaplama, OBP hesaplama, YKS tercih robotu, üniversite taban puanları ve MSÜ puan hesaplama. Ücretsiz.">
+<title>YKS Hesaplama Araçları | PuanRobotu</title>
+<meta name="description" content="YKS hesaplama araçları: YKS puan hesaplama, OBP hesaplama, MSÜ puan hesaplama, tercih robotu ve taban puanları. Ücretsiz, şeffaf ve tarayıcıda çalışan.">
 <link rel="canonical" href="https://puanrobotu.com/yks/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Üniversite Giriş Araçları | PuanRobotu">
+<meta property="og:title" content="YKS Hesaplama Araçları | PuanRobotu">
 <meta property="og:url" content="https://puanrobotu.com/yks/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "YKS nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>YKS, üniversiteye giriş için ÖSYM'nin yaptığı üç oturumlu sınavdır: TYT, AYT ve YDT.</strong> TYT temel yeterliliği, AYT alan bilgisini, YDT yabancı dil seviyesini ölçer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TYT puanı ile hangi bölümlere girilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>TYT puanıyla 2 yıllık önlisans programlarına ve özel yetenek sınavı gerektirmeyen bazı lisans programlarına girilir.</strong> 4 yıllık lisans bölümleri için AYT veya YDT puan türü gerekir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SAY, EA, SÖZ ve DİL puanları nasıl oluşur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>TYT netlerinin %40'ı ile ilgili AYT testlerinin ağırlıklı toplamından oluşur.</strong> SAY için AYT Matematik-Fen, EA için Matematik-Edebiyat, SÖZ için Edebiyat-Sosyal, DİL için YDT ağırlıklıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OBP yerleştirme puanına nasıl eklenir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Diploma notunun 5 katı alınır (OBP), yerleştirme puanına OBP × 0,12 olarak eklenir.</strong> Kırık OBP durumunda katsayı 0,06'ya iner. Ayrıntılar <a href=\"obp-hesaplama/\">OBP hesaplama</a> sayfasındadır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ ile YKS arasındaki ilişki nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>MSÜ, askeri okullara çağrı için ayrı bir sınavdır; YKS'nin yerine geçmez.</strong> Harp Okulları AYT, Astsubay MYO'lar TYT puanı da ister. Ayrıntılar <a href=\"msu-puan-hesaplama/\">MSÜ puan hesaplama</a> sayfasındadır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tercih döneminde hangi sırayla ilerlemeliyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Önce puanını hesapla, OBP katkını ekle, taban puan tablolarını oku, sonra tercih robotuyla hedef listeni kur.</strong> Listenin üstüne istek sırasına göre diz; strateji başarı sırası üzerinden kurulur."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -37,10 +93,11 @@
   <section class="hero hero-kisa">
     <div class="wrap">
       <p class="kicker">🎓 Üniversite Giriş</p>
-      <h1>Üniversite Giriş Hesaplama Araçları</h1>
-      <p class="lede">YKS puanı, OBP, üniversite tercihi ve MSÜ — üniversite yolundaki tüm hesaplamalar burada.</p>
+      <h1>YKS Hesaplama Araçları</h1>
+      <p class="lede"><strong>YKS hesaplama araçları:</strong> <strong>YKS puan hesaplama</strong> (TYT–AYT–YDT), <strong>OBP hesaplama</strong>, <strong>MSÜ puan hesaplama</strong>, <strong>YKS tercih robotu</strong> ve <strong>üniversite taban puanları</strong>. Beş araç, tek akış: önce puanını hesapla, diploma katkını ekle, hedef listeni kur.</p>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
   <section class="bolum">
     <div class="wrap">
       <h2>Araçlar</h2>
@@ -49,18 +106,42 @@
   </section>
   <section class="bolum bolum-soluk">
     <div class="wrap">
-      <h2>YKS Puanlama Sistemi</h2>
-      <p>Yükseköğretim Kurumları Sınavı (YKS) üç oturumdan oluşur: <strong>TYT</strong> (Temel Yeterlilik Testi), <strong>AYT</strong> (Alan Yeterlilik Testleri) ve <strong>YDT</strong> (Yabancı Dil Testi). TYT ve AYT'de her testin neti, <strong>Net = Doğru − (Yanlış ÷ 4)</strong> formülüyle bulunur; yani 4 yanlış, 1 doğruyu götürür.</p>
-      <p>ÖSYM, netleri standart puana dönüştürür ve puan türüne göre ağırlıklandırır: TYT puanında dört test, SAY/SÖZ/EA puanlarında AYT testleri farklı katsayılarla çarpılır. <strong>OBP</strong> (Ortaöğretim Başarı Puanı) ise diploma notunun 5 katıdır (250–500 aralığı) ve yerleştirme puanına 0,12 katsayısıyla eklenir.</p>
-      <p>Önce <a href="puan-hesaplama/">YKS Puan Hesaplama</a> ile tahmini puanını bul, <a href="obp-hesaplama/">OBP Hesaplama</a> ile diploma katkını ekle, ardından <a href="tercih-robotu/">Tercih Robotu</a> ile hedefleyebileceğin üniversiteleri gör.</p>
+      <h2>Hangi Araç Ne İçin?</h2>
+      <table class="bilgi-tablosu">
+        <caption>YKS araçları ve kullanım sırası</caption>
+        <thead><tr><th scope="col">Araç</th><th scope="col">Ne Yapar</th><th scope="col">Ne Zaman</th></tr></thead>
+        <tbody>
+          <tr><td><strong><a href="msu-puan-hesaplama/">MSÜ puan hesaplama</a></strong></td><td>SA, EA, SÖZ, GN tahmini puan (OBP'siz)</td><td>Mart'taki MSÜ'den sonra</td></tr>
+          <tr><td><strong><a href="puan-hesaplama/">YKS puan hesaplama</a></strong></td><td>TYT–AYT–YDT ham ve yerleştirme puanı tahmini</td><td>Deneme sonuçlarından sonra</td></tr>
+          <tr><td><strong><a href="obp-hesaplama/">OBP hesaplama</a></strong></td><td>Diploma notunun yerleştirme puanına katkısı</td><td>Puan hesaplamayla birlikte</td></tr>
+          <tr><td><strong><a href="taban-puanlari/">Üniversite taban puanları</a></strong></td><td>Taban puan ve kapanış sırası referans tabloları</td><td>Tercih dönemi öncesi</td></tr>
+          <tr><td><strong><a href="tercih-robotu/">YKS tercih robotu</a></strong></td><td>Başarı sırana göre hedef program listesi</td><td>Tercih döneminde</td></tr>
+        </tbody>
+      </table>
+
+      <h2>YKS Süreci: Doğru Sıralama</h2>
+      <ol>
+        <li><strong>MSÜ (Mart):</strong> Askeri okulları düşünenler önce MSÜ'ye girer; sonuç <a href="msu-puan-hesaplama/">MSÜ puan hesaplama</a> ile tahmin edilir.</li>
+        <li><strong>TYT–AYT–YDT (Haziran):</strong> Sınavdan sonra tahmini puan <a href="puan-hesaplama/">YKS puan hesaplama</a> ile bulunur.</li>
+        <li><strong>OBP eklenir:</strong> Diploma katkısı <a href="obp-hesaplama/">OBP hesaplama</a> ile yerleştirme puanına işlenir.</li>
+        <li><strong>Tercih listesi kurulur:</strong> <a href="taban-puanlari/">Üniversite taban puanları</a> okuma kılavuzuyla referans alınır; <a href="tercih-robotu/">YKS tercih robotu</a> ile hedef liste çıkarılır.</li>
+      </ol>
+
+      <h2>YKS Puan Türleri Kısa Rehberi</h2>
+      <p><strong>Beş puan türü vardır; her biri farklı test bileşiminden oluşur.</strong> TYT puanı yalnızca dört TYT testinden; SAY, EA, SÖZ puanları TYT'nin %40'ı ile ilgili AYT testlerinin ağırlıklı toplamından; DİL puanı TYT + YDT'den hesaplanır. Ayrıntılı katsayı tablosu <a href="puan-hesaplama/">YKS puan hesaplama</a> sayfasındadır.</p>
+      <p>Üç oturumun ortak kuralı: <strong>Net = Doğru − (Yanlış ÷ 4)</strong>; 4 yanlış 1 doğruyu götürür. TYT'de ayrıca 0,5 net kuralı vardır: Türkçe veya Temel Matematik'ten en az 0,5 ham puan yoksa TYT puanı hesaplanmaz.</p>
+      <!-- [IMAGE: YKS süreç akışı — MSÜ → TYT/AYT → OBP → tercih. Alt: "YKS hazırlık sırası akış şeması"] -->
     </div>
   </section>
   <section class="bolum sss">
     <div class="wrap">
       <h2>Sık Sorulan Sorular</h2>
-      <details><summary>YKS'de yanlış doğruyu götürür mü?</summary><p>Evet. TYT, AYT ve YDT'de 4 yanlış, 1 doğruyu götürür (Net = Doğru − Yanlış ÷ 4).</p></details>
-      <details><summary>OBP nedir, nasıl hesaplanır?</summary><p>OBP (Ortaöğretim Başarı Puanı), diploma notunun 5 katıdır ve 250–500 aralığındadır. Yerleştirme puanına 0,12 katsayısı ile eklenir.</p></details>
-      <details><summary>TYT puanı ile AYT puanı farklı mı?</summary><p>Evet. TYT puanı yalnızca TYT netlerinden; SAY, SÖZ, EA puanları TYT + ilgili AYT testlerinin ağırlıklı birleşiminden oluşur.</p></details>
+      <details><summary>YKS nedir?</summary><p><strong>YKS, üniversiteye giriş için ÖSYM'nin yaptığı üç oturumlu sınavdır: TYT, AYT ve YDT.</strong> TYT temel yeterliliği, AYT alan bilgisini, YDT yabancı dil seviyesini ölçer.</p></details>
+      <details><summary>TYT puanı ile hangi bölümlere girilir?</summary><p><strong>TYT puanıyla 2 yıllık önlisans programlarına ve özel yetenek sınavı gerektirmeyen bazı lisans programlarına girilir.</strong> 4 yıllık lisans bölümleri için AYT veya YDT puan türü gerekir.</p></details>
+      <details><summary>SAY, EA, SÖZ ve DİL puanları nasıl oluşur?</summary><p><strong>TYT netlerinin %40'ı ile ilgili AYT testlerinin ağırlıklı toplamından oluşur.</strong> SAY için AYT Matematik-Fen, EA için Matematik-Edebiyat, SÖZ için Edebiyat-Sosyal, DİL için YDT ağırlıklıdır.</p></details>
+      <details><summary>OBP yerleştirme puanına nasıl eklenir?</summary><p><strong>Diploma notunun 5 katı alınır (OBP), yerleştirme puanına OBP × 0,12 olarak eklenir.</strong> Kırık OBP durumunda katsayı 0,06'ya iner. Ayrıntılar <a href="obp-hesaplama/">OBP hesaplama</a> sayfasındadır.</p></details>
+      <details><summary>MSÜ ile YKS arasındaki ilişki nedir?</summary><p><strong>MSÜ, askeri okullara çağrı için ayrı bir sınavdır; YKS'nin yerine geçmez.</strong> Harp Okulları AYT, Astsubay MYO'lar TYT puanı da ister. Ayrıntılar <a href="msu-puan-hesaplama/">MSÜ puan hesaplama</a> sayfasındadır.</p></details>
+      <details><summary>Tercih döneminde hangi sırayla ilerlemeliyim?</summary><p><strong>Önce puanını hesapla, OBP katkını ekle, taban puan tablolarını oku, sonra tercih robotuyla hedef listeni kur.</strong> Listenin üstüne istek sırasına göre diz; strateji başarı sırası üzerinden kurulur.</p></details>
     </div>
   </section>
 </main>

@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KPSS Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="KPSS puan hesaplama: GY-GK doğru ve yanlışlarını gir, tahmini P1, P2, P3 puanlarını anında öğren. 2026 ÖSYM formatına uygun ücretsiz araç.">
+<meta name="description" content="KPSS puan hesaplama: GY-GK doğru ve yanlışlarını gir, tahmini P1, P2, P3 puanlarını anında öğren. 2026 ÖSYM formatı, 4 yanlış 1 doğru kuralı. Ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/kamu-sinavlari/kpss-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="KPSS Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="GY-GK netlerinden tahmini KPSS P1, P2, P3 puanını hesapla. 4 yanlış 1 doğruyu götürür.">
+<meta property="og:description" content="KPSS puan hesaplama: GY-GK doğru ve yanlışlarını gir, tahmini P1, P2, P3 puanlarını anında öğren. 2026 ÖSYM formatı, 4 yanlış 1 doğru kuralı. Ücretsiz.">
 <meta property="og:url" content="https://puanrobotu.com/kamu-sinavlari/kpss-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -38,7 +38,10 @@
     {"@type": "Question", "name": "Öğretmen adayları KPSS'ye giriyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. 2026 itibarıyla öğretmen adayları KPSS'ye değil, Millî Eğitim Bakanlığı Akademi Giriş Sınavı'na (MEB-AGS) giriyor. KPSS'de artık Eğitim Bilimleri testi ve P10/P121 puan türleri yok."}},
     {"@type": "Question", "name": "Bu araçtaki puanlar neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "ÖSYM gerçek puanı sınav sonrası hesaplar: her testin neti önce standart puana çevrilir (ortalama 50, standart sapma 10), sonra puan türünün ağırlıklarıyla birleştirilip 100'lük ölçeğe dönüştürülür. Bu dönüşümdeki ortalama, standart sapma ve en yüksek puan sınavdan önce bilinemez. Bu araç, 2025 KPSS istatistikleriyle hazırlanmış yayınlanmış bir net–puan tablosuna dayalı şeffaf tahmin yapar."}},
     {"@type": "Question", "name": "KPSS'de hedef puan için kaç net gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi bir baraj yoktur; önemli olan hedef kadronun taban puanıdır. Kabaca (P3, 2025 verileri): 40 net ≈ 70 puan, 60 net ≈ 77 puan, 80 net ≈ 85 puan. Atama taban puanları her yerleştirmede değişir."}},
-    {"@type": "Question", "name": "Girdiğim veriler saklanıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru–yanlış sayıların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {"@type": "Question", "name": "Girdiğim veriler saklanıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru–yanlış sayıların hiçbir sunucuya gönderilmez ve saklanmaz."}},
+    {"@type": "Question", "name": "KPSS P1 ve P2 puanını kimler kullanır?", "acceptedAnswer": {"@type": "Answer", "text": "A grubu kadrolara başvuran lisans mezunları. Hangi kurumun hangi puan türünü istediği, o kurumun personel alım ilanında yazar. İlanda tür belirtilmiyorsa B grubu merkezi yerleştirme (P3) geçerlidir."}},
+    {"@type": "Question", "name": "KPSS puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "2 yıl. Bu süre içinde yapılan merkezi yerleştirmelerde ve A grubu alımlarında kullanılır; süre dolunca yeniden sınava girmek gerekir."}},
+    {"@type": "Question", "name": "Ön lisans ve lise mezunlarının KPSS'si farklı mı?", "acceptedAnswer": {"@type": "Answer", "text": "Sınav formatı aynıdır (120 soru, GY + GK), ancak puan türü farklıdır: ön lisans için P93, ortaöğretim için P94 hesaplanır. İkisi de %50–%50 ağırlıktadır."}}
   ]
 }
 </script>
@@ -69,10 +72,11 @@
     <article>
       <p class="kicker">Kamu Sınavları</p>
       <h1>KPSS Puan Hesaplama</h1>
+      <p class="yazar">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
       <p class="lede">Genel Yetenek ve Genel Kültür testlerindeki <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>tahmini P1, P2 ve P3 puanlarını</strong> anında öğren. Hesaplama, ÖSYM'nin resmi puanlama mantığına ve yayınlanmış net–puan verilerine dayanır.</p>
 
       <div class="tahmin-notu">
-        <strong>2026 değişikliği:</strong> Öğretmen adayları artık KPSS'ye değil, <strong>MEB-AGS</strong>'ye giriyor. KPSS'de Eğitim Bilimleri testi ile P10 ve P121 puan türleri kaldırıldı. Öğretmenlik puanı için <a href="../oabt-puan-hesaplama/">ÖABT / MEB-AGS-P2 hesaplama aracımıza</a> bak.
+        <strong>2026 değişikliği:</strong> Öğretmen adayları artık KPSS'ye değil, <strong>MEB-AGS</strong>'ye giriyor. KPSS'de Eğitim Bilimleri testi ile P10 ve P121 puan türleri kaldırıldı. Öğretmenlik puanı için <a href="../oabt-puan-hesaplama/">ÖABT puan hesaplama</a> aracımıza bak.
       </div>
 
       <!-- ============ HESAPLAYICI ============ -->
@@ -113,28 +117,46 @@
         <strong>Önemli:</strong> Bu sonuçlar birer <strong>tahmindir</strong>. ÖSYM, gerçek puanı sınav sonrası açıklar: netler önce standart puana çevrilir (ortalama 50, standart sapma 10), sonra puan türünün ağırlıklarıyla birleştirilip 100'lük ölçeğe dönüştürülür. Bu dönüşümdeki ortalama, standart sapma ve en yüksek puan sınavdan önce bilinemez.
       </div>
 
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>KPSS puanı</strong>, netlerin standart puana çevrilip puan türü ağırlıklarıyla birleştirilmesiyle bulunur. 4 yanlış, 1 doğruyu götürür.</li>
+          <li><strong>P1 = GY %70 + GK %30</strong>, <strong>P2 = GY %60 + GK %40</strong>, <strong>P3 = GY %50 + GK %50</strong> ağırlığıyla hesaplanır.</li>
+          <li><strong>2026'da öğretmen adayları KPSS'ye girmiyor;</strong> MEB-AGS'ye giriyor. P10 ve P121 kaldırıldı.</li>
+          <li>Bu sayfadaki sonuçlar <strong>tahmindir</strong>; gerçek puanı ÖSYM sınav sonrası açıklar.</li>
+          <li>Kabaca (P3): 40 net ≈ 70 puan, 60 net ≈ 77 puan, 80 net ≈ 85 puan.</li>
+        </ul>
+      </div>
+
       <!-- ============ REHBER İÇERİK ============ -->
+      <h2>KPSS Puanı Nedir?</h2>
+      <p><strong>KPSS puanı</strong>, ÖSYM'nin Kamu Personel Seçme Sınavı sonuçlarına göre hesapladığı 100'lük ölçekteki yerleştirme puanıdır. Genel Yetenek ve Genel Kültür testlerindeki netler önce standart puana çevrilir, ardından başvurulan kadronun istediği puan türünün ağırlıklarıyla birleştirilir. En yüksek puan 100'dür; KPSS puanı 2 yıl geçerlidir.</p>
+
       <h2>KPSS Puanı Nasıl Hesaplanır?</h2>
-      <p>KPSS Lisans, tek oturumda 120 soru ve 130 dakikadan oluşur: <strong>Genel Yetenek (GY)</strong> 60 soru (Türkçe 30 + Matematik 30) ve <strong>Genel Kültür (GK)</strong> 60 soru (Tarih, Coğrafya, Vatandaşlık, Güncel Bilgiler).</p>
+      <p><strong>KPSS puanı 4 adımda hesaplanır:</strong> net bulma, standart puana çevirme, puan türü ağırlıklarıyla birleştirme ve 100'lük ölçeğe dönüştürme. İlk adımı sen yaparsın; kalan 3 adımı ÖSYM sınav sonrası uygular.</p>
       <h3>Adım 1 — Netleri bul</h3>
-      <p>Her test için: <strong>Net = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. Yani 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p>
-      <h3>Adım 2 — Standart puana çevir (ÖSYM yapar)</h3>
-      <p>ÖSYM, her testin netini o yılın aday kitlesine göre standart puana dönüştürür (ortalama 50, standart sapma 10). Aynı testte aynı neti yapan herkes aynı standart puanı alır; sorular tek tek ağırlıklandırılmaz.</p>
+      <p>Her test için <strong>Net = Doğru − (Yanlış ÷ 4)</strong> formülü uygulanır. 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti değiştirmez. GY ve GK netleri ayrı ayrı hesaplanır.</p>
+      <h3>Adım 2 — Standart puana çevir</h3>
+      <p>ÖSYM, her testin netini o yıl sınava girenlerin dağılımına göre standart puana dönüştürür: ortalama 50, standart sapma 10. Aynı testte aynı neti yapan herkes aynı standart puanı alır. Sorular tek tek ağırlıklandırılmaz; 60 sorunun her biri net hesabında eşittir.</p>
       <h3>Adım 3 — Puan türünün ağırlıklarıyla birleştir</h3>
+      <p>Standart puanlar, başvurulan kadronun istediği puan türünün katsayılarıyla çarpılıp toplanır. Böylece ağırlıklı standart puan (ASP) bulunur.</p>
       <table class="bilgi-tablosu">
         <caption>KPSS puan türü ağırlıkları (ÖSYM kılavuzu)</caption>
         <thead><tr><th scope="col">Puan Türü</th><th scope="col">Genel Yetenek</th><th scope="col">Genel Kültür</th><th scope="col">Kullanım</th></tr></thead>
         <tbody>
-          <tr><td><strong>P1</strong></td><td>%70</td><td>%30</td><td>A grubu kadrolar (ilanla)</td></tr>
-          <tr><td><strong>P2</strong></td><td>%60</td><td>%40</td><td>A grubu kadrolar (ilanla)</td></tr>
+          <tr><td><strong>P1</strong></td><td>%70</td><td>%30</td><td>A grubu kadrolar (kurum ilanıyla)</td></tr>
+          <tr><td><strong>P2</strong></td><td>%60</td><td>%40</td><td>A grubu kadrolar (kurum ilanıyla)</td></tr>
           <tr><td><strong>P3</strong></td><td>%50</td><td>%50</td><td>B grubu merkezi yerleştirme (lisans)</td></tr>
-          <tr><td><strong>P93 / P94</strong></td><td>%50</td><td>%50</td><td>B grubu (ön lisans / ortaöğretim)</td></tr>
+          <tr><td><strong>P93</strong></td><td>%50</td><td>%50</td><td>B grubu merkezi yerleştirme (ön lisans)</td></tr>
+          <tr><td><strong>P94</strong></td><td>%50</td><td>%50</td><td>B grubu merkezi yerleştirme (ortaöğretim)</td></tr>
         </tbody>
       </table>
-      <h3>Adım 4 — 100'lük ölçeğe dönüştür (tahmini)</h3>
-      <p>Resmi formül: <strong>Puan = 70 + 30 × [2(ASP − X) − S] ÷ [2(B − X) − S]</strong>; burada ASP ağırlıklı standart puan, X ortalama, S standart sapma, B en yüksek ASP'dir. En yüksek puan 100 olur. Bu araç, resmi formülün gerektirdiği sınav-sonrası istatistikler yerine <strong>yayınlanmış bir net–puan tablosunu</strong> (2025 KPSS verileri: 40 net → 69,87; 60 net → 77,40; 66,9 net → 80; 80 net → 84,93) dayanak alır ve aralarında doğrusal içdeğerleme yapar. P1 ve P2 için ağırlıklı netin "eşdeğer toplam net" karşılığı aynı eğride okunur — bu, standart puanın nette doğrusal olmasına dayanan şeffaf bir yaklaşımdır.</p>
+      <h3>Adım 4 — 100'lük ölçeğe dönüştür</h3>
+      <p>Resmi formül <strong>Puan = 70 + 30 × [2(ASP − X) − S] ÷ [2(B − X) − S]</strong> şeklindedir. X, ASP ortalaması; S, standart sapması; B, en yüksek ASP'dir. En yüksek ASP'ye sahip aday 100 puan alır.</p>
+      <p><strong>Tam çözümlü örnek:</strong> bir adayın ASP'si 60 olsun; o yılın ortalaması X = 50, standart sapması S = 10, en yüksek ASP B = 80 olsun. Puan = 70 + 30 × [2(60 − 50) − 10] ÷ [2(80 − 50) − 10] = 70 + 30 × 10 ÷ 50 = <strong>76</strong>. Buradaki X, S ve B değerleri örnektir; gerçek değerleri yalnızca ÖSYM bilir.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>Formül ve Çalışılmış Örnek</h2>
+      <p>Yukarıdaki 4 adımın tamamı sınav-sonrası veriye ihtiyaç duyar. Bu araç, 4. adımdaki bilinmeyenleri <strong>yayınlanmış bir net–puan tablosuyla</strong> (2025 KPSS verileri: 40 net → 69,87; 60 net → 77,40; 66,9 net → 80; 80 net → 84,93) değiştirir ve şeffaf tahmin üretir.</p>
       <p>Bir adayın deneme sonucu: GY 42 doğru 13 yanlış (5 boş), GK 35 doğru 18 yanlış (7 boş).</p>
       <ul>
         <li>GY net: 42 − (13 ÷ 4) = <strong>38,75</strong></li>
@@ -146,6 +168,83 @@
       </ul>
       <p>GY neti GK'den yüksek olduğu için GY ağırlıklı P1 en yüksek çıkar. Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
+      <h2>Bu Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>GY doğru sayını yaz.</strong> Genel Yetenek testindeki doğru sayını ilk kutuya gir (0–60).</li>
+        <li><strong>GY yanlış sayını yaz.</strong> Aynı testteki yanlış sayını ikinci kutuya gir.</li>
+        <li><strong>GK doğru ve yanlışlarını yaz.</strong> Genel Kültür için aynı iki değeri gir (0–60).</li>
+        <li><strong>Hesapla'ya bas.</strong> Tahmini P1, P2 ve P3 puanın anında görünür.</li>
+        <li><strong>Sonucu yorumla.</strong> Aşağıdaki tabloda hedef kadronun taban puanıyla karşılaştır.</li>
+      </ol>
+      <p>Her iki testte de en az 1 işaretleme yapmalısın; ÖSYM kuralı gereği boş bırakılan testin puanı hesaplanmaz.</p>
+
+      <h2>Sonucunu Nasıl Okumalısın?</h2>
+      <p><strong>Tahmini puanın, hedef kadronun son yerleştirmedeki taban puanıyla karşılaştırıldığında anlam kazanır.</strong> Tek başına 80 puan iyi ya da kötü değildir; kadronun tabanı belirleyicidir.</p>
+      <table class="bilgi-tablosu">
+        <caption>Tahmini P3 puanı ve pratik yorumu (2025 verileri)</caption>
+        <thead><tr><th scope="col">Tahmini P3</th><th scope="col">Yaklaşık Net</th><th scope="col">Ne Anlama Gelir?</th><th scope="col">Sonraki Adım</th></tr></thead>
+        <tbody>
+          <tr><td><strong>85+</strong></td><td>80+</td><td>Çoğu B grubu kadro için rekabetçi aralık</td><td>Hedef kadroların taban puanlarını listele, tercih stratejisi kur</td></tr>
+          <tr><td><strong>80–85</strong></td><td>67–80</td><td>Birçok kadro için yeterli, popüler kadrolarda sınırda</td><td>Zayıf testine odaklan, neti 5–10 artır</td></tr>
+          <tr><td><strong>75–80</strong></td><td>55–67</td><td>Orta aralık; kadro seçimi kritik</td><td>GY/GK dengeni gözden geçir, deneme analizi yap</td></tr>
+          <tr><td><strong>70–75</strong></td><td>40–55</td><td>Alt aralık; az kadro bu banda düşer</td><td>Temel konuları bitir, yanlış sayını azalt</td></tr>
+          <tr><td><strong>70 altı</strong></td><td>40 altı</td><td>Yerleşme şansı düşük</td><td>Çalışma planını baştan kur, konu eksiği kapat</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2026 İstatistikleri Açıklandı: Tahmin İçin Ne Anlama Geliyor?</h2>
+      <p><strong>ÖSYM, 7 Ekim 2026'da açıklanan KPSS Lisans sonuçlarıyla test istatistiklerini yayımladı:</strong> GY ortalaması 19,44; GK ortalaması 20,08. Bir önceki yılın değerleri GY 17,43 ve GK 14,30 idi.</p>
+      <p>Bu ne anlama gelir? Ortalamalar yükseldiği için <strong>aynı net, 2026'da bir önceki yıla göre biraz daha düşük standart puana denk gelir</strong>. Bu sayfadaki tahmin tablosu 2025 verilerine dayanır; 2026 zorluğunda aynı netten bir miktar düşük puan çıkması normaldir. Rakiplerin tabloları da hâlâ 2025 (hatta ön lisans için 2018) verilerini kullanıyor; hiçbiri bu güncellemeyi sayfasına işlemedi.</p>
+
+      <h2>Aynı 70 Net, Üç Farklı Puan: Dağılımın Gücü</h2>
+      <p><strong>Toplam netin aynı olması, P1 ve P2 puanının aynı olacağı anlamına gelmez.</strong> 70 neti iki farklı dağılımla yapan adayların tahmini puanları (bu sayfadaki hesaplayıcıyla):</p>
+      <table class="bilgi-tablosu">
+        <caption>70 netin dağılıma göre P1/P2/P3 karşılığı</caption>
+        <thead><tr><th scope="col">Net Dağılımı</th><th scope="col">Tahmini P1</th><th scope="col">Tahmini P2</th><th scope="col">Tahmini P3</th></tr></thead>
+        <tbody>
+          <tr><td>GY 45 + GK 25</td><td><strong>84,18</strong></td><td>82,67</td><td>81,17</td></tr>
+          <tr><td>GY 35 + GK 35</td><td>81,17</td><td>81,17</td><td>81,17</td></tr>
+          <tr><td>GY 25 + GK 45</td><td>78,15</td><td>79,66</td><td>81,17</td></tr>
+        </tbody>
+      </table>
+      <p>Ders: P3 hedefliyorsan dağılım fark etmez; <strong>P1 hedefliyorsan GY'ye yüklen</strong> — 6 puanlık fark, kadro barajında belirleyici olur. Rakip hesaplayıcıların hiçbiri P1/P2 hesabı yapmıyor.</p>
+
+      <h2>P1 ve P2 Tahmini Nasıl Yapılıyor?</h2>
+      <p><strong>P1 ve P2 tahmini "eşdeğer net" yöntemiyle yapılır.</strong> Yayınlanmış net–puan tablosu toplam nete göre hazırlandığı için önce ağırlıklı netin toplam-net karşılığı bulunur: P1 için eşdeğer net = 2 × (0,70 × GY net + 0,30 × GK net). Bu değer tabloda okunur.</p>
+      <p>Dayanağı şeffaftır: standart puan nette doğrusala yakın davrandığı için ağırlıklı netin toplam net cinsinden karşılığı aynı eğride okunabilir. GY ve GK'nın o yılki ortalama ve standart sapması eşit olsaydı bu yöntem birebir doğru olurdu; gerçekte küçük bir yaklaşım payı vardır.</p>
+
+      <h2>40 Netin Altında Tahmin Neden Daha Belirsiz?</h2>
+      <p><strong>40 netin altındaki tahminler, dayanak tablonun dışına taşan ekstrapolasyondur.</strong> Tablodaki en düşük nokta 40 nettir (69,87 puan); altındaki değerler doğrusal uzatmayla bulunur ve hata payı büyür.</p>
+      <p>Pratik sonuç: 30 net civarındaki tahmini bir aralık olarak oku, tek sayı olarak değil. Hiçbir rakip sayfa bu uyarıyı yapmıyor.</p>
+
+      <h2>İnternetteki Yanlış KPSS Ağırlık Tabloları</h2>
+      <p><strong>Bazı sitelerdeki KPSS ağırlık tabloları yanlıştır.</strong> Örneğin yakın tarihli bir sayfada P1 "GY %50 + GK %50" olarak yazıyor; doğrusu GY %70 + GK %30'dur. Aynı sayfada P10 ve Eğitim Bilimleri %40 ağırlıkla "güncel" gibi anlatılıyor; oysa 2026'da Eğitim Bilimleri testi de P10 da yok.</p>
+      <p>Kural basit: "Eğitim Bilimleri %40" yazan her tablo güncel değildir. Ağırlıkları her zaman ÖSYM kılavuzundan teyit et; yukarıdaki tablo kılavuzla birebir uyumludur.</p>
+
+      <h2>Sınırlamalar</h2>
+      <p><strong>Bu araç ÖSYM'nin yerini tutmaz; 4 somut sınırı vardır.</strong></p>
+      <ul>
+        <li><strong>Standart sapma bilinmiyor.</strong> Gerçek puan o yılın aday dağılımına bağlıdır; aynı net farklı yıllarda farklı puana denk gelir.</li>
+        <li><strong>40 net altı ekstrapolasyondur.</strong> Dayanak tablonun altındaki tahminler daha az güvenilirdir.</li>
+        <li><strong>P1/P2 eşdeğer-net yaklaşımıdır.</strong> GY ve GK dağılımları farklıysa küçük sapma olur.</li>
+        <li><strong>2025 verilerine dayanır.</strong> 2026 sınavının zorluğu farklıysa tablo kayar; yukarıdaki 2026 istatistikleri bölümü bu etkiyi açıklar.</li>
+      </ul>
+
+      <h2>Hangi Puan Türü Sana Lazım?</h2>
+      <p><strong>Doğru puan türü, başvuracağın kadronun ilanında yazar.</strong> Yanlış türle hesap yapmak en yaygın hatadır.</p>
+      <table class="bilgi-tablosu">
+        <caption>KPSS puan türleri karşılaştırması</caption>
+        <thead><tr><th scope="col">Puan Türü</th><th scope="col">Kimler İçin?</th><th scope="col">GY Ağırlığı</th><th scope="col">Ne Zaman?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>P1</strong></td><td>Lisans mezunları</td><td>%70 (yüksek)</td><td>GY'si güçlü adaylar; A grubu ilanları</td></tr>
+          <tr><td><strong>P2</strong></td><td>Lisans mezunları</td><td>%60 (orta)</td><td>A grubu ilanları; P1–P3 arası denge</td></tr>
+          <tr><td><strong>P3</strong></td><td>Lisans mezunları</td><td>%50 (eşit)</td><td>B grubu merkezi yerleştirme; en yaygın tür</td></tr>
+          <tr><td><strong>P93</strong></td><td>Ön lisans mezunları</td><td>%50 (eşit)</td><td>B grubu merkezi yerleştirme (ön lisans)</td></tr>
+          <tr><td><strong>P94</strong></td><td>Ortaöğretim mezunları</td><td>%50 (eşit)</td><td>B grubu merkezi yerleştirme (lise)</td></tr>
+        </tbody>
+      </table>
+      <p>Öğretmen adayıysan bu tablodaki hiçbir tür sana uygun değil; 2026'dan beri öğretmenlik puanı <a href="../oabt-puan-hesaplama/">ÖABT puan hesaplama</a> sayfasındaki MEB-AGS-P2 sistemiyle bulunuyor.</p>
+
       <h2>İpuçları</h2>
       <ul>
         <li><strong>Yanlışların maliyetini bil:</strong> Emin olmadığın soruda rastgele işaretleme, 4 yanlışta 1 net götürür. En az 2 şıkkı eleyebiliyorsan işaretlemek mantıklıdır.</li>
@@ -156,11 +255,12 @@
 
       <h2>Sonraki Adımlar</h2>
       <ul>
-        <li><a href="../oabt-puan-hesaplama/"><strong>ÖABT / MEB-AGS-P2 Hesaplama</strong></a> — öğretmen adayıysan 2026'nın yeni sistemine göre puanını hesapla</li>
-        <li><a href="../tus-puan-hesaplama/"><strong>TUS Puan Hesaplama</strong></a> — tıpta uzmanlık hedefliyorsan K ve T puanlarını tahmin et</li>
+        <li>Öğretmen adayıysan, 2026'nın yeni sistemine göre puanını <a href="../oabt-puan-hesaplama/">ÖABT puan hesaplama</a> aracımızla bul.</li>
+        <li>Tıpta uzmanlık hedefliyorsan, K ve T puanlarını <a href="../tus-puan-hesaplama/">TUS puan hesaplama</a> aracımızla tahmin et.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
+      <p><small>Yasal uyarı: Bu sayfadaki araç ve içerik bilgilendirme amaçlıdır; ÖSYM'nin resmi hesaplama ve yerleştirme süreçlerinin yerini tutmaz. Kadro ve başvuru koşulları için ilgili kurumun ilanını ve ÖSYM kılavuzunu esas al.</small></p>
+            <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>KPSS'de yanlış doğruyu götürür mü?</summary><p>Evet. KPSS'de her test için Net = Doğru − (Yanlış ÷ 4) uygulanır; yani 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p></details>
@@ -169,6 +269,9 @@
         <details><summary>Bu araçtaki puanlar neden “tahmini”?</summary><p>ÖSYM gerçek puanı sınav sonrası hesaplar: her testin neti önce standart puana çevrilir (ortalama 50, standart sapma 10), sonra puan türünün ağırlıklarıyla birleştirilip 100'lük ölçeğe dönüştürülür. Bu dönüşümdeki ortalama, standart sapma ve en yüksek puan sınavdan önce bilinemez. Bu araç, 2025 KPSS istatistikleriyle hazırlanmış yayınlanmış bir net–puan tablosuna dayalı şeffaf tahmin yapar.</p></details>
         <details><summary>KPSS'de hedef puan için kaç net gerekir?</summary><p>Resmi bir baraj yoktur; önemli olan hedef kadronun taban puanıdır. Kabaca (P3, 2025 verileri): 40 net ≈ 70 puan, 60 net ≈ 77 puan, 80 net ≈ 85 puan. Atama taban puanları her yerleştirmede değişir.</p></details>
         <details><summary>Girdiğim veriler saklanıyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru–yanlış sayıların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
+        <details><summary>KPSS P1 ve P2 puanını kimler kullanır?</summary><p>A grubu kadrolara başvuran lisans mezunları. Hangi kurumun hangi puan türünü istediği, o kurumun personel alım ilanında yazar. İlanda tür belirtilmiyorsa B grubu merkezi yerleştirme (P3) geçerlidir.</p></details>
+        <details><summary>KPSS puanı kaç yıl geçerli?</summary><p>2 yıl. Bu süre içinde yapılan merkezi yerleştirmelerde ve A grubu alımlarında kullanılır; süre dolunca yeniden sınava girmek gerekir.</p></details>
+        <details><summary>Ön lisans ve lise mezunlarının KPSS'si farklı mı?</summary><p>Sınav formatı aynıdır (120 soru, GY + GK), ancak puan türü farklıdır: ön lisans için P93, ortaöğretim için P94 hesaplanır. İkisi de %50–%50 ağırlıktadır.</p></details>
       </section>
     </article>
 

@@ -28,6 +28,86 @@
   "description": "LGS puan veya yüzdelik dilimine göre 81 ilde lise öneren ücretsiz tercih robotu."
 }
 </script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Tercih robotu resmi tercih yerine geçer mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Bu araç, puanına uygun okulları bulmana yardım eden bir ön eleme aracıdır. Resmi tercih başvurusu yalnızca e-Okul üzerinden yapılır ve ortaokul müdürlüğüne onaylatılır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Puanımla mı, dilimimle mi arama yapmalıyım?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Diliminle. Puanlar sınavın zorluğuna göre yıldan yıla değişir; yüzdelik dilim daha istikrarlıdır ve okulların taban dilimleri tercihte asıl referanstır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Listede kaç okul olmalı?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Merkezi yerleştirmede en fazla 10 tercih yapabilirsin. Dengeli bir liste için 3–4 güvenli, 3–4 hedef ve 2–3 zorlu okul önerilir. Yerel yerleştirmede 5, pansiyonlu okullarda 5 ayrı hakkın daha vardır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Taban puanlar her yıl aynı mı kalır?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Okulun popülaritesine, kontenjan değişimine ve o yılın sınav zorluğuna göre taban puan ve dilimler değişir. Bu listedeki veriler 2025 yerleştirmesine aittir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Yerel yerleştirmede nelere dikkat etmeliyim?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "İlk 3 tercihin kayıt alanından (yeşil alan) olmak zorundadır ve aynı okul türünden en fazla 3 tercih yapabilirsin. Yerel yerleştirme sınavsızdır; OBP ve adres belirleyicidir. Kalan 2 hakkı kayıt alanı dışından stratejik kullan."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Tercih sıralaması yerleşme şansımı etkiler mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sıralama şansını artırmaz; önceliğini belirler. Sistem listeni yukarıdan aşağı tarar ve hak kazandığın ilk okula yerleştirir. Bu yüzden en çok istediğin okulu en üste yazmalısın."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Nakil başvurusu nedir, ne zaman yapılır?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yerleştirmeye esas nakil, ilk yerleştirme sonrası boş kalan kontenjanlar için yapılan ek tercih dönemleridir. İlk turda yerleşemeyen veya okulunu beğenmeyen öğrenciler nakille yeniden tercih yapar. Tarihler her yıl MEB tercih kılavuzunda ilan edilir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Pansiyonlu okul tercihi ne zaman mantıklı?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "İl dışında, yatılı okumaya uygun bir hedef okulun varsa mantıklıdır. Pansiyonun koşullarını, ücretini ve okulun yatılılık kontenjanını tek tek araştır; pansiyonlu tercihler ayrı bir ekranda (5 hak) yapılır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Tüm eşleştirme tarayıcında yapılır; puanın, dilimin ve il seçimin hiçbir sunucuya gönderilmez veya saklanmaz."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
 
@@ -55,6 +135,7 @@
       <p class="kicker">LGS 2026 tercih dönemi</p>
       <h1>LGS Tercih Robotu</h1>
       <p class="lede">Puanını veya yüzdelik dilimini gir, ilini seç — sana uygun liseler <strong>taban puan ve yüzdelik dilimleriyle</strong> sıralansın.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
     </div>
   </section>
 
@@ -118,20 +199,80 @@
   </section>
 
   <section class="wrap content">
-    <h2>Tercih Robotu Nasıl Çalışır?</h2>
+    <div class="ozet-kutu">
+      <h2>Öne Çıkanlar</h2>
+      <ul>
+        <li><strong>Tercihte puandan değil, yüzdelik dilimden yola çık.</strong> Dilim, sınavın zorluğundan bağımsız gerçek sıralamandır.</li>
+        <li><strong>3 ayrı tercih ekranı vardır:</strong> yerel yerleştirme (5 tercih), merkezi yerleştirme (10 tercih), pansiyonlu okullar (5 tercih).</li>
+        <li><strong>Listeni 3–4 güvenli, 3–4 hedef, 2–3 zorlu okul</strong> dengesinde kur.</li>
+        <li><strong>Yerleşme, listedeki ilk hak kazandığın okuladır</strong> — sıralama, tercih önceliğindir; olasılık artırmaz.</li>
+        <li>Bu sayfadaki veriler <strong>2025 yerleştirme</strong> sonuçlarına aittir; resmi tercih yalnızca e-Okul üzerinden yapılır.</li>
+      </ul>
+    </div>
+
+    <h2>LGS Tercih Robotu Nedir?</h2>
+    <p><strong>LGS tercih robotu, puanına veya yüzdelik dilimine göre girebileceğin liseleri listeleyen bir ön eleme aracıdır.</strong> Okulların geçmiş yıl taban puan ve yüzdelik dilimlerini senin diliminle karşılaştırır; uygun okulları güvenli, hedef ve zorlu olarak sınıflandırır. Resmî tercih başvurusu yerine geçmez — o işlem yalnızca e-Okul üzerinden yapılır.</p>
+
+    <h2>Robot Nasıl Çalışır?</h2>
+    <p><strong>Robot, yüzdelik dilimini okulların taban dilimleriyle eşleştirir.</strong> Puan girersen önce onu tahmini dilime çevirir; dilim biliyorsan doğrudan kullanır. Sonra seçtiğin ildeki okulları tarar ve her okulu 3 rozetten biriyle işaretler:</p>
+    <table class="bilgi-tablosu">
+      <caption>Rozet anlamları</caption>
+      <thead><tr><th scope="col">Rozet</th><th scope="col">Anlamı</th><th scope="col">Ne yapmalısın</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rozet rozet-guvenli">Şansın yüksek</span></td><td>Dilimin, okulun taban diliminden belirgin şekilde iyi</td><td>Listenin "güvenli" katmanına koy</td></tr>
+        <tr><td><span class="rozet rozet-hedef">Hedef</span></td><td>Dilimin, okulun taban dilimine yakın</td><td>Asıl hedeflerin bunlar — listeye mutlaka al</td></tr>
+        <tr><td><span class="rozet rozet-zorlu">Zorlu</span></td><td>Okulun taban dilimi seninkinden iyi</td><td>Üstten 1–2 deneme olarak ekle, listeyi bunlarla doldurma</td></tr>
+      </tbody>
+    </table>
+    <p>Rozetler geçen yıl verisine dayanır; bu yılki tabanlar kontenjan ve sınav zorluğuna göre oynar. Bu yüzden robot bir <strong>ön eleme</strong> aracıdır — son kararı taban puan tablolarını inceleyerek ver.</p>
+
+    <h2>Nasıl Kullanılır?</h2>
     <ol class="adimlar">
       <li><strong>Puanını veya dilimini gir:</strong> Puan girersen araç onu yüzdelik dilime çevirir; dilim biliyorsan doğrudan girebilirsin. Tercihte dilim, puandan daha güvenilirdir.</li>
       <li><strong>İlini seç:</strong> 81 ilin 2025 yerleştirme taban puan ve dilim verileriyle eşleşen okullar bulunur.</li>
-      <li><strong>Listeni incele:</strong> Okullar taban puana göre en iyiden başlayarak sıralanır. <em>Şansın yüksek</em> rozeti diliminin rahatça yettiği, <em>Hedef</em> rozeti sınırda olduğun, <em>Zorlu</em> rozeti ise üstten denemen gereken okulları gösterir.</li>
+      <li><strong>Listeni incele:</strong> Okullar taban puana göre en iyiden başlayarak sıralanır. Rozetlere göre güvenli, hedef ve zorlu okullarını işaretle.</li>
     </ol>
 
-    <h2>Bilmen Gerekenler</h2>
+    <h2>10 Tercih Hakkını Nasıl Dağıtmalısın?</h2>
+    <p><strong>Merkezi yerleştirmede 10 hakkını 3–4 güvenli, 3–4 hedef, 2–3 zorlu okul olarak dağıt.</strong> Bu dağılımın mantığı: zorlu okullar hayalini, hedef okullar gerçekçi beklentini, güvenli okullar ise "açıkta kalmama" sigortanı temsil eder.</p>
+    <p>En sık yapılan hata, listeyi yalnızca hayal okullarla doldurmaktır. Kontenjanlar ve dilimler yıldan yıla oynadığı için geçen yıl %5 dilimle alan bir okul bu yıl %4,5'a çekilebilir. Güvenli katman olmadan liste kurmak, nakil dönemine kalmak anlamına gelir.</p>
+
+    <h2>3 Ayrı Tercih Ekranı: Yerel, Merkezi, Pansiyonlu</h2>
+    <p><strong>Tercihler 3 ayrı ekranda yapılır ve her ekranın kendi kotası vardır:</strong> yerel yerleştirme için 5, merkezi yerleştirme için 10, pansiyonlu okullar için 5 tercih hakkı.</p>
     <ul>
-      <li><strong>Veriler 2025 yerleştirmesine aittir</strong> (kontenjanlar 2026). Taban puanlar her yıl değişir; bu liste bir ön eleme aracıdır, resmi tercih yerine geçmez.</li>
-      <li>Resmi tercihlerini <strong>e-Okul</strong> üzerinden, ortaokul müdürlüğüne onaylatarak yapmalısın.</li>
-      <li>Merkezi sınavla alan okullarda en fazla <strong>10 tercih</strong> hakkın var; listeni dengeli kur: birkaç güvenli, birkaç hedef, birkaç zorlu okul.</li>
-      <li>Detaylı taban puan tabloları için <a href="taban-puanlari/">81 ilin LGS taban puanları</a> sayfasına bakabilirsin.</li>
+      <li><strong>Yerel yerleştirme (5 tercih):</strong> Sınavsız, adrese dayalı yerleştirmedir. İlk 3 tercihin kayıt alanından (yeşil) olmak zorundadır; aynı okul türünden en fazla 3 tercih yapabilirsin. OBP burada belirleyicidir.</li>
+      <li><strong>Merkezi yerleştirme (10 tercih):</strong> LGS puanıyla öğrenci alan okullar içindir. Bu robotun listelediği okullar bu ekrana girer.</li>
+      <li><strong>Pansiyonlu okullar (5 tercih):</strong> İl dışında yatılı okumak isteyenler içindir. Pansiyon koşullarını ve ücretlerini ayrıca araştır.</li>
     </ul>
+    <p>Üç liste birbirinden bağımsızdır; birine yazdığın okul diğerini etkilemez. Strateji, her listeyi kendi içinde güvenli–hedef–zorlu dengesinde kurmaktır.</p>
+
+    <h2>Nakil Dönemleri: İkinci Şans</h2>
+    <p><strong>İlk yerleştirmede istediğin okula giremezsen nakil (yerleştirmeye esas nakil) dönemlerinde yeniden tercih yaparsın.</strong> Nakil, boş kalan kontenjanlara göre yapılır; tabanlar ilk yerleştirmeden farklı oluşur.</p>
+    <p>Nakil dönemlerinde tabloyu okuma: boş kontenjanı olan okulun tabanı genellikle ilk yerleştirmenin altında kalır, ancak popüler okullarda boş kontenjan hiç açılmayabilir. Hiçbir okula yerleşemeyen öğrenciler, il/ilçe komisyonlarınca açık kontenjanı olan okullara yerleştirilir — yani sistemde kimse açıkta bırakılmaz, ancak okul seçme lüksün azalır.</p>
+
+    <h2>Yerleşme Mantığı: Sıralama Ne İşe Yarar?</h2>
+    <p><strong>Sistem seni, tercih listende hak kazandığın İLK okula yerleştirir.</strong> 3. ve 7. sıradaki okulların ikisine de puanın yetiyorsa 3. sıradakine yerleşirsin — 7. sıradaki "yedek" olmaz.</p>
+    <p>Bu yüzden sıralama bir olasılık artırıcı değil, <strong>öncelik beyanıdır</strong>: en çok istediğin okulu en üste yaz. "Alta yazarsam şansım artar" düşüncesi yanlıştır; sistem yukarıdan aşağı tarar ve ilk uygun okulda durur.</p>
+
+    <h2>Bu Aracın Sınırları</h2>
+    <ul>
+      <li><strong>Veriler 2025 yerleştirmesine aittir</strong> (kontenjanlar 2026). Taban puan ve dilimler her yıl değişir; bu liste bir ön eleme aracıdır, resmi tercih yerine geçmez.</li>
+      <li><strong>Resmi tercih yalnızca e-Okul üzerinden yapılır</strong> ve ortaokul müdürlüğüne onaylatılır. Onayın işlendiğini e-Okul'dan kontrol et; onaylanmamış tercih geçersizdir.</li>
+      <li><strong>Rozetler olasılık değil, geçen yıl verisine göre sınıflandırmadır.</strong> "Şansın yüksek" rozeti yerleşme garantisi vermez.</li>
+    </ul>
+
+    <h2>Tercih Robotu mu, Manuel Araştırma mı?</h2>
+    <table class="bilgi-tablosu">
+      <caption>İki yöntemin karşılaştırması</caption>
+      <thead><tr><th scope="col">Ölçüt</th><th scope="col">Tercih robotu</th><th scope="col">Manuel araştırma</th></tr></thead>
+      <tbody>
+        <tr><td>Hız</td><td>Dakikalar içinde yüzlerce okulu eler</td><td>Saatler sürer</td></tr>
+        <tr><td>Veri genişliği</td><td>81 ilin tamamı tek ekranda</td><td>Tek tek sayfa gezmek gerekir</td></tr>
+        <tr><td>Yorum derinliği</td><td>Sınırlı — sayısal eşleştirme yapar</td><td>Okul kültürü, ulaşım, pansiyon gibi detaylar</td></tr>
+        <tr><td>Ne zaman kullanılır</td><td>Ön eleme: aday listeyi daraltmak için</td><td>Final: listedeki okulları tek tek incelemek için</td></tr>
+      </tbody>
+    </table>
+    <p>Doğru akış: önce robotla aday listeyi çıkar, sonra her okulun detayını incelemeden listeyi kapatma.</p>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
@@ -145,14 +286,40 @@
       </details>
       <details>
         <summary>Listede kaç okul olmalı?</summary>
-        <p>Merkezi yerleştirmede en fazla 10 tercih yapabilirsin. Dengeli bir liste için 3–4 güvenli, 3–4 hedef ve 2–3 zorlu okul önerilir.</p>
+        <p>Merkezi yerleştirmede en fazla 10 tercih yapabilirsin. Dengeli bir liste için 3–4 güvenli, 3–4 hedef ve 2–3 zorlu okul önerilir. Yerel yerleştirmede 5, pansiyonlu okullarda 5 ayrı hakkın daha vardır.</p>
       </details>
       <details>
         <summary>Taban puanlar her yıl aynı mı kalır?</summary>
         <p>Hayır. Okulun popülaritesine, kontenjan değişimine ve o yılın sınav zorluğuna göre taban puan ve dilimler değişir. Bu listedeki veriler 2025 yerleştirmesine aittir.</p>
       </details>
+      <details>
+        <summary>Yerel yerleştirmede nelere dikkat etmeliyim?</summary>
+        <p>İlk 3 tercihin kayıt alanından (yeşil alan) olmak zorundadır ve aynı okul türünden en fazla 3 tercih yapabilirsin. Yerel yerleştirme sınavsızdır; OBP ve adres belirleyicidir. Kalan 2 hakkı kayıt alanı dışından stratejik kullan.</p>
+      </details>
+      <details>
+        <summary>Tercih sıralaması yerleşme şansımı etkiler mi?</summary>
+        <p>Sıralama şansını artırmaz; önceliğini belirler. Sistem listeni yukarıdan aşağı tarar ve hak kazandığın ilk okula yerleştirir. Bu yüzden en çok istediğin okulu en üste yazmalısın.</p>
+      </details>
+      <details>
+        <summary>Nakil başvurusu nedir, ne zaman yapılır?</summary>
+        <p>Yerleştirmeye esas nakil, ilk yerleştirme sonrası boş kalan kontenjanlar için yapılan ek tercih dönemleridir. İlk turda yerleşemeyen veya okulunu beğenmeyen öğrenciler nakille yeniden tercih yapar. Tarihler her yıl MEB tercih kılavuzunda ilan edilir.</p>
+      </details>
+      <details>
+        <summary>Pansiyonlu okul tercihi ne zaman mantıklı?</summary>
+        <p>İl dışında, yatılı okumaya uygun bir hedef okulun varsa mantıklıdır. Pansiyonun koşullarını, ücretini ve okulun yatılılık kontenjanını tek tek araştır; pansiyonlu tercihler ayrı bir ekranda (5 hak) yapılır.</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
+        <p>Hayır. Tüm eşleştirme tarayıcında yapılır; puanın, dilimin ve il seçimin hiçbir sunucuya gönderilmez veya saklanmaz.</p>
+      </details>
     </div>
-  </section>
+
+    <h2>Sonraki Adımlar</h2>
+    <p>Tercih listeni kurmadan önce puanını netleştir ve okul verilerini incele:</p>
+    <ul>
+      <li>Puanını henüz hesaplamadıysan <a href="../puan-hesaplama/"><strong>LGS Puan Hesaplama</strong></a> aracıyla tahmini puanını ve dilimini öğren.</li>
+      <li>Okul bazında detaylı inceleme için <a href="../taban-puanlari/"><strong>LGS Taban Puanları</strong></a> sayfasında 81 ilin taban puan ve kontenjan tablolarına bak.</li>
+    </ul>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="lgs-tercih" aria-label="Aynı kategorideki araçlar"></aside>
   </div>

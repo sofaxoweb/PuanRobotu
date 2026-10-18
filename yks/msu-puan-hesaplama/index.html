@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MSÜ Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="MSÜ puan hesaplama: doğru-yanlışlarını gir; SA, EA, SÖZ, GN tahmini puanlarını (100-500) anında öğren. Resmi ağırlık tablosuna göre, ücretsiz.">
+<meta name="description" content="MSÜ puan hesaplama: doğru-yanlışlarını gir; SA, EA, SÖZ, GN tahmini puanlarını (100-500) anında öğren. Resmi ağırlık tablosuyla şeffaf hesap, OBP'siz, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/yks/msu-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -33,13 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "MSÜ puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. Bu araç, MEB'in yayımladığı resmi ağırlık tablosunu kullanan şeffaf bir tahmin yapar."}},
-    {"@type": "Question", "name": "MSÜ'de hangi puan türleri var?", "acceptedAnswer": {"@type": "Answer", "text": "Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel). Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır."}},
-    {"@type": "Question", "name": "MSÜ'de OBP eklenir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır."}},
-    {"@type": "Question", "name": "MSÜ'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür."}},
-    {"@type": "Question", "name": "MSÜ'ye girmek Harp Okuluna girmek için yeterli mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır."}},
-    {"@type": "Question", "name": "Bu hesaplama ne kadar güvenilir?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi ağırlık tablosuna dayalı şeffaf bir tahmindir."}},
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "MSÜ puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Üç adımda: netler, resmi test ağırlıkları, 100–500 ölçeği.</strong> Önce her testin neti bulunur (Net = Doğru − Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. OBP eklenmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ'de hangi puan türleri var?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel).</strong> Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ'de OBP eklenir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır. Bu yönüyle YKS'den ayrılır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ'de yanlış doğruyu götürür mü?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Evet.</strong> MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ'ye girmek Harp Okuluna girmek için yeterli mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ'ye kimler başvurabilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Lise son sınıf öğrencileri ve mezunlar başvurabilir.</strong> Yaş ve sağlık şartları her yıl MSB'nin yayımladığı kılavuzda açıklanır; boy-kilo ve sağlık koşulları elenme nedenidir, sınavdan önce kontrol edilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MSÜ puanı kaç yıl geçerli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Yalnızca ilgili yıl için geçerlidir.</strong> MSÜ puanı bir sonraki yıla devretmez; her yıl sınava yeniden girilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Harp Okulu ile Astsubay MYO farkı nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Harp Okulları 4 yıllık lisans eğitimi verir ve subay yetiştirir; Astsubay Meslek Yüksekokulları 2 yıllık önlisans eğitimi verir ve astsubay yetiştirir.</strong> Harp için SA/EA/SÖ puanı ve AYT gerekir; MYO için GN puanı ve TYT yeterlidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bu hesaplama ne kadar güvenilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Şeffaf bir tahmindir; resmi sonuç değildir.</strong> Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,10 +142,11 @@
     <div class="wrap">
       <p class="kicker">MSÜ 2026 hazırlık</p>
       <h1>MSÜ Puan Hesaplama</h1>
-      <p class="lede">MSÜ'deki <strong>doğru–yanlış</strong> sayılarını gir; <strong>SA, EA, SÖZ ve GN</strong> puan türlerinde <strong>tahmini puanını (100–500)</strong> anında öğren. Resmî test ağırlıklarına göre, OBP'siz.</p>
+      <p class="lede">MSÜ, askeri okullara çağrı için ilk aşamadır: <strong>120 soru</strong>, dört puan türü (<strong>SA, EA, SÖZ, GN</strong>), <strong>OBP'siz</strong> hesaplama. Aşağıdaki araca doğru-yanlışlarını gir; tahmini puanını (100–500) saniyeler içinde gör.</p>
       <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
 
   <div class="wrap sayfa-iki-sutun">
   <article>
@@ -127,12 +201,26 @@
     <strong>Önemli:</strong> Bu sonuçlar <strong>tahminidir</strong>. Gerçek MSÜ puanı, ÖSYM'nin sınav sonrası açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Ayrıca MSÜ tek başına yerleştirme için yeterli değildir — Harp Okulları AYT, Astsubay MYO'lar TYT puanı da ister.
   </div>
 
-  <section class="wrap content">
-    <h2>MSÜ Puanı Nasıl Hesaplanıyor?</h2>
+<section class="wrap content">
+    <h2>Öne Çıkanlar</h2>
+    <ul>
+      <li><strong>MSÜ 120 sorudur</strong> (Türkçe 40, Matematik 40, Fen 20, Sosyal 20); dört puan türü hesaplanır: <strong>SA, EA, SÖZ, GN</strong>.</li>
+      <li><strong>OBP eklenmez;</strong> puan yalnızca netlerden oluşur.</li>
+      <li><strong>MSÜ tek başına yeterli değildir:</strong> Harp Okulları AYT, Astsubay MYO'lar TYT puanı da ister.</li>
+      <li><strong>0,5 net kuralı:</strong> Türkçe veya Matematik'ten 0,5 net yoksa puanın hesaplanmaz.</li>
+      <li><strong>Bu sayfadaki sonuç tahmindir;</strong> resmi puan ÖSYM sonuç ekranında açıklanır.</li>
+    </ul>
+
+    <h2>MSÜ Puanı Nedir?</h2>
+    <p><strong>MSÜ puanı, Milli Savunma Üniversitesi Askeri Öğrenci Aday Belirleme Sınavı'ndaki netlerin resmi test ağırlıklarıyla birleştirilip 100–500 ölçeğine yerleştirilmesiyle elde edilen puandır.</strong> Dört puan türü vardır: SA (Sayısal), EA (Eşit Ağırlık), SÖ (Sözel) ve GN (Genel). Puan, askeri okullara <strong>çağrı</strong> için kullanılır; doğrudan yerleştirme yapmaz.</p>
+    <!-- [IMAGE: MSÜ puan türleri ve okul eşleşme şeması. Alt: "MSÜ puan türleri hangi okul için"] -->
+
+    <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+    <p><strong>Üç adımda şeffaf tahmin üretir: net hesabı, resmi ağırlıklar, 100–500 ölçeği.</strong></p>
     <h3>Adım 1 — Netleri bul</h3>
-    <p>Her test için: <strong>Net = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. 4 yanlış, 1 doğruyu götürür.</p>
+    <p>Her test için <strong>Net = Doğru − (Yanlış ÷ 4)</strong>. 4 yanlış, 1 doğruyu götürür.</p>
     <h3>Adım 2 — Test ağırlıklarıyla topla</h3>
-    <p>Netler, her puan türünün resmî test ağırlıklarıyla çarpılır ve 100–500 ölçeğine yerleştirilir:</p>
+    <p>Netler, puan türünün resmi test ağırlıklarıyla çarpılır. Ağırlık tablosu aşağıdadır; GN satırındaki çelişkiyi açıkça belgeliyoruz.</p>
     <table class="bilgi-tablosu">
       <caption>MSÜ puan türü test ağırlıkları (%)</caption>
       <thead><tr><th scope="col">Puan Türü</th><th scope="col">Türkçe</th><th scope="col">Tem. Mat.</th><th scope="col">Fen</th><th scope="col">Sosyal</th><th scope="col">Kullanım</th></tr></thead>
@@ -143,11 +231,12 @@
         <tr><td><strong>MSÜ-GN</strong></td><td>37</td><td>37</td><td>13</td><td>13</td><td>Astsubay MYO</td></tr>
       </tbody>
     </table>
-    <p class="dipnot"><strong>Dipnot — GN ağırlıkları:</strong> MSÜ-GN test ağırlıklarında kaynaklar çelişiyor; MEB'in yayımladığı resmî tablo 37/37/13/13 derken bazı siteler TYT ile aynı 33/33/17/17 oranını veriyor. Bu araç, resmî tabloyu esas alır (37/37/13/13). Resmî kılavuzda değişiklik olursa sayfa güncellenir.</p>
-    <h3>Adım 3 — OBP yok</h3>
-    <p>MSÜ puanına <strong>OBP eklenmez</strong>; puan yalnızca sınav netlerinden hesaplanır.</p>
+    <p class="dipnot">GN satırında kaynaklar çelişir: resmi tablo 37/37/13/13 derken bazı siteler TYT oranını (33/33/17/17) verir. Bu araç resmi tabloyu esas alır.</p>
+    <h3>Adım 3 — Ölçeğe yerleştir</h3>
+    <p>Ağırlıklı toplam 100–500 ölçeğine yerleştirilir. MSÜ'ye <strong>OBP eklenmez</strong>; sonuç yalnızca sınav performansını yansıtır.</p>
 
-    <h2>Çalışılmış Örnek</h2>
+    <h2>Formül ve Çalışılmış Örnek</h2>
+    <p><strong>Formül:</strong> Puan = 100 + Σ(net × test katsayısı). Katsayılar: SA için 2,5/3,5/6,0/2,0; EA için 3,5/3,5/2,0/4,0; SÖ için 3,5/2,0/2,0/7,0; GN için 3,7/3,7/2,6/2,6 (Türkçe/Mat/Fen/Sosyal sırasıyla).</p>
     <p>Bir adayın sonuçları: Türkçe 30 doğru 8 yanlış (net 28), Temel Matematik 25 doğru 4 yanlış (net 24), Fen 12 doğru 4 yanlış (net 11), Sosyal 10 doğru 4 yanlış (net 9).</p>
     <ul>
       <li>MSÜ-SA: 100 + 28×2,5 + 24×3,5 + 11×6 + 9×2 = <strong>338,0</strong></li>
@@ -157,50 +246,126 @@
     </ul>
     <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
-    <h2>İpuçları</h2>
+    <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+    <ol>
+      <li><strong>Yaz:</strong> Dört test için doğru ve yanlış sayılarını gir (Türkçe 40, Matematik 40, Fen 20, Sosyal 20 soru).</li>
+      <li><strong>Bas:</strong> "Hesapla" düğmesine bas; dört puan türünde tahmini puanın görünür.</li>
+      <li><strong>Oku:</strong> Hedeflediğin okul türüne göre ilgili puana bak: Harp için SA/EA/SÖ, MYO için GN.</li>
+      <li><strong>Planla:</strong> MSÜ sonrası gereken AYT/TYT hazırlığını <a href="../puan-hesaplama/">YKS puan hesaplama</a> aracıyla planla.</li>
+    </ol>
+
+    <h2>Sonucunu Nasıl Okumalısın?</h2>
+    <p><strong>Her puan türü farklı bir okul grubuna çağrı için kullanılır.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Puan türü, okul ve sonraki adım</caption>
+      <thead><tr><th scope="col">Puan Türü</th><th scope="col">Hangi Okullar</th><th scope="col">MSÜ Sonrası Gerekli</th></tr></thead>
+      <tbody>
+        <tr><td><strong>MSÜ-SA</strong></td><td>Harp Okulları (sayısal bölümler)</td><td>AYT sayısal + fiziki yeterlilik + mülakat</td></tr>
+        <tr><td><strong>MSÜ-EA</strong></td><td>Harp Okulları (eşit ağırlık bölümler)</td><td>AYT eşit ağırlık + fiziki yeterlilik + mülakat</td></tr>
+        <tr><td><strong>MSÜ-SÖ</strong></td><td>Harp Okulları (sözel bölümler)</td><td>AYT sözel + fiziki yeterlilik + mülakat</td></tr>
+        <tr><td><strong>MSÜ-GN</strong></td><td>Astsubay Meslek Yüksekokulları</td><td>TYT + fiziki yeterlilik + mülakat</td></tr>
+      </tbody>
+    </table>
+
+    <h2>GN Ağırlıklarındaki Çelişki</h2>
+    <p><strong>MSÜ-GN test ağırlıklarında kaynaklar çelişiyor; bu sayfa çelişkiyi gizlemiyor.</strong> MEB'in yayımladığı resmi tablo 37/37/13/13 derken, bazı siteler TYT ile aynı 33/33/17/17 oranını veriyor. Bu araç resmi tabloyu esas alır (37/37/13/13).</p>
+    <p>Farkın pratik etkisi sınırlıdır: iki tablo arasındaki puan farkı çoğu adayda birkaç puanı geçmez. Resmi kılavuzda değişiklik olursa bu sayfa güncellenir.</p>
+
+    <h2>MSÜ'den Sonra Ne Olur?</h2>
+    <p><strong>MSÜ puanı yalnızca çağrı barajıdır; asıl eleme sonraki aşamalardadır.</strong> Süreç beş basamaktan oluşur:</p>
+    <ol>
+      <li><strong>MSÜ:</strong> Barajı geçen aday çağrı listesine girer.</li>
+      <li><strong>YKS:</strong> Harp Okulları için AYT, Astsubay MYO için TYT puanı gerekir.</li>
+      <li><strong>Evrak ve sağlık kontrolü:</strong> Boy-kilo ve sağlık şartları elenme nedenidir.</li>
+      <li><strong>Fiziki yeterlilik:</strong> Koşu, mekik, şınav gibi testler uygulanır.</li>
+      <li><strong>Mülakat:</strong> Kişilik ve mesleğe uygunluk değerlendirmesi yapılır.</li>
+    </ol>
+    <p>MSÜ'ye hazırlanırken YKS'yi ihmal etmek en yaygın hatadır; iki sınava paralel hazırlan.</p>
+
+    <h2>2026 MSÜ Oturum Bilgileri</h2>
+    <p><strong>2026 MSÜ 1 Mart 2026 Pazar günü yapıldı; 645.406 aday başvurdu.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>2026 MSÜ temel bilgileri</caption>
+      <tbody>
+        <tr><td><strong>Sınav tarihi</strong></td><td>1 Mart 2026 Pazar, 10:15–13:00 (165 dakika)</td></tr>
+        <tr><td><strong>Başvuran</strong></td><td>645.406 aday</td></tr>
+        <tr><td><strong>Soru sayısı</strong></td><td>120 (Türkçe 40, Matematik 40, Fen 20, Sosyal 20)</td></tr>
+        <tr><td><strong>Sonuç tarihi</strong></td><td>26 Mart 2026</td></tr>
+        <tr><td><strong>Geçerlilik koşulu</strong></td><td>Türkçe veya Matematik'ten en az 0,5 ham puan</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Sınırlamalar</h2>
     <ul>
-      <li><strong>Hedef okula göre çalış:</strong> Harp Okulu hedefliyorsan puan türüne uygun testlere (SA için Matematik+Fen) ağırlık ver; Astsubay MYO için GN dengesine dikkat et.</li>
-      <li><strong>MSÜ = ilk kapı:</strong> MSÜ'den çağrı almak yetmez; Harp Okulları için AYT'ye, Astsubay MYO için TYT'ye de hazırlan. Fiziki yeterlilik ve mülakatı unutma.</li>
-      <li><strong>Geçerlilik kuralı:</strong> Temel Matematik veya Türkçe'den en az 0,5 netin yoksa puanın hesaplanmaz.</li>
+      <li><strong>Tahmini sonuç:</strong> Resmi puanın yalnızca ÖSYM sonuç ekranında açıklanır.</li>
+      <li><strong>Standart sapma bilinmiyor:</strong> Gerçek hesaplamadaki ulusal ortalama ve sapma, sınavdan önce bilinemez.</li>
+      <li><strong>GN ağırlık çelişkisi:</strong> Resmi tablo esas alınır; kılavuz değişirse sayfa güncellenir.</li>
+      <li><strong>Çağrı ≠ yerleştirme:</strong> Bu araç çağrı puanını tahmin eder; sonraki aşamaları kapsamaz.</li>
     </ul>
+
+    <h2>MSÜ ve YKS Puanları</h2>
+    <p><strong>İkisi farklı amaçlı, farklı formüllü puanlardır.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>MSÜ ve YKS karşılaştırması</caption>
+      <thead><tr><th scope="col">Özellik</th><th scope="col">MSÜ Puanı</th><th scope="col">YKS Puanı</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Amaç</strong></td><td>Askeri okullara çağrı</td><td>Üniversite yerleştirme</td></tr>
+        <tr><td><strong>OBP</strong></td><td>Eklenmez</td><td>×0,12 eklenir</td></tr>
+        <tr><td><strong>Test sayısı</strong></td><td>4 test, 120 soru</td><td>16 test (TYT+AYT+YDT)</td></tr>
+        <tr><td><strong>Puan türü</strong></td><td>SA, EA, SÖ, GN</td><td>TYT, SAY, EA, SÖZ, DİL</td></tr>
+      </tbody>
+    </table>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
       <details>
         <summary>MSÜ puanı nasıl hesaplanır?</summary>
-        <p>Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. Bu araç, MEB'in yayımladığı resmi ağırlık tablosunu kullanan şeffaf bir tahmin yapar.</p>
+        <p><strong>Üç adımda: netler, resmi test ağırlıkları, 100–500 ölçeği.</strong> Önce her testin neti bulunur (Net = Doğru − Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. OBP eklenmez.</p>
       </details>
       <details>
         <summary>MSÜ'de hangi puan türleri var?</summary>
-        <p>Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel). Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır.</p>
+        <p><strong>Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel).</strong> Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır.</p>
       </details>
       <details>
         <summary>MSÜ'de OBP eklenir mi?</summary>
-        <p>Hayır. MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır.</p>
+        <p><strong>Hayır.</strong> MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır. Bu yönüyle YKS'den ayrılır.</p>
       </details>
       <details>
         <summary>MSÜ'de yanlış doğruyu götürür mü?</summary>
-        <p>Evet. MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür.</p>
+        <p><strong>Evet.</strong> MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür.</p>
       </details>
       <details>
         <summary>MSÜ'ye girmek Harp Okuluna girmek için yeterli mi?</summary>
-        <p>Hayır. MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır.</p>
+        <p><strong>Hayır.</strong> MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır.</p>
+      </details>
+      <details>
+        <summary>MSÜ'ye kimler başvurabilir?</summary>
+        <p><strong>Lise son sınıf öğrencileri ve mezunlar başvurabilir.</strong> Yaş ve sağlık şartları her yıl MSB'nin yayımladığı kılavuzda açıklanır; boy-kilo ve sağlık koşulları elenme nedenidir, sınavdan önce kontrol edilir.</p>
+      </details>
+      <details>
+        <summary>MSÜ puanı kaç yıl geçerli?</summary>
+        <p><strong>Yalnızca ilgili yıl için geçerlidir.</strong> MSÜ puanı bir sonraki yıla devretmez; her yıl sınava yeniden girilir.</p>
+      </details>
+      <details>
+        <summary>Harp Okulu ile Astsubay MYO farkı nedir?</summary>
+        <p><strong>Harp Okulları 4 yıllık lisans eğitimi verir ve subay yetiştirir; Astsubay Meslek Yüksekokulları 2 yıllık önlisans eğitimi verir ve astsubay yetiştirir.</strong> Harp için SA/EA/SÖ puanı ve AYT gerekir; MYO için GN puanı ve TYT yeterlidir.</p>
       </details>
       <details>
         <summary>Bu hesaplama ne kadar güvenilir?</summary>
-        <p>Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi ağırlık tablosuna dayalı şeffaf bir tahmindir.</p>
+        <p><strong>Şeffaf bir tahmindir; resmi sonuç değildir.</strong> Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır.</p>
       </details>
       <details>
         <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
-        <p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz.</p>
+        <p><strong>Hayır.</strong> Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz.</p>
       </details>
     </div>
 
     <h2>Sonraki Adımlar</h2>
     <ul>
-      <li><a href="../puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — TYT/AYT/YDT tahmini puanlarını hesapla</li>
-      <li><a href="../tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
+      <li><a href="../puan-hesaplama/"><strong>YKS puan hesaplama</strong></a> — TYT/AYT/YDT tahmini puanlarını hesapla</li>
+      <li><a href="../tercih-robotu/"><strong>YKS tercih robotu</strong></a> — sivil üniversiteler için hedef listesi oluştur</li>
     </ul>
+    <!-- [IMAGE: MSÜ süreç haritası (5 basamak). Alt: "MSÜ sonrası süreç haritası"] -->
   </section>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-msu" aria-label="Aynı kategorideki araçlar"></aside>

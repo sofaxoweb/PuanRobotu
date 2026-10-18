@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harf Notu Hesaplama | PuanRobotu</title>
-<meta name="description" content="100'lük notunun harf karşılığını öğren: AA, BA, BB, CB, CC, DC, DD, FD, FF. Üniversitene göre ayarlanabilir aralıklar ve hazır örneklerle ücretsiz araç.">
+<meta name="description" content="100'lük notunun harf karşılığını bul: üniversite bant presetleri, karşılaştırma tablosu, özel harfler ve koşullu geçme kuralları. Ücretsiz, anında sonuç.">
 <link rel="canonical" href="https://puanrobotu.com/universite-not/harf-notu-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Harf Notu Hesaplama | PuanRobotu">
-<meta property="og:description" content="100'lük notunun harf karşılığını (AA, BA, BB…) öğren. Aralıklar üniversitene göre ayarlanabilir.">
+<meta property="og:description" content="100'lük notunun harf karşılığını bul: üniversite bant presetleri ve karşılaştırma tablosuyla ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/universite-not/harf-notu-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "100'lük not harf notuna nasıl çevrilir?", "acceptedAnswer": {"@type": "Answer", "text": "Notun, üniversitenin belirlediği aralıklara göre harfe denk gelir. AA=90+, BA=85–89, BB=80–84 çekirdeği neredeyse her okulda aynıdır; alt harflerde aralıklar değişir."}},
-    {"@type": "Question", "name": "Harf aralıkları neden üniversiteden üniversiteye değişiyor?", "acceptedAnswer": {"@type": "Answer", "text": "Çünkü aralıkları her üniversitenin senatosu belirler; ulusal tek bir tablo yoktur. Bu araçta Kent, GTÜ ve İstanbul Aydın örnekleri hazırdır; alt sınırları elle de düzenleyebilirsin."}},
-    {"@type": "Question", "name": "Çan eğrisi uygulanan derste bu araç işe yarar mı?", "acceptedAnswer": {"@type": "Answer", "text": "Ham 100'lük notunu harfe çevirmek için evet; ama çan eğrisinde harf, sınıfın dağılımına göre belirlenir. Onun için Çan Eğrisi Hesaplama aracını kullan."}},
-    {"@type": "Question", "name": "FD ile FF arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "İkisi de başarısız sayılır; ancak FD'nin katsayısı 0,50'dir ve bazı okullarda bütünleme hakkı tanır ya da ortalamayı FF kadar düşürmez. Okulunun yönetmeliğindeki karşılığına bak."}},
-    {"@type": "Question", "name": "84,5 notum BA mı BB mi olur?", "acceptedAnswer": {"@type": "Answer", "text": "Seçili aralığa bağlı: yaygın örnekte 85 altı BB'dir, yani 84,5 BB olur. Bazı okullar buçuğu yukarı yuvarlar; kesin bilgi için hocana ya da öğrenci işlerine sor."}},
-    {"@type": "Question", "name": "Girdiğim not bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "100'lük not harf notuna nasıl çevrilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notun, üniversitenin belirlediği aralıklara göre harfe denk gelir. AA=90+, BA=85–89, BB=80–84 çekirdeği neredeyse her okulda aynıdır; alt harflerde aralıklar değişir. Bu araçta 5 gerçek üniversite preseti hazırdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Harf aralıkları neden üniversiteden üniversiteye değişiyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Çünkü aralıkları her üniversitenin senatosu belirler; ulusal tek bir tablo yoktur. Örneğin 62 puan Yaygın aralıkta DD, Kent Üniversitesi'nde CC olur. Okulunun güncel aralıklarını öğrenci işlerinden teyit et."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi üniversite hangi bantları kullanıyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tek tip yok: bu sayfadaki karşılaştırma tablosunda Yaygın, Kent, GTÜ, İstanbul Aydın ve Sakarya presetleri yan yana. Üst üç harf (AA/BA/BB) her yerde aynıdır; fark alt harflerdedir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "84,5 notum BA mı BB mi olur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seçili aralığa bağlı: yaygın örnekte 85 altı BB'dir, yani 84,5 BB olur. Bazı okullar buçuğu yukarı yuvarlar; kesin bilgi için hocana ya da öğrenci işlerine sor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "76 puan hangi harfe denk gelir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aralığa göre değişir: yaygın aralıkta 76 puan CB'dir (75–79); Kent Üniversitesi aralığında da CB'dir (70–79). Ama 72 puan yaygında CC, Kent'te CB olur — preset seçimi bu yüzden kritiktir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FD ile FF arasındaki fark nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İkisi de başarısız sayılır; ancak FD'nin katsayısı 0,50'dir ve bazı okullarda bütünleme hakkı tanır ya da ortalamayı FF kadar düşürmez. Okulunun yönetmeliğindeki karşılığına bak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "DC ve DD ile ders geçilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Koşullu geçme: GANO'n 2,00 ve üzeriyse DC/DD geçer sayılır; 2,00'nin altındaysa bu dersler kalmaya döner ve tekrarlanmalıdır. Uygulama okula göre değişir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "W (çekilme) notu ortalamayı etkiler mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. W, dersten çekildiğini gösterir; transkriptte görünür ama GANO paydayasına girmez. Aynı şekilde MU, G ve İZ notları da ortalamayı etkilemez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Çan eğrisi uygulanan derste bu araç işe yarar mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ham 100'lük notunu harfe çevirmek için evet; ama çan eğrisinde harf, sınıfın dağılımına göre belirlenir. Onun için Çan Eğrisi Hesaplama aracını kullan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim not bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +143,8 @@
     <article>
       <p class="kicker">📝 Üniversite Notları</p>
       <h1>Harf Notu Hesaplama</h1>
-      <p class="lede">100'lük notunu yaz, <strong>harf karşılığını</strong> (AA, BA, BB…) öğren. Aralıklar üniversitene göre değişir — hazır örneklerden seç ya da alt sınırları elle düzenle.</p>
+      <p class="lede">Harf notu, <strong>100'lük ham notunun üniversitenin belirlediği aralık tablosundaki karşılığıdır</strong>: yaygın aralıkta 84 puan BB, 92 puan AA olur. Notunu yaz, okulunun bantlarına göre harfini anında öğren.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -98,41 +173,142 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>Nasıl Hesaplanır?</h2>
-      <p>100'lük notun, üniversitenin belirlediği aralık tablosundaki yerine göre harfe çevrilir. Neredeyse tüm okullarda ortak olan çekirdek: <strong>AA=90+, BA=85–89, BB=80–84</strong>. Farklılık alt harflerde başlar: örneğin 62 puan Kent Üniversitesi'nde CC iken GTÜ'de DD'dir; İstanbul Aydın'da ise DC'dir.</p>
-      <p>Bazı okullar çan eğrisi (bağıl değerlendirme) uygular: o zaman harf, ham notunun sınıf içindeki göreli konumuna göre belirlenir. Bu araç mutlak aralıklarla çalışır; eğri hesabı için <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> aracını kullan.</p>
+<div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
+<ul>
+<li><strong>Harf notu = 100'lük notunun, üniversitenin aralık tablosundaki karşılığıdır.</strong> Ulusal tek tablo yoktur; aralıkları her üniversitenin senatosu belirler.</li>
+<li>Neredeyse tüm okullarda ortak çekirdek: <strong>AA=90+, BA=85–89, BB=80–84</strong>. Farklılık alt harflerde başlar.</li>
+<li>62 puan bir üniversitede CC, başkasında DD olur — bu sayfadaki 5 gerçek üniversite presetini karşılaştır.</li>
+<li><strong>84,9 ile 85,0 arasındaki 0,1 puan</strong> harfi değiştirir; yuvarlama politikasını hocana sor.</li>
+<li>Çan eğrisi uygulanan derste harf, ham notun değil sınıf içindeki konumunun karşılığıdır.</li>
+</ul>
+</div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>Yaygın örnek aralık seçiliyken 84 puan gir:</p>
-      <ul>
-        <li>84 ≥ 90? Hayır → AA değil.</li>
-        <li>84 ≥ 85? Hayır → BA değil.</li>
-        <li>84 ≥ 80? Evet → harf notun <strong>BB</strong>.</li>
-      </ul>
-      <p>Aynı 84 puan, tüm örneklerde BB verir; ama 62 puan gibi sınır değerler okuldan okula değişir. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+<h2>Harf Notu Nedir?</h2>
+<p><strong>Harf notu, 100'lük ham başarı notunun AA'dan FF'ye uzanan sembolik ölçeğe çevrilmiş hâlidir.</strong> Her harfin 4,00'lük sistemde bir katsayı karşılığı vardır (AA=4,00 … FF=0,00) ve GANO bu katsayılarla hesaplanır.</p>
+<p>Harf notu iki işlev görür: dersi geçip geçmediğini gösterir ve not ortalamana katsayı olarak girer. Bu yüzden 84 ile 85 arasındaki 1 puanlık fark, BB (3,00) ile BA (3,50) arasındaki <strong>0,50 katsayı farkı</strong> demektir.</p>
+<p>Kritik nokta: harf aralıkları ulusal değildir. Aynı 100'lük not, iki üniversitede iki farklı harf verebilir — aşağıdaki karşılaştırma tablosu bunu sayıyla gösterir.</p>
 
-      <h2>İpuçları</h2>
-      <ul>
-        <li>Okulunun gerçek harf aralıklarını dönem başında öğrenci işlerinden ya da ders izlencesinden öğren.</li>
-        <li>Hedef harfini erken belirle: BB istiyorsan 80 barajını, BA istiyorsan 85 barajını kovalamalısın.</li>
-        <li>Çan eğrisi olan derste mutlak nota değil, sınıf içindeki konumuna odaklan.</li>
-        <li>FD/DD gibi sınır harflerde bütünleme hakkın olup olmadığını yönetmelikten kontrol et.</li>
-      </ul>
+<h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+<p><strong>Notunu seçili aralık tablosundaki alt sınırlarla karşılaştırır; notunun sağladığı en yüksek aralığın harfini verir.</strong> Mantık: 84 için "84 ≥ 90 mı? Hayır. 84 ≥ 85 mi? Hayır. 84 ≥ 80 mi? Evet → BB."</p>
+<p>Beş hazır preset vardır: <strong>Yaygın Örnek, Kent Üniversitesi, GTÜ, İstanbul Aydın Üniversitesi, Sakarya Üniversitesi</strong>. Hepsi gerçek üniversite aralıklarıdır. Okulun listede yoksa alt sınırları elle düzenleyebilirsin.</p>
+<p>Bu araç <strong>mutlak değerlendirme</strong> ile çalışır: harf yalnızca notuna bağlıdır, sınıfın durumuna değil. Çan eğrisi uygulanan derslerde harf sınıf dağılımına göre belirlenir — onun için <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> sayfasını kullan.</p>
 
-      <h2>Sonraki Adımlar</h2>
-      <ul>
-        <li>Tüm derslerinin harf notlarıyla genel ortalamanı bulmak için <a href="../gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</li>
-        <li>Dersten geçmek için finalden kaç alman gerektiğini öğrenmek istersen <a href="../vize-final-hesaplama/">Vize–Final Hesaplama</a> aracına bak.</li>
-      </ul>
+<h2>Formül ve Çalışılmış Örnek</h2>
+<p><strong>Yaygın aralık seçiliyken 84 puan BB, 92 puan AA olur.</strong> Adım adım:</p>
+<ul>
+<li>84 ≥ 90? Hayır → AA değil.</li>
+<li>84 ≥ 85? Hayır → BA değil.</li>
+<li>84 ≥ 80? Evet → harf notun <strong>BB</strong>.</li>
+<li>92 ≥ 90? Evet → harf notun <strong>AA</strong>.</li>
+</ul>
+<p>Tamamlanmış bir başka örnek: <strong>72 puan</strong>, yaygın aralıkta CC olur (70–74); Kent Üniversitesi aralığında CB olur (70–79). Aynı puan, iki okulda iki harf — işte bu yüzden preset seçimi kritiktir. Bu örnekleri yukarıdaki araca girerek doğrulayabilirsin.</p>
+
+<h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+<ol>
+<li><strong>Notunu yaz.</strong> 0–100 arası ham başarı notunu gir (ondalık girebilirsin).</li>
+<li><strong>Aralık presetini seç.</strong> Okuluna en yakın üniversite örneğini seç; listede yoksa "Yaygın Örnek" ile başla.</li>
+<li><strong>Gerekirse alt sınırları düzenle.</strong> Her harfin alt sınırını okulunun senato kararındaki değere göre değiştirebilirsin.</li>
+<li><strong>Harfi oku.</strong> Sonuç kutusu harfi ve hangi aralığa denk geldiğini gösterir.</li>
+</ol>
+
+<h2>Sonucunu Nasıl Okursun?</h2>
+<p><strong>Harfin, seçili aralığa göre 100'lük karşılığını ve GANO katsayını aşağıdaki üçlü tablodan okursun.</strong> (Yaygın örnek aralık.)</p>
+<table class="bilgi-tablosu">
+<caption>100'lük ↔ harf ↔ katsayı (üçlü tablo, yaygın örnek)</caption>
+<thead><tr><th>100'lük Aralık</th><th>Harf</th><th>Katsayı</th><th>Durum</th></tr></thead>
+<tbody>
+<tr><td>90 – 100</td><td><strong>AA</strong></td><td>4,00</td><td>Geçti</td></tr>
+<tr><td>85 – 89</td><td><strong>BA</strong></td><td>3,50</td><td>Geçti</td></tr>
+<tr><td>80 – 84</td><td><strong>BB</strong></td><td>3,00</td><td>Geçti</td></tr>
+<tr><td>75 – 79</td><td><strong>CB</strong></td><td>2,50</td><td>Geçti</td></tr>
+<tr><td>70 – 74</td><td><strong>CC</strong></td><td>2,00</td><td>Geçti</td></tr>
+<tr><td>65 – 69</td><td><strong>DC</strong></td><td>1,50</td><td>Şartlı*</td></tr>
+<tr><td>60 – 64</td><td><strong>DD</strong></td><td>1,00</td><td>Şartlı*</td></tr>
+<tr><td>50 – 59</td><td><strong>FD</strong></td><td>0,50</td><td>Kaldı</td></tr>
+<tr><td>0 – 49</td><td><strong>FF</strong></td><td>0,00</td><td>Kaldı</td></tr>
+</tbody>
+</table>
+<p>*Şartlı: DC/DD, GANO 2,00 ve üzeriyse geçer sayılır; altındaysa kalmaya döner (okula göre değişir).</p>
+
+<h2>Hangi Üniversite Hangi Bantları Kullanıyor?</h2>
+<p><strong>Alt harf bantları üniversiteden üniversiteye değişir; üst üç harf (AA/BA/BB) neredeyse her yerde aynıdır.</strong> Bu sayfadaki beş gerçek preset yan yana:</p>
+<table class="bilgi-tablosu">
+<caption>Üniversite bant karşılaştırması (alt sınırlar)</caption>
+<thead><tr><th>Harf</th><th>Yaygın</th><th>Kent Üni.</th><th>GTÜ</th><th>İst. Aydın</th><th>Sakarya</th></tr></thead>
+<tbody>
+<tr><td>AA</td><td>90</td><td>90</td><td>90</td><td>90</td><td>90</td></tr>
+<tr><td>BA</td><td>85</td><td>85</td><td>85</td><td>85</td><td>85</td></tr>
+<tr><td>BB</td><td>80</td><td>80</td><td>80</td><td>80</td><td>80</td></tr>
+<tr><td>CB</td><td>75</td><td>70</td><td>75</td><td>75</td><td>75</td></tr>
+<tr><td>CC</td><td>70</td><td>60</td><td>70</td><td>70</td><td>65</td></tr>
+<tr><td>DC</td><td>65</td><td>55</td><td>65</td><td>60</td><td>58</td></tr>
+<tr><td>DD</td><td>60</td><td>50</td><td>60</td><td>50</td><td>50</td></tr>
+<tr><td>FD</td><td>50</td><td>—</td><td>50</td><td>40</td><td>—</td></tr>
+</tbody>
+</table>
+<p>Tabloyu oku: <strong>62 puan</strong> Yaygın/GTÜ'de DD, Kent'te CC, İstanbul Aydın'da DC olur. Hiçbir rakip sayfa bu karşılaştırmayı yapmaz; çoğu tek tabloyu evrenselmiş gibi sunar (biri CC'yi 60–65 yazar — yanlış).</p>
+
+<h2>Sınır Değerler: 84,9 ile 85,0 Arasındaki 0,1 Puan</h2>
+<p><strong>Sınırda 0,1 puan bile harfi değiştirir: 84,9 BB'dir, 85,0 BA'dir.</strong> Bu 0,50 katsayı farkı demektir.</p>
+<p>Üç pratik sonuç çıkar:</p>
+<ul>
+<li><strong>Yuvarlama politikasını öğren.</strong> Bazı hocalar 84,5'i 85'e yuvarlar, bazıları yuvarlamaz. Kural ders izlencesinde yazar.</li>
+<li><strong>84–86 bandındaysan 1 puan için itiraz etmeye değer.</strong> Sınav kâğıdındaki 1 puanlık hata, BA ile BB arasındaki farktır.</li>
+<li><strong>Hedefini sınırın 1–2 puan üstüne koy.</strong> BA istiyorsan 85'i değil 87'yi hedefle; güven payı bırak.</li>
+</ul>
+
+<h2>Özel Harfler ve Koşullu Geçme</h2>
+<p><strong>AA–FF dışındaki harfler dersin durumunu anlatır; çoğu GANO'ya girmez.</strong></p>
+<ul>
+<li><strong>FD:</strong> Başarısız ama FF'ten hafif; katsayısı 0,50'dir. Bazı okullarda bütünleme hakkı tanır.</li>
+<li><strong>G (Geçer) / K (Kalır):</strong> Kredisiz derslerde kullanılır; GANO'yu etkilemez.</li>
+<li><strong>W (Çekilme):</strong> Dersten çekilme; transkriptte görünür, ortalamaya girmez.</li>
+<li><strong>I (Eksik) / MZ (Mazeret):</strong> Tamamlanmamış değerlendirme; süre dolunca harfe dönüşür.</li>
+</ul>
+<p><strong>Koşullu geçme:</strong> DC/DD notları, GANO 2,00 ve üzeriyse "geçti" sayılır; 2,00'nin altındaysa bu dersler kalmaya döner ve tekrarlanmalıdır. Transkriptte harf aynı kalır, durumu GANO belirler.</p>
+
+<h2>Sınırlamalar</h2>
+<p><strong>Bu araç seçili aralığa göre matematiksel olarak doğru harfi verir; ama üç önemli sınırı vardır.</strong></p>
+<ul>
+<li><strong>Aralık senato kararıdır.</strong> Okulunun güncel bantlarını öğrenci işlerinden teyit et; bu sayfadaki presetler örnektir.</li>
+<li><strong>Çan eğrisi derslerinde geçersizdir.</strong> Bağıl değerlendirmede harf, sınıf dağılımına göre belirlenir — <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> sayfasını kullan.</li>
+<li><strong>AÖF'de geçersizdir.</strong> Açıköğretimde harf, 35 barajı sonrası bağıl değerlendirmeyle belirlenir — <a href="../aof-not-hesaplama/">AÖF Not Hesaplama</a> sayfasına bak.</li>
+</ul>
+
+<h2>Mutlak Değerlendirme vs Çan Eğrisi</h2>
+<p><strong>İki sistemin farkı, harfin neye göre belirlendiğidir: sabit tabloya mı, sınıfa mı?</strong></p>
+<table class="bilgi-tablosu">
+<caption>Değerlendirme sistemleri karşılaştırması</caption>
+<thead><tr><th></th><th>Mutlak</th><th>Bağıl (Çan Eğrisi)</th></tr></thead>
+<tbody>
+<tr><td>Harf neye göre?</td><td>Sabit aralık tablosu</td><td>Sınıf ortalaması ve dağılımı (z/T)</td></tr>
+<tr><td>84 puan</td><td>Her zaman BB (yaygın)</td><td>Sınıfa göre AA da olur CC de</td></tr>
+<tr><td>Öngörülebilirlik</td><td>Yüksek: hedefi baştan bilirsin</td><td>Düşük: sınıfı beklemen gerekir</td></tr>
+<tr><td>Doğru araç</td><td>Bu sayfa</td><td><a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></td></tr>
+</tbody>
+</table>
+
+<h2>İpuçları</h2>
+<ul>
+<li>Okulunun gerçek harf aralıklarını dönem başında öğrenci işlerinden ya da ders izlencesinden öğren.</li>
+<li>Hedef harfini erken belirle: BB istiyorsan 80 barajını, BA istiyorsan 85 barajını kovala.</li>
+<li>Çan eğrisi olan derste mutlak nota değil, sınıf içindeki konumuna odaklan.</li>
+<li>Tüm derslerinin harfleriyle genel ortalaman için <a href="../gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</li>
+</ul>
 
       <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>100'lük not harf notuna nasıl çevrilir?</summary><p>Notun, üniversitenin belirlediği aralıklara göre harfe denk gelir. AA=90+, BA=85–89, BB=80–84 çekirdeği neredeyse her okulda aynıdır; alt harflerde aralıklar değişir.</p></details>
-        <details><summary>Harf aralıkları neden üniversiteden üniversiteye değişiyor?</summary><p>Çünkü aralıkları her üniversitenin senatosu belirler; ulusal tek bir tablo yoktur. Bu araçta Kent, GTÜ ve İstanbul Aydın örnekleri hazırdır; alt sınırları elle de düzenleyebilirsin.</p></details>
-        <details><summary>Çan eğrisi uygulanan derste bu araç işe yarar mı?</summary><p>Ham 100'lük notunu harfe çevirmek için evet; ama çan eğrisinde harf, sınıfın dağılımına göre belirlenir. Onun için Çan Eğrisi Hesaplama aracını kullan.</p></details>
-        <details><summary>FD ile FF arasındaki fark nedir?</summary><p>İkisi de başarısız sayılır; ancak FD'nin katsayısı 0,50'dir ve bazı okullarda bütünleme hakkı tanır ya da ortalamayı FF kadar düşürmez. Okulunun yönetmeliğindeki karşılığına bak.</p></details>
+        <details><summary>100'lük not harf notuna nasıl çevrilir?</summary><p>Notun, üniversitenin belirlediği aralıklara göre harfe denk gelir. AA=90+, BA=85–89, BB=80–84 çekirdeği neredeyse her okulda aynıdır; alt harflerde aralıklar değişir. Bu araçta 5 gerçek üniversite preseti hazırdır.</p></details>
+        <details><summary>Harf aralıkları neden üniversiteden üniversiteye değişiyor?</summary><p>Çünkü aralıkları her üniversitenin senatosu belirler; ulusal tek bir tablo yoktur. Örneğin 62 puan Yaygın aralıkta DD, Kent Üniversitesi'nde CC olur. Okulunun güncel aralıklarını öğrenci işlerinden teyit et.</p></details>
+        <details><summary>Hangi üniversite hangi bantları kullanıyor?</summary><p>Tek tip yok: bu sayfadaki karşılaştırma tablosunda Yaygın, Kent, GTÜ, İstanbul Aydın ve Sakarya presetleri yan yana. Üst üç harf (AA/BA/BB) her yerde aynıdır; fark alt harflerdedir.</p></details>
         <details><summary>84,5 notum BA mı BB mi olur?</summary><p>Seçili aralığa bağlı: yaygın örnekte 85 altı BB'dir, yani 84,5 BB olur. Bazı okullar buçuğu yukarı yuvarlar; kesin bilgi için hocana ya da öğrenci işlerine sor.</p></details>
+        <details><summary>76 puan hangi harfe denk gelir?</summary><p>Aralığa göre değişir: yaygın aralıkta 76 puan CB'dir (75–79); Kent Üniversitesi aralığında da CB'dir (70–79). Ama 72 puan yaygında CC, Kent'te CB olur — preset seçimi bu yüzden kritiktir.</p></details>
+        <details><summary>FD ile FF arasındaki fark nedir?</summary><p>İkisi de başarısız sayılır; ancak FD'nin katsayısı 0,50'dir ve bazı okullarda bütünleme hakkı tanır ya da ortalamayı FF kadar düşürmez. Okulunun yönetmeliğindeki karşılığına bak.</p></details>
+        <details><summary>DC ve DD ile ders geçilir mi?</summary><p>Koşullu geçme: GANO'n 2,00 ve üzeriyse DC/DD geçer sayılır; 2,00'nin altındaysa bu dersler kalmaya döner ve tekrarlanmalıdır. Uygulama okula göre değişir.</p></details>
+        <details><summary>W (çekilme) notu ortalamayı etkiler mi?</summary><p>Hayır. W, dersten çekildiğini gösterir; transkriptte görünür ama GANO paydayasına girmez. Aynı şekilde MU, G ve İZ notları da ortalamayı etkilemez.</p></details>
+        <details><summary>Çan eğrisi uygulanan derste bu araç işe yarar mı?</summary><p>Ham 100'lük notunu harfe çevirmek için evet; ama çan eğrisinde harf, sınıfın dağılımına göre belirlenir. Onun için Çan Eğrisi Hesaplama aracını kullan.</p></details>
         <details><summary>Girdiğim not bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
       </section>
     </article>

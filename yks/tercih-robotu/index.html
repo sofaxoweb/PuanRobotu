@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YKS Tercih Robotu | Puanına Göre Üniversite Bul</title>
-<meta name="description" content="YKS tercih robotu: puan türünü ve puanını gir, hedefleyebileceğin üniversite ve bölümleri taban puanlarıyla listele. 2025 yerleştirme verileriyle hazırlanıyor.">
+<title>YKS Tercih Robotu | PuanRobotu</title>
+<meta name="description" content="YKS tercih robotu: başarı sırana göre hedefleyebileceğin üniversite ve bölümleri taban puanlarıyla listele. 2025 yerleştirme verileriyle hazırlanıyor, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/yks/tercih-robotu/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="YKS Tercih Robotu | Puanına Göre Üniversite Bul">
+<meta property="og:title" content="YKS Tercih Robotu | PuanRobotu">
 <meta property="og:description" content="Puanına göre girebileceğin üniversiteleri saniyeler içinde listele.">
 <meta property="og:url" content="https://puanrobotu.com/yks/tercih-robotu/">
 <meta name="theme-color" content="#16294d">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "YKS tercihi puana göre mi, başarı sırasına göre mi yapılır?", "acceptedAnswer": {"@type": "Answer", "text": "Başarı sırasına göre. Puanlar sınavın zorluğuna göre yıldan yıla değişir; ancak başarı sıraları daha istikrarlıdır. Tercih listeni, geçen yılın başarı sıralarıyla kendi tahmini sıranı karşılaştırarak kurmalısın."}},
-    {"@type": "Question", "name": "Ölü tercih nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Kendi başarı sırandan çok daha iyi (düşük) sıralamayla kapatan bölümleri listenin üstüne yazmaktır; bu tercihler boşa gider. Listenin üstüne hayal, ortasına hedef, altına garanti bölümler yazmak en sağlıklı stratejidir."}},
-    {"@type": "Question", "name": "Kaç tercih hakkım var?", "acceptedAnswer": {"@type": "Answer", "text": "YKS'de en fazla 24 tercih yapabilirsin. Tercihlerin puan sırasına göre değil, istek sırasına göre dizilmelidir; ÖSYM seni puanın yettiği en üst tercihe yerleştirir."}},
-    {"@type": "Question", "name": "Tercih robotu ne zaman kullanılabilir olacak?", "acceptedAnswer": {"@type": "Answer", "text": "2025 YKS yerleştirme verileri (taban puan, başarı sırası, kontenjan) işlenip yayınlandığında bu sayfadaki robot aktif olacak. O zamana kadar tahmini puanını YKS Puan Hesaplama aracıyla öğrenebilirsin."}},
-    {"@type": "Question", "name": "Vakıf üniversitesi burslu bölümler tercihte nasıl görünür?", "acceptedAnswer": {"@type": "Answer", "text": "Burslu, %50 indirimli ve ücretli kontenjanlar ayrı programlar olarak listelenir ve her birinin kendi taban puanı ile başarı sırası vardır. Robot yayına girdiğinde burs durumuna göre filtreleyebileceksin."}},
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tercih robotu yayına girdiğinde de tüm işlem tarayıcında yapılacak; verilerin hiçbir sunucuya gönderilmeyecek."}}
+    {
+      "@type": "Question",
+      "name": "YKS tercihi puana göre mi, başarı sırasına göre mi yapılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Başarı sırasına göre.</strong> Puanlar sınavın zorluğuna göre yıldan yıla değişir; başarı sıraları daha istikrarlıdır. Tercih listeni, geçen yılın başarı sıralarıyla kendi tahmini sıranı karşılaştırarak kurmalısın."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ölü tercih nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Kendi başarı sırandan çok daha iyi sıralamayla kapatan bölümleri listenin üstüne yazmaktır; bu tercihler boşa gider.</strong> Listenin üstüne hayal, ortasına hedef, altına garanti bölümler yazmak en sağlıklı stratejidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kaç tercih hakkım var?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>En fazla 24 tercih.</strong> Tercihlerin puan sırasına göre değil, istek sırasına göre dizilir; ÖSYM seni puanın yettiği en üst tercihe yerleştirir. 24'ün tamamını doldurmak zorunda değilsin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tercih robotu benim yerime karar verir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> Tercih robotu bir karar verici değil, veri listesidir: filtrelerine uyan programları taban puan ve kontenjanlarıyla sıralar. Hangi programın mantıklı olduğu, risk dengesi ve istek sıran sana aittir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Listemde kaç program olmalı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Tek doğru sayı yok; denge şart.</strong> Sağlıklı listede üç katman olur: sırandan iyi kapatan 3–5 hayal program, sırana denk 8–12 hedef program, sırandan kötü kapatan 4–6 garanti program. Toplam 15–24 arası idealdir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ek tercih nedir, kimler başvurabilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Merkezi yerleştirmede boş kalan kontenjanlar için ikinci turdur.</strong> İlk yerleştirmede hiçbir programa yerleşemeyen adaylar başvurur. Ek tercihte de taban puan şartı aranır: puanın, programın taban puanından düşük olamaz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vakıf üniversitesi burslu bölümler tercihte nasıl görünür?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Ayrı programlar olarak listelenir.</strong> Burslu, %50 indirimli ve ücretli kontenjanların her birinin kendi taban puanı ve başarı sırası vardır. Robot yayına girdiğinde burs durumuna göre filtreleyebileceksin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İkinci öğretim programları ne anlama gelir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Derslerin akşam yapıldığı, harçlı programlardır.</strong> Diploma örgün öğretimle aynıdır; ancak ders saatleri ve harç ücreti farklıdır. Tercih robotunda ayrı program kodu ile listelenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tercih robotu ne zaman kullanılabilir olacak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>2025 YKS yerleştirme verileri işlenip yayınlandığında bu sayfadaki robot aktif olacak.</strong> O zamana kadar tahmini puanını YKS Puan Hesaplama aracıyla öğrenebilirsin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Hayır.</strong> Tercih robotu yayına girdiğinde de tüm işlem tarayıcında yapılacak; verilerin hiçbir sunucuya gönderilmeyecek."
+      }
+    }
   ]
 }
 </script>
@@ -68,9 +142,10 @@
     <div class="wrap">
       <p class="kicker">YKS 2026 tercih dönemi</p>
       <h1>YKS Tercih Robotu</h1>
-      <p class="lede">Puan türünü ve puanını gir — sana uygun <strong>üniversite ve bölümleri</strong> taban puan ve başarı sıralarıyla listele.</p>
+      <p class="lede"><strong>YKS tercih robotu</strong>, puan türün ve başarı sırana göre hedefleyebileceğin <strong>üniversite ve bölümleri</strong> taban puan ve kontenjan verileriyle listeler. Bu sayfadaki robot, 2025 yerleştirme verileri doğrulanınca aktif olacak; aşağıda ise <strong>doğru tercih listesinin yöntemini</strong> öğrenirsin.</p>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
 
   <div class="wrap sayfa-iki-sutun">
   <article>
@@ -111,63 +186,141 @@
     </div>
   </section>
 
-  <section class="wrap content">
-    <h2>YKS Tercihi Nasıl Yapılır?</h2>
-    <h3>1. Puana değil, başarı sırasına bak</h3>
-    <p>Puanlar sınavın zorluğuna göre yıldan yıla oynar; <strong>başarı sıraları</strong> çok daha istikrarlıdır. Tercih stratejinin temeli: kendi tahmini sıran ile bölümlerin geçen yılki kapanış sıralarını karşılaştırmak.</p>
-    <h3>2. Listeyi üç katmanlı kur</h3>
+<section class="wrap content">
+    <h2>Öne Çıkanlar</h2>
     <ul>
-      <li><strong>Hayal (üst sıra):</strong> Sırandan biraz daha iyi kapatan, çok istediğin 3–5 bölüm.</li>
-      <li><strong>Hedef (orta):</strong> Sırana denk kapatan bölümler — listenin gövdesi.</li>
-      <li><strong>Garanti (alt):</strong> Sırandan belirgin kötü kapatan, kesin yerleşeceğin bölümler. Boş kalma riskine karşı şart.</li>
+      <li><strong>Tercih başarı sırasına göre yapılır,</strong> puana göre değil — puanlar yıldan yıla kayar, sıralamalar istikrarlıdır.</li>
+      <li><strong>ÖSYM seni puanın yettiği en üst tercihe yerleştirir;</strong> listeyi istek sırasına göre diz.</li>
+      <li><strong>Üç katmanlı liste:</strong> 3–5 hayal, 8–12 hedef, 4–6 garanti program.</li>
+      <li><strong>Bu sayfadaki robot,</strong> 2025 yerleştirme verileri doğrulanınca aktif olacak — sahte liste gösterilmiyor.</li>
+      <li><strong>En fazla 24 tercih</strong> hakkın var; tamamını doldurmak zorunda değilsin.</li>
     </ul>
-    <h3>3. Ölü tercihten kaçın</h3>
-    <p>Sırandan çok daha iyi kapatan bölümleri üste yazmak "ölü tercih"tir — o satırlar boşa gider. İstek sırası önemli: ÖSYM, puanın yettiği <strong>en üst</strong> tercihine yerleştirir, o yüzden listeyi gerçekten istediğin sıraya göre diz.</p>
-    <h3>4. Kontenjan değişimlerini izle</h3>
-    <p>Bölümlerin kontenjanı yıldan yıla değişir; kontenjan artışı kapanış sırasını gevşetir, azalışı sıkılaştırır. Robot yayına girdiğinde kontenjan verisini de gösterecek.</p>
+
+    <h2>YKS Tercih Robotu Nedir?</h2>
+    <p><strong>YKS tercih robotu, adayın puan türü ve başarı sırasına göre hedefleyebileceği üniversite programlarını taban puan, başarı sırası ve kontenjan verileriyle listeleyen araçtır.</strong> Robot, ÖSYM'nin yayımladığı yerleştirme verilerini filtreler; karar vermez, öneride bulunmaz — yalnızca veriyi sıralar.</p>
+    <p>Bu sayfadaki robot şu anda 2025 YKS yerleştirme verilerinin doğrulanmasını bekliyor. Veri seti hazır olana kadar sahte program listesi göstermiyoruz; aşağıdaki yöntem bölümüyle tercih stratejini şimdiden kurabilirsin.</p>
+    <!-- [IMAGE: tercih robotu akış şeması — puan türü + başarı sırası → filtre → program listesi. Alt: "tercih robotu nasıl çalışır"] -->
+
+    <h2>Tercih Robotu Nasıl Çalışır?</h2>
+    <p><strong>Üç adımda çalışır: girdi, filtreleme, listeleme.</strong> Sen puan türünü ve başarı sıranı girersin; robot, veri setindeki programları bu aralığa göre süzer ve taban puan, başarı sırası, kontenjan bilgileriyle listeler.</p>
+    <p>Robotun çıktısı bir "olasılık" değil, bir "uygunluk listesidir". Programın geçen yılki kapanış sırası senin sırana yakınsa listede görünür; yerleşip yerleşemeyeceğin, o yılın kontenjan ve aday davranışına bağlıdır.</p>
+
+    <h2>ÖSYM Yerleştirme Algoritması Adım Adım</h2>
+    <p><strong>ÖSYM, tercihlerini yukarıdan aşağıya tek tek kontrol eder ve puanının yettiği ilk programa yerleştirir.</strong> Algoritma dört adımdır:</p>
+    <ol>
+      <li><strong>Listeni sırayla okur:</strong> 1. tercihinden başlar, 24. tercihine kadar iner.</li>
+      <li><strong>Her tercihte puanı karşılaştırır:</strong> Yerleştirme puanın, programın o yılki taban puanına yetiyorsa ve kontenjan boşsa yerleşirsin.</li>
+      <li><strong>İlk "olur"da durur:</strong> Yerleştiğin anda alt tercihlerine bakılmaz. Bu yüzden liste istek sırasına göre dizilir — puan sırasına göre değil.</li>
+      <li><strong>Hiçbiri olmazsa yerleşemezsin:</strong> Bu durumda ek tercih hakkı doğar.</li>
+    </ol>
+    <p>Sonuç: listeyi "en çok istediğin" sırasına göre dizmek, algoritmanın doğasına uygun tek stratejidir. Puanı yüksek programı üste yazmak, istek sırasını bozmak demektir.</p>
+
+    <h2>Üç Katmanlı Tercih Listesi</h2>
+    <p><strong>Sağlıklı liste üç katmandan oluşur: hayal, hedef, garanti.</strong> Bantlar, başarı sırana göre kurulur.</p>
+    <table class="bilgi-tablosu">
+      <caption>Tercih listesi katmanları</caption>
+      <thead><tr><th scope="col">Katman</th><th scope="col">Kapanış Sırası Aralığı</th><th scope="col">Adet</th><th scope="col">Amaç</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Hayal</strong></td><td>Sırandan %10–15 daha iyi</td><td>3–5</td><td>Şansını dene; kontenjan artışı sürpriz yapar</td></tr>
+        <tr><td><strong>Hedef</strong></td><td>Sırana ±%10 bandında</td><td>8–12</td><td>Listenin gövdesi; yerleşme ihtimalin en yüksek</td></tr>
+        <tr><td><strong>Garanti</strong></td><td>Sırandan %15+ daha kötü</td><td>4–6</td><td>Boş kalma riskine karşı sigorta</td></tr>
+      </tbody>
+    </table>
+    <p>Bantlar strateji önerisidir, resmi kural değildir. Ölü tercih — sırandan çok iyi kapatan bölümleri üste yığmak — bu katmanların dışına taşar ve satırları boşa harcar.</p>
+
+    <h2>Kontenjan Değişiminin Kapanış Sırasına Etkisi</h2>
+    <p><strong>Kontenjan artarsa kapanış sırası gevşer; azalırsa sıkılaşır.</strong> 100 kontenjanlı bir bölüm 120'ye çıkarsa, son yerleşen daha alt sıradan gelir — taban puan düşer. Kontenjan 80'e inerse tersi olur.</p>
+    <p>Pratik kural: hedeflediğin bölümün kontenjanı geçen yıla göre %20'den fazla değiştiyse, geçen yılın kapanış sırasını tek başına referans alma. Robot yayına girdiğinde kontenjan verisini her programda gösterecek; o zamana kadar ÖSYM kılavuzundaki kontenjan tablosunu kontrol et.</p>
 
     <h2>Robot Yayına Girince Neler Olacak?</h2>
     <ul>
-      <li>Puan türü + puan girişiyle <strong>uygun üniversite ve bölümlerin</strong> listesi</li>
+      <li>Puan türü + başarı sırası girişiyle <strong>uygun üniversite ve bölümlerin</strong> listesi</li>
       <li>Her programda <strong>taban puan, başarı sırası ve kontenjan</strong></li>
-      <li><strong>Şansın yüksek / Hedef / Zorlu</strong> rozetleriyle risk görünümü</li>
+      <li><strong>Hayal / Hedef / Garanti</strong> rozetleriyle risk görünümü</li>
       <li>Burs filtresi (burslu / %50 indirimli / ücretli)</li>
       <li>Yazdırma ve WhatsApp ile paylaşma</li>
     </ul>
+
+    <h2>Sık Yapılan 5 Tercih Hatası</h2>
+    <ol>
+      <li><strong>Puana göre tercih yapmak:</strong> Puanlar yıldan yıla kayar; strateji başarı sırası üzerinden kurulur.</li>
+      <li><strong>Listeyi puan sırasına dizmek:</strong> ÖSYM istek sırasına göre yerleştirir; en çok istediğin en üstte olmalı.</li>
+      <li><strong>Garanti katmanı yazmamak:</strong> 24 tercihin hepsini "hayal" doldurmak, boş kalma riskini büyütür.</li>
+      <li><strong>Vakıf burs şartlarını okumamak:</strong> Burslu görünen programın burs devam koşullarını kılavuzdan kontrol et.</li>
+      <li><strong>Tek yıllık veriye güvenmek:</strong> Geçen yılın kapanış sırası referanstır, garanti değildir; kontenjan değişimini izle.</li>
+    </ol>
+
+    <h2>Sınırlamalar</h2>
+    <ul>
+      <li><strong>Veri bekleniyor:</strong> Bu sayfadaki robot, 2025 yerleştirme verileri doğrulanmadan liste üretmez. Doğrulanmamış sayıyla tercih yapmak, hiç yapmamaktan kötüdür.</li>
+      <li><strong>Robot tahmin değil, listedir:</strong> Yayına girdiğinde de robot "yerleşirsin" demez; uygunluk listesi sunar.</li>
+      <li><strong>Kılavuz esastır:</strong> Özel koşullar, burs devam şartları ve kontenjan detayları yalnızca ÖSYM kılavuzunda yazar.</li>
+    </ul>
+
+    <h2>Tercih Robotu ve Alternatifleri</h2>
+    <p><strong>Üç yol var; her birinin rolü farklıdır.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Tercih araçlarının karşılaştırması</caption>
+      <thead><tr><th scope="col">Araç</th><th scope="col">Ne Yapar</th><th scope="col">Ne Yapmaz</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ÖSYM tercih robotu</strong></td><td>Resmi kılavuz verisini filtreler</td><td>Öneri, risk analizi, sıralama tavsiyesi vermez</td></tr>
+        <tr><td><strong>Özel tercih robotları</strong></td><td>Risk rozeti, burs filtresi gibi ek görünüm sunar</td><td>Yerleşme garantisi veremez</td></tr>
+        <tr><td><strong>Rehber öğretmen / danışman</strong></td><td>Kişisel durumu yoruma katar</td><td>Veriyi robot kadar hızlı tarayamaz</td></tr>
+      </tbody>
+    </table>
+    <p>En sağlıklı yaklaşım üçünü birlikte kullanmaktır: robotla havuzu genişlet, kılavuzla detayı doğrula, danışmanla kararı netleştir.</p>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
       <details>
         <summary>YKS tercihi puana göre mi, başarı sırasına göre mi yapılır?</summary>
-        <p>Başarı sırasına göre. Puanlar sınavın zorluğuna göre yıldan yıla değişir; ancak başarı sıraları daha istikrarlıdır. Tercih listeni, geçen yılın başarı sıralarıyla kendi tahmini sıranı karşılaştırarak kurmalısın.</p>
+        <p><strong>Başarı sırasına göre.</strong> Puanlar sınavın zorluğuna göre yıldan yıla değişir; başarı sıraları daha istikrarlıdır. Tercih listeni, geçen yılın başarı sıralarıyla kendi tahmini sıranı karşılaştırarak kurmalısın.</p>
       </details>
       <details>
         <summary>Ölü tercih nedir?</summary>
-        <p>Kendi başarı sırandan çok daha iyi (düşük) sıralamayla kapatan bölümleri listenin üstüne yazmaktır; bu tercihler boşa gider. Listenin üstüne hayal, ortasına hedef, altına garanti bölümler yazmak en sağlıklı stratejidir.</p>
+        <p><strong>Kendi başarı sırandan çok daha iyi sıralamayla kapatan bölümleri listenin üstüne yazmaktır; bu tercihler boşa gider.</strong> Listenin üstüne hayal, ortasına hedef, altına garanti bölümler yazmak en sağlıklı stratejidir.</p>
       </details>
       <details>
         <summary>Kaç tercih hakkım var?</summary>
-        <p>YKS'de en fazla 24 tercih yapabilirsin. Tercihlerin puan sırasına göre değil, istek sırasına göre dizilmelidir; ÖSYM seni puanın yettiği en üst tercihe yerleştirir.</p>
+        <p><strong>En fazla 24 tercih.</strong> Tercihlerin puan sırasına göre değil, istek sırasına göre dizilir; ÖSYM seni puanın yettiği en üst tercihe yerleştirir. 24'ün tamamını doldurmak zorunda değilsin.</p>
       </details>
       <details>
-        <summary>Tercih robotu ne zaman kullanılabilir olacak?</summary>
-        <p>2025 YKS yerleştirme verileri (taban puan, başarı sırası, kontenjan) işlenip yayınlandığında bu sayfadaki robot aktif olacak. O zamana kadar tahmini puanını YKS Puan Hesaplama aracıyla öğrenebilirsin.</p>
+        <summary>Tercih robotu benim yerime karar verir mi?</summary>
+        <p><strong>Hayır.</strong> Tercih robotu bir karar verici değil, veri listesidir: filtrelerine uyan programları taban puan ve kontenjanlarıyla sıralar. Hangi programın mantıklı olduğu, risk dengesi ve istek sıran sana aittir.</p>
+      </details>
+      <details>
+        <summary>Listemde kaç program olmalı?</summary>
+        <p><strong>Tek doğru sayı yok; denge şart.</strong> Sağlıklı listede üç katman olur: sırandan iyi kapatan 3–5 hayal program, sırana denk 8–12 hedef program, sırandan kötü kapatan 4–6 garanti program. Toplam 15–24 arası idealdir.</p>
+      </details>
+      <details>
+        <summary>Ek tercih nedir, kimler başvurabilir?</summary>
+        <p><strong>Merkezi yerleştirmede boş kalan kontenjanlar için ikinci turdur.</strong> İlk yerleştirmede hiçbir programa yerleşemeyen adaylar başvurur. Ek tercihte de taban puan şartı aranır: puanın, programın taban puanından düşük olamaz.</p>
       </details>
       <details>
         <summary>Vakıf üniversitesi burslu bölümler tercihte nasıl görünür?</summary>
-        <p>Burslu, %50 indirimli ve ücretli kontenjanlar ayrı programlar olarak listelenir ve her birinin kendi taban puanı ile başarı sırası vardır. Robot yayına girdiğinde burs durumuna göre filtreleyebileceksin.</p>
+        <p><strong>Ayrı programlar olarak listelenir.</strong> Burslu, %50 indirimli ve ücretli kontenjanların her birinin kendi taban puanı ve başarı sırası vardır. Robot yayına girdiğinde burs durumuna göre filtreleyebileceksin.</p>
+      </details>
+      <details>
+        <summary>İkinci öğretim programları ne anlama gelir?</summary>
+        <p><strong>Derslerin akşam yapıldığı, harçlı programlardır.</strong> Diploma örgün öğretimle aynıdır; ancak ders saatleri ve harç ücreti farklıdır. Tercih robotunda ayrı program kodu ile listelenir.</p>
+      </details>
+      <details>
+        <summary>Tercih robotu ne zaman kullanılabilir olacak?</summary>
+        <p><strong>2025 YKS yerleştirme verileri işlenip yayınlandığında bu sayfadaki robot aktif olacak.</strong> O zamana kadar tahmini puanını YKS Puan Hesaplama aracıyla öğrenebilirsin.</p>
       </details>
       <details>
         <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
-        <p>Hayır. Tercih robotu yayına girdiğinde de tüm işlem tarayıcında yapılacak; verilerin hiçbir sunucuya gönderilmeyecek.</p>
+        <p><strong>Hayır.</strong> Tercih robotu yayına girdiğinde de tüm işlem tarayıcında yapılacak; verilerin hiçbir sunucuya gönderilmeyecek.</p>
       </details>
     </div>
 
     <h2>Şimdiden Hazırlan</h2>
     <ul>
-      <li><a href="../puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — tahmini ham ve yerleştirme puanını öğren</li>
-      <li><a href="../taban-puanlari/"><strong>Üniversite Taban Puanları</strong></a> — taban puanın ne anlama geldiğini öğren</li>
+      <li><a href="../puan-hesaplama/"><strong>YKS puan hesaplama</strong></a> — tahmini ham ve yerleştirme puanını öğren</li>
+      <li><a href="../taban-puanlari/"><strong>Üniversite taban puanları</strong></a> — taban puanın ne anlama geldiğini öğren</li>
+      <li><a href="../obp-hesaplama/"><strong>OBP hesaplama</strong></a> — diploma katkını yerleştirme puanına ekle</li>
     </ul>
+    <!-- [IMAGE: üç katmanlı tercih listesi şeması. Alt: "tercih listesi nasıl kurulur"] -->
   </section>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-tercih" aria-label="Aynı kategorideki araçlar"></aside>

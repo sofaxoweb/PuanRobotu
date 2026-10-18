@@ -30,17 +30,82 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "İOKBS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 3). Sonra her net, 3 katsayısıyla çarpılıp toplanır (en fazla 300). MEB bu ağırlıklı toplamı, o yılın Türkiye geneli ortalama ve standart sapmasını kullanarak 100–500 ölçeğine dönüştürür."}},
-    {"@type": "Question", "name": "Bursluluk sınavında 3 yanlış 1 doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. MEB İOKBS Kılavuzu'na göre her testte ham puan, doğru sayısından yanlış sayısının üçte biri çıkarılarak bulunur. Yani 3 yanlış, 1 doğruyu götürür."}},
-    {"@type": "Question", "name": "İOKBS'de hangi testler var, kaç soru soruluyor?", "acceptedAnswer": {"@type": "Answer", "text": "4 test vardır ve her biri 25 sorudan oluşur: Türkçe, Matematik, Fen Bilimleri ve Sosyal Bilimler. Sınav toplam 100 soru, 120 dakika ve tek oturum olarak yapılır."}},
-    {"@type": "Question", "name": "Bursluluk kazanmak için kaç puan gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Puanın yanında ailenin gelir durumu gibi başvuru koşulları da değerlendirilir."}},
-    {"@type": "Question", "name": "Bu hesaplama ne kadar doğru?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek İOKBS puanı, sınav sonrası açıklanan ulusal ortalama ve standart sapma ile hesaplanır. Buradaki sonuç, MEB'in resmi formül mantığına dayalı şeffaf bir tahmindir; resmi sonuç yerine geçmez."}},
-    {"@type": "Question", "name": "İOKBS'ye kimler başvurabilir?", "acceptedAnswer": {"@type": "Answer", "text": "5, 6, 7, 8, hazırlık, 9, 10 ve 11. sınıf öğrencileri başvurabilir. Kişi başına düşen ailenin gelirinin belirlenen sınırın altında olması ve bir önceki yılı başarıyla geçmiş olma şartı aranır. Başvuru ücretsizdir ve okul aracılığıyla e-Okul üzerinden yapılır."}},
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz."}}
-  ]
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "İOKBS puanı nasıl hesaplanır?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Üç adımda: (1) Her testin neti bulunur: Net = Doğru − (Yanlış ÷ 3). (2) Netler 3 katsayısıyla çarpılıp toplanır (en fazla 300). (3) MEB bu toplamı Türkiye geneli ortalama ve standart sapmayla 100–500 ölçeğine dönüştürür."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bursluluk sınavında 3 yanlış 1 doğruyu götürür mü?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. MEB İOKBS Kılavuzu'na göre ham puan, doğru sayısından yanlış sayısının üçte birinin çıkarılmasıyla bulunur."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "İOKBS'de hangi testler var, kaç soru soruluyor?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "4 test vardır ve her biri 25 sorudan oluşur: Türkçe, Matematik, Fen Bilimleri ve Sosyal Bilimler. Sınav toplam 100 soru, 120 dakika ve tek oturum olarak yapılır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bursluluk kazanmak için kaç puan gerekir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Puanın yanında, ailenin gelir durumu gibi başvuru koşullarının da sağlanması gerekir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bu hesaplama ne kadar doğru?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Formül mantığı MEB'in resmi yöntemiyle aynıdır, ancak gerçek puan ulusal istatistiklere bağlı olduğu için sonuç tahmini niteliktedir. Resmi sonuç yerine geçmez."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "İOKBS'ye kimler başvurabilir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "5, 6, 7, 8, hazırlık, 9, 10 ve 11. sınıf öğrencileri başvurabilir. Kişi başına düşen ailenin gelirinin belirlenen sınırın altında olması ve bir önceki yılı başarıyla geçmiş olma şartı aranır. Başvuru ücretsizdir ve okul aracılığıyla e-Okul üzerinden yapılır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "İOKBS ile LGS aynı sınav mı?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. İOKBS, maddi destek bursu için yapılan ayrı bir sınavdır; 5–11. sınıf öğrencileri başvurabilir. LGS ise 8. sınıf sonunda lise yerleştirme için yapılır. İkisinin formülü benzerdir (3:1 ceza, katsayılı ağırlık), ama amaçları ve ölçekleri farklıdır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Burs ne kadar süre ödenir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Burs, kazanan öğrencilere aylık olarak ve öğretim yılı boyunca ödenir; tutar her yıl güncellenir. Devamsızlık, disiplin cezası veya sınıf tekrarı gibi durumlarda burs kesilebilir — güncel tutar ve koşullar için MEB İOKBS Kılavuzu'na bak."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz."
+            }
+        }
+    ]
 }
 </script>
 </head>
@@ -71,6 +136,7 @@
       <h1>Bursluluk (İOKBS) Puan Hesaplama</h1>
       <p class="lede">4 testin <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>netini</strong> ve <strong>tahmini bursluluk puanını (100–500)</strong> saniyeler içinde öğren. Hesaplama, MEB İOKBS Kılavuzu'ndaki resmi puanlama mantığına göre yapılır — sonucun neden "tahmini" olduğunu aşağıda açıkça anlatıyoruz.</p>
       <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
     </div>
   </section>
 
@@ -130,6 +196,16 @@
   </div>
 
   <section class="wrap content">
+    <div class="ozet-kutu">
+      <h2>Öne Çıkanlar</h2>
+      <ul>
+        <li><strong>Net = Doğru − (Yanlış ÷ 3).</strong> İOKBS'de 3 yanlış, 1 doğruyu götürür.</li>
+        <li><strong>4 testin katsayısı da 3'tür</strong> — her test puana eşit ağırlıkla katılır (en yüksek ağırlıklı toplam 300).</li>
+        <li><strong>Tahmini puan 100–500 aralığındadır;</strong> gerçek puan, MEB'in ulusal istatistikleriyle hesaplanır — sabit bir "net = puan" tablosu matematiksel olarak mümkün değildir.</li>
+        <li><strong>PYBS ve İOKBS aynı sınavdır;</strong> PYBS eski adıdır.</li>
+        <li>Burs için puan tek başına yetmez — <strong>gelir şartı</strong> gibi başvuru koşulları da aranır.</li>
+      </ul>
+    </div>
     <h2>Nasıl Kullanılır?</h2>
     <ol class="adimlar">
       <li><strong>Doğru ve yanlışlarını gir:</strong> Deneme sınavındaki veya tahmini doğru-yanlış sayılarını her testin satırına yaz. Boş bıraktığın sorular otomatik hesaplanır.</li>
@@ -176,6 +252,18 @@
     </table>
     <p>Sınav tek oturumda, 100 soru ve 120 dakika olarak yapılır. Katsayılar eşit olduğu için her test puana aynı ağırlıkla katılır — çalışmanı dengeli dağıtmak en mantıklı stratejidir.</p>
 
+    <h2>PYBS ile İOKBS Aynı Sınav mı?</h2>
+    <p><strong>Evet, aynı sınavdır — PYBS eski adıdır.</strong> Sınavın tam adı "İlköğretim ve Ortaöğretim Kurumları Bursluluk Sınavı"dır ve kısaltması İOKBS'dir. Eski yıllarda "Parasız Yatılılık ve Bursluluk Sınavı" (PYBS) adıyla yapılırdı; isim değişti, sınavın yapısı aynı kaldı.</p>
+    <p>İnternette bazı siteler hâlâ PYBS adıyla güncel olmayan bilgiler yayımlıyor (ör. test başına 20 soru gibi). Doğru bilgi: <strong>4 test, her biri 25 soru, toplam 100 soru, 120 dakika, tek oturum.</strong> Arama yaparken iki ismi de kullanabilirsin; bu sayfa ikisini de kapsar.</p>
+
+    <h2>Neden Sabit Bir "Net–Puan" Tablosu Yok?</h2>
+    <p><strong>Çünkü İOKBS puanı, o yıl sınava girenlerin dağılımına göre hesaplanır.</strong> MEB önce her testin netini standart puana çevirir (ortalama 50, standart sapma 10), sonra katsayılarla ağırlıklandırır ve 100–500 ölçeğine dönüştürür. Ulusal ortalama ve standart sapma sınavdan önce bilinemez.</p>
+    <p>Bu yüzden "70 net = 400 puan" gibi sabit tablolar matematiksel olarak geçersizdir. İnternette dolaşan bu tür tablolar uydurmadır. Bu araç bunun yerine şeffaf bir tahmin modeli kullanır: ağırlıklı toplamı 100–500 aralığına doğrusal olarak yerleştirir ve sonucu her zaman <strong>"tahmini"</strong> olarak etiketler.</p>
+
+    <h2>Soru İptali ve Kopya Durumunda Ne Olur?</h2>
+    <p><strong>İptal edilen soru, sınava giren herkes için doğru kabul edilir.</strong> Bu MEB kılavuzunda açıkça yazar — yani bir sorunun iptali kimseyi mağdur etmez, herkese eşit yarar sağlar.</p>
+    <p>Kopya çektiği tespit edilen adayın ilgili testi iptal edilir ve o testten puanı <strong>100</strong> olarak işlem görür. Sınav kurallarına uymak, sadece ahlaki değil, puansal bir zorunluluktur.</p>
+
     <h2>Bu Aracın Sınırları (Dürüstlük Bölümü)</h2>
     <ul>
       <li><strong>Tahmini sonuç:</strong> Gerçek ve resmi bursluluk puanın yalnızca MEB'in açıkladığı sonuç belgesinde yazar. Bu araç, resmi formülün mantığını kullanan şeffaf bir tahmindir.</li>
@@ -200,7 +288,7 @@
       </details>
       <details>
         <summary>Bursluluk kazanmak için kaç puan gerekir?</summary>
-        <p>Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Ayrıca ailenin gelir durumu gibi başvuru koşullarının da sağlanması gerekir.</p>
+        <p>Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Puanın yanında, ailenin gelir durumu gibi başvuru koşullarının da sağlanması gerekir.</p>
       </details>
       <details>
         <summary>Bu hesaplama ne kadar doğru?</summary>
@@ -211,6 +299,14 @@
         <p>5, 6, 7, 8, hazırlık, 9, 10 ve 11. sınıf öğrencileri başvurabilir. Kişi başına düşen ailenin gelirinin belirlenen sınırın altında olması ve bir önceki yılı başarıyla geçmiş olma şartı aranır. Başvuru ücretsizdir ve okul aracılığıyla e-Okul üzerinden yapılır.</p>
       </details>
       <details>
+        <summary>İOKBS ile LGS aynı sınav mı?</summary>
+        <p>Hayır. İOKBS, maddi destek bursu için yapılan ayrı bir sınavdır; 5–11. sınıf öğrencileri başvurabilir. LGS ise 8. sınıf sonunda lise yerleştirme için yapılır. İkisinin formülü benzerdir (3:1 ceza, katsayılı ağırlık), ama amaçları ve ölçekleri farklıdır.</p>
+      </details>
+      <details>
+        <summary>Burs ne kadar süre ödenir?</summary>
+        <p>Burs, kazanan öğrencilere aylık olarak ve öğretim yılı boyunca ödenir; tutar her yıl güncellenir. Devamsızlık, disiplin cezası veya sınıf tekrarı gibi durumlarda burs kesilebilir — güncel tutar ve koşullar için MEB İOKBS Kılavuzu'na bak.</p>
+      </details>
+      <details>
         <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
         <p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz.</p>
       </details>
@@ -219,9 +315,9 @@
     <h2>Sonraki Adımlar</h2>
     <p>Bursluluk hedefinin yanında lise hedefini de planla:</p>
     <ul>
-      <li><a href="../puan-hesaplama/"><strong>LGS Puan Hesaplama</strong></a> — LGS netinden tahmini puanını ve yüzdelik dilimini öğren</li>
-      <li><a href="../tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> — puanına ve dilimine göre girebileceğin liseleri listele</li>
-      <li><a href="../taban-puanlari/"><strong>81 İlin LGS Taban Puanları</strong></a> — okul bazında taban puan ve kontenjan tabloları</li>
+      <li>LGS hedefin için <a href="../puan-hesaplama/"><strong>LGS Puan Hesaplama</strong></a> aracıyla tahmini puanını ve yüzdelik dilimini öğren.</li>
+      <li>Sana uygun liseleri bulmak için <a href="../tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> ile puanına ve dilimine göre okulları listele.</li>
+      <li>Okul bazında inceleme için <a href="../taban-puanlari/"><strong>LGS Taban Puanları</strong></a> sayfasında 81 ilin taban puan ve kontenjan tablolarına bak.</li>
     </ul>
   </section>
   </article>

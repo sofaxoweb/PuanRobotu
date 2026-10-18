@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TUS Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="TUS puan hesaplama: TTBT ve KTBT doğru–yanlışlarını gir, tahmini K ve T puanlarını ve 45 baraj durumunu öğren. 2026 formatına uygun.">
+<meta name="description" content="TUS puan hesaplama: TTBT ve KTBT doğru-yanlışlarını gir, tahmini K ve T puanlarını ve 45 baraj durumunu öğren. 85 tavan kuralı, 2026 formatı, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/kamu-sinavlari/tus-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="TUS Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="Temel ve Klinik netlerinden tahmini TUS K/T puanını hesapla. En yüksek puan 85, baraj 45.">
+<meta property="og:description" content="TUS puan hesaplama: TTBT ve KTBT doğru-yanlışlarını gir, tahmini K ve T puanlarını ve 45 baraj durumunu öğren. 85 tavan kuralı, 2026 formatı, ücretsiz.">
 <meta property="og:url" content="https://puanrobotu.com/kamu-sinavlari/tus-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -38,7 +38,10 @@
     {"@type": "Question", "name": "TUS'ta en yüksek puan kaç?", "acceptedAnswer": {"@type": "Answer", "text": "85. ÖSYM, ağırlıklı puanı 85 tavanına dönüştürür; en yüksek ağırlıklı puanı yapan aday 85 alır."}},
     {"@type": "Question", "name": "45 barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Tercih yapabilmek için ilgili puan türünden en az 45 almak gerekir. 45'in altındaki puanla yerleştirme tercihinde bulunulamaz."}},
     {"@type": "Question", "name": "TUS için YDS şart mı?", "acceptedAnswer": {"@type": "Answer", "text": "Yerleştirme için evet: son 5 yıl içinde alınmış en az 50 YDS (veya eşdeğeri) puanı gerekir. Puanın kendisine OBP ya da diploma notu eklenmez; puan %100 sınav performansına dayanır."}},
-    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi puan, sınav sonrası her oturumun ortalama ve standart sapmasıyla hesaplanır. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar; her dönem katsayılar sınavın zorluğuna göre değişir."}}
+    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi puan, sınav sonrası her oturumun ortalama ve standart sapmasıyla hesaplanır. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar; her dönem katsayılar sınavın zorluğuna göre değişir."}},
+    {"@type": "Question", "name": "TUS'ta boş bırakmak mı mantıklı, tahmin etmek mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hiçbir fikrin yoksa boş bırak; beklenen değer sıfırdır. Bir şıkkı elediysen işaretle: 4 şık arasından tahminin beklenen değeri +0,0625 nettir. İki şıkka indirdiysen +0,25 net kazanırsın."}},
+    {"@type": "Question", "name": "Yerleşip eğitime başlamazsam ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Bir uzmanlık programına yerleşip eğitime başlamayan, istifa eden veya eğitimi sürerken yeniden sınava giren adayların puanından %5 kesinti uygulanır. Kesintinin hangi sınava yansıyacağını kılavuzdan teyit et."}},
+    {"@type": "Question", "name": "A puanı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Sözleşmeli aile hekimliği için kullanılan ayrı bir puan türüdür. K ve T'den farklı hesaplanır; aile hekimliği hedefleyen adaylar kılavuzdaki A puanı formülünü incelemelidir."}}
   ]
 }
 </script>
@@ -69,6 +72,7 @@
     <article>
       <p class="kicker">Kamu Sınavları</p>
       <h1>TUS Puan Hesaplama</h1>
+      <p class="yazar">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
       <p class="lede">Temel Tıp Bilimleri (TTBT) ve Klinik Tıp Bilimleri (KTBT) oturumlarındaki <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>tahmini K ve T puanlarını</strong> ile <strong>45 baraj</strong> durumunu öğren.</p>
 
       <!-- ============ HESAPLAYICI ============ -->
@@ -109,26 +113,53 @@
         <strong>Önemli:</strong> Bu sonuçlar birer <strong>tahmindir</strong>. ÖSYM, resmi puanı sınav sonrası hesaplar: ham puanlar önce standart puana çevrilir (ortalama 50, standart sapma 10), ağırlıklarla birleştirilir ve 85 tavanına dönüştürülür. Bu dönüşümdeki oturum istatistikleri sınavdan önce bilinemez. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar.
       </div>
 
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>TUS puanı</strong>, TTBT ve KTBT ham puanlarının standart puana çevrilip ağırlıklandırılmasıyla bulunur. 4 yanlış, 1 doğruyu götürür.</li>
+          <li><strong>K = TTBT %40 + KTBT %60</strong> (klinik ağırlıklı), <strong>T = TTBT %60 + KTBT %40</strong> (temel ağırlıklı).</li>
+          <li><strong>En yüksek puan 85'tir;</strong> tercih için <strong>45 barajı</strong> vardır.</li>
+          <li>Yerleşme için son 5 yılda alınmış <strong>en az 50 YDS</strong> (veya eşdeğeri) şarttır; puana OBP eklenmez.</li>
+          <li>Bu sayfadaki sonuçlar <strong>tahmindir</strong>; katsayılar her dönem sınavın zorluğuna göre değişir.</li>
+        </ul>
+      </div>
+
       <!-- ============ REHBER İÇERİK ============ -->
+      <h2>TUS Puanı Nedir?</h2>
+      <p><strong>TUS puanı</strong>, Tıpta Uzmanlık Eğitimi Giriş Sınavı'ndaki performansın 100'lük ölçekteki karşılığıdır; ancak ÖSYM bu ölçeği <strong>85 tavanına</strong> dönüştürür. İki puan türü vardır: klinik branşlar için <strong>K puanı</strong>, temel bilimler için <strong>T puanı</strong>. Puan %100 sınav performansına dayanır; diploma notu eklenmez.</p>
+
       <h2>TUS Puanı Nasıl Hesaplanır?</h2>
-      <p>TUS, iki ayrı oturumda yapılır: <strong>Temel Tıp Bilimleri Testi (TTBT)</strong> 100 soru / 135 dakika ve <strong>Klinik Tıp Bilimleri Testi (KTBT)</strong> 100 soru / 135 dakika.</p>
+      <p><strong>TUS puanı 4 adımda hesaplanır:</strong> ham puan bulma, standart puana çevirme, ağırlıklandırma ve 85 tavanına dönüştürme.</p>
       <h3>Adım 1 — Ham puanları bul</h3>
       <p>Her test için: <strong>Ham Puan = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. Yanlışlar doğruyu götürür; boşlar etkilemez.</p>
-      <h3>Adım 2 — Standart puana çevir (ÖSYM yapar)</h3>
-      <p>Her testin ham puanı, o oturumun ortalaması 50 ve standart sapması 10 olacak şekilde standart puana dönüştürülür.</p>
+      <h3>Adım 2 — Standart puana çevir</h3>
+      <p>Her testin ham puanı, o oturumun ortalaması 50 ve standart sapması 10 olacak şekilde standart puana dönüştürülür. Sınav zorsa ortalama düşer; aynı ham puan daha yüksek standart puana denk gelir.</p>
       <h3>Adım 3 — Ağırlıklı puanı bul</h3>
-      <p>Resmi ağırlıklar (2026 TUS kılavuzu):</p>
+      <p>Resmi ağırlıklar:</p>
       <ul>
         <li><strong>K Puanı</strong> (klinik ağırlıklı) = TTBT × %40 + KTBT × %60</li>
         <li><strong>T Puanı</strong> (temel ağırlıklı) = TTBT × %60 + KTBT × %40</li>
       </ul>
-      <p><small><em>Not: İnternetteki bazı eski kaynaklarda K için %50–%50, T için %70–%30 yazıyor; bu değerler güncel değildir. Güncel kılavuzdaki ağırlıklar yukarıdakilerdir.</em></small></p>
-      <h3>Adım 4 — 85 tavanına dönüştür (tahmini)</h3>
-      <p>Resmi formül ağırlıklı puanı 85 tavanına ölçekler; en yüksek ağırlıklı puanı yapan aday 85 alır. Bu araç, resmi formülün ihtiyaç duyduğu oturum istatistikleri yerine <strong>2026 Mart TUS dönemine ait yayınlanmış ampirik katsayıları</strong> kullanır: K ≈ 40,3 + 0,207 × TTBT ham + 0,277 × KTBT ham; T ≈ 41,8 + 0,294 × TTBT ham + 0,175 × KTBT ham. Bu katsayılar döneme özeldir; her TUS'ta sınavın zorluğuna göre değişir.</p>
-      <h3>45 barajı</h3>
-      <p>Tercih yapabilmek için ilgili puan türünden <strong>en az 45</strong> almak gerekir. Ayrıca yerleştirme için son 5 yıl içinde alınmış <strong>en az 50 YDS</strong> (veya eşdeğeri) puanı şarttır. TUS puanına OBP veya diploma notu eklenmez.</p>
+      <h3>Adım 4 — 85 tavanına dönüştür</h3>
+      <p>ÖSYM, ağırlıklı puanı 85 tavanına ölçekler; en yüksek ağırlıklı puanı yapan aday 85 alır. Bu araç, resmi formülün ihtiyaç duyduğu oturum istatistikleri yerine <strong>2026 Mart TUS dönemine ait yayınlanmış ampirik katsayıları</strong> kullanır: K ≈ 40,3 + 0,207 × TTBT ham + 0,277 × KTBT ham; T ≈ 41,8 + 0,294 × TTBT ham + 0,175 × KTBT ham. Bu katsayılar döneme özeldir; her TUS'ta sınavın zorluğuna göre değişir.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>Kaç Net Kaç Puan Eder? (Dürüst Tablo)</h2>
+      <p><strong>Aşağıdaki tablo, bu sayfadaki hesaplayıcının 2026 Mart modeliyle ürettiği tahmini karşılıklardır.</strong> Hiçbir rakip sayfa böyle bir tablo yayımlamıyor; çoğu "her doğru 3 puan" gibi gerçek dışı formüller yazıyor.</p>
+      <table class="bilgi-tablosu">
+        <caption>Ham puan → tahmini TUS puanı (2026 Mart modeli, TTBT = KTBT varsayımıyla)</caption>
+        <thead><tr><th scope="col">Her Testte Ham Puan</th><th scope="col">Tahmini K</th><th scope="col">Tahmini T</th><th scope="col">Baraj</th></tr></thead>
+        <tbody>
+          <tr><td>30</td><td>54,8</td><td>55,9</td><td>✓ Üstü</td></tr>
+          <tr><td>40</td><td>59,7</td><td>60,6</td><td>✓ Üstü</td></tr>
+          <tr><td>50</td><td>64,5</td><td>65,3</td><td>✓ Üstü</td></tr>
+          <tr><td>60</td><td>69,3</td><td>69,9</td><td>✓ Üstü</td></tr>
+          <tr><td>70</td><td>74,2</td><td>74,6</td><td>✓ Üstü</td></tr>
+          <tr><td>80</td><td>79,0</td><td>79,3</td><td>✓ Üstü</td></tr>
+        </tbody>
+      </table>
+      <p>Tabloyu doğru oku: bunlar <strong>model tahminidir</strong>, garanti değildir. Sınav kolay gelirse standart sapma daralır ve aynı ham puan daha düşük puana denk gelir. "Aynı net, farklı dönem, farklı puan" kuralını unutma.</p>
+
+      <h2>Formül ve Çalışılmış Örnek</h2>
       <p>Bir adayın sonuçları: TTBT 70 doğru 20 yanlış, KTBT 60 doğru 30 yanlış.</p>
       <ul>
         <li>TTBT ham: 70 − (20 ÷ 4) = <strong>65</strong></li>
@@ -138,21 +169,83 @@
       </ul>
       <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
+      <h2>Bu Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>TTBT doğru sayını yaz.</strong> Temel Tıp Bilimleri testindeki doğru sayını gir (0–100).</li>
+        <li><strong>TTBT yanlış sayını yaz.</strong> Aynı testteki yanlış sayını gir.</li>
+        <li><strong>KTBT doğru ve yanlışlarını yaz.</strong> Klinik test için aynı iki değeri gir (0–100).</li>
+        <li><strong>Hesapla'ya bas.</strong> Tahmini K ve T puanın ile 45 baraj durumun görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Nasıl Okumalısın?</h2>
+      <p><strong>Puanın, hedef branşın taban puanıyla karşılaştırıldığında anlam kazanır.</strong> Popüler branşlarda (dermatoloji, plastik cerrahi) tabanlar 75–85 bandına çıkarken, geniş kontenjanlı branşlarda 50'li değerlere düşer.</p>
+      <ul>
+        <li><strong>Baraj altı (&lt;45):</strong> tercih yapamazsın; ham puanı yükseltmen şart.</li>
+        <li><strong>45–60:</strong> kontenjanı geniş branşlar mümkün; taban tablolarını izle.</li>
+        <li><strong>60–75:</strong> çoğu branş için rekabetçi aralık.</li>
+        <li><strong>75+:</strong> popüler branşlar için yarışır aralık.</li>
+      </ul>
+      <p>Unutma: puan tek başına yetmez. Yerleşme için son 5 yılda alınmış <strong>en az 50 YDS</strong> (veya eşdeğeri) puanın da olması gerekir.</p>
+
+      <h2>Boş Bırak mı, Tahmin mi? Karar Matematiği</h2>
+      <p><strong>Hiçbir fikrin yoksa boş bırak; 1 şıkkı bile elediysen işaretle.</strong> Matematiği: 5 şıklı soruda rastgele işaretlemenin beklenen değeri 0,2 × 1 − 0,8 × 0,25 = <strong>0</strong>'dır; yani rastgele tahmin ne kazandırır ne kaybettirir.</p>
+      <p>Bir şıkkı elediğinde tablo değişir: 4 şık arasından tahminin beklenen değeri 0,25 × 1 − 0,75 × 0,25 = <strong>+0,0625</strong> net olur. İki şıkka indirdiysen beklenen değer +0,25 nete çıkar. Kural: eleme yapabiliyorsan işaretle, tamamen körü körüne ise boş bırak.</p>
+
+      <h2>Yerleşme Koşulları: YDS ve %5 Kesinti</h2>
+      <p><strong>Puanın yetmesi, yerleşeceğin anlamına gelmez; iki koşul daha var.</strong> Hesaplayıcı sayfalarının hiçbiri bunları anlatmıyor.</p>
+      <ul>
+        <li><strong>YDS ≥ 50 şartı:</strong> Yerleşme için son 5 yıl içinde alınmış en az 50 YDS (veya YÖKDİL/TIPDİL eşdeğeri) puanı gerekir. Puanın 80 olsa bile dil puanın yoksa tercih yapamazsın.</li>
+        <li><strong>%5 puan kesintisi:</strong> Daha önce bir uzmanlık programına yerleşip eğitime başlamayan, istifa eden veya eğitimi devam ederken yeniden sınava giren adayların puanından %5 kesinti uygulanır. Hangi durumda kesintinin hangi sınava yansıyacağını kılavuzdan teyit et.</li>
+      </ul>
+
+      <h2>İnternetteki Yanlış TUS Bilgileri</h2>
+      <p><strong>Üç yaygın hata, adayları yanlış yönlendiriyor.</strong></p>
+      <ul>
+        <li><strong>"TUS 240 soru":</strong> Doğrusu 200 sorudur (TTBT 100 + KTBT 100). 240 yazan sayfalar güncel değildir.</li>
+        <li><strong>"Yanlışlar etkilemez":</strong> Tam tersi; 4 yanlış 1 doğruyu götürür. "Tahmin et, boş bırakma" tavsiyesi bu yanlışa dayanır.</li>
+        <li><strong>"Her doğru 3 puan" / "Baraj 50.000":</strong> TUS'ta soru başına sabit puan yoktur; puan standardizasyonla bulunur. Tercih barajı 45'tir, 50.000 değil.</li>
+        <li><strong>Eski ağırlıklar:</strong> K için %50–%50, T için %70–%30 yazan sayfalar güncel değildir. Doğrusu K %40–%60, T %60–%40'tır.</li>
+      </ul>
+
+      <h2>Sınırlamalar</h2>
+      <p><strong>Bu araç ÖSYM'nin yerini tutmaz; 3 somut sınırı vardır.</strong></p>
+      <ul>
+        <li><strong>Katsayılar döneme özeldir.</strong> 2026 Mart modeliyle hesap yapar; Eylül dönemi veya sonraki yıllar farklı katsayılarla farklı sonuç verir.</li>
+        <li><strong>Standart sapma bilinmiyor.</strong> Sınavın zorluğu değiştikçe aynı ham puanın karşılığı kayar.</li>
+        <li><strong>85 tavanı keskindir.</strong> Model 85'i aşan değeri 85'e sabitler; gerçekte de en yüksek ağırlıklı puan 85 alır.</li>
+      </ul>
+
+      <h2>TUS mu, DUS mu?</h2>
+      <p><strong>Mezuniyetin hangi sınavı gerektiriyorsa onu hesapla.</strong></p>
+      <table class="bilgi-tablosu">
+        <caption>TUS ve DUS puanlama karşılaştırması</caption>
+        <thead><tr><th scope="col"></th><th scope="col">TUS</th><th scope="col">DUS</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Kimler girer?</strong></td><td>Tıp fakültesi mezunları</td><td>Diş hekimliği mezunları</td></tr>
+          <tr><td><strong>Soru sayısı</strong></td><td>200 (100 + 100)</td><td>120 (40 + 80)</td></tr>
+          <tr><td><strong>Puan türleri</strong></td><td>K (%40–%60), T (%60–%40)</td><td>K (%40–%60), T (%60–%40)</td></tr>
+          <tr><td><strong>Tavan</strong></td><td><strong>85</strong></td><td><strong>Yok</strong></td></tr>
+          <tr><td><strong>Baraj</strong></td><td>45</td><td>45</td></tr>
+        </tbody>
+      </table>
+      <p>Diş hekimiysen puanını <a href="../dus-puan-hesaplama/">DUS puan hesaplama</a> aracımızla tahmin et; TUS formülleri sana uymaz.</p>
+
       <h2>İpuçları</h2>
       <ul>
         <li><strong>Hedef branşa göre çalış:</strong> Klinik branş hedefliyorsan KTBT'ye (K'da %60), temel bilimler hedefliyorsan TTBT'ye (T'de %60) ağırlık ver.</li>
-        <li><strong>Yanlışların maliyetini bil:</strong> 4 yanlış 1 doğruyu götürür; bilmediğin soruda rastgele işaretleme ham puanını eritir.</li>
-        <li><strong>Barajı hafife alma:</strong> 45 barajı düşük görünür ama standart sapma daralırsa ham puanın aynı kalsa bile puanın düşebilir.</li>
-        <li><strong>YDS'yi erkenden hallet:</strong> Yerleştirme için 5 yıl geçerli 50+ YDS puanı şart; sınava son ay bırakma.</li>
+        <li><strong>Yanlışların maliyetini bil:</strong> 4 yanlış 1 doğruyu götürür; yukarıdaki karar matematiğini uygula.</li>
+        <li><strong>YDS'yi erkenden hallet:</strong> Yerleştirme için 5 yıl geçerli 50+ dil puanı şart; sınava son ay bırakma.</li>
+        <li><strong>Dönem farkını hesaba kat:</strong> Mart ve Eylül dönemlerinin zorluğu farklıdır; tek dönemin katsayısına körü körüne güvenme.</li>
       </ul>
 
       <h2>Sonraki Adımlar</h2>
       <ul>
-        <li><a href="../dus-puan-hesaplama/"><strong>DUS Puan Hesaplama</strong></a> — diş hekimliğinde uzmanlık için K/T puanı tahmini</li>
-        <li><a href="../kpss-puan-hesaplama/"><strong>KPSS Puan Hesaplama</strong></a> — kamu kadroları için P1/P2/P3 tahmini</li>
+        <li>Diş hekimliğinde uzmanlık için K/T puanı tahminini <a href="../dus-puan-hesaplama/">DUS puan hesaplama</a> sayfamızda yap.</li>
+        <li>Kamu kadroları için P1/P2/P3 tahminini <a href="../kpss-puan-hesaplama/">KPSS puan hesaplama</a> sayfamızda bul.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
+      <p><small>Yasal uyarı: Bu sayfadaki araç ve içerik bilgilendirme amaçlıdır; ÖSYM'nin resmi hesaplama ve yerleştirme süreçlerinin yerini tutmaz. Başvuru koşulları için güncel TUS kılavuzunu esas al.</small></p>
+            <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>TUS'ta yanlış doğruyu götürür mü?</summary><p>Evet. Her testte Ham Puan = Doğru − (Yanlış ÷ 4) uygulanır. Boş bırakılan soru ham puanı etkilemez.</p></details>
@@ -161,6 +254,9 @@
         <details><summary>45 barajı nedir?</summary><p>Tercih yapabilmek için ilgili puan türünden en az 45 almak gerekir. 45'in altındaki puanla yerleştirme tercihinde bulunulamaz.</p></details>
         <details><summary>TUS için YDS şart mı?</summary><p>Yerleştirme için evet: son 5 yıl içinde alınmış en az 50 YDS (veya eşdeğeri) puanı gerekir. Puanın kendisine OBP ya da diploma notu eklenmez; puan %100 sınav performansına dayanır.</p></details>
         <details><summary>Sonuç neden “tahmini”?</summary><p>Resmi puan, sınav sonrası her oturumun ortalama ve standart sapmasıyla hesaplanır. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar; her dönem katsayılar sınavın zorluğuna göre değişir.</p></details>
+        <details><summary>TUS'ta boş bırakmak mı mantıklı, tahmin etmek mi?</summary><p>Hiçbir fikrin yoksa boş bırak; beklenen değer sıfırdır. Bir şıkkı elediysen işaretle: 4 şık arasından tahminin beklenen değeri +0,0625 nettir. İki şıkka indirdiysen +0,25 net kazanırsın.</p></details>
+        <details><summary>Yerleşip eğitime başlamazsam ne olur?</summary><p>Bir uzmanlık programına yerleşip eğitime başlamayan, istifa eden veya eğitimi sürerken yeniden sınava giren adayların puanından %5 kesinti uygulanır. Kesintinin hangi sınava yansıyacağını kılavuzdan teyit et.</p></details>
+        <details><summary>A puanı nedir?</summary><p>Sözleşmeli aile hekimliği için kullanılan ayrı bir puan türüdür. K ve T'den farklı hesaplanır; aile hekimliği hedefleyen adaylar kılavuzdaki A puanı formülünü incelemelidir.</p></details>
       </section>
     </article>
 

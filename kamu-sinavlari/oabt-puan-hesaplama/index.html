@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ÖABT Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="ÖABT puan hesaplama (2026): AGS puanını ve ÖABT doğru–yanlışlarını gir, tahmini MEB-AGS-P2 puanını öğren. 50 soruluk yeni formata uygun.">
+<meta name="description" content="ÖABT puan hesaplama (2026): AGS puanını ve ÖABT doğru-yanlışlarını gir, tahmini MEB-AGS-P2 puanını öğren. 50 soruluk yeni formata uygun ücretsiz araç.">
 <link rel="canonical" href="https://puanrobotu.com/kamu-sinavlari/oabt-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="ÖABT Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="2026 sistemine göre MEB-AGS-P2 tahminini hesapla: AGS × %50 + ÖABT × %50.">
+<meta property="og:description" content="ÖABT puan hesaplama (2026): AGS puanını ve ÖABT doğru-yanlışlarını gir, tahmini MEB-AGS-P2 puanını öğren. 50 soruluk yeni formata uygun ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/kamu-sinavlari/oabt-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -38,7 +38,10 @@
     {"@type": "Question", "name": "ÖABT kaç soru?", "acceptedAnswer": {"@type": "Answer", "text": "2026 itibarıyla 50 soru (önceden 75'ti). Yanlışlar doğruyu götürür: Net = Doğru − (Yanlış ÷ 4)."}},
     {"@type": "Question", "name": "P121 puanım ne oldu?", "acceptedAnswer": {"@type": "Answer", "text": "P121, 2026 öncesi sistemin öğretmenlik puanıydı. Yeni sistemde karşılığı MEB-AGS-P2'dir. Eski P121 puanları geçerliliğini korur, ancak yeni alımlarda MEB-AGS puanları kullanılır."}},
     {"@type": "Question", "name": "AGS'nin alt test ağırlıkları neler?", "acceptedAnswer": {"@type": "Answer", "text": "Sözel Yetenek 20, Sayısal Yetenek 20, Tarih 15, Türkiye Coğrafyası 10, Eğitimin Temelleri ve Türk Millî Eğitim Sistemi 25, Mevzuat 10. Not: ÖSYM, 2026 puanlamasında 2025 ağırlıklarının yanlış uygulandığını duyurmuştu; güncel MEB-AGS kılavuzunu teyit edin."}},
-    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "ÖABT'nin 100'lük puana dönüşümü, sınav sonrası ÖSYM'in yaptığı standardizasyona bağlıdır. Bu araç neti doğrusal bir modelle (0 net → 20, 50 net → 100) ölçeğe taşır; gerçek puanınız ÖSYM sonuç belgesinde yazar."}}
+    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "ÖABT'nin 100'lük puana dönüşümü, sınav sonrası ÖSYM'in yaptığı standardizasyona bağlıdır. Bu araç neti doğrusal bir modelle (0 net → 20, 50 net → 100) ölçeğe taşır; gerçek puanınız ÖSYM sonuç belgesinde yazar."}},
+    {"@type": "Question", "name": "ÖABT'de alan eğitimi soruları ne demek?", "acceptedAnswer": {"@type": "Answer", "text": "50 soruluk ÖABT'nin yaklaşık 10 sorusu alan eğitimine (öğretme bilgisine), kalan 40 soru alan bilgisine ayrılır. İki bölüm de aynı net formülüyle değerlendirilir; toplam net üzerinden tek ÖABT puanı oluşur."}},
+    {"@type": "Question", "name": "Hangi branşlar MEB-AGS-P2 kullanır?", "acceptedAnswer": {"@type": "Answer", "text": "ÖABT uygulanan 18 alanın branşları P2 ile değerlendirilir. Yabancı dil branşları (11 alan) P3 (AGS + YDS) kullanır; ÖABT'si olmayan branşlarda AGS puanı tek başına geçerlidir. Branşını kılavuzdan teyit et."}},
+    {"@type": "Question", "name": "AGS puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "KPSS puanının 2 yıl geçerli olması kuralını AGS'ye otomatik taşıma. Geçerlilik süresi ve koşulları güncel MEB-AGS kılavuzunda yazar; kılavuzdaki ifadeyi esas al."}}
   ]
 }
 </script>
@@ -69,6 +72,7 @@
     <article>
       <p class="kicker">Kamu Sınavları</p>
       <h1>ÖABT Puan Hesaplama</h1>
+      <p class="yazar">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
       <p class="lede"><strong>2026'dan itibaren ÖABT artık KPSS'nin parçası değil.</strong> Öğretmen adayları MEB-AGS'ye giriyor ve branş puanı <strong>MEB-AGS-P2 = AGS × %50 + ÖABT × %50</strong> olarak hesaplanıyor. AGS puanını ve ÖABT doğru–yanlışlarını gir, tahmini P2 puanını öğren.</p>
 
       <!-- ============ HESAPLAYICI ============ -->
@@ -105,36 +109,72 @@
         <strong>Önemli:</strong> Bu sonuç bir <strong>tahmindir</strong>. ÖABT'nin 100'lük puana dönüşümü, sınav sonrası ÖSYM'in yaptığı standardizasyona bağlıdır. Bu araç, neti şeffaf bir doğrusal modelle (0 net → 20, 50 net → 100) ölçeğe taşır; gerçek puanın ÖSYM sonuç belgende yazar.
       </div>
 
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>2026'dan beri ÖABT, KPSS'nin değil MEB-AGS'nin parçasıdır.</strong> Branş puanı <strong>MEB-AGS-P2 = AGS × %50 + ÖABT × %50</strong> formülüyle bulunur.</li>
+          <li><strong>ÖABT 50 sorudur</strong> (eski sistemde 75'ti). Net = Doğru − (Yanlış ÷ 4).</li>
+          <li>Eski <strong>P121</strong> (GY %15 + GK %15 + EB %20 + ÖABT %50) artık hesaplanmıyor; tarihe karıştı.</li>
+          <li>Bu sayfadaki sonuçlar <strong>tahmindir</strong>; ÖABT'nin 100'lük puana dönüşümünü ÖSYM sınav sonrası yapar.</li>
+          <li>Yabancı dil branşları P2 değil <strong>P3</strong> (AGS + YDS) kullanır.</li>
+        </ul>
+      </div>
+
       <!-- ============ REHBER İÇERİK ============ -->
+      <h2>ÖABT Puanı Nedir?</h2>
+      <p><strong>ÖABT puanı</strong>, öğretmen adaylarının alan bilgisi sınavındaki (Öğretmenlik Alan Bilgisi Testi) performansının 100'lük ölçekteki karşılığıdır. 2026'dan beri ÖABT tek başına bir puan türü değil; <strong>MEB-AGS-P2</strong> branş puanının %50'sini oluşturan bileşendir. Diğer %50, MEB-AGS oturumundaki AGS puanından gelir.</p>
+
       <h2>2026'da Ne Değişti?</h2>
       <p>2026'ya kadar öğretmen adayları KPSS'ye girer, alan bilgisi için de ÖABT'ye (75 soru) katılırdı; <strong>P121 = GY %15 + GK %15 + Eğitim Bilimleri %20 + ÖABT %50</strong> formülüyle puan hesaplanırdı. Bu sistem tarihe karıştı:</p>
       <ul>
         <li>Öğretmen adayları artık <strong>MEB-AGS</strong>'ye (Millî Eğitim Bakanlığı Akademi Giriş Sınavı) giriyor.</li>
-        <li>KPSS'de <strong>Eğitim Bilimleri testi ile P10 ve P121</strong> puan türleri kaldırıldı (<a href="../kpss-puan-hesaplama/">KPSS puan hesaplama</a> sayfamızda güncel P1/P2/P3 sistemini anlattık).</li>
+        <li>KPSS'de <strong>Eğitim Bilimleri testi ile P10 ve P121</strong> puan türleri kaldırıldı.</li>
         <li><strong>ÖABT 50 soruya</strong> indi (önceden 75'ti) ve MEB-AGS'nin ikinci oturumu oldu.</li>
       </ul>
+
+      <h2>P121'den P2'ye Geçiş Haritası</h2>
+      <p><strong>Eski ve yeni sistem yan yana konulunca fark netleşir.</strong> Yıllardır internette biriken P121 içerikleri hâlâ "güncel" gibi duruyor; tabloyu okuyan aday hangi sistemde olduğunu anlar.</p>
+      <table class="bilgi-tablosu">
+        <caption>Eski P121 ile yeni MEB-AGS-P2 karşılaştırması</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Eski Sistem (2025 ve öncesi)</th><th scope="col">Yeni Sistem (2026+)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Puan adı</strong></td><td>KPSS-P121</td><td>MEB-AGS-P2</td></tr>
+          <tr><td><strong>Formül</strong></td><td>GY %15 + GK %15 + EB %20 + ÖABT %50</td><td>AGS %50 + ÖABT %50</td></tr>
+          <tr><td><strong>ÖABT soru sayısı</strong></td><td>75</td><td>50</td></tr>
+          <tr><td><strong>Eğitim Bilimleri</strong></td><td>Ayrı test (80 soru)</td><td>Yok (AGS'nin içinde eridi)</td></tr>
+          <tr><td><strong>Durum</strong></td><td><strong>Tarihe karıştı</strong></td><td><strong>Geçerli sistem</strong></td></tr>
+        </tbody>
+      </table>
+      <p>"P121 hesapla" yazan eski araçlar ve tablolar yeni sistemi yansıtmaz. Eski P121 puanın geçerliliğini korur, ancak yeni alımlarda MEB-AGS puanları kullanılır.</p>
+
       <h2>MEB-AGS-P2 Nasıl Hesaplanır?</h2>
+      <p><strong>MEB-AGS-P2 iki bileşenin ortalamasıdır:</strong> AGS puanı ve ÖABT puanı, ikisi de 100'lük ölçekte, %50–%50 ağırlıkla birleştirilir.</p>
       <p>AGS oturumu 80 sorudan oluşur; alt test ağırlıkları şöyledir:</p>
       <table class="bilgi-tablosu">
         <caption>MEB-AGS alt test ağırlıkları</caption>
-        <thead><tr><th scope="col">Alt Test</th><th scope="col">Ağırlık</th></tr></thead>
+        <thead><tr><th scope="col">Alt Test</th><th scope="col">Ağırlık</th><th scope="col">P2'deki Payı</th></tr></thead>
         <tbody>
-          <tr><td>Sözel Yetenek</td><td>20</td></tr>
-          <tr><td>Sayısal Yetenek</td><td>20</td></tr>
-          <tr><td>Tarih</td><td>15</td></tr>
-          <tr><td>Türkiye Coğrafyası</td><td>10</td></tr>
-          <tr><td>Eğitimin Temelleri ve Türk Millî Eğitim Sistemi</td><td>25</td></tr>
-          <tr><td>Mevzuat</td><td>10</td></tr>
+          <tr><td>Sözel Yetenek</td><td>20</td><td>10</td></tr>
+          <tr><td>Sayısal Yetenek</td><td>20</td><td>10</td></tr>
+          <tr><td>Tarih</td><td>15</td><td>7,5</td></tr>
+          <tr><td>Türkiye Coğrafyası</td><td>10</td><td>5</td></tr>
+          <tr><td>Eğitimin Temelleri ve Türk Millî Eğitim Sistemi</td><td>25</td><td>12,5</td></tr>
+          <tr><td>Mevzuat</td><td>10</td><td>5</td></tr>
+          <tr><td><strong>ÖABT</strong></td><td><strong>—</strong></td><td><strong>50</strong></td></tr>
         </tbody>
       </table>
       <p><small><em>Not: ÖSYM, 2026 puanlamasında 2025 yılına ait alt test ağırlıklarının yanlış uygulandığını duyurmuştu. Yukarıdaki ağırlıklar kılavuzdaki güncel değerlerdir; sınava girmeden önce güncel MEB-AGS kılavuzunu teyit et.</em></small></p>
-      <p>ÖABT oturumunda net: <strong>Net = Doğru − (Yanlış ÷ 4)</strong>. Ardından branş puanı:</p>
-      <ul>
-        <li><strong>MEB-AGS-P2 = AGS × %50 + ÖABT × %50</strong> (ÖABT'si olan branşlar)</li>
-        <li><strong>MEB-AGS-P3 = AGS × %50 + YDS/e-YDS × %50</strong> (yabancı dil branşları)</li>
-      </ul>
+      <h3>ÖABT'nin iç yapısı</h3>
+      <p>50 soruluk ÖABT, <strong>40 alan bilgisi + 10 alan eğitimi</strong> sorusundan oluşur. İki bölüm de aynı net formülüyle değerlendirilir: <strong>Net = Doğru − (Yanlış ÷ 4)</strong>. Bu iç ayrımı internetteki hesaplayıcı içeriklerinin hiçbiri anlatmıyor.</p>
+      <h3>Branşın hangi puan türünü kullanır?</h3>
+      <p><strong>18 ÖABT alanı MEB-AGS-P2'yi kullanır</strong> (her branşın kendi P2 kodu vardır). <strong>11 yabancı dil branşı P2 değil P3</strong> (AGS %50 + YDS/e-YDS %50) ile değerlendirilir. ÖABT'si olmayan branşlarda ise AGS puanı tek başına geçerlidir. Branşını kılavuzdaki listeden teyit et; yanlış puan türüyle hesap yapmak en yaygın hatadır.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>2026 Puanlama Düzeltmesi: Sade Türkçe Açıklama</h2>
+      <p><strong>ÖSYM, 2026 MEB-AGS puanlamasında bir önceki yılın alt test ağırlıklarının yanlış uygulandığını duyurdu ve sonuçları düzeltti.</strong> Haber siteleri olayı duyurdu; adaylara ne olduğunu kimse sade dille anlatmadı.</p>
+      <p>Ne oldu? Puan hesaplanırken 2026 yerine 2025'in ağırlık katsayıları kullanılmıştı. Ağırlıklar değişince özellikle Tarih ve Eğitimin Temelleri neti yüksek adayların puanı oynadı. Sonuç belgen güncellendiyse yeni puanın geçerlidir; itiraz ve teyit için ÖSYM'nin duyurusundaki takvimi izle. Bu sayfadaki araç, güncel kılavuz ağırlıklarıyla tahmin yapar.</p>
+
+      <h2>Formül ve Çalışılmış Örnek</h2>
+      <p>ÖABT neti, şeffaf bir doğrusal modelle 100'lük ölçeğe taşınır: <strong>0 net → 20 puan, 50 net → 100 puan</strong>. Ardından P2 = AGS × 0,50 + ÖABT × 0,50.</p>
       <p>Bir öğretmen adayının sonuçları: AGS puanı 78,5; ÖABT'de 40 doğru 5 yanlış (5 boş).</p>
       <ul>
         <li>ÖABT net: 40 − (5 ÷ 4) = <strong>38,75</strong> / 50</li>
@@ -142,6 +182,63 @@
         <li>MEB-AGS-P2 = (78,5 × 0,50) + (82 × 0,50) = <strong>≈ 80,25</strong></li>
       </ul>
       <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin. Unutma: ÖABT bileşenindeki 82 değeri bir model tahminidir; gerçek standart puan ÖSYM tarafından belirlenir.</p>
+
+      <h2>Hedef P2 İçin Kaç ÖABT Neti Gerekir?</h2>
+      <p><strong>Hedefini nete çevirmek, çalışma planının en somut adımıdır.</strong> AGS puanın 75 ise, hedef P2'ye ulaşmak için gereken yaklaşık ÖABT neti (doğrusal modelle):</p>
+      <table class="bilgi-tablosu">
+        <caption>Hedef MEB-AGS-P2 için gereken ÖABT neti (AGS = 75 varsayımıyla)</caption>
+        <thead><tr><th scope="col">Hedef P2</th><th scope="col">Gereken ÖABT Puanı</th><th scope="col">Yaklaşık Net (50 üzerinden)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>75</strong></td><td>75</td><td>≈ 34,4</td></tr>
+          <tr><td><strong>80</strong></td><td>85</td><td>≈ 40,6</td></tr>
+          <tr><td><strong>85</strong></td><td>95</td><td>≈ 46,9</td></tr>
+        </tbody>
+      </table>
+      <p>AGS puanın farklıysa hesap değişir: gereken ÖABT puanı = 2 × hedef P2 − AGS puanın. 2026 Akademi alımlarında bazı branşların tabanları (ör. sınıf öğretmenliği 74,7; okul öncesi 80,8) bu tablonun hangi satırına denk geldiğini gösterir.</p>
+
+      <h2>Bu Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>AGS puanını yaz.</strong> 0–100 aralığındaki AGS puanını ilk kutuya gir (örn. 78,5).</li>
+        <li><strong>ÖABT doğru sayını yaz.</strong> 50 soruluk oturumdaki doğru sayını gir (0–50).</li>
+        <li><strong>ÖABT yanlış sayını yaz.</strong> Yanlış sayını gir; net otomatik hesaplanır.</li>
+        <li><strong>Hesapla'ya bas.</strong> Tahmini MEB-AGS-P2 puanın anında görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Nasıl Okumalısın?</h2>
+      <p><strong>P2 puanın, branşının akademi alım tabanıyla karşılaştırıldığında anlam kazanır.</strong> Her branşın tabanı farklıdır; 80 puan bir branşta rahat yerleştirirken diğerinde sınırda kalır.</p>
+      <ul>
+        <li><strong>Tabanın üstündeysen:</strong> puan sıralamanı ve kontenjan sayısını izle; tercih stratejisi kur.</li>
+        <li><strong>Tabana yakınsan:</strong> ÖABT netini 3–5 artırman tabloyu değiştirir; alan bilgisi sorularına odaklan.</li>
+        <li><strong>Tabanın altındaysan:</strong> AGS ve ÖABT'yi birlikte yükseltmen gerekir; tek oturuma yüklenmek P2'yi yarı yolda bırakır.</li>
+      </ul>
+
+      <h2>İnternetteki Güncel Olmayan ÖABT Bilgileri</h2>
+      <p><strong>Üç yaygın hata, adayları yanlış yönlendiriyor.</strong></p>
+      <ul>
+        <li><strong>"ÖABT 75 soru":</strong> 2026'dan beri 50 soru. 75 yazan sayfalar eski sistemi anlatıyor.</li>
+        <li><strong>"ÖABT, KPSS'nin parçası":</strong> Artık değil; MEB-AGS bünyesinde. KPSS oturumlarına (GY/GK) girmen öğretmenlik puanı için gerekmiyor.</li>
+        <li><strong>"Sonuçlar 2 yıl geçerli":</strong> Bu, KPSS kuralıdır. AGS puanının geçerliliği için güncel MEB-AGS kılavuzundaki ifadeyi esas al; iki sistemi birbirine karıştırma.</li>
+      </ul>
+
+      <h2>Sınırlamalar</h2>
+      <p><strong>Bu araç ÖSYM'nin yerini tutmaz; 3 somut sınırı vardır.</strong></p>
+      <ul>
+        <li><strong>ÖABT'nin 100'lük puana dönüşümü modellenmiştir.</strong> Gerçek dönüşüm, sınav sonrası ÖSYM'in standardizasyonuna bağlıdır; doğrusal model (0 net → 20, 50 net → 100) şeffaf bir yaklaşımdır.</li>
+        <li><strong>AGS bileşeni senin girdindir.</strong> Araç AGS puanını hesaplamaz; 6 alt testin ağırlıklı sonucunu ÖSYM belirler.</li>
+        <li><strong>2026 ağırlık düzeltmesi notu geçerlidir.</strong> ÖSYM'nin duyurduğu puanlama hatası, kılavuz ağırlıklarının teyidini zorunlu kılar.</li>
+      </ul>
+
+      <h2>ÖABT mi, KPSS mi, YDS mi?</h2>
+      <p><strong>Hangi araca ihtiyacın olduğu, hedefine göre değişir.</strong></p>
+      <table class="bilgi-tablosu">
+        <caption>Öğretmen adayları için puan türü seçimi</caption>
+        <thead><tr><th scope="col">Hedefin</th><th scope="col">Kullanacağın Puan</th><th scope="col">Hesaplama Aracı</th></tr></thead>
+        <tbody>
+          <tr><td>ÖABT'li branşta öğretmenlik</td><td><strong>MEB-AGS-P2</strong></td><td>Bu sayfadaki araç</td></tr>
+          <tr><td>Yabancı dil branşında öğretmenlik</td><td><strong>MEB-AGS-P3</strong></td><td>AGS + YDS bileşimi (yakında)</td></tr>
+          <tr><td>Öğretmenlik dışı memurluk</td><td><strong>KPSS P1/P2/P3</strong></td><td><a href="../kpss-puan-hesaplama/">KPSS puan hesaplama</a></td></tr>
+        </tbody>
+      </table>
 
       <h2>İpuçları</h2>
       <ul>
@@ -153,11 +250,12 @@
 
       <h2>Sonraki Adımlar</h2>
       <ul>
-        <li><a href="../kpss-puan-hesaplama/"><strong>KPSS Puan Hesaplama</strong></a> — öğretmenlik dışı kadrolar için güncel P1/P2/P3 sistemi</li>
-        <li><a href="../tus-puan-hesaplama/"><strong>TUS Puan Hesaplama</strong></a> — uzmanlık sınavlarında puanlama nasıl işliyor merak ediyorsan</li>
+        <li>Öğretmenlik dışı kadrolar için güncel P1/P2/P3 sistemini <a href="../kpss-puan-hesaplama/">KPSS puan hesaplama</a> sayfamızda anlattık.</li>
+        <li>Tıpta uzmanlık hedefliyorsan, K ve T puanlarını <a href="../tus-puan-hesaplama/">TUS puan hesaplama</a> aracımızla tahmin et.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
+      <p><small>Yasal uyarı: Bu sayfadaki araç ve içerik bilgilendirme amaçlıdır; ÖSYM ve MEB'in resmi hesaplama süreçlerinin yerini tutmaz. Başvuru koşulları için güncel MEB-AGS kılavuzunu esas al.</small></p>
+            <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>ÖABT hâlâ KPSS'nin parçası mı?</summary><p>Hayır. 2026'dan itibaren ÖABT, KPSS'den ayrıldı ve MEB-AGS bünyesine geçti. Eski KPSS-P121 puanı (GY %15 + GK %15 + Eğitim Bilimleri %20 + ÖABT %50) artık hesaplanmıyor.</p></details>
@@ -166,6 +264,9 @@
         <details><summary>P121 puanım ne oldu?</summary><p>P121, 2026 öncesi sistemin öğretmenlik puanıydı. Yeni sistemde karşılığı MEB-AGS-P2'dir. Eski P121 puanları geçerliliğini korur, ancak yeni alımlarda MEB-AGS puanları kullanılır.</p></details>
         <details><summary>AGS'nin alt test ağırlıkları neler?</summary><p>Sözel Yetenek 20, Sayısal Yetenek 20, Tarih 15, Türkiye Coğrafyası 10, Eğitimin Temelleri ve Türk Millî Eğitim Sistemi 25, Mevzuat 10. Not: ÖSYM, 2026 puanlamasında 2025 ağırlıklarının yanlış uygulandığını duyurmuştu; güncel MEB-AGS kılavuzunu teyit edin.</p></details>
         <details><summary>Sonuç neden “tahmini”?</summary><p>ÖABT'nin 100'lük puana dönüşümü, sınav sonrası ÖSYM'in yaptığı standardizasyona bağlıdır. Bu araç neti doğrusal bir modelle (0 net → 20, 50 net → 100) ölçeğe taşır; gerçek puanınız ÖSYM sonuç belgesinde yazar.</p></details>
+        <details><summary>ÖABT'de alan eğitimi soruları ne demek?</summary><p>50 soruluk ÖABT'nin yaklaşık 10 sorusu alan eğitimine (öğretme bilgisine), kalan 40 soru alan bilgisine ayrılır. İki bölüm de aynı net formülüyle değerlendirilir; toplam net üzerinden tek ÖABT puanı oluşur.</p></details>
+        <details><summary>Hangi branşlar MEB-AGS-P2 kullanır?</summary><p>ÖABT uygulanan 18 alanın branşları P2 ile değerlendirilir. Yabancı dil branşları (11 alan) P3 (AGS + YDS) kullanır; ÖABT'si olmayan branşlarda AGS puanı tek başına geçerlidir. Branşını kılavuzdan teyit et.</p></details>
+        <details><summary>AGS puanı kaç yıl geçerli?</summary><p>KPSS puanının 2 yıl geçerli olması kuralını AGS'ye otomatik taşıma. Geçerlilik süresi ve koşulları güncel MEB-AGS kılavuzunda yazar; kılavuzdaki ifadeyi esas al.</p></details>
       </section>
     </article>
 

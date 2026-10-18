@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AÖF Not Hesaplama | PuanRobotu</title>
-<meta name="description" content="Anadolu AÖF resmi formülüyle başarı notunu hesapla: Ara Sınav %30 + Dönem Sonu %70. 35 barajı kontrolü dahil. Ücretsiz AÖF not hesaplama aracı.">
+<meta name="description" content="AÖF başarı notunu resmi formülle hesapla: Ara %30 + Dönem Sonu %70, 35 baraj kontrolü, 4-yanlış cezası ve Anadolu/ATA/AUZEF karşılaştırması. Ücretsiz araç.">
 <link rel="canonical" href="https://puanrobotu.com/universite-not/aof-not-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="AÖF Not Hesaplama | PuanRobotu">
-<meta property="og:description" content="AÖF resmi formülüyle başarı notunu hesapla: Ara %30 + Dönem Sonu %70. 35 barajı kontrolü dahil.">
+<meta property="og:description" content="AÖF başarı notunu resmi formülle hesapla: %30/%70 ağırlık, 35 baraj kontrolü ve harf tahminiyle ücretsiz araç.">
 <meta property="og:url" content="https://puanrobotu.com/universite-not/aof-not-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "AÖF başarı notu nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları)."}},
-    {"@type": "Question", "name": "35 barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz."}},
-    {"@type": "Question", "name": "Harf notum neden hemen belli olmuyor?", "acceptedAnswer": {"@type": "Answer", "text": "35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine (çan eğrisi) göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır."}},
-    {"@type": "Question", "name": "Ara sınavım iyi ama finale girmedim, geçer miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Finalin ağırlığı %70 olduğu için genellikle hayır. Örneğin ara 80, final 0 ise başarı notu 24 olur ve FF alırsın."}},
-    {"@type": "Question", "name": "İstisna dersler var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60, ödevli derslerde %30+%20+%50 uygulanır. Bu araç standart %30/%70 modelini kullanır."}},
-    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+    {
+      "@type": "Question",
+      "name": "AÖF başarı notu nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları). Sonuç 35'in altındaysa harf otomatik FF olur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "35 barajı nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz. Baraj, dönem sonu notuna değil ağırlıklı başarı notuna uygulanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vizem yüksek ama finalim 35'in altında, geçer miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Başarı notun 35'in altına düşerse hayır. Örneğin ara 85 + dönem sonu 30 → 46,5 puan olmasına rağmen FF alırsın. Önce barajı garantile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4 yanlış 1 doğruyu nasıl etkiler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net = Doğru − (Yanlış ÷ 4). Örneğin 20 soruda 12 doğru + 8 yanlış → net 10 → puan 50. Emin olmadığın soruyu boş bırakmak, rastgele işaretlemekten iyidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Harf notum neden hemen belli olmuyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "CD, DC, DD ile geçilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Koşullu geçme: GNO'n 2,00 ve üzeriyse bu harfler geçer sayılır; 2,00'nin altındaysa dersler kalmaya döner ve tekrarlanmalıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ATA AÖF ile Anadolu AÖF'nin farkı ne?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ağırlıklar farklıdır: Anadolu'da %30/%70 sabittir; ATA'da yüz yüze sınavda %30/%70, çevrimiçi sınavda %20/%80 uygulanır. Yanlış ağırlıkla hesap yapma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ara sınavım iyi ama finale girmedim, geçer miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Genellikle hayır. Dönem sonunun ağırlığı %70 olduğu için örneğin ara 80 + final 0 → başarı notu 24 olur ve FF alırsın."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İstisna dersler var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60, ödevli derslerde %30+%20+%50 uygulanır. Bu araç standart %30/%70 modelini kullanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Girdiğim notlar bir yere gönderiliyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +143,8 @@
     <article>
       <p class="kicker">📝 Üniversite Notları</p>
       <h1>AÖF Not Hesaplama</h1>
-      <p class="lede">Anadolu Üniversitesi Açıköğretim'in <strong>resmi formülüyle</strong> başarı notunu hesapla: Ara Sınav %30 + Dönem Sonu %70. <strong>35 barajı</strong> kontrolü dahildir.</p>
+      <p class="lede">AÖF başarı notu, <strong>Ara Sınav × 0,30 + Dönem Sonu × 0,70 formülüyle hesaplanır</strong>; 35'in altındaki not otomatik FF olur. Notlarını yaz, baraj durumunu ve tahmini harfini anında gör.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazan: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -96,46 +171,128 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
-      <h2>Nasıl Hesaplanır?</h2>
-      <p>Anadolu Üniversitesi Senato kararlarına göre AÖF başarı notu:</p>
-      <p><strong>Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70</strong></p>
-      <p>İki kritik kural var:</p>
-      <ul>
-        <li><strong>35 barajı:</strong> Başarı notun 35'in altında kalırsa harf notun otomatik <strong>FF</strong> olur. Eğri, ortalama — hiçbiri kurtarmaz.</li>
-        <li><strong>Bağıl harf:</strong> 35 ve üzeri puanlarda harf notu, o dersin çan eğrisine göre belirlenir. Yani 74 puan bir derste BB, başka bir derste CB olabilir.</li>
-      </ul>
-      <p>İstisnalar: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60; ödevli derslerde ara %30 + ödev %20 + dönem sonu %50 uygulanır. Bu araç standart %30/%70 modelini kullanır.</p>
+<div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
+<ul>
+<li><strong>Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70.</strong> Bu oran Anadolu AÖF'nin resmi formülüdür.</li>
+<li><strong>35 barajı:</strong> Başarı notun 35'in altında kalırsa harf notun otomatik <strong>FF</strong> olur — eğri bile kurtarmaz.</li>
+<li><strong>4 yanlış 1 doğruyu götürür:</strong> Net = Doğru − (Yanlış ÷ 4). Boş bırakmak, yanlış işaretlemekten iyidir.</li>
+<li>35 ve üzeri puanlarda harf notu dersin <strong>bağıl değerlendirmesine</strong> göre belirlenir.</li>
+<li>Anadolu, ATA ve AUZEF'nin ağırlıkları farklıdır — aşağıdaki karşılaştırma tablosuna bak.</li>
+</ul>
+</div>
 
-      <h2>Çalışılmış Örnek</h2>
-      <p>Ara sınavın 60, dönem sonu notun 80 olsun:</p>
-      <ul>
-        <li>Ara katkı: 60 × 0,30 = <strong>18</strong></li>
-        <li>Dönem sonu katkı: 80 × 0,70 = <strong>56</strong></li>
-        <li>Başarı notu: 18 + 56 = <strong>74</strong> (35 barajının üstünde ✓)</li>
-      </ul>
-      <p>74 puanla harf notun dersin eğrisine göre belirlenir; kaba tahmin BB–CB bandı civarıdır. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+<h2>AÖF Not Sistemi Nedir?</h2>
+<p><strong>AÖF not sistemi, açıköğretimde ders başarı notunun ara sınav ve dönem sonu sınavının ağırlıklı ortalamasıyla belirlendiği, 35 barajlı değerlendirme modelidir.</strong> Anadolu Üniversitesi Senato kararlarına göre ağırlıklar %30 ara + %70 dönem sonudur.</p>
+<p>Sistemi örgün üniversitelerden ayıran iki özellik vardır: <strong>35 barajı</strong> (başarı notu 35'in altındaysa otomatik FF) ve <strong>4-yanlış-1-doğru cezası</strong> (her 4 yanlış 1 doğruyu siler). Bu iki kural, AÖF öğrencisinin sınav stratejisini doğrudan belirler.</p>
+<p>Harf notu ise 35 barajı geçildikten sonra dersin bağıl değerlendirmesine göre belirlenir; yani aynı puan farklı derste farklı harf getirebilir.</p>
 
-      <h2>İpuçları</h2>
-      <ul>
-        <li>Finalin ağırlığı %70: ara sınavın iyi olsa bile dönem sonuna girmemek neredeyse kesin FF demektir.</li>
-        <li>Önce 35 barajını garantile; harf hedefini sonra kovalamaya başla.</li>
-        <li>Dersin geçmiş dönem harf dağılımını öğren — aynı puanın hangi harfe denk geldiğini gösterir.</li>
-        <li>Ödevli ders alıyorsan ağırlıkların farklı olduğunu unutma (%30+%20+%50).</li>
-      </ul>
+<h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
+<p><strong>Ara sınav ve dönem sonu notlarını resmi %30/%70 ağırlıklarla birleştirir, 35 barajını kontrol eder ve harf aralığını tahmin eder.</strong></p>
+<p>Formül: <strong>Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70</strong>.</p>
+<p>Baraj kontrolü: sonuç 35'in altındaysa harf <strong>FF</strong> yazılır. 35 ve üzerindeyse harf, dersin eğrisine göre tahmin edilir — bu tahmin kabaca fikir verir, kesin harf öğrenci bilgi sisteminde açıklanır.</p>
+<p>İstisna dersler: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60; ödevli derslerde %30 ara + %20 ödev + %50 dönem sonu uygulanır. Bu araç standart %30/%70 modelini kullanır.</p>
 
-      <h2>Sonraki Adımlar</h2>
-      <ul>
-        <li>Çan eğrisinin harfini nasıl belirlediğini merak ediyorsan <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> aracıyla z/T puanını incele.</li>
-        <li>Tüm derslerinin harfleriyle genel ortalaman için <a href="../gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</li>
-      </ul>
+<h2>Formül ve Çalışılmış Örnek</h2>
+<p><strong>Ara sınavın 60, dönem sonu notun 80 ise başarı notun 74 olur.</strong></p>
+<ul>
+<li>Ara katkı: 60 × 0,30 = <strong>18</strong></li>
+<li>Dönem sonu katkı: 80 × 0,70 = <strong>56</strong></li>
+<li>Başarı notu: 18 + 56 = <strong>74</strong> (35 barajının üstünde ✓)</li>
+</ul>
+<p>74 puanla harf notun dersin eğrisine göre belirlenir; kaba tahmin BB–CB bandı civarıdır. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+
+<h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+<ol>
+<li><strong>Ara sınav notunu yaz.</strong> 0–100 arası ham notunu gir.</li>
+<li><strong>Dönem sonu notunu yaz.</strong> Final yerine geçen dönem sonu sınavının notu.</li>
+<li><strong>Sonucu oku.</strong> Başarı notun, baraj durumun ve tahmini harf aralığın görünür.</li>
+<li><strong>Tersini dene.</strong> "Finalden kaç almalıyım?" sorusu için arana hedeflediğin başarı notunu verecek dönem sonu değerini farklı girdilerle test et.</li>
+</ol>
+
+<h2>Sonucunu Nasıl Okursun?</h2>
+<p><strong>Sonuç önce 35 barajına göre, sonra harf bandına göre okunur.</strong></p>
+<table class="bilgi-tablosu">
+<caption>AÖF başarı notu bantları</caption>
+<thead><tr><th>Başarı Notu</th><th>Durum</th><th>Ne olur?</th></tr></thead>
+<tbody>
+<tr><td>0 – 34,99</td><td><strong>Baraj altı</strong></td><td>Otomatik <strong>FF</strong>; eğri uygulanmaz</td></tr>
+<tr><td>35 – 100</td><td><strong>Baraj üstü</strong></td><td>Harf, dersin bağıl değerlendirmesine göre belirlenir</td></tr>
+</tbody>
+</table>
+<p>Barajı geçen notlarda harf tahmini kaba bir aralıktır: 70–80 bandı genelde BB–CB civarına denk gelir, ama dersin eğrisi dar veya genişse harf kayar. Kesin harfi öğrenci bilgi sisteminden öğrenirsin.</p>
+
+<h2>35 Baraj Tuzağı: Yüksek Vize Yetmez</h2>
+<p><strong>Başarı notun 35'in altındaysa vize notun kaç olursa olsun kalırsın.</strong> Klasik tuzak senaryosu:</p>
+<ul>
+<li>Ara sınav: <strong>85</strong> (mükemmel)</li>
+<li>Dönem sonu: <strong>30</strong></li>
+<li>Başarı notu: 85 × 0,30 + 30 × 0,70 = 25,5 + 21 = <strong>46,5</strong></li>
+<li>46,5 normal bir geçme notunun üstünde — ama dönem sonu 35'in altında olduğu için sonuç: <strong>FF</strong>.</li>
+</ul>
+<p>Hiçbir rakip sayfa bu tuzağı sayıyla göstermez; biri kendi içinde çelişir (35 altı FF der, sonra 30 üstü eğriye girer der). Stratejik sonuç: önce dönem sonu barajını garantile, sonra yüksek harf kovala.</p>
+<p>Ters senaryo da mümkündür: ara 20 + dönem sonu 45 → 6 + 31,5 = <strong>37,5</strong> — barajın üstünde, harf eğriye girer.</p>
+
+<h2>4 Yanlış 1 Doğruyu Götürür: Puanın Gerçek Matematiği</h2>
+<p><strong>AÖF sınavlarında her 4 yanlış cevap 1 doğru cevabı siler.</strong> Formül: <strong>Net = Doğru − (Yanlış ÷ 4)</strong>; puan = Net ÷ Soru Sayısı × 100.</p>
+<p>Çalışılmış örnek (20 soruluk sınav):</p>
+<ul>
+<li>12 doğru, 8 yanlış → Net = 12 − 8÷4 = 12 − 2 = <strong>10</strong></li>
+<li>Puan = 10 ÷ 20 × 100 = <strong>50</strong></li>
+<li>Bu 50, ara sınavınsa katkısı 50 × 0,30 = <strong>15</strong>; dönem sonuysa 50 × 0,70 = <strong>35</strong> olur.</li>
+</ul>
+<p>Stratejik sonuç: emin olmadığın soruyu boş bırakmak, rastgele işaretlemekten iyidir. 4 boş = 0 kayıp; 4 yanlış = 1 doğru kaybı. Rakipler bu kuralı söyler ama hiçbiri sayıya dökmez.</p>
+
+<h2>Koşullu Geçme (CD/DC/DD) ve GNO 2,00 Kuralı</h2>
+<p><strong>AÖF'de CD, DC ve DD notları koşullu geçer: GNO'n 2,00 ve üzeriyse bu dersler geçmiş sayılır.</strong></p>
+<p>Senaryo: üç dersten DD aldın.</p>
+<ul>
+<li>GNO'n <strong>1,95</strong> ise → bu üç ders <strong>kalmış</strong> sayılır; mezuniyet için tekrarlanmalıdır.</li>
+<li>GNO'n <strong>2,05</strong> ise → bu üç ders <strong>geçmiş</strong> sayılır; ek işlem gerekmez.</li>
+</ul>
+<p>Transkriptte harf aynı görünür; durumu GNO belirler. Bu kuralı hiçbir rakip sayfa senaryoyla anlatmaz. Tüm derslerinin ortalaması için <a href="../gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</p>
+
+<h2>Anadolu vs ATA vs AUZEF: Ağırlık Karşılaştırması</h2>
+<p><strong>"AÖF" tek sistem değildir; üç büyük açıköğretim kurumunun ağırlıkları farklıdır.</strong> Hiçbir rakip sayfa bu üçünü yan yana koymaz.</p>
+<table class="bilgi-tablosu">
+<caption>Açıköğretim ağırlık karşılaştırması</caption>
+<thead><tr><th>Kurum</th><th>Ara Sınav</th><th>Dönem Sonu</th><th>Not</th></tr></thead>
+<tbody>
+<tr><td><strong>Anadolu AÖF</strong></td><td>%30</td><td>%70</td><td>35 barajı; bu sayfanın formülü</td></tr>
+<tr><td><strong>ATA AÖF</strong></td><td>%30 (yüz yüze) / %20 (çevrimiçi)</td><td>%70 / %80</td><td>Sınav türüne göre değişir</td></tr>
+<tr><td><strong>İstanbul AUZEF</strong></td><td colspan="2">Güncel duyuruyu kontrol et</td><td>Oranlar dönemsel güncellenir</td></tr>
+</tbody>
+</table>
+<p>ATA öğrencisiysen sınavının türüne göre doğru ağırlığı seç; yanlış ağırlıkla hesaplanan baraj seni yanıltır.</p>
+
+<h2>Sınırlamalar</h2>
+<p><strong>Bu araç Anadolu AÖF'nin standart %30/%70 formülüyle matematiksel olarak doğru sonuç üretir; ama üç sınırı vardır.</strong></p>
+<ul>
+<li><strong>Harf tahmini kabaca fikir verir.</strong> 35 üzeri puanlarda harf, dersin bağıl değerlendirmesine göre belirlenir; aynı puan farklı derste farklı harf getirir. Kesin harf öğrenci bilgi sisteminde açıklanır.</li>
+<li><strong>İstisna dersler:</strong> İngilizce öğretmenliği İngilizce dersleri (%40/%60) ve ödevli dersler (%30+%20+%50) farklı ağırlık kullanır.</li>
+<li><strong>Kurum farkı:</strong> ATA ve AUZEF öğrencileri yukarıdaki karşılaştırma tablosundaki kendi ağırlıklarını kullanmalıdır.</li>
+</ul>
+
+<h2>İpuçları</h2>
+<ul>
+<li>Dönem sonunun ağırlığı %70: ara sınavın iyi olsa bile dönem sonuna girmemek neredeyse kesin FF demektir.</li>
+<li>Önce 35 barajını garantile; harf hedefini sonra kovalamaya başla.</li>
+<li>Emin olmadığın soruları boş bırak: 4 yanlış 1 doğruyu siler.</li>
+<li>Dersin geçmiş dönem harf dağılımını öğren — aynı puanın hangi harfe denk geldiğini gösterir.</li>
+<li>Çan eğrisinin harfini nasıl belirlediğini merak ediyorsan <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> sayfasında z/T formülünü incele.</li>
+</ul>
 
       <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>AÖF başarı notu nasıl hesaplanır?</summary><p>Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları).</p></details>
-        <details><summary>35 barajı nedir?</summary><p>Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz.</p></details>
-        <details><summary>Harf notum neden hemen belli olmuyor?</summary><p>35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine (çan eğrisi) göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır.</p></details>
-        <details><summary>Ara sınavım iyi ama finale girmedim, geçer miyim?</summary><p>Finalin ağırlığı %70 olduğu için genellikle hayır. Örneğin ara 80, final 0 ise başarı notu 24 olur ve FF alırsın.</p></details>
+        <details><summary>AÖF başarı notu nasıl hesaplanır?</summary><p>Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları). Sonuç 35'in altındaysa harf otomatik FF olur.</p></details>
+        <details><summary>35 barajı nedir?</summary><p>Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz. Baraj, dönem sonu notuna değil ağırlıklı başarı notuna uygulanır.</p></details>
+        <details><summary>Vizem yüksek ama finalim 35'in altında, geçer miyim?</summary><p>Başarı notun 35'in altına düşerse hayır. Örneğin ara 85 + dönem sonu 30 → 46,5 puan olmasına rağmen FF alırsın. Önce barajı garantile.</p></details>
+        <details><summary>4 yanlış 1 doğruyu nasıl etkiler?</summary><p>Net = Doğru − (Yanlış ÷ 4). Örneğin 20 soruda 12 doğru + 8 yanlış → net 10 → puan 50. Emin olmadığın soruyu boş bırakmak, rastgele işaretlemekten iyidir.</p></details>
+        <details><summary>Harf notum neden hemen belli olmuyor?</summary><p>35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır.</p></details>
+        <details><summary>CD, DC, DD ile geçilir mi?</summary><p>Koşullu geçme: GNO'n 2,00 ve üzeriyse bu harfler geçer sayılır; 2,00'nin altındaysa dersler kalmaya döner ve tekrarlanmalıdır.</p></details>
+        <details><summary>ATA AÖF ile Anadolu AÖF'nin farkı ne?</summary><p>Ağırlıklar farklıdır: Anadolu'da %30/%70 sabittir; ATA'da yüz yüze sınavda %30/%70, çevrimiçi sınavda %20/%80 uygulanır. Yanlış ağırlıkla hesap yapma.</p></details>
+        <details><summary>Ara sınavım iyi ama finale girmedim, geçer miyim?</summary><p>Genellikle hayır. Dönem sonunun ağırlığı %70 olduğu için örneğin ara 80 + final 0 → başarı notu 24 olur ve FF alırsın.</p></details>
         <details><summary>İstisna dersler var mı?</summary><p>Evet: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60, ödevli derslerde %30+%20+%50 uygulanır. Bu araç standart %30/%70 modelini kullanır.</p></details>
         <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
       </section>

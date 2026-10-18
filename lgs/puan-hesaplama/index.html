@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LGS Puan Hesaplama 2027 | Net, Tahmini Puan ve Yüzdelik Dilim</title>
+<title>LGS Puan Hesaplama 2027 | Net, Puan ve Yüzdelik Dilim</title>
 <meta name="description" content="LGS puan hesaplama aracı: doğru ve yanlış sayılarını gir, netini, tahmini puanını (100-500) ve tahmini yüzdelik dilimini anında öğren. MEB formülüne uygun, ücretsiz.">
 <link rel="canonical" href="https://puanrobotu.com/lgs/puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="LGS Puan Hesaplama 2027 | Net, Tahmini Puan ve Yüzdelik Dilim">
+<meta property="og:title" content="LGS Puan Hesaplama 2027 | Net, Puan ve Yüzdelik Dilim">
 <meta property="og:description" content="Doğru-yanlış sayılarını gir, LGS netini, tahmini puanını ve tahmini yüzdelik dilimini anında hesapla.">
 <meta property="og:url" content="https://puanrobotu.com/lgs/puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
@@ -30,19 +30,90 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "LGS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her dersin neti bulunur: Net = Doğru − (Yanlış ÷ 3). Sonra her net, dersin katsayısıyla çarpılır (Türkçe, Matematik ve Fen Bilimleri ×4; diğer dersler ×1) ve toplanır. MEB bu ağırlıklı toplamı, Türkiye geneli ortalama ve standart sapmayı kullanarak 100–500 ölçeğine dönüştürür."}},
-    {"@type": "Question", "name": "LGS'de 3 yanlış 1 doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. MEB LGS Kılavuzu'na göre her testte ham puan, doğru sayısından yanlış sayısının üçte biri çıkarılarak bulunur. Yani 3 yanlış, 1 doğruyu götürür."}},
-    {"@type": "Question", "name": "Boş bıraksam mı, tahmin etsem mi?", "acceptedAnswer": {"@type": "Answer", "text": "Boş bırakılan soru neti etkilemez; yanlış ise doğrunun üçte birini götürür. Rastgele işaretlemenin beklenen değeri negatiftir. En az 2 şıkkı eleyebiliyorsan tahmin etmek istatistiksel olarak mantıklıdır."}},
-    {"@type": "Question", "name": "LGS'de hangi derslerin katsayısı yüksek?", "acceptedAnswer": {"@type": "Answer", "text": "Türkçe, Matematik ve Fen Bilimleri derslerinin katsayısı 4; T.C. İnkılap Tarihi, Din Kültürü ve Yabancı Dil derslerinin katsayısı 1'dir. Yani bu üç dersteki 1 net, diğer derslerdeki 4 nete eşdeğer ağırlık taşır."}},
-    {"@type": "Question", "name": "Bu hesaplama ne kadar doğru?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek LGS puanı, sınav sonrası MEB'in açıkladığı Türkiye geneli ortalama ve standart sapma ile hesaplanır. Buradaki sonuç, MEB'in resmi formül mantığına ve geçmiş yıl net-puan tablolarına dayalı şeffaf bir tahmindir."}},
-    {"@type": "Question", "name": "Yüzdelik dilim nedir, neden puandan daha önemli?", "acceptedAnswer": {"@type": "Answer", "text": "Yüzdelik dilim, sınava girenler arasındaki sıralamanı gösterir. Puanlar sınavın zorluğuna göre yıldan yıla değişir; ancak dilim daha istikrarlıdır ve lise tercihlerinde asıl bakılan ölçüttür."}},
-    {"@type": "Question", "name": "Okul başarı puanı (OBP) LGS puanına eklenir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Merkezi sınavla öğrenci alan okullara yerleştirmede OBP, LGS puanına eklenmez. Yalnızca puan eşitliğinde sıralama ölçütü olarak ve yerel yerleştirmede kullanılır."}},
-    {"@type": "Question", "name": "400 puan için kaç net gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Dağılıma göre değişmekle birlikte yaklaşık 65–70 net gerekir. Netlerin katsayısı yüksek derslerde (Türkçe, Matematik, Fen) yoğunlaşması puanı artırır."}},
-    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez ve saklanmaz."}}
-  ]
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "LGS puanı nasıl hesaplanır?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Üç adımda: (1) Her dersin neti bulunur: Net = Doğru − (Yanlış ÷ 3). (2) Netler katsayılarla çarpılıp toplanır (Türkçe, Matematik, Fen ×4; diğerleri ×1). (3) MEB bu toplamı Türkiye geneli ortalama ve standart sapmayla 100–500 ölçeğine dönüştürür."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "LGS'de 3 yanlış 1 doğruyu götürür mü?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. MEB LGS Kılavuzu'na göre ham puan, doğru sayısından yanlış sayısının üçte birinin çıkarılmasıyla bulunur. İnternette \"yanlışlar götürmez\" yazan sayfalar hatalıdır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Boş bıraksam mı, tahmin etsem mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Boş bırakmak neti etkilemez; yanlış ise 1/3 net götürür. LGS 4 şıklı olduğu için tamamen rastgele işaretlemenin beklenen değeri tam sıfırdır — ne kazandırır ne kaybettirir. Ancak en az 1 şıkkı eleyebiliyorsan tahmin etmek istatistiksel olarak lehinedir (+0,111 net)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hangi derslere öncelik vermeliyim?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Türkçe, Matematik ve Fen Bilimleri'ne. Katsayıları 4 olduğu için bu üç dersteki 1 net, diğer derslerdeki 4 nete eşdeğerdir. Sözel dersleri ihmal etme, ama ağırlığı yüksek derslerdeki her net puanı belirgin şekilde artırır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bu hesaplama ne kadar doğru?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Formül mantığı MEB'in resmi yöntemiyle aynıdır, ancak gerçek puan ulusal istatistiklere bağlı olduğu için sonuç tahmini niteliktedir. Geçmiş yıl net–puan tablolarıyla tutarlı olacak şekilde kalibre edilmiştir; yine de resmi sonuç yerine geçmez."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Yüzdelik dilim nedir, neden puandan daha önemli?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yüzdelik dilim, sınava giren öğrenciler arasındaki sıralamanı gösterir (ör. %5'lik dilim, ilk %5'te olduğun anlamına gelir). Puanlar sınavın zorluğuna göre yıldan yıla değişir; dilim ise daha istikrarlıdır ve lise tercihlerinde asıl bakılan ölçüttür."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Okul başarı puanı (OBP) LGS puanına eklenir mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Merkezi sınavla öğrenci alan okullara yerleştirmede OBP puana eklenmez. Yalnızca iki adayın puanı eşitse sıralamada ve yerel yerleştirmede dikkate alınır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "400 puan için kaç net gerekir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dağılıma göre değişmekle birlikte yaklaşık 65–70 net gerekir. Netlerin katsayısı yüksek derslerde yoğunlaşması, aynı toplam netle daha yüksek puan anlamına gelir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Girdiğim veriler bir yere gönderiliyor mu?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru–yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "2027 LGS ne zaman yapılacak?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kesin tarih MEB'in yayımlayacağı 2027 LGS Kılavuzu ile belli olur. Kılavuz yayımlandığında bu sayfadaki tarih ve katsayı bilgileri güncellenecektir."
+            }
+        }
+    ]
 }
 </script>
 </head>
@@ -72,6 +143,7 @@
       <p class="kicker">LGS 2027 hazırlık</p>
       <h1>LGS Puan Hesaplama</h1>
       <p class="lede">Doğru ve yanlış sayılarını gir; <strong>netini</strong>, <strong>tahmini puanını (100–500)</strong> ve <strong>tahmini yüzdelik dilimini</strong> saniyeler içinde öğren. Hesaplama, MEB'in resmi puanlama mantığına göre yapılır — sonucun neden "tahmini" olduğunu aşağıda açıkça anlatıyoruz.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
       <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
     </div>
   </section>
@@ -130,6 +202,16 @@
   </section>
 
   <section class="wrap content">
+    <div class="ozet-kutu">
+      <h2>Öne Çıkanlar</h2>
+      <ul>
+        <li><strong>Net = Doğru − (Yanlış ÷ 3).</strong> LGS'de 3 yanlış, 1 doğruyu götürür.</li>
+        <li><strong>Katsayılar:</strong> Türkçe, Matematik ve Fen Bilimleri ×4; diğer 3 ders ×1.</li>
+        <li><strong>Tahmini puan 100–500 aralığındadır;</strong> gerçek puan, MEB'in sınav sonrası açıkladığı ulusal ortalama ve standart sapmayla hesaplanır.</li>
+        <li><strong>Tercihte yüzdelik dilim, puandan daha önemlidir</strong> — dilim, sınavın zorluğundan bağımsız sıralamanı gösterir.</li>
+        <li><strong>OBP, merkezi yerleştirmede LGS puanına eklenmez.</strong></li>
+      </ul>
+    </div>
     <h2>Nasıl Kullanılır?</h2>
     <ol class="adimlar">
       <li><strong>Doğru ve yanlışlarını gir:</strong> Deneme sınavındaki veya tahmini doğru-yanlış sayılarını her dersin satırına yaz. Boş bıraktığın sorular otomatik hesaplanır.</li>
@@ -190,6 +272,35 @@
       <li><strong>Sınavın zorluğu:</strong> Gerçek puanda standart sapma devreye girer; zor bir sınavda aynı net daha yüksek puana denk gelebilir. Bu etkiyi bu araç tahmin edemez — bir sınırlama olarak aşağıda açıklıyoruz.</li>
     </ul>
 
+    <h2>Tahmin mi Etmeli, Boş mu Bırakmalı?</h2>
+    <p><strong>En az 1 şıkkı eleyebiliyorsan tahmin et; hiç eleyemiyorsan boş bırakman da işaretlemen de aynı sonucu verir.</strong> Bu kural, 3:1 ceza sisteminin beklenen-değer matematiğinden çıkar — sezgiye değil, hesaba dayanır.</p>
+    <p>LGS soruları 4 şıklıdır. Hiç eleme yapmadan rastgele işaretlersen doğru bilme olasılığın 1/4, yanlış yapma olasılığın 3/4'tür. Beklenen net değişimi: (1/4 × +1) + (3/4 × −1/3) = <strong>tam 0</strong>. Yani kör tahmin ne kazandırır ne kaybettirir — ama 1 şık elediğin anda matematik lehine döner:</p>
+    <table class="bilgi-tablosu">
+      <caption>Elediğin şık sayısına göre 1 sorunun beklenen net değeri (4 şık, 3:1 ceza)</caption>
+      <thead><tr><th scope="col">Elediğin şık</th><th scope="col">Kalan şık</th><th scope="col">Beklenen net</th><th scope="col">Karar</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>4</td><td>0,000</td><td>Fark etmez</td></tr>
+        <tr><td>1</td><td>3</td><td>+0,111</td><td>Tahmin et</td></tr>
+        <tr><td>2</td><td>2</td><td>+0,333</td><td>Tahmin et</td></tr>
+        <tr><td>3</td><td>1</td><td>+1,000</td><td>İşaretle</td></tr>
+      </tbody>
+    </table>
+    <p>Tabloyu okuma: 1 şık elediğinde her tahmin ortalama +0,111 net kazandırır; 2 şık elediğinde +0,333. <em>Not: İnternette "4 yanlış 1 doğruyu götürür" yazan sayfalar hatalıdır; MEB kılavuzundaki oran 3:1'dir ve yukarıdaki matematik bu orana göre kurulmuştur. (5 şıklı YKS'de hesap farklıdır; LGS 4 şıklıdır.)</em></p>
+
+    <h2>Net Negatif Çıkarsa Ne Olur?</h2>
+    <p><strong>Bir testte netin negatif çıkabilir; bu matematiksel olarak mümkündür.</strong> Örneğin 2 doğru, 9 yanlış yaptığın bir testte netin 2 − (9 ÷ 3) = <strong>−1</strong> olur.</p>
+    <p>Negatif net, o testte Türkiye ortalamasının belirgin şekilde altında kaldığını gösterir. Standart puan hesabında bu değer, eksi işaretiyle aynen işleme girer — yani zayıf olduğun test, toplam puanı yalnızca "sıfır katkı" ile değil, negatif katkıyla aşağı çeker. Bu yüzden bilmediğin sorularda kör tahmin yapmak, boş bırakmaktan daha maliyetlidir.</p>
+
+    <h2>Puanlar Eşitse Sıralama Nasıl Belirlenir?</h2>
+    <p><strong>Puanı eşit olan adaylar arasında önce Okul Başarı Puanı (OBP) yüksek olana öncelik verilir.</strong> MEB kılavuzundaki eşitlik bozma sırası şöyledir:</p>
+    <ol>
+      <li>OBP'si yüksek olan aday öne geçer.</li>
+      <li>Eşitlik sürerse 8. sınıf yıl sonu başarı puanı yüksek olana bakılır.</li>
+      <li>Hâlâ eşitse sırasıyla 7. ve 6. sınıf yıl sonu başarı puanları karşılaştırılır.</li>
+      <li>Tüm puanlar eşitse yaşı küçük olan aday tercih edilir.</li>
+    </ol>
+    <p>Bu sıra, OBP'nin neden "puana eklenmez ama önemlidir" sorusunun da cevabıdır: OBP merkezi puana eklenmez, ancak eşitlik durumunda ilk kırılma noktasıdır.</p>
+
     <h2>Bu Aracın Sınırları (Dürüstlük Bölümü)</h2>
     <ul>
       <li><strong>Tahmini sonuç:</strong> Gerçek ve resmi puanın yalnızca MEB'in e-Okul sonuç ekranında açıklanır. Bu araç, resmi formülün mantığını ve geçmiş yıl verilerini kullanan şeffaf bir tahmindir.</li>
@@ -210,7 +321,7 @@
       </details>
       <details>
         <summary>Boş bıraksam mı, tahmin etsem mi?</summary>
-        <p>Boş bırakmak neti etkilemez; yanlış ise 1/3 net götürür. Tamamen rastgele işaretlemenin beklenen değeri negatiftir (5 şıkta: 0,2 − 0,8÷3 ≈ −0,07 net). Ancak en az 2 şıkkı eleyebiliyorsan tahmin etmek istatistiksel olarak lehinedir.</p>
+        <p>Boş bırakmak neti etkilemez; yanlış ise 1/3 net götürür. LGS 4 şıklı olduğu için tamamen rastgele işaretlemenin beklenen değeri tam sıfırdır — ne kazandırır ne kaybettirir. Ancak en az 1 şıkkı eleyebiliyorsan tahmin etmek istatistiksel olarak lehinedir (+0,111 net).</p>
       </details>
       <details>
         <summary>Hangi derslere öncelik vermeliyim?</summary>
@@ -245,8 +356,8 @@
     <h2>Sonraki Adımlar</h2>
     <p>Puanını öğrendikten sonra sırada tercih planlaması var:</p>
     <ul>
-      <li><a href="../tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> — puanına ve dilimine göre girebileceğin liseleri listele</li>
-      <li><a href="../taban-puanlari/"><strong>81 İlin LGS Taban Puanları</strong></a> — okul bazında taban puan, yüzdelik dilim ve kontenjan tabloları</li>
+      <li>Sana uygun liseleri bulmak için <a href="../tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> sayfasında puanına ve dilimine göre okulları listele.</li>
+      <li>Okulların geçmiş yıl verilerini incelemek için <a href="../taban-puanlari/"><strong>LGS Taban Puanları</strong></a> sayfasında 81 ilin taban puan, yüzdelik dilim ve kontenjan tablolarına bak.</li>
     </ul>
   </section>
   </article>

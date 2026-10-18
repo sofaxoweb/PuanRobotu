@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Üniversite Taban Puanları | PuanRobotu</title>
-<meta name="description" content="Üniversite taban puanları: bölüm ve üniversite bazında taban puan, başarı sırası ve kontenjan tabloları. 2025 YKS yerleştirme verileriyle hazırlanıyor.">
+<meta name="description" content="Üniversite taban puanları: bölüm ve üniversite bazında taban puan, başarı sırası ve kontenjan tabloları nasıl okunur? 2025 YKS verileriyle hazırlanıyor.">
 <link rel="canonical" href="https://puanrobotu.com/yks/taban-puanlari/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -33,12 +33,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Taban puanı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Taban puanı, bir üniversite programına en son yerleşen adayın puanıdır. Geçen yılın taban puanı, bu yıl için kabaca bir referans verir; ancak asıl bakılması gereken başarı sırasıdır çünkü puanlar sınavın zorluğuna göre değişir."}},
-    {"@type": "Question", "name": "Başarı sırası taban puandan neden daha önemli?", "acceptedAnswer": {"@type": "Answer", "text": "Puanlar her yıl sınavın zorluğuna göre kayar; sıralamalar ise görece istikrarlıdır. Örneğin bir bölüm 2024'te 380 puanla 50.000'inciyi, 2025'te 365 puanla yine 50.000'inciyi alabilir. Tercih stratejisi sıralama üzerinden kurulur."}},
-    {"@type": "Question", "name": "Kontenjan değişikliği taban puanı nasıl etkiler?", "acceptedAnswer": {"@type": "Answer", "text": "Kontenjan artarsa bölüm daha alt sıralardan öğrenci alır (kapanış sırası gevşer); kontenjan azalırsa kapanış sırası yükselir. Bu yüzden tek yıllık veriyle değil, birkaç yıllık eğilimle değerlendirme yapmak gerekir."}},
-    {"@type": "Question", "name": "Taban puan tabloları ne zaman yayınlanacak?", "acceptedAnswer": {"@type": "Answer", "text": "2025 YKS yerleştirme sonuçları açıklandıktan sonra veriler doğrulanıp işleniyor. Tablolar hazır olduğunda bu sayfada bölüm, üniversite, puan türü ve burs filtresine göre arama yapılabilecek."}},
-    {"@type": "Question", "name": "Resmi taban puan verisini nereden doğrulayabilirim?", "acceptedAnswer": {"@type": "Answer", "text": "En güvenilir kaynaklar ÖSYM'nin yayımladığı yerleştirme sonuç belgeleri ve YÖK Atlas'tır. Bu sayfadaki tablolar da bu resmi kaynaklardan derlenecek."}},
-    {"@type": "Question", "name": "2 yıllık (önlisans) bölümlerin taban puanları da olacak mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. TYT puanıyla öğrenci alan önlisans programlarının taban puan ve başarı sırası tabloları da 4 yıllık lisans programlarıyla birlikte yayınlanacak."}}
+    {
+      "@type": "Question",
+      "name": "Taban puanı nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Bir programa en son yerleşen adayın puanıdır.</strong> \"X Üniversitesi Bilgisayar Mühendisliği taban puanı 420\" demek, o yıl o bölüme giren en düşük puanlı öğrencinin 420 aldığı anlamına gelir. Geçen yılın taban puanı bu yıl için kabaca referans verir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Başarı sırası taban puandan neden daha önemli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Puanlar sınavın zorluğuna göre kayar; sıralamalar istikrarlıdır.</strong> Bir bölüm 2024'te 380 puanla 50.000'inciyi, 2025'te 365 puanla yine 50.000'inciyi alabilir. Tercih stratejisi sıralama üzerinden kurulur; puana göre kurulan liste yanıltır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tavan puan nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Bir programa ilk sıradan yerleşen adayın puanıdır.</strong> Tavan puan, bölümün çektiği en yüksek profili gösterir; taban-tavan aralığı bölümün puan bandını tanımlar. Tercihte esas alınan tabandır, tavan yalnızca bilgi verir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kontenjan değişikliği taban puanı nasıl etkiler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Kontenjan artarsa kapanış sırası gevşer, azalırsa sıkılaşır.</strong> Bu yüzden tek yıllık veriyle değil, birkaç yıllık eğilimle değerlendirme yapmak gerekir. %20'den büyük kontenjan değişimlerinde geçen yılın kapanış sırası tek başına referans alınmaz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Taban puanı her yıl değişir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Evet, neredeyse her yıl değişir.</strong> Sınav zorluğu, aday sayısı ve kontenjan değişimleri taban puanı oynatır. Değişmeyen şey yöntemdir: her yıl başarı sırası, puandan daha güvenilir referanstır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ek yerleştirmede taban puan şartı var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Evet.</strong> Ek tercihte de adayın puanı, programın taban puanından düşük olamaz. Boş kontenjan kalması, barajın kalktığı anlamına gelmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aynı bölüm farklı üniversitelerde neden farklı kapatır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Üç neden: şehir, üniversite algısı ve kontenjan.</strong> Büyük şehirdeki köklü üniversitenin aynı bölümü daha üst sıradan kapatır. Vakıf üniversitelerinde burs kademesi de ayrı kapanış üretir: burslu, %50 indirimli ve ücretli kontenjanların taban puanları farklıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Taban puan tabloları ne zaman yayınlanacak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>2025 YKS yerleştirme verileri doğrulanıp işlendikten sonra.</strong> Tablolar hazır olduğunda bu sayfada bölüm, üniversite, puan türü ve burs filtresine göre arama yapılabilecek."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Resmi taban puan verisini nereden doğrulayabilirim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>ÖSYM'nin yayımladığı yerleştirme sonuç belgeleri ve YÖK Atlas.</strong> Bu sayfadaki tablolar da bu resmi kaynaklardan derlenecek; doğrulanmamış sayı yayınlanmayacak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2 yıllık (önlisans) bölümlerin taban puanları da olacak mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>Evet.</strong> TYT puanıyla öğrenci alan önlisans programlarının taban puan ve başarı sırası tabloları, 4 yıllık lisans programlarıyla birlikte yayınlanacak."
+      }
+    }
   ]
 }
 </script>
@@ -68,9 +142,10 @@
     <div class="wrap">
       <p class="kicker">YKS 2026 tercih dönemi</p>
       <h1>Üniversite Taban Puanları</h1>
-      <p class="lede">Üniversite ve bölüm bazında <strong>taban puan</strong>, <strong>başarı sırası</strong> ve <strong>kontenjan</strong> tabloları.</p>
+      <p class="lede"><strong>Üniversite taban puanı</strong>, bir programa en son yerleşen adayın puanıdır — ancak tercihte asıl bakılan <strong>başarı sırasıdır</strong>. Aşağıda taban puan tablolarını <strong>doğru okuma yöntemini</strong> öğrenirsin; 2025 verileri doğrulanınca interaktif tablolar bu sayfada olacak.</p>
     </div>
   </section>
+  <div class="wrap"><p><small>Son güncelleme: <time datetime="2026-10-18">18 Ekim 2026</time> · Yazan: PuanRobotu Editör Ekibi</small></p></div>
 
   <div class="wrap sayfa-iki-sutun">
   <article>
@@ -90,48 +165,117 @@
     </div>
   </section>
 
-  <section class="wrap content">
-    <h2>Taban Puanı Nasıl Okunur?</h2>
-    <h3>Taban puanı nedir?</h3>
-    <p>Bir programa <strong>en son yerleşen adayın puanıdır</strong>. "X Üniversitesi Bilgisayar Mühendisliği taban puanı 420" demek, o yıl o bölüme giren en düşük puanlı öğrencinin 420 aldığı anlamına gelir.</p>
-    <h3>Neden başarı sırasına bakmalısın?</h3>
-    <p>Puanlar sınavın zorluğuna göre yıldan yıla kayar; <strong>sıralamalar</strong> ise görece sabittir. Bir bölüm bir yıl 380 puanla 50.000'inciyi, ertesi yıl 365 puanla yine 50.000'inciyi alabilir. Tercih listeni sıralama üzerinden kur.</p>
-    <h3>Kontenjan tuzağı</h3>
-    <p>Kontenjan artarsa kapanış sırası gevşer, azalırsa sıkılaşır. Tek yıllık veriye değil, birkaç yıllık eğilime bak. Vakıf üniversitelerinde burslu / %50 indirimli / ücretli kontenjanların <strong>ayrı</strong> taban puanları vardır — aynı bölümün üç farklı kapanış sırası olabilir.</p>
+<section class="wrap content">
+    <h2>Öne Çıkanlar</h2>
+    <ul>
+      <li><strong>Taban puan = son yerleşenin puanı;</strong> tercihte asıl referans <strong>başarı sırasıdır</strong>.</li>
+      <li><strong>Puanlar kayar, sıralamalar durur:</strong> 380 puan bir yıl 50.000'inci, ertesi yıl 365 puan yine 50.000'inci olabilir.</li>
+      <li><strong>Kontenjan artarsa kapanış gevşer,</strong> azalırsa sıkılaşır — tek yıllık veriye güvenme.</li>
+      <li><strong>Burslu / %50 indirimli / ücretli</strong> kontenjanların kapanışları ayrıdır.</li>
+      <li><strong>2025 veri tabloları doğrulanınca</strong> bu sayfada interaktif arama açılacak.</li>
+    </ul>
+
+    <h2>Üniversite Taban Puanı Nedir?</h2>
+    <p><strong>Üniversite taban puanı, bir üniversite programına en son yerleşen adayın yerleştirme puanıdır.</strong> Her programın her yıl bir taban puanı oluşur; kontenjan dolar ve son yerleşenin puanı o yılın tabanı olarak kayda geçer. Taban puan, geçmişin fotoğrafıdır — geleceğin garantisi değildir.</p>
+    <p>Bu sayfadaki tablolar şu anda hazırlanıyor: 2025 YKS yerleştirme verileri ÖSYM ve YÖK Atlas kaynaklarından doğrulanıp işleniyor. Doğrulanmamış sayı yayınlamıyoruz.</p>
+    <!-- [IMAGE: taban puan kavram şeması — kontenjan dolar, son yerleşen = taban puan. Alt: "taban puanı nedir şema"] -->
+
+    <h2>Taban Puan Tabloları Nasıl Çalışacak?</h2>
+    <p><strong>Dört filtreli interaktif tablo: üniversite, bölüm, puan türü ve burs durumu.</strong> Her program satırında taban puan, başarı sırası ve kontenjan; 4 yıllık lisans ve 2 yıllık önlisans programları birlikte yer alacak.</p>
+    <p>Tablolar yayına girene kadar aşağıdaki okuma kılavuzuyla taban puan-sıralama-kontenjan üçlüsünü doğru yorumlamayı öğren; tablo geldiğinde hazır olursun.</p>
+
+    <h2>Taban Puanı Nasıl Okunur? (5 Adım)</h2>
+    <ol>
+      <li><strong>Tabanı değil, kapanış sırasını bul:</strong> Programın geçen yılki başarı sırası kapanışını referans al.</li>
+      <li><strong>Kendi sıranla karşılaştır:</strong> Sıran kapanışa ±%10 bandındaysa program hedeftir.</li>
+      <li><strong>Kontenjanı kontrol et:</strong> Bu yıl kontenjan değiştiyse kapanış sırasını yeniden yorumla.</li>
+      <li><strong>Burs kademesini ayır:</strong> Vakıf üniversitesinde burslu ve ücretli kapanışlar farklıdır; doğru satıra bak.</li>
+      <li><strong>3 yıllık eğilime bak:</strong> Tek yıl dalgalanma olabilir; üç yılın ortalaması daha dürüsttür.</li>
+    </ol>
+
+    <h2>Neden Başarı Sırası Puandan Daha Önemlidir?</h2>
+    <p><strong>Çünkü puan, sınavın zorluğuna göre her yıl yeniden ölçeklenir; sıralama ise adayların birbirine göre dizilişidir.</strong> Zor bir yılda 365 puan 50.000'inci yaparken, kolay bir yılda aynı sıra 380 puan isteyebilir. Puan üzerinden kurulan tercih listesi, sınav zorluğunu hesaba katmadığı için yanıltır.</p>
+    <p>Sayısal örnek: bir bölüm 2024'te 380 taban puanla 50.000'inciyi aldı; 2025'te sınav zorlaştı, taban 365'e indi ama kapanış sırası yine 50.000 oldu. Puana bakan "bölüm kolaylaştı" sanır; sıraya bakan gerçeği görür: talebi değişmedi.</p>
+
+    <h2>Kontenjan Değişimini Nasıl Okumalısın?</h2>
+    <p><strong>Kontenjan ve kapanış sırası ters yönlü hareket eder.</strong> 100 kontenjanlı bölüm 120'ye çıkarsa son yerleşen daha alt sıradan gelir; taban puan düşer, kapanış sırası büyür. Kontenjan 80'e inerse taban yükselir, kapanış sırası küçülür.</p>
+    <p>Pratik eşik: kontenjan değişimi %20'yi aşıyorsa geçen yılın kapanış sırasını doğrudan referans alma; bandı genişlet. Yeni açılan bölümlerde ise hiç geçmiş veri yoktur — ilk yıl kapanışını tahmin etmek yerine benzer üniversitelerdeki emsal bölümlere bak.</p>
+
+    <h2>Burslu, %50 İndirimli ve Ücretli: Üç Ayrı Kapanış</h2>
+    <p><strong>Vakıf üniversitelerinde aynı bölümün üç ayrı taban puanı vardır.</strong> Burslu kontenjan en üst sıradan, %50 indirimli ortadan, ücretli en alt sıradan kapatır. "X Üniversitesi Psikoloji taban puanı" dendiğinde hangi kademenin kastedildiğini sormadan tabloyu okuma.</p>
+    <p>Ekstra dikkat: bursun devam koşulları (not ortalaması şartı gibi) kılavuzda yazar; taban puan tablosunda görünmez. Tercih listene yazmadan önce burs şartını ÖSYM kılavuzundan doğrula.</p>
+
+    <h2>Sınırlamalar</h2>
+    <ul>
+      <li><strong>Tablolar hazırlanıyor:</strong> Bu sayfada henüz interaktif veri yok; doğrulanmamış sayı yayınlamıyoruz.</li>
+      <li><strong>Taban puan tahmini değildir:</strong> Geçen yılın tabanı, bu yılın garantisi değildir; yalnızca referanstır.</li>
+      <li><strong>Resmi kaynak esastır:</strong> Nihai doğrulama ÖSYM yerleştirme belgeleri ve YÖK Atlas'tır.</li>
+    </ul>
+
+    <h2>Taban Puan, Tavan Puan ve Kontenjan</h2>
+    <p><strong>Üçü birlikte okunur; tek başına hiçbiri yeterli değildir.</strong></p>
+    <table class="bilgi-tablosu">
+      <caption>Üç kavramın karşılaştırması</caption>
+      <thead><tr><th scope="col">Kavram</th><th scope="col">Nedir</th><th scope="col">Tercihteki Rolü</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Taban puan</strong></td><td>Son yerleşenin puanı</td><td>Referans; tek başına yanıltır</td></tr>
+        <tr><td><strong>Tavan puan</strong></td><td>İlk yerleşenin puanı</td><td>Bölümün çektiği üst profili gösterir</td></tr>
+        <tr><td><strong>Kontenjan</strong></td><td>Programın alacağı öğrenci sayısı</td><td>Kapanış sırasının yönünü belirler</td></tr>
+        <tr><td><strong>Başarı sırası</strong></td><td>Kapanışın sıralama karşılığı</td><td>Tercih stratejisinin gerçek temeli</td></tr>
+      </tbody>
+    </table>
 
     <h2>Sıkça Sorulan Sorular</h2>
     <div class="sss">
       <details>
         <summary>Taban puanı nedir?</summary>
-        <p>Taban puanı, bir üniversite programına en son yerleşen adayın puanıdır. Geçen yılın taban puanı, bu yıl için kabaca bir referans verir; ancak asıl bakılması gereken başarı sırasıdır çünkü puanlar sınavın zorluğuna göre değişir.</p>
+        <p><strong>Bir programa en son yerleşen adayın puanıdır.</strong> "X Üniversitesi Bilgisayar Mühendisliği taban puanı 420" demek, o yıl o bölüme giren en düşük puanlı öğrencinin 420 aldığı anlamına gelir. Geçen yılın taban puanı bu yıl için kabaca referans verir.</p>
       </details>
       <details>
         <summary>Başarı sırası taban puandan neden daha önemli?</summary>
-        <p>Puanlar her yıl sınavın zorluğuna göre kayar; sıralamalar ise görece istikrarlıdır. Örneğin bir bölüm 2024'te 380 puanla 50.000'inciyi, 2025'te 365 puanla yine 50.000'inciyi alabilir. Tercih stratejisi sıralama üzerinden kurulur.</p>
+        <p><strong>Puanlar sınavın zorluğuna göre kayar; sıralamalar istikrarlıdır.</strong> Bir bölüm 2024'te 380 puanla 50.000'inciyi, 2025'te 365 puanla yine 50.000'inciyi alabilir. Tercih stratejisi sıralama üzerinden kurulur; puana göre kurulan liste yanıltır.</p>
+      </details>
+      <details>
+        <summary>Tavan puan nedir?</summary>
+        <p><strong>Bir programa ilk sıradan yerleşen adayın puanıdır.</strong> Tavan puan, bölümün çektiği en yüksek profili gösterir; taban-tavan aralığı bölümün puan bandını tanımlar. Tercihte esas alınan tabandır, tavan yalnızca bilgi verir.</p>
       </details>
       <details>
         <summary>Kontenjan değişikliği taban puanı nasıl etkiler?</summary>
-        <p>Kontenjan artarsa bölüm daha alt sıralardan öğrenci alır (kapanış sırası gevşer); kontenjan azalırsa kapanış sırası yükselir. Bu yüzden tek yıllık veriyle değil, birkaç yıllık eğilimle değerlendirme yapmak gerekir.</p>
+        <p><strong>Kontenjan artarsa kapanış sırası gevşer, azalırsa sıkılaşır.</strong> Bu yüzden tek yıllık veriyle değil, birkaç yıllık eğilimle değerlendirme yapmak gerekir. %20'den büyük kontenjan değişimlerinde geçen yılın kapanış sırası tek başına referans alınmaz.</p>
+      </details>
+      <details>
+        <summary>Taban puanı her yıl değişir mi?</summary>
+        <p><strong>Evet, neredeyse her yıl değişir.</strong> Sınav zorluğu, aday sayısı ve kontenjan değişimleri taban puanı oynatır. Değişmeyen şey yöntemdir: her yıl başarı sırası, puandan daha güvenilir referanstır.</p>
+      </details>
+      <details>
+        <summary>Ek yerleştirmede taban puan şartı var mı?</summary>
+        <p><strong>Evet.</strong> Ek tercihte de adayın puanı, programın taban puanından düşük olamaz. Boş kontenjan kalması, barajın kalktığı anlamına gelmez.</p>
+      </details>
+      <details>
+        <summary>Aynı bölüm farklı üniversitelerde neden farklı kapatır?</summary>
+        <p><strong>Üç neden: şehir, üniversite algısı ve kontenjan.</strong> Büyük şehirdeki köklü üniversitenin aynı bölümü daha üst sıradan kapatır. Vakıf üniversitelerinde burs kademesi de ayrı kapanış üretir: burslu, %50 indirimli ve ücretli kontenjanların taban puanları farklıdır.</p>
       </details>
       <details>
         <summary>Taban puan tabloları ne zaman yayınlanacak?</summary>
-        <p>2025 YKS yerleştirme sonuçları açıklandıktan sonra veriler doğrulanıp işleniyor. Tablolar hazır olduğunda bu sayfada bölüm, üniversite, puan türü ve burs filtresine göre arama yapılabilecek.</p>
+        <p><strong>2025 YKS yerleştirme verileri doğrulanıp işlendikten sonra.</strong> Tablolar hazır olduğunda bu sayfada bölüm, üniversite, puan türü ve burs filtresine göre arama yapılabilecek.</p>
       </details>
       <details>
         <summary>Resmi taban puan verisini nereden doğrulayabilirim?</summary>
-        <p>En güvenilir kaynaklar ÖSYM'nin yayımladığı yerleştirme sonuç belgeleri ve YÖK Atlas'tır. Bu sayfadaki tablolar da bu resmi kaynaklardan derlenecek.</p>
+        <p><strong>ÖSYM'nin yayımladığı yerleştirme sonuç belgeleri ve YÖK Atlas.</strong> Bu sayfadaki tablolar da bu resmi kaynaklardan derlenecek; doğrulanmamış sayı yayınlanmayacak.</p>
       </details>
       <details>
         <summary>2 yıllık (önlisans) bölümlerin taban puanları da olacak mı?</summary>
-        <p>Evet. TYT puanıyla öğrenci alan önlisans programlarının taban puan ve başarı sırası tabloları da 4 yıllık lisans programlarıyla birlikte yayınlanacak.</p>
+        <p><strong>Evet.</strong> TYT puanıyla öğrenci alan önlisans programlarının taban puan ve başarı sırası tabloları, 4 yıllık lisans programlarıyla birlikte yayınlanacak.</p>
       </details>
     </div>
 
     <h2>Şimdiden Hazırlan</h2>
     <ul>
-      <li><a href="../puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — tahmini ham ve yerleştirme puanını öğren</li>
-      <li><a href="../tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedef listesi oluştur</li>
+      <li><a href="../puan-hesaplama/"><strong>YKS puan hesaplama</strong></a> — tahmini ham ve yerleştirme puanını öğren</li>
+      <li><a href="../tercih-robotu/"><strong>YKS tercih robotu</strong></a> — puanına göre hedef listesi oluştur</li>
+      <li><a href="../obp-hesaplama/"><strong>OBP hesaplama</strong></a> — diploma katkını yerleştirme puanına ekle</li>
     </ul>
+    <!-- [IMAGE: taban puan okuma akış şeması (5 adım). Alt: "taban puanı nasıl okunur"] -->
   </section>
   </article>
   <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-taban" aria-label="Aynı kategorideki araçlar"></aside>

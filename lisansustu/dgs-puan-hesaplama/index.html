@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DGS Puan Hesaplama | PuanRobotu</title>
-<meta name="description" content="DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli.">
+<title>DGS Puan Hesaplama 2026 | SAY-SÖZ-EA + ÖBP | PuanRobotu</title>
+<meta name="description" content="DGS puanını tahmin et: sayısal ve sözel netlerini gir, SAY-SÖZ-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli. 1 yanlış kaç puan götürür, 1 net kuralı nedir?">
 <link rel="canonical" href="https://puanrobotu.com/lisansustu/dgs-puan-hesaplama/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="DGS Puan Hesaplama | PuanRobotu">
-<meta property="og:description" content="DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli.">
+<meta property="og:title" content="DGS Puan Hesaplama 2026 | SAY-SÖZ-EA + ÖBP | PuanRobotu">
+<meta property="og:description" content="DGS puanını tahmin et: sayısal ve sözel netlerini gir, SAY-SÖZ-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli. 1 yanlış kaç puan götürür, 1 net kuralı nedir?">
 <meta property="og:url" content="https://puanrobotu.com/lisansustu/dgs-puan-hesaplama/">
 <meta name="theme-color" content="#16294d">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
@@ -25,7 +25,7 @@
   "operatingSystem": "Web",
   "inLanguage": "tr",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
-  "description": "DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli."
+  "description": "DGS puanını tahmin et: sayısal ve sözel netlerini gir, SAY-SÖZ-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli. 1 yanlış kaç puan götürür, 1 net kuralı nedir?"
 }
 </script>
 <script type="application/ld+json">
@@ -33,12 +33,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "DGS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. DGS-SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; DGS-SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; DGS-EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP formülüyle toplanır."}},
-    {"@type": "Question", "name": "DGS'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür."}},
-    {"@type": "Question", "name": "ÖBP nedir, nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur."}},
-    {"@type": "Question", "name": "Kırık ÖBP nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. Diploma ortalamasına göre 7–12 puan kayıp demektir."}},
-    {"@type": "Question", "name": "Her iki testten de net yapmak zorunda mıyım?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz."}},
-    {"@type": "Question", "name": "DGS puanı neden 100 üzerinden değil?", "acceptedAnswer": {"@type": "Answer", "text": "DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır."}}
+    {
+      "@type": "Question",
+      "name": "DGS puanı nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Sonra resmi katsayılarla toplanır: SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP. 100'lük ölçeğe dönüşüm yoktur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "DGS'de yanlış doğruyu götürür mü?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür; sayısal yanlışlar sözel doğruları yemez. 1 yanlış, netini 0,25 düşürür — bu da DGS-SAY'da yaklaşık 1,5 puana mal olur. Boş bırakmak, emin olmadığın soruda işaretlemekten güvenlidir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ÖBP nedir, nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur. Not: bu, lisedeki 'diploma × 5' formülü değildir; DGS ÖBP'si ön lisans ortalamanı kullanır. Bazı siteler bu iki formülü karıştırır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kırık ÖBP nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. ÖBP'si 68 olan adayda bu 10,2 puan kayıp demektir — SAY'da yaklaşık 1,7 sayısal nete, EA'da yaklaşık 2,8 nete eşdeğerdir. Yeniden girerken bu kaybı net hedefine ekle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Her iki testten de net yapmak zorunda mıyım?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz — sonuç belgende puan görünmez. Sıfır netli test, diğer testteki yüksek neti de geçersiz kılar. Bu yüzden zayıf olduğun bölümü tamamen boş bırakma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "DGS puanı neden 100 üzerinden değil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır. Bazı siteler 100 üzerinden sahte formüller yazar; resmi kılavuzdaki Tablo-A katsayıları tek doğru kaynaktır. Bu yüzden DGS puanını KPSS puanıyla kıyaslama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "DGS puanım kaç yıl geçerli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yalnızca girdiğin yılın yerleştirmesinde geçerlidir; ertesi yıl kullanamazsın. Bu, ALES'in 5 yıllık geçerliliğinden en büyük farkıdır. Yeniden girmek istersen kırık ÖBP cezası (0,45 katsayı) uygulanır; bu yüzden 'seneye kullanırım' planı DGS'de işlemez. Kararını verirken bu iki maliyeti birlikte hesapla: ceza puanı ve bir yıllık bekleme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Eski DGS net tabloları hâlâ geçerli mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2025'ten beri sınav 100 soru ve 135 dakikadır; öncesinde 120 soru ve 150 dakikaydı. Eski döneme ait 'şu net şu puan' tabloları yeni formata birebir uymaz, çünkü net dağılımı ve standart puanlar değişti. Eski kaynaklardaki YGS'li veya 120 soruluk formülleri görmezden gel."
+      }
+    }
   ]
 }
 </script>
@@ -69,7 +127,8 @@
     <article>
       <p class="kicker">Lisansüstü</p>
       <h1>DGS Puan Hesaplama</h1>
-      <p class="lede">Sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren.</p>
+      <p class="lede"><strong>Tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanların</strong> burada: sayısal ve sözel netlerini gir, diploma ortalamanı ekle. ÖBP ve kırık ÖBP dahil, resmi Tablo-A katsayılarıyla hesaplanır.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
 
       <!-- ============ HESAPLAYICI ============ -->
       <section class="hesap-kart" aria-labelledby="hesap-baslik">
@@ -130,9 +189,24 @@
       </div>
 
       <!-- ============ REHBER İÇERİK ============ -->
+      <div class="ozet-kutu">
+        <h2>Öne Çıkanlar</h2>
+        <ul>
+          <li><strong>Net = Doğru − Yanlış/4</strong> (her bölüm kendi içinde; 4 yanlış 1 doğruyu götürür).</li>
+          <li>Resmi katsayılar: <strong>SAY 3/0,6/0,6 · SÖZ 0,6/3/0,6 · EA 1,8/1,8/0,6</strong> (+ 0,6 × ÖBP).</li>
+          <li><strong>ÖBP = diploma ortalaması × 0,8</strong> (40–80 arası); kırık ÖBP'de katsayı 0,45 olur.</li>
+          <li>Her iki testten de <strong>en az 1 net</strong> şarttır, yoksa puan hesaplanmaz.</li>
+          <li>DGS puanı <strong>100 üzerinden değildir;</strong> tipik bant 150–350 arasıdır.</li>
+          <li>Bu sayfadaki sonuç <strong>tahmindir:</strong> gerçek standart puanlar o yılın istatistiğine bağlıdır.</li>
+        </ul>
+      </div>
+
+      <h2>DGS Nedir?</h2>
+      <p><strong>DGS (Dikey Geçiş Sınavı),</strong> ön lisans mezunlarının lisans programlarına geçişini sağlayan ÖSYM sınavıdır. Tek oturumda yapılır: 50 sayısal + 50 sözel olmak üzere 100 soru, 135 dakika. Sonuç, üç ayrı puan türü (SAY, SÖZ, EA) olarak hesaplanır ve yalnızca o yılın yerleştirmesinde kullanılır.</p>
+
       <h2>DGS Puanı Nasıl Hesaplanır?</h2>
-      <p>DGS (Dikey Geçiş Sınavı) tek oturumda yapılır: 50 sayısal + 50 sözel olmak üzere 100 soru, 135 dakika. Hesaplama üç adımda ilerler:</p>
-      <p><strong>1. Net:</strong> Her bölüm kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. Yani 4 yanlış 1 doğruyu götürür; yanlışlar yalnızca kendi bölümünün netini düşürür, boşlar etki etmez.</p>
+      <p>Hesaplama üç adımda ilerler:</p>
+      <p><strong>1. Net:</strong> Her bölüm kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. Yani 4 yanlış 1 doğruyu götürür; yanlışlar yalnızca kendi bölümünün netini düşürür — sayısal yanlışlar sözel doğruları yemez. Boşlar etki etmez.</p>
       <p><strong>2. Standart puan:</strong> Her bölümün neti, ortalaması 50 ve standart sapması 10 olan standart puana (SP) çevrilir.</p>
       <p><strong>3. Ağırlıklı toplam</strong> (ÖSYM DGS kılavuzu Tablo-A'daki resmi katsayılar):</p>
       <ul>
@@ -140,17 +214,10 @@
         <li><strong>DGS-SÖZ</strong> = 0,6 × Sayısal SP + 3 × Sözel SP + 0,6 × ÖBP</li>
         <li><strong>DGS-EA</strong> = 1,8 × Sayısal SP + 1,8 × Sözel SP + 0,6 × ÖBP</li>
       </ul>
-      <p><strong>ÖBP</strong> (Ön lisans Başarı Puanı) = diploma not ortalaman × 0,8. 50'nin altındaki ortalamalar 50 sayılır; bu yüzden ÖBP 40 ile 80 arasında olur. <strong>Kırık ÖBP:</strong> bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine <strong>0,45</strong> uygulanır — diploma ortalamana göre 7–12 puan kayıp demektir.</p>
+      <p><strong>ÖBP</strong> (Ön lisans Başarı Puanı) = diploma not ortalaman × 0,8. 50'nin altındaki ortalamalar 50 sayılır; bu yüzden ÖBP 40 ile 80 arasında olur. Dikkat: bu, lisedeki "diploma × 5" formülü değildir — bazı siteler iki sınavın formülünü karıştırır.</p>
       <p>İki kritik fark: DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm <strong>yoktur</strong> — puan doğrudan ağırlıklı toplamdır, tipik bant 150–350 arasıdır. Ve her iki testten de <strong>en az 1 net</strong> yapılmazsa hiçbir puan türü hesaplanmaz.</p>
-      <h3>Bu Tahmin Nasıl Hesaplanıyor? (Şeffaflık)</h3>
-      <p>ÖSYM'nin o yıla ait istatistikleri sınavdan önce bilinmediği için bu araç, standart puanları yayımlanmış gerçek verilere dayalı şeffaf bir doğrusal modelle tahmin eder: <strong>SP(net) = 50 + 2 × (net − 25)</strong>. Dayanaklar:</p>
-      <ul>
-        <li>Arif Hoca'nın DGS hukuk analizi: iyi ÖBP'li (≈70) bir adayda <strong>75–76 toplam net ≈ 315–316 EA puanı</strong> getirmiştir. Modelimiz aynı senaryoda EA <strong>313,8</strong> üretir — tutarlı.</li>
-        <li>2026 DGS taban puanları: örneğin Bilgisayar Mühendisliği SAY taban <strong>316,69</strong>, modelimizde ≈76 net bandına denk gelir — tutarlı.</li>
-      </ul>
-      <p>Lisansüstü hedefin için <a href="../ales-puan-hesaplama/">ALES puan hesaplama</a> aracını, dil puanı için <a href="../yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
 
-      <h2>Çalışılmış Örnek</h2>
+      <h2>Formül ve Çalışılmış Örnek</h2>
       <p>Sayısalda 30 doğru 5 yanlış, sözelde 28 doğru 4 yanlış yapan; diploma ortalaması 85 olan bir aday:</p>
       <ul>
         <li>Sayısal net = 30 − 5/4 = <strong>28,75</strong>; Sözel net = 28 − 4/4 = <strong>27</strong></li>
@@ -159,23 +226,73 @@
         <li><strong>DGS-SAY ≈ 245,70</strong> · <strong>DGS-SÖZ ≈ 237,30</strong> · <strong>DGS-EA ≈ 241,50</strong> (tahmini)</li>
       </ul>
 
-      <h2>İpuçları</h2>
+      <h2>Hesaplayıcı Nasıl Kullanılır?</h2>
+      <ol>
+        <li><strong>Sayısal doğru ve yanlış</strong> sayılarını gir.</li>
+        <li><strong>Sözel doğru ve yanlış</strong> sayılarını gir.</li>
+        <li><strong>Diploma ortalamanı</strong> (100'lük) gir.</li>
+        <li>Geçen yıl DGS ile yerleştiysen <strong>Kırık ÖBP</strong> seçeneğini işaretle.</li>
+        <li><strong>Hesapla</strong> düğmesine bas: üç puan türü anında görünür.</li>
+      </ol>
+
+      <h2>Sonucunu Oku: Puan Türleri</h2>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Puan Türü</th><th>Ağırlık Merkezi</th><th>Hedef Bölümler</th></tr></thead>
+        <tbody>
+          <tr><td>DGS-SAY</td><td>Sayısal ×3</td><td>Mühendislik, mimarlık, fen bölümleri</td></tr>
+          <tr><td>DGS-SÖZ</td><td>Sözel ×3</td><td>İletişim, edebiyat, sosyal bölümler</td></tr>
+          <tr><td>DGS-EA</td><td>İkisi ×1,8</td><td>İşletme, iktisat, yönetim bölümleri</td></tr>
+        </tbody>
+      </table>
+      <p>Hedefin mühendislikse sayısal nete yüklen: SAY'da sayısalın katsayısı 3, sözelin katkısı yanında küçük kalır. Bölümünün hangi puan türüyle aldığını tercih kılavuzundan kontrol et.</p>
+
+      <h2>Kırık ÖBP Kaç Nete Mal Olur?</h2>
+      <p>Bir önceki yıl DGS ile yerleşen adayda ÖBP katsayısı 0,6 yerine <strong>0,45</strong> uygulanır. ÖBP'si 68 olan adayda fark: 0,15 × 68 = <strong>10,2 puan</strong> kayıp. Bu kayıp net diline çevrilirse: DGS-SAY'da yaklaşık <strong>1,7 sayısal net</strong>, DGS-EA'da yaklaşık <strong>2,8 net</strong> demektir. Yeniden girmeye karar verirken bu kaybı net hedefine ekle — geçen yılki netini aynen tekrarlarsan puanın düşer.</p>
+
+      <h2>Neden Aynı Net Farklı Puan Getirir?</h2>
+      <p>Standart puan, netinin <strong>o yılki aday kitlesine göre</strong> nerede durduğunu ölçer: SP = 50 + 10 × (net − ortalama) / standart sapma. Sınav kolaysa ortalama yükselir, aynı net daha düşük SP getirir; zorsa tersi olur. Bu yüzden iki farklı yılın 30 neti aynı puanı vermez — ve bu yüzden hiçbir hesaplayıcı kesin sonuç veremez, yalnızca tahmin eder. Bu sayfadaki model, yayımlanmış gerçek verilere dayalı şeffaf bir doğrusal yaklaşımdır: <strong>SP(net) = 50 + 2 × (net − 25)</strong>.</p>
+      <h3>Bu Tahmin Nasıl Hesaplanıyor? (Şeffaflık)</h3>
       <ul>
-        <li><strong>1 net kuralını</strong> unutma: her iki testten de en az 1 net yapmadan puanın hesaplanmaz.</li>
-        <li>ÖBP 40–80 arası 12 puana kadar fark yaratır; diploma ortalamanı yüksek tutmak bedava puandır.</li>
-        <li>Kırık ÖBP cezası 7–12 puan arasıdır — geçen yıl yerleştiysen bu kaybı net hedefine ekle.</li>
-        <li>SAY hedefin varsa sayısal nete yüklen: katsayısı 3, sözelin katkısı yanında çok küçük kalır.</li>
+        <li>Arif Hoca'nın DGS hukuk analizi: iyi ÖBP'li (≈70) bir adayda <strong>75–76 toplam net ≈ 315–316 EA puanı</strong> getirmiştir. Modelimiz aynı senaryoda EA <strong>313,8</strong> üretir — tutarlı.</li>
+        <li>2026 DGS taban puanları: örneğin Bilgisayar Mühendisliği SAY taban <strong>316,69</strong>, modelimizde ≈76 net bandına denk gelir — tutarlı.</li>
       </ul>
 
-      <!-- ============ SSS ============ -->
-      <section class="sss" aria-labelledby="sss-baslik">
+      <h2>1 Yanlış Kaç Puana Mal Olur?</h2>
+      <p>1 yanlış, netini 0,25 düşürür. Standart puan diliminde bu ≈0,5 SP eder. Katsayılarla çarpılınca: sayısal testteki 1 yanlış <strong>DGS-SAY'da ≈1,5 puan</strong>, <strong>DGS-EA'da ≈0,9 puan</strong> götürür. Emin olmadığın soruda boş bırakmak, rastgele işaretlemekten güvenlidir — özellikle SAY hedefliyorsan.</p>
+
+      <h2>Sınırlamalar</h2>
+      <ul>
+        <li>DGS puanı <strong>yalnızca girdiğin yılın yerleştirmesinde</strong> geçerlidir; ertesi yıl kullanamazsın. ALES'in 5 yıllık geçerliliğinden en büyük farkı budur.</li>
+        <li><strong>Format değişti:</strong> 2025'ten beri sınav 100 soru / 135 dakikadır; öncesinde 120 soru / 150 dakikaydı. Eski dönemin "şu net şu puan" tabloları yeni formata birebir uymaz.</li>
+        <li>İnternetteki bazı formüller yanlıştır: YGS'li hesaplar (YGS 2018'de kalktı), "doğru başına 2 puan" iddiaları ve lisedeki "diploma × 5" formülünün DGS'ye uygulanması — üçü de hatalıdır.</li>
+        <li>Standart puanlar o yılın istatistiğine bağlı olduğu için bu araç tahmin verir; kesin sonuç ÖSYM sonuç belgesindedir.</li>
+      </ul>
+
+      <h2>DGS mi ALES mi?</h2>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Ölçüt</th><th>DGS</th><th>ALES</th></tr></thead>
+        <tbody>
+          <tr><td>Hedef</td><td>Ön lisans → lisans geçişi</td><td>Yüksek lisans / doktora / akademik kadro</td></tr>
+          <tr><td>Soru</td><td>100 (50+50)</td><td>100 (50+50)</td></tr>
+          <tr><td>Yanlış cezası</td><td>Var (4Y = 1D)</td><td>Var (4Y = 1D)</td></tr>
+          <tr><td>Ek puan</td><td>ÖBP (diploma × 0,8)</td><td>Yok</td></tr>
+          <tr><td>Ölçek</td><td>150–350 bandı, dönüşüm yok</td><td>100'lük ölçek (70+30)</td></tr>
+          <tr><td>Geçerlilik</td><td>Yalnızca o yıl</td><td>5 yıl</td></tr>
+        </tbody>
+      </table>
+      <p>Lisansüstü hedefin için <a href="../ales-puan-hesaplama/">ALES puan hesaplama</a> aracını, dil puanı için <a href="../yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
+
+<!-- ============ SSS ============ -->
+            <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
-        <details><summary>DGS puanı nasıl hesaplanır?</summary><p>Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. DGS-SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; DGS-SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; DGS-EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP formülüyle toplanır.</p></details>
-        <details><summary>DGS'de yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür.</p></details>
-        <details><summary>ÖBP nedir, nasıl hesaplanır?</summary><p>Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur.</p></details>
-        <details><summary>Kırık ÖBP nedir?</summary><p>Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. Diploma ortalamasına göre 7–12 puan kayıp demektir.</p></details>
-        <details><summary>Her iki testten de net yapmak zorunda mıyım?</summary><p>Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz.</p></details>
-        <details><summary>DGS puanı neden 100 üzerinden değil?</summary><p>DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır.</p></details>
+        <details><summary>DGS puanı nasıl hesaplanır?</summary><p>Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Sonra resmi katsayılarla toplanır: SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP. 100'lük ölçeğe dönüşüm yoktur.</p></details>
+        <details><summary>DGS'de yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür; sayısal yanlışlar sözel doğruları yemez. 1 yanlış, netini 0,25 düşürür — bu da DGS-SAY'da yaklaşık 1,5 puana mal olur. Boş bırakmak, emin olmadığın soruda işaretlemekten güvenlidir.</p></details>
+        <details><summary>ÖBP nedir, nasıl hesaplanır?</summary><p>Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur. Not: bu, lisedeki 'diploma × 5' formülü değildir; DGS ÖBP'si ön lisans ortalamanı kullanır. Bazı siteler bu iki formülü karıştırır.</p></details>
+        <details><summary>Kırık ÖBP nedir?</summary><p>Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. ÖBP'si 68 olan adayda bu 10,2 puan kayıp demektir — SAY'da yaklaşık 1,7 sayısal nete, EA'da yaklaşık 2,8 nete eşdeğerdir. Yeniden girerken bu kaybı net hedefine ekle.</p></details>
+        <details><summary>Her iki testten de net yapmak zorunda mıyım?</summary><p>Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz — sonuç belgende puan görünmez. Sıfır netli test, diğer testteki yüksek neti de geçersiz kılar. Bu yüzden zayıf olduğun bölümü tamamen boş bırakma.</p></details>
+        <details><summary>DGS puanı neden 100 üzerinden değil?</summary><p>DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır. Bazı siteler 100 üzerinden sahte formüller yazar; resmi kılavuzdaki Tablo-A katsayıları tek doğru kaynaktır. Bu yüzden DGS puanını KPSS puanıyla kıyaslama.</p></details>
+        <details><summary>DGS puanım kaç yıl geçerli?</summary><p>Yalnızca girdiğin yılın yerleştirmesinde geçerlidir; ertesi yıl kullanamazsın. Bu, ALES'in 5 yıllık geçerliliğinden en büyük farkıdır. Yeniden girmek istersen kırık ÖBP cezası (0,45 katsayı) uygulanır; bu yüzden 'seneye kullanırım' planı DGS'de işlemez. Kararını verirken bu iki maliyeti birlikte hesapla: ceza puanı ve bir yıllık bekleme.</p></details>
+        <details><summary>Eski DGS net tabloları hâlâ geçerli mi?</summary><p>2025'ten beri sınav 100 soru ve 135 dakikadır; öncesinde 120 soru ve 150 dakikaydı. Eski döneme ait 'şu net şu puan' tabloları yeni formata birebir uymaz, çünkü net dağılımı ve standart puanlar değişti. Eski kaynaklardaki YGS'li veya 120 soruluk formülleri görmezden gel.</p></details>
       </section>
     </article>
 
