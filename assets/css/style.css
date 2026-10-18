@@ -92,8 +92,8 @@ body {
 
 .kicker {
   display: inline-block;
-  background: rgba(232, 147, 12, 0.18);
-  color: #f5b942;
+  background: #fff3d6;
+  color: #7a5b16;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -101,6 +101,11 @@ body {
   padding: 0.3rem 0.9rem;
   border-radius: 999px;
   margin: 0 0 1rem;
+}
+
+.hero .kicker {
+  background: rgba(232, 147, 12, 0.18);
+  color: #f5b942;
 }
 
 .hero h1 {
@@ -112,11 +117,11 @@ body {
 .lede {
   max-width: 640px;
   margin: 0 auto 1.75rem;
-  color: #c9d4ea;
+  color: var(--yazi-soluk);
   font-size: 1.1rem;
 }
 
-.lede strong { color: #fff; }
+.lede strong { color: var(--yazi); }
 
 /* ---------- Butonlar ---------- */
 .btn {
