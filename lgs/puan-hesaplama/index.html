@@ -159,7 +159,8 @@
 
       <div class="calc-grid">
         <div class="calc-table-wrap">
-          <table class="calc-table">
+          <div class="tablo-kaydir">
+<table class="calc-table">
             <caption class="sr-only">Derslere göre doğru ve yanlış giriş tablosu</caption>
             <thead>
               <tr>
@@ -172,6 +173,7 @@
             </thead>
             <tbody id="ders-satirlari"></tbody>
           </table>
+</div>
           <div class="calc-actions">
             <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
             <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
@@ -251,7 +253,8 @@
     <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
 
     <h2>Ders Katsayıları</h2>
-    <table class="bilgi-tablosu">
+    <div class="tablo-kaydir">
+<table class="bilgi-tablosu">
       <caption>LGS ders katsayıları ve soru sayıları</caption>
       <thead><tr><th scope="col">Ders</th><th scope="col">Soru Sayısı</th><th scope="col">Katsayı</th></tr></thead>
       <tbody>
@@ -263,6 +266,7 @@
         <tr><td>Yabancı Dil (İngilizce)</td><td>10</td><td>1</td></tr>
       </tbody>
     </table>
+</div>
     <p>Tablo şunu söylüyor: Türkçe, Matematik veya Fen'deki <strong>1 net</strong>, diğer derslerdeki <strong>4 net</strong> ile aynı ağırlığa sahip. Çalışma planını buna göre kur.</p>
 
     <h2>Sonucu Etkileyen Faktörler</h2>
@@ -275,7 +279,8 @@
     <h2>Tahmin mi Etmeli, Boş mu Bırakmalı?</h2>
     <p><strong>En az 1 şıkkı eleyebiliyorsan tahmin et; hiç eleyemiyorsan boş bırakman da işaretlemen de aynı sonucu verir.</strong> Bu kural, 3:1 ceza sisteminin beklenen-değer matematiğinden çıkar — sezgiye değil, hesaba dayanır.</p>
     <p>LGS soruları 4 şıklıdır. Hiç eleme yapmadan rastgele işaretlersen doğru bilme olasılığın 1/4, yanlış yapma olasılığın 3/4'tür. Beklenen net değişimi: (1/4 × +1) + (3/4 × −1/3) = <strong>tam 0</strong>. Yani kör tahmin ne kazandırır ne kaybettirir — ama 1 şık elediğin anda matematik lehine döner:</p>
-    <table class="bilgi-tablosu">
+    <div class="tablo-kaydir">
+<table class="bilgi-tablosu">
       <caption>Elediğin şık sayısına göre 1 sorunun beklenen net değeri (4 şık, 3:1 ceza)</caption>
       <thead><tr><th scope="col">Elediğin şık</th><th scope="col">Kalan şık</th><th scope="col">Beklenen net</th><th scope="col">Karar</th></tr></thead>
       <tbody>
@@ -285,6 +290,7 @@
         <tr><td>3</td><td>1</td><td>+1,000</td><td>İşaretle</td></tr>
       </tbody>
     </table>
+</div>
     <p>Tabloyu okuma: 1 şık elediğinde her tahmin ortalama +0,111 net kazandırır; 2 şık elediğinde +0,333. <em>Not: İnternette "4 yanlış 1 doğruyu götürür" yazan sayfalar hatalıdır; MEB kılavuzundaki oran 3:1'dir ve yukarıdaki matematik bu orana göre kurulmuştur. (5 şıklı YKS'de hesap farklıdır; LGS 4 şıklıdır.)</em></p>
 
     <h2>Net Negatif Çıkarsa Ne Olur?</h2>

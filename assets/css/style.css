@@ -731,3 +731,49 @@ table.sehir-tablo { width: 100%; border-collapse: collapse; font-size: 0.93rem; 
 .site-footer a { color: #cdd8ec; text-decoration: none; font-size: .92rem; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .footer-alt { border-top: 1px solid rgba(255,255,255,.12); padding: 1rem 0; font-size: .85rem; text-align: center; }
+
+/* ---------- Mobil uyumluluk (2026-10-18) ---------- */
+.tablo-kaydir {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.25rem 0;
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--golge);
+}
+.tablo-kaydir table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.tablo-kaydir th, .tablo-kaydir td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cizgi);
+  vertical-align: top;
+}
+.tablo-kaydir th {
+  background: var(--lacivert);
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.tablo-kaydir tr:last-child td { border-bottom: 0; }
+
+/* Uzun kelime/URL taşmalarını engelle */
+article p, article li, .sss p { overflow-wrap: break-word; }
+
+/* Küçük ekranlarda hero ve kartlar */
+@media (max-width: 560px) {
+  .hero h1 { font-size: 1.65rem; line-height: 1.25; }
+  .arama-kutu input { font-size: 1rem; padding: 0.85rem 1rem 0.85rem 2.75rem; }
+  .kategori-kartlari, .arac-kartlari { grid-template-columns: 1fr; }
+  .sss summary { padding: 0.85rem 1rem; font-size: 0.95rem; }
+  .sonuc-paneli { padding: 1.1rem; }
+  .sonuc-buyuk { font-size: 1.6rem; }
+  .kenarcubugu { margin-top: 0.5rem; }
+  .kenarcubugu-liste a { padding: 0.7rem 0.2rem; }
+  .tablo-kaydir table { font-size: 0.85rem; }
+  .tablo-kaydir th, .tablo-kaydir td { padding: 0.5rem 0.6rem; }
+}
