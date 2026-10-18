@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standart Puan Nedir? ÖSYM Nasıl Hesaplar? | PuanRobotu</title>
+<meta name="description" content="Standart puan nedir? ÖSYM'nin SP = 50 + 10×(Net−Ortalama)/Sapma formülü sade dille: 50'nin anlamı, çalışılmış örnek ve aynı netin yıllara göre değişimi.">
+<link rel="canonical" href="https://lgspuan-hesaplama.com/rehber/standart-puan-nedir/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Standart Puan Nedir? ÖSYM Nasıl Hesaplar? | PuanRobotu">
+<meta property="og:url" content="https://lgspuan-hesaplama.com/rehber/standart-puan-nedir/">
+<meta property="og:description" content="Standart puan nedir? ÖSYM'nin neti puana çevirme mantığı, 50'nin anlamı ve aynı netin farklı yıllardaki karşılığı sade dille.">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Standart puan nedir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standart puan, ham netinin sınava giren grubun ortalamasına ve yayılımına göre yeniden hesaplanmış değeridir. Amacı, farklı zorluktaki sınavları karşılaştırılabilir kılmaktır. Ölçeğin merkezi 50'dir: 50, grubun tam ortalamasındaki adayın puanıdır."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ÖSYM standart puanı nasıl hesaplar?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ÖSYM şu formülü kullanır: SP = 50 + 10 × (Net − Ortalama) / Standart Sapma. Önce netinden testin ortalaması çıkarılır, fark standart sapmaya bölünür, sonuç 10 ile çarpılıp 50 eklenir. Örneğin ortalaması 16, sapması 8 olan testte 28 net yapanın standart puanı 65'tir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Standart puanda 50 ne anlama gelir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "50, testin ortalamasında kalan adayın puanıdır. Ortalamanın 1 standart sapma üstündeki aday 60, 1 sapma altındaki aday 40 alır. Yani 50 'ortalama', 60 ve üstü 'ortalamanın belirgin şekilde üstü' anlamına gelir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Aynı net her yıl aynı puanı verir mi?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Aynı net, zor sınavda (ortalama düşükken) daha yüksek, kolay sınavda (ortalama yüksekken) daha düşük standart puana dönüşür. ÖSYM'nin resmi açıklaması da bunu doğrular: ortalamanın yükselmesi, aynı netlerle puanın düşmesine neden olabilir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Ham puanım neden doğrudan puan olmuyor?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ham puan sınavın zorluğunu hesaba katmaz. 90 soruluk zor bir sınavda 60 net ile kolay bir sınavda 60 net aynı başarıyı göstermez. Standart puan, netini grup içindeki konumuna çevirir; bu yüzden farklı yılların adayları adil şekilde karşılaştırılabilir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "LGS puanı da standart puanla mı hesaplanır?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mantık aynıdır, ölçek farklıdır. MEB de netleri Türkiye geneli ortalama ve standart sapmayla 100–500 ölçeğine dönüştürür. ÖSYM ise standart puanı test ağırlıklarıyla birleştirip 100–500 aralığındaki puan türlerine çevirir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hesaplayıcılar neden tahmini sonuç verir?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Çünkü formüldeki ortalama ve standart sapma, sınav yapılmadan bilinemez. Hesaplayıcılar geçmiş yılların dağılımını varsayar; o yılın gerçek dağılımı farklı çıkarsa tahmin sapar. Bu yüzden netten üretilen her puan, model tabanlı bir tahmindir."
+            }
+        }
+    ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../../" aria-label="PuanRobotu ana sayfa">
+      <img src="../../assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="../../lgs/">Ortaokul</a>
+      <a href="../../yks/">Üniversite Giriş</a>
+      <a href="../../universite-not/">Üniversite Notları</a>
+      <a href="../../lisansustu/">Lisansüstü</a>
+      <a href="../../kamu-sinavlari/">Kamu Sınavları</a>
+          <a href="../../rehber/" aria-current="page">Rehberler</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="../../">Ana Sayfa</a> › <a href="../">Rehberler</a> › Standart Puan Nedir?</p></div>
+
+  <section class="hero hero-kisa">
+    <div class="wrap">
+      <p class="kicker">📊 Bilgi Rehberi</p>
+      <h1>Standart Puan Nedir? ÖSYM Nasıl Hesaplar?</h1>
+      <p class="lede"><strong>Standart puan, netinin o sınavdaki tüm adayların ortalamasına ve dağılımına göre yeniden ölçeklenmiş hâlidir.</strong> ÖSYM, SP = 50 + 10 × (Net − Ortalama) / Standart Sapma formülünü kullanır. Aynı netin farklı yıllarda farklı puana dönüşmesinin sebebi bu formüldür.</p>
+      <p class="guncelleme">Son güncelleme: 18 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+  <article class="content">
+
+    <div class="ozet-kutu">
+      <h2>Öne Çıkanlar</h2>
+      <ul>
+        <li><strong>Standart puan = 50 + 10 × (Net − Ortalama) / Standart Sapma.</strong></li>
+        <li><strong>Ortalamadaki aday 50 alır;</strong> ortalamanın 1 sapma üstü 60, 1 sapma altı 40'tır.</li>
+        <li><strong>Aynı net, zor sınavda daha yüksek</strong> standart puana dönüşür; kolay sınavda daha düşük.</li>
+        <li><strong>MEB LGS puanını 100–500'e,</strong> ÖSYM puan türlerini 100–500'e bu mantıkla ölçekler.</li>
+        <li><strong>Hesaplayıcılar "tahmini" sonuç verir,</strong> çünkü ortalama ve sapma sınavdan önce bilinemez.</li>
+      </ul>
+    </div>
+
+    <h2>Standart Puan Nedir?</h2>
+    <p>Standart puan nedir? <strong>Standart puan, ham netinin sınava giren grubun ortalamasına ve yayılımına göre yeniden hesaplanmış değeridir.</strong> Amaç, farklı zorluktaki sınavları karşılaştırılabilir kılmaktır. Zor bir sınavda düşük netle de yüksek standart puan alınabilir. Ölçeğin merkezi 50'dir: 50, grubun tam ortalamasındaki adayın puanıdır.</p>
+
+    <h2>Formül ve Mantık</h2>
+    <p>ÖSYM standart puanı nasıl hesaplar? <strong>ÖSYM şu formülü kullanır: SP = 50 + 10 × (Net − Ortalama) / Standart Sapma.</strong></p>
+    <p>Formül 3 soruya cevap verir. (1) Ortalamanın ne kadar üstündesin? Netinden testin ortalamasını çıkar. (2) Bu fark kaç "yayılım birimi"? Sonucu standart sapmaya böl. (3) Ölçeğe yerleştir: 10 ile çarp, 50 ekle.</p>
+    <p>Standart sapmayı şöyle düşün: adayların netleri ortalamanın etrafına ne kadar yayılmış? Herkes birbirine yakınsa sapma küçük, dağılım genişse sapma büyüktür. Sapma küçükken ortalamanın 5 net üstü büyük fark yaratır; sapma büyükken aynı 5 net daha az değer taşır.</p>
+    <p>Sayısal örnek: Bir testin ortalaması 16, standart sapması 8 olsun. Neti 28 olan aday için (28 − 16) / 8 = 1,5; SP = 50 + 15 = <strong>65</strong>. Neti 8 olan aday için (8 − 16) / 8 = −1; SP = 50 − 10 = <strong>40</strong>. Aynı tabloda neti 16 olan aday tam 50 alır.</p>
+    <div class="tablo-kaydir">
+<table class="bilgi-tablosu">
+      <caption>Ortalaması 16, sapması 8 olan bir testte net–standart puan karşılığı</caption>
+      <thead><tr><th scope="col">Net</th><th scope="col">Ortalamadan fark</th><th scope="col">Standart puan</th></tr></thead>
+      <tbody>
+        <tr><td>8</td><td>−1 sapma</td><td><strong>40</strong></td></tr>
+        <tr><td>16</td><td>Ortalama</td><td><strong>50</strong></td></tr>
+        <tr><td>24</td><td>+1 sapma</td><td><strong>60</strong></td></tr>
+        <tr><td>28</td><td>+1,5 sapma</td><td><strong>65</strong></td></tr>
+      </tbody>
+    </table>
+</div>
+    <p>Tablodaki kritik nokta: 40 ile 60 arasındaki 20 puanlık fark, ortalamanın iki yanındaki 2 sapmalık dilimi temsil eder. Standart puandaki her 10 puan, 1 standart sapmalık konuma denk gelir.</p>
+    <p>Netin negatif de çıkabildiğini unutma: 2 doğru, 9 yanlışta net −1'dir. Formül eksi neti de aynen işler; ortalamanın altında kalan aday 50'nin altında standart puan alır. Negatif net, yalnızca "sıfır katkı" değil, ortalamayı aşağı çeken bir değerdir.</p>
+    <p>Standart puanın yaklaşık yüzdelik karşılığı da sezgisel okunabilir. Dağılım tam çan eğrisi olmasa da şu karşılıklar yol göstericidir:</p>
+    <div class="tablo-kaydir">
+<table class="bilgi-tablosu">
+      <caption>Standart puanın sapma ve yaklaşık yüzdelik karşılığı</caption>
+      <thead><tr><th scope="col">Standart puan</th><th scope="col">Ortalamadan konum</th><th scope="col">Yaklaşık karşılık</th></tr></thead>
+      <tbody>
+        <tr><td>30</td><td>−2 sapma</td><td>En alt %2–3 dilimi</td></tr>
+        <tr><td>40</td><td>−1 sapma</td><td>Alt %16 dilimi</td></tr>
+        <tr><td>50</td><td>Ortalama</td><td>Tam orta</td></tr>
+        <tr><td>60</td><td>+1 sapma</td><td>Üst %16 dilimi</td></tr>
+        <tr><td>70</td><td>+2 sapma</td><td>Üst %2–3 dilimi</td></tr>
+      </tbody>
+    </table>
+</div>
+    <p>Bu tabloyu şöyle oku: 60 standart puan, "ortalamanın 1 sapma üstü" demektir; bu da kabaca adayların en üst %16'sına denk gelir. 70 ise en üst %2–3'e. Rakiplerin çoğu formülü verir ama bu karşılığı göstermez; oysa hedefin "60 üstü" demek, "en üst %16'ya girmek" demektir.</p>
+
+    <h2>Neden Ham Puan Değil?</h2>
+    <p>ÖSYM neden ham puanı doğrudan kullanmaz? <strong>Çünkü ham puan, sınavın zorluğunu hesaba katmaz; standart puan ise adayın grup içindeki konumunu ölçer.</strong> Formülün güzelliği buradadır: zorluk, ortalamanın içinde zaten saklıdır.</p>
+    <p>Şöyle düşün: Zor bir yılın sınavında 60 net yapan, adayların çoğundan iyi durumdadır. Kolay bir yılın sınavında 70 net yapan ise ortalamaya yakın olabilir. Ham puana bakılırsa 70, 60'tan büyüktür; ama grup içindeki konuma bakılırsa 60 netlik performans daha değerlidir.</p>
+    <p>ÖSYM'nin resmi açıklaması da bunu doğrular: testin ortalaması ve standart sapması sınavdan sınava değişir; bunun sonucu olarak aynı netler farklı puanlar oluşturabilir ve ortalamanın yükselmesi aynı netlerle puanın düşmesine neden olabilir. Bu yüzden net, puanın kendisi değil; puana giden yolun ilk adımıdır.</p>
+    <p>Diyelim ki A yılında test ortalaması 20, sapma 10 ve senin netin 30: SP = 50 + 10 × (30 − 20) / 10 = 60. B yılında ortalama 30, sapma 10 ve netin 35: SP = 50 + 10 × (35 − 30) / 10 = 55. B yılında 5 net fazla yapmana rağmen standart puanın daha düşük; çünkü grubun geneli daha başarılıydı. Ham puan seni, standart puan grubun içindeki yerini anlatır.</p>
+
+    <h2>Tahmindeki Belirsizlik</h2>
+    <p>Hesaplayıcılar neden "tahmini" sonuç verir? <strong>Çünkü formüldeki ortalama ve standart sapma, sınav yapılmadan bilinemez.</strong></p>
+    <p>Pratik yaklaşım: tahmini puanı tek bir sayı olarak değil, ±10 puanlık bir bant olarak oku. Modelin varsayımı ile gerçek dağılım arasındaki fark, sonucu bu bant içinde oynatır. Hedefini bandın alt ucuna göre kurarsan sürpriz yaşamazsın.</p>
+    <p>Belirsizliğin 3 kaynağı vardır. (1) Ortalama ve sapma, ancak tüm adayların cevapları okunduktan sonra belli olur. (2) Hesaplayıcılar bu değerler yerine geçmiş yılların ortalamalarını varsayar. (3) O yılın sınavı beklenenden zor veya kolay çıkarsa gerçek dağılım varsayımdan sapar ve tahmin kayar.</p>
+    <p>Aynı 28 net, ortalaması 16 olan testte 65 standart puan verir; ortalaması 24, sapması 8 olan testte ise (28 − 24) / 8 = 0,5 sapma ile 55 verir. Aynı net, ortalaması yüksek (kolay) testte daha az değerlidir. Bu yüzden "kaç net yaptın?" sorusu eksiktir; doğru soru "ortalamanın kaç sapma üstündesin?"dir.</p>
+    <p>Pratik sonuç: netten üretilen her puan, geçmiş yıl dağılımına göre kurulmuş bir modelin çıktısıdır. Sıralamanı ve hedefini planlamak için yeterince iyidir; ama resmi sonuç yerine geçmez. 2026 sınavlarının ortalama ve sapma değerleri açıklandığında bu sayfadaki örnekler güncellenecektir.</p>
+
+    <h2>Sınırlamalar</h2>
+    <p>Standart puanın sınırları nelerdir? <strong>Standart puan, yerleştirme puanının kendisi değildir ve formülün bu sayfadaki hâli basitleştirilmiştir.</strong></p>
+    <ul>
+      <li><strong>Yerleştirme puanı farklıdır:</strong> ÖSYM, standart puanları test ağırlıklarıyla birleştirip OBP ekleyerek yerleştirme puanını üretir; MEB ise 100–500 ölçeğine dönüştürür.</li>
+      <li><strong>Resmi adımlar değişebilir:</strong> Kılavuzlardaki ağırlıklandırma ve ölçekleme adımları sınavdan sınava güncellenir; bu sayfa mantığı anlatır, resmi formülü kopyalamaz.</li>
+      <li><strong>Uç değerlerde model zayıflar:</strong> Çok düşük veya çok yüksek netlerde dağılım varsayımları daha az güvenilir sonuç verir.</li>
+      <li><strong>2026 değerleri bilinmiyor:</strong> Ortalama ve sapma, sınav sonrası ÖSYM ve MEB verileriyle belli olur.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/adimlar-osym.svg" alt="ÖSYM puanının oluşumu" loading="lazy" width="800" height="450">
+  <figcaption>Son üç adımı ÖSYM sınav sonrası uygular.</figcaption>
+</figure>
+
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-100.svg" alt="0 ile 100 arası puan ölçeği" loading="lazy" width="800" height="450">
+  <figcaption>Atamalarda taban puanlar genellikle 70–85 bandındadır.</figcaption>
+</figure>
+
+<div class="sss">
+      <details>
+        <summary>Standart puan nedir?</summary>
+        <p>Standart puan, ham netinin sınava giren grubun ortalamasına ve yayılımına göre yeniden hesaplanmış değeridir. Amacı, farklı zorluktaki sınavları karşılaştırılabilir kılmaktır. Ölçeğin merkezi 50'dir: 50, grubun tam ortalamasındaki adayın puanıdır.</p>
+      </details>
+      <details>
+        <summary>ÖSYM standart puanı nasıl hesaplar?</summary>
+        <p>ÖSYM şu formülü kullanır: SP = 50 + 10 × (Net − Ortalama) / Standart Sapma. Önce netinden testin ortalaması çıkarılır, fark standart sapmaya bölünür, sonuç 10 ile çarpılıp 50 eklenir. Örneğin ortalaması 16, sapması 8 olan testte 28 net yapanın standart puanı 65'tir.</p>
+      </details>
+      <details>
+        <summary>Standart puanda 50 ne anlama gelir?</summary>
+        <p>50, testin ortalamasında kalan adayın puanıdır. Ortalamanın 1 standart sapma üstündeki aday 60, 1 sapma altındaki aday 40 alır. Yani 50 'ortalama', 60 ve üstü 'ortalamanın belirgin şekilde üstü' anlamına gelir.</p>
+      </details>
+      <details>
+        <summary>Aynı net her yıl aynı puanı verir mi?</summary>
+        <p>Hayır. Aynı net, zor sınavda (ortalama düşükken) daha yüksek, kolay sınavda (ortalama yüksekken) daha düşük standart puana dönüşür. ÖSYM'nin resmi açıklaması da bunu doğrular: ortalamanın yükselmesi, aynı netlerle puanın düşmesine neden olabilir.</p>
+      </details>
+      <details>
+        <summary>Ham puanım neden doğrudan puan olmuyor?</summary>
+        <p>Ham puan sınavın zorluğunu hesaba katmaz. 90 soruluk zor bir sınavda 60 net ile kolay bir sınavda 60 net aynı başarıyı göstermez. Standart puan, netini grup içindeki konumuna çevirir; bu yüzden farklı yılların adayları adil şekilde karşılaştırılabilir.</p>
+      </details>
+      <details>
+        <summary>LGS puanı da standart puanla mı hesaplanır?</summary>
+        <p>Mantık aynıdır, ölçek farklıdır. MEB de netleri Türkiye geneli ortalama ve standart sapmayla 100–500 ölçeğine dönüştürür. ÖSYM ise standart puanı test ağırlıklarıyla birleştirip 100–500 aralığındaki puan türlerine çevirir.</p>
+      </details>
+      <details>
+        <summary>Hesaplayıcılar neden tahmini sonuç verir?</summary>
+        <p>Çünkü formüldeki ortalama ve standart sapma, sınav yapılmadan bilinemez. Hesaplayıcılar geçmiş yılların dağılımını varsayar; o yılın gerçek dağılımı farklı çıkarsa tahmin sapar. Bu yüzden netten üretilen her puan, model tabanlı bir tahmindir.</p>
+      </details>
+    </div>
+
+    <h2>Sonraki Adımlar</h2>
+    <p>Netinin puana nasıl dönüşeceğini görmek için ilgili aracı kullan:</p>
+    <ul>
+      <li>Üniversite hedefin için <a href="../../yks/puan-hesaplama/"><strong>YKS puan hesaplama</strong></a> aracında netlerini dene ve tahmini puan aralığını gör.</li>
+      <li>Memurluk hedefin için <a href="../../kamu-sinavlari/kpss-puan-hesaplama/"><strong>KPSS puan hesaplama</strong></a> aracı netlerini puan türlerine çevirir.</li>
+    </ul>
+
+  </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><h3>PuanRobotu</h3><ul><li><a href="../../">Ana Sayfa</a></li><li><a href="../../lgs/">Ortaokul</a></li><li><a href="../../yks/">Üniversite Giriş</a></li><li><a href="../../universite-not/">Üniversite Notları</a></li><li><a href="../../lisansustu/">Lisansüstü</a></li><li><a href="../../kamu-sinavlari/">Kamu Sınavları</a></li></ul></div>
+    <div><h3>Kurumsal</h3><ul><li><a href="../../hakkimizda/">Hakkımızda</a></li><li><a href="../../iletisim/">İletişim</a></li><li><a href="../../gizlilik-politikasi/">Gizlilik Politikası</a></li><li><a href="../../kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a></li><li><a href="../../cerez-politikasi/">Çerez Politikası</a></li></ul></div>
+  </div>
+  <div class="footer-alt"><div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div></div>
+</footer>
+<script src="../../assets/js/tools.js"></script>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>
