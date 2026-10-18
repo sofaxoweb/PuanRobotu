@@ -191,11 +191,21 @@
 
 <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
 <p><strong>Notunu seçili aralık tablosundaki alt sınırlarla karşılaştırır; notunun sağladığı en yüksek aralığın harfini verir.</strong> Mantık: 84 için "84 ≥ 90 mı? Hayır. 84 ≥ 85 mi? Hayır. 84 ≥ 80 mi? Evet → BB."</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/can-egrisi.svg" alt="Çan eğrisi: sınıf ortalamasına göre harf notu dağılımı" loading="lazy" width="800" height="450">
+  <figcaption>Notun mutlak puana değil, sınıfın ortalamasına göre harfe dönüşür.</figcaption>
+</figure>
+
 <p>Beş hazır preset vardır: <strong>Yaygın Örnek, Kent Üniversitesi, GTÜ, İstanbul Aydın Üniversitesi, Sakarya Üniversitesi</strong>. Hepsi gerçek üniversite aralıklarıdır. Okulun listede yoksa alt sınırları elle düzenleyebilirsin.</p>
 <p>Bu araç <strong>mutlak değerlendirme</strong> ile çalışır: harf yalnızca notuna bağlıdır, sınıfın durumuna değil. Çan eğrisi uygulanan derslerde harf sınıf dağılımına göre belirlenir — onun için <a href="../can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> sayfasını kullan.</p>
 
 <h2>Formül ve Çalışılmış Örnek</h2>
 <p><strong>Yaygın aralık seçiliyken 84 puan BB, 92 puan AA olur.</strong> Adım adım:</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/gano.svg" alt="GANO formülü: harf katsayısı çarpı kredi toplamı bölü toplam kredi" loading="lazy" width="800" height="450">
+  <figcaption>GANO’da kredisi yüksek dersin ağırlığı daha fazladır.</figcaption>
+</figure>
+
 <ul>
 <li>84 ≥ 90? Hayır → AA değil.</li>
 <li>84 ≥ 85? Hayır → BA değil.</li>
@@ -304,7 +314,12 @@
 </ul>
 
       <!-- ============ SSS ============ -->
-      <section class="sss" aria-labelledby="sss-baslik">
+      
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-not.svg" alt="Harf notu ölçeği: FF’den AA’ya not bantları" loading="lazy" width="800" height="450">
+  <figcaption>Harf notun, not ortalaman ve sınıfın dağılımına göre belirlenir.</figcaption>
+</figure>
+<section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>100'lük not harf notuna nasıl çevrilir?</summary><p>Notun, üniversitenin belirlediği aralıklara göre harfe denk gelir. AA=90+, BA=85–89, BB=80–84 çekirdeği neredeyse her okulda aynıdır; alt harflerde aralıklar değişir. Bu araçta 5 gerçek üniversite preseti hazırdır.</p></details>
         <details><summary>Harf aralıkları neden üniversiteden üniversiteye değişiyor?</summary><p>Çünkü aralıkları her üniversitenin senatosu belirler; ulusal tek bir tablo yoktur. Örneğin 62 puan Yaygın aralıkta DD, Kent Üniversitesi'nde CC olur. Okulunun güncel aralıklarını öğrenci işlerinden teyit et.</p></details>

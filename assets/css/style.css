@@ -123,6 +123,14 @@ body {
 
 .lede strong { color: var(--yazi); }
 
+.yazar {
+  font-size: 0.88rem;
+  color: var(--yazi-soluk);
+  margin: 0 0 1.25rem;
+}
+
+.hero .yazar { color: #c9d4ea; }
+
 /* ---------- Butonlar ---------- */
 .btn {
   display: inline-block;
@@ -768,6 +776,29 @@ table.sehir-tablo { width: 100%; border-collapse: collapse; font-size: 0.93rem; 
 
 /* Uzun kelime/URL taşmalarını engelle */
 article p, article li, .sss p { overflow-wrap: break-word; }
+
+/* İçerik diyagramları */
+.diyagram {
+  margin: 1.75rem auto;
+  max-width: 640px;
+  background: #fff;
+  border: 1px solid var(--cizgi);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.diyagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.diyagram figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--yazi-soluk);
+  text-align: center;
+  line-height: 1.5;
+}
 
 /* Küçük ekranlarda hero ve kartlar */
 @media (max-width: 560px) {

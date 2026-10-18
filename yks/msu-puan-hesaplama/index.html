@@ -204,7 +204,8 @@
   </div>
 
 <section class="wrap content">
-    <h2>Öne Çıkanlar</h2>
+    <div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
     <ul>
       <li><strong>MSÜ 120 sorudur</strong> (Türkçe 40, Matematik 40, Fen 20, Sosyal 20); dört puan türü hesaplanır: <strong>SA, EA, SÖZ, GN</strong>.</li>
       <li><strong>OBP eklenmez;</strong> puan yalnızca netlerden oluşur.</li>
@@ -212,6 +213,7 @@
       <li><strong>0,5 net kuralı:</strong> Türkçe veya Matematik'ten 0,5 net yoksa puanın hesaplanmaz.</li>
       <li><strong>Bu sayfadaki sonuç tahmindir;</strong> resmi puan ÖSYM sonuç ekranında açıklanır.</li>
     </ul>
+</div>
 
     <h2>MSÜ Puanı Nedir?</h2>
     <p><strong>MSÜ puanı, Milli Savunma Üniversitesi Askeri Öğrenci Aday Belirleme Sınavı'ndaki netlerin resmi test ağırlıklarıyla birleştirilip 100–500 ölçeğine yerleştirilmesiyle elde edilen puandır.</strong> Dört puan türü vardır: SA (Sayısal), EA (Eşit Ağırlık), SÖ (Sözel) ve GN (Genel). Puan, askeri okullara <strong>çağrı</strong> için kullanılır; doğrudan yerleştirme yapmaz.</p>
@@ -219,6 +221,11 @@
 
     <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
     <p><strong>Üç adımda şeffaf tahmin üretir: net hesabı, resmi ağırlıklar, 100–500 ölçeği.</strong></p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/adimlar-osym.svg" alt="ÖSYM puanının oluşumu: netler, standart puan, ağırlıklar, 100’lük ölçek" loading="lazy" width="800" height="450">
+  <figcaption>Son üç adımı ÖSYM, sınav sonrası tüm adayların verisiyle uygular.</figcaption>
+</figure>
+
     <h3>Adım 1 — Netleri bul</h3>
     <p>Her test için <strong>Net = Doğru − (Yanlış ÷ 4)</strong>. 4 yanlış, 1 doğruyu götürür.</p>
     <h3>Adım 2 — Test ağırlıklarıyla topla</h3>
@@ -241,6 +248,11 @@
 
     <h2>Formül ve Çalışılmış Örnek</h2>
     <p><strong>Formül:</strong> Puan = 100 + Σ(net × test katsayısı). Katsayılar: SA için 2,5/3,5/6,0/2,0; EA için 3,5/3,5/2,0/4,0; SÖ için 3,5/2,0/2,0/7,0; GN için 3,7/3,7/2,6/2,6 (Türkçe/Mat/Fen/Sosyal sırasıyla).</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/net-osym.svg" alt="ÖSYM net formülü: Net eşittir Doğru eksi Yanlış bölü 4" loading="lazy" width="800" height="450">
+  <figcaption>ÖSYM sınavlarında 4 yanlış, 1 doğruyu götürür; boş sorular neti etkilemez.</figcaption>
+</figure>
+
     <p>Bir adayın sonuçları: Türkçe 30 doğru 8 yanlış (net 28), Temel Matematik 25 doğru 4 yanlış (net 24), Fen 12 doğru 4 yanlış (net 11), Sosyal 10 doğru 4 yanlış (net 9).</p>
     <ul>
       <li>MSÜ-SA: 100 + 28×2,5 + 24×3,5 + 11×6 + 9×2 = <strong>338,0</strong></li>
@@ -260,6 +272,11 @@
 
     <h2>Sonucunu Nasıl Okumalısın?</h2>
     <p><strong>Her puan türü farklı bir okul grubuna çağrı için kullanılır.</strong></p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-500.svg" alt="100 ile 500 arası puan ölçeği: düşük, orta, iyi ve çok iyi bantları" loading="lazy" width="800" height="450">
+  <figcaption>Puanın bu ölçekte nerede olduğunu sonuç bölümündeki tabloyla karşılaştır.</figcaption>
+</figure>
+
     <div class="tablo-kaydir">
 <table class="bilgi-tablosu">
       <caption>Puan türü, okul ve sonraki adım</caption>

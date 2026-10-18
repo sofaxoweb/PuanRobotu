@@ -218,7 +218,8 @@
     <strong>Önemli:</strong> Bu sonuçlar <strong>tahminidir</strong>. Gerçek YKS puanı, ÖSYM'nin sınav sonrası açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır; o yılın verileri sınavdan önce bilinemez. Bu araç, MEB'in yayımladığı resmi katsayı tablolarını kullanan şeffaf bir yaklaşımdır.
   </div>
   <section class="wrap content">
-    <h2>Öne Çıkanlar</h2>
+    <div class="ozet-kutu">
+<h2>Öne Çıkanlar</h2>
     <ul>
       <li><strong>YKS puanı dört aşamada oluşur:</strong> netler → standart puan → resmi test ağırlıkları → 100–500 ölçeği. OBP, yerleştirme puanına ayrıca eklenir.</li>
       <li><strong>4 yanlış 1 doğruyu götürür</strong> — TYT, AYT ve YDT'nin tüm testlerinde kural aynıdır.</li>
@@ -226,6 +227,7 @@
       <li><strong>0,5 net kuralı:</strong> Türkçe veya Temel Matematik'ten en az 0,5 ham puanın yoksa TYT puanın hesaplanmaz.</li>
       <li><strong>Bu sayfadaki sonuç tahmindir;</strong> resmi puanın yalnızca ÖSYM sonuç ekranında açıklanır.</li>
     </ul>
+</div>
   </section>
 <section class="wrap content">
     <h2>YKS Puanı Nedir?</h2>
@@ -235,6 +237,11 @@
 
     <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
     <p><strong>Üç aşamalı şeffaf yöntem kullanır: net hesabı, standart puan yaklaşımı ve resmi test ağırlıkları.</strong> Her aşama aşağıda açıkça yazıyor; gizli katsayı yok.</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/adimlar-osym.svg" alt="ÖSYM puanının oluşumu: netler, standart puan, ağırlıklar, 100’lük ölçek" loading="lazy" width="800" height="450">
+  <figcaption>Son üç adımı ÖSYM, sınav sonrası tüm adayların verisiyle uygular.</figcaption>
+</figure>
+
     <h3>Adım 1 — Netleri bul</h3>
     <p>Her test için <strong>Net = Doğru − (Yanlış ÷ 4)</strong> uygulanır. TYT, AYT ve YDT'nin tamamında 4 yanlış, 1 doğruyu götürür. Boş bırakılan sorular neti etkilemez.</p>
     <h3>Adım 2 — Standart puana dönüştür</h3>
@@ -244,6 +251,11 @@
 
     <h2>Formül ve Çalışılmış Örnek</h2>
     <p><strong>Formüller:</strong> Net = Doğru − (Yanlış ÷ 4) · TYT ham = 100 + Σ(net × test katsayısı) · SAY/EA/SÖZ ham = 100 + TYT parçası + Σ(AYT net × katsayı) · Yerleştirme = Ham + OBP × 0,12.</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/net-osym.svg" alt="ÖSYM net formülü: Net eşittir Doğru eksi Yanlış bölü 4" loading="lazy" width="800" height="450">
+  <figcaption>ÖSYM sınavlarında 4 yanlış, 1 doğruyu götürür; boş sorular neti etkilemez.</figcaption>
+</figure>
+
     <p>Bir adayın deneme sonuçları: TYT'de Türkçe 32 doğru 8 yanlış (net 30), Sosyal 14 doğru 4 yanlış (net 13), Temel Matematik 28 doğru 8 yanlış (net 26), Fen 12 doğru 8 yanlış (net 10). AYT'de Matematik 30 doğru 8 yanlış (net 28), Fizik 10 doğru 4 yanlış (net 9), Kimya 9 doğru 4 yanlış (net 8), Biyoloji 10 doğru 4 yanlış (net 9). Diploma notu 85 (OBP 425).</p>
     <ul>
       <li>TYT parçası: 30×1,32 + 13×1,36 + 26×1,32 + 10×1,36 = <strong>105,2</strong></li>
@@ -264,6 +276,11 @@
 
     <h2>Sonucunu Nasıl Okumalısın?</h2>
     <p><strong>Her puan türü farklı bir kapıyı açar; tablo hangi puanın ne işe yaradığını gösterir.</strong></p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-500.svg" alt="100 ile 500 arası puan ölçeği: düşük, orta, iyi ve çok iyi bantları" loading="lazy" width="800" height="450">
+  <figcaption>Puanın bu ölçekte nerede olduğunu sonuç bölümündeki tabloyla karşılaştır.</figcaption>
+</figure>
+
     <div class="tablo-kaydir">
 <table class="bilgi-tablosu">
       <caption>Puan türleri ve kullanım alanları</caption>

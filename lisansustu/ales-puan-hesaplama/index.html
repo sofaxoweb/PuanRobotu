@@ -194,6 +194,11 @@
 
       <h2>ALES Puanı Nasıl Hesaplanır?</h2>
       <p>Hesaplama dört adımda ilerler:</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/agirlik-ales.svg" alt="ALES SAY, SÖZ ve EA puan türlerinin bölüm ağırlıkları" loading="lazy" width="800" height="450">
+  <figcaption>Hedef puan türünde ağırlığı yüksek bölüme çalışma zamanını ayır.</figcaption>
+</figure>
+
       <p><strong>1. Net:</strong> Her test kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. 4 yanlış 1 doğruyu götürür. "Yanlışlar puanı düşürmez" yazan siteler yanlıştır; ALES'te ceza vardır.</p>
       <p><strong>2. Standart puan:</strong> Her testin neti, ortalaması 50 ve standart sapması 10 olan standart puana (SP) çevrilir.</p>
       <p><strong>3. Ağırlıklı puan (AP):</strong></p>
@@ -217,6 +222,11 @@
 
       <h2>Formül ve Çalışılmış Örnek</h2>
       <p>Sayısalda 32 doğru 8 yanlış, sözelde 36 doğru 4 yanlış yapan bir aday:</p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/net-osym.svg" alt="ÖSYM net formülü: Net eşittir Doğru eksi Yanlış bölü 4" loading="lazy" width="800" height="450">
+  <figcaption>ÖSYM sınavlarında 4 yanlış, 1 doğruyu götürür; boş sorular neti etkilemez.</figcaption>
+</figure>
+
       <ul>
         <li>Sayısal net = 32 − 8/4 = <strong>30</strong>; Sözel net = 36 − 4/4 = <strong>35</strong></li>
         <li>Tahmini standart puanlar: Sayısal ≈ 63,30 — Sözel ≈ 68,72</li>
@@ -273,7 +283,12 @@
       <p>Dikey geçiş hedefin için <a href="../dgs-puan-hesaplama/">DGS puan hesaplama</a> aracını, dil puanı için <a href="../yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
 
 <!-- ============ SSS ============ -->
-            <section class="sss" aria-labelledby="sss-baslik">
+            
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-100.svg" alt="0 ile 100 arası puan ölçeği ve başarı bantları" loading="lazy" width="800" height="450">
+  <figcaption>Yerleştirme ve atamalarda taban puanlar genellikle 70–85 bandındadır.</figcaption>
+</figure>
+<section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>ALES puanı nasıl hesaplanır?</summary><p>Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür. X, S ve B o oturumun istatistikleridir.</p></details>
         <details><summary>ALES'te yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür. 'Yanlışlar puanı düşürmez' yazan siteler yanlıştır; ALES'te ceza vardır. İki şıkka indiremediğin soruyu boş bırakmak genellikle daha güvenlidir. Körü körüne işaretlemek beklenen değeri sıfırlar.</p></details>

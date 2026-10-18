@@ -199,12 +199,22 @@
 
 <h2>Bu Hesaplayıcı Nasıl Çalışır?</h2>
 <p><strong>Notunu, sınıf ortalamasını ve standart sapmayı alır; z ve T puanını hesaplar, örnek harf aralığına göre tahmini harfi gösterir.</strong></p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/can-egrisi.svg" alt="Çan eğrisi: sınıf ortalamasına göre harf notu dağılımı" loading="lazy" width="800" height="450">
+  <figcaption>Notun mutlak puana değil, sınıfın ortalamasına göre harfe dönüşür.</figcaption>
+</figure>
+
 <p><strong>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma.</strong> z=1,5 demek "ortalamanın 1,5 sapma üstündesin" demektir. z=0 tam ortalamadır; negatif z ortalamanın altındadır.</p>
 <p><strong>T = 10 × z + 50.</strong> T, z'yi herkesin anlayacağı bir ölçeğe taşır: sınıf ortalaması her zaman T=50 olur, 1 sapma üstü T=60'tır. Farklı derslerin notları bu ölçekte kıyaslanabilir.</p>
 <p>Harf adımı: T puanın, sayfadaki örnek aralık tablosundaki (AA≥65, BB≥55, CC≥45, DD≥35) yerine göre harfe çevrilir. Bu aralıkları kendi okuluna göre düzenleyebilirsin.</p>
 
 <h2>Formül ve Çalışılmış Örnek</h2>
 <p><strong>Notun 70, sınıf ortalaması 55, standart sapma 10 ise z=1,5, T=65 olur ve örnek aralıkta AA getirir.</strong></p>
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/gano.svg" alt="GANO formülü: harf katsayısı çarpı kredi toplamı bölü toplam kredi" loading="lazy" width="800" height="450">
+  <figcaption>GANO’da kredisi yüksek dersin ağırlığı daha fazladır.</figcaption>
+</figure>
+
 <ul>
 <li>z = (70 − 55) ÷ 10 = <strong>1,5</strong></li>
 <li>T = 10 × 1,5 + 50 = <strong>65</strong></li>
@@ -303,7 +313,12 @@
 </ul>
 
       <!-- ============ SSS ============ -->
-      <section class="sss" aria-labelledby="sss-baslik">
+      
+<figure class="diyagram">
+  <img src="../../assets/img/diyagram/olcek-not.svg" alt="Harf notu ölçeği: FF’den AA’ya not bantları" loading="lazy" width="800" height="450">
+  <figcaption>Harf notun, not ortalaman ve sınıfın dağılımına göre belirlenir.</figcaption>
+</figure>
+<section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
         <details><summary>Çan eğrisi nedir?</summary><p>Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50.</p></details>
         <details><summary>z puanı nasıl hesaplanır?</summary><p>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma. Örneğin notun 70, ortalama 55, sapma 10 ise z = 1,5 olur; yani ortalamanın 1,5 sapma üstündesin.</p></details>
