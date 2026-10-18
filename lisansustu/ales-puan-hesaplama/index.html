@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALES Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun.">
+<link rel="canonical" href="https://puanrobotu.com/lisansustu/ales-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="ALES Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun.">
+<meta property="og:url" content="https://puanrobotu.com/lisansustu/ales-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu ALES Puan Hesaplama",
+  "url": "https://puanrobotu.com/lisansustu/ales-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "ALES puan hesaplama: sayısal ve sözel netlerinden tahmini ALES SAY, SÖZ ve EA puanını hesapla. 100 soru, 150 dakika formatına uygun."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "ALES puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür."}},
+    {"@type": "Question", "name": "ALES'te yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür."}},
+    {"@type": "Question", "name": "ALES puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "ALES puanı 5 yıl geçerlidir. Sınav yılda 3 kez yapılır."}},
+    {"@type": "Question", "name": "ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan."}},
+    {"@type": "Question", "name": "70 puan için kaç net gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine göre belirlenir."}},
+    {"@type": "Question", "name": "ALES kaç soru, kaç dakika?", "acceptedAnswer": {"@type": "Answer", "text": "100 soru (50 sayısal + 50 sözel), 150 dakika. Sınav yılda 3 kez yapılır."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/" aria-current="page">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lisansustu/">Lisansüstü</a> › ALES Puan Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">Lisansüstü</p>
+      <h1>ALES Puan Hesaplama</h1>
+      <p class="lede">Sayısal ve sözel netlerini gir, tahmini ALES SAY, SÖZ ve EA puanlarını öğren.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">ALES Puan Hesaplama Aracı</h2>
+        <p>Her test için doğru-yanlış sayılarını gir; üç puan türü hemen hesaplansın.</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="say-dogru">Sayısal Doğru</label>
+            <input type="number" id="say-dogru" min="0" max="50" value="32">
+          </div>
+          <div class="form-alan">
+            <label for="say-yanlis">Sayısal Yanlış</label>
+            <input type="number" id="say-yanlis" min="0" max="50" value="8">
+          </div>
+        </div>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="soz-dogru">Sözel Doğru</label>
+            <input type="number" id="soz-dogru" min="0" max="50" value="36">
+          </div>
+          <div class="form-alan">
+            <label for="soz-yanlis">Sözel Yanlış</label>
+            <input type="number" id="soz-yanlis" min="0" max="50" value="4">
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">Tahmini ALES Puanların</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Değerleri girin.</div>
+        </div>
+        <table class="bilgi-tablosu" id="detay-tablo" hidden>
+          <thead><tr><th>Puan Türü</th><th>Tahmini Puan</th></tr></thead>
+          <tbody>
+            <tr><td>ALES-SAY (Sayısal)</td><td id="p-say">—</td></tr>
+            <tr><td>ALES-SÖZ (Sözel)</td><td id="p-soz">—</td></tr>
+            <tr><td>ALES-EA (Eşit Ağırlık)</td><td id="p-ea">—</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> Bu sonuçlar bir <strong>tahmindir</strong>. Gerçek puan, sınav sonrası açıklanan resmi istatistiklerle (X, S, B değerleri) hesaplanır; bu değerler sınavdan önce bilinemez. Aşağıda tahmin modelinin dayanaklarını açıkça yazdık.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>ALES Puanı Nasıl Hesaplanır?</h2>
+      <p>ALES (Akademik Personel ve Lisansüstü Eğitimi Giriş Sınavı) yılda 3 kez yapılır; puanın <strong>5 yıl</strong> geçerlidir. Sınav 100 sorudan oluşur (50 sayısal + 50 sözel), süresi 150 dakikadır. Hesaplama dört adımda ilerler:</p>
+      <p><strong>1. Net:</strong> Her test kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. 4 yanlış 1 doğruyu götürür.</p>
+      <p><strong>2. Standart puan:</strong> Her testin neti, ortalaması 50 ve standart sapması 10 olan standart puana (SP) çevrilir.</p>
+      <p><strong>3. Ağırlıklı puan (AP):</strong></p>
+      <ul>
+        <li><strong>ALES-SAY</strong> = 0,75 × Sayısal SP + 0,25 × Sözel SP</li>
+        <li><strong>ALES-SÖZ</strong> = 0,25 × Sayısal SP + 0,75 × Sözel SP</li>
+        <li><strong>ALES-EA</strong> = 0,50 × Sayısal SP + 0,50 × Sözel SP</li>
+      </ul>
+      <p><strong>4. 100'lük puana dönüşüm</strong> (resmi formül): ALES Puanı = 70 + 30 × [2(AP − X) − S] ÷ [2(B − X) − S]. En yüksek puan 100 olur.</p>
+      <p class="acik"><small>Not: Bazı kaynaklarda SAY/SÖZ ağırlıkları 70/30 olarak da geçer. Bu araç, güncel kılavuzlarda ve hesaplayıcılarda yaygın kullanılan 75/25 oranını esas alır.</small></p>
+      <h3>Bu Tahmin Nasıl Hesaplanıyor? (Şeffaflık)</h3>
+      <p>Standart puanlar o yılın istatistiklerine bağlı olduğu için bu araç, ÖSYM'nin yayımlanmış <strong>iki gerçek sonuç belgesine</strong> dayalı doğrusal bir enterpolasyon kullanır:</p>
+      <ul>
+        <li><strong>Çapa 1</strong> (20.11.2022 ALES): Sayısal 17D/5Y (net 15,75), Sözel 24D/17Y (net 19,75) → SAY 62,82 / SÖZ 65,65 / EA 65,16</li>
+        <li><strong>Çapa 2</strong> (28.07.2024 ALES): Sayısal 36D/14Y (net 32,50), Sözel 41D/9Y (net 38,75) → SAY 85,22 / SÖZ 89,23 / EA 87,51</li>
+      </ul>
+      <p>Model, her testin netini bu iki çapa arasında doğrusal olarak standart puana çevirir, resmi ağırlıklarla birleştirir ve 70+30 dönüşümünü (X=50, S=10, B=80 varsayımıyla) uygular. Model, iki çapa noktasındaki gerçek SAY ve SÖZ puanlarını 0,05'ten küçük hatayla yeniden üretir.</p>
+      <p>Dikey geçiş hedefin için <a href="/lisansustu/dgs-puan-hesaplama/">DGS puan hesaplama</a> aracını, dil puanı için <a href="/lisansustu/yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Sayısalda 32 doğru 8 yanlış, sözelde 36 doğru 4 yanlış yapan bir aday:</p>
+      <ul>
+        <li>Sayısal net = 32 − 8/4 = <strong>30</strong>; Sözel net = 36 − 4/4 = <strong>35</strong></li>
+        <li>Tahmini standart puanlar: Sayısal ≈ 63,30 — Sözel ≈ 68,72</li>
+        <li><strong>ALES-SAY ≈ 81,59</strong> · <strong>ALES-SÖZ ≈ 84,84</strong> · <strong>ALES-EA ≈ 83,21</strong> (tahmini)</li>
+      </ul>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>ALES yılda 3 kez yapılır ve puanın 5 yıl geçerlidir — erken girmek, hedefini netleştirir.</li>
+        <li>Doktora başvurularında genelde 80+, araştırma görevlisi kadrolarında 70+ puan istenir; hedefini buna göre koy.</li>
+        <li>Yanlış cezası var: iki şıkka indiremediğin soruyu boş bırakmak, rastgele işaretlemekten iyidir.</li>
+        <li>EA hedefin varsa iki teste de dengeli çalış; SAY hedefin varsa sayısal nete yüklen.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>ALES puanı nasıl hesaplanır?</summary><p>Önce her testin neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. Ağırlıklı puan: SAY = 0,75×SayısalSP + 0,25×SözelSP; SÖZ = 0,25×SayısalSP + 0,75×SözelSP; EA = 0,50×SayısalSP + 0,50×SözelSP. Son adımda 70 + 30×[2(AP−X)−S]/[2(B−X)−S] formülüyle 100'lük puana dönüştürülür.</p></details>
+        <details><summary>ALES'te yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi testinin netini düşürür.</p></details>
+        <details><summary>ALES puanı kaç yıl geçerli?</summary><p>ALES puanı 5 yıl geçerlidir. Sınav yılda 3 kez yapılır.</p></details>
+        <details><summary>ALES SAY, SÖZ ve EA puan türleri arasındaki fark nedir?</summary><p>Ağırlıklar farklıdır: SAY'da sayısal test %75, sözel %25; SÖZ'de tam tersi; EA'da ikisi de %50 etkilidir. Başvuracağın programın istediği puan türünü kullan.</p></details>
+        <details><summary>70 puan için kaç net gerekir?</summary><p>Sınavın zorluğuna göre değişir; kabaca her iki testte de 22–25 net bandı 70 puan civarına denk gelir. Kesin eşik, o yılın istatistiklerine göre belirlenir.</p></details>
+        <details><summary>ALES kaç soru, kaç dakika?</summary><p>100 soru (50 sayısal + 50 sözel), 150 dakika. Sınav yılda 3 kez yapılır.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="ales" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="ales" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Lisansüstü</h3>
+      <ul>
+        <li><a href="/lisansustu/ales-puan-hesaplama/" aria-current="page">ALES Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/dgs-puan-hesaplama/">DGS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yds-puan-hesaplama/">YDS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yokdil-puan-hesaplama/">YÖKDİL Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/hesap-ales.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function fmt(x) { return x.toFixed(2).replace(".", ","); }
+  function val(id) {
+    return Math.max(0, Math.min(50, Number($(id).value) || 0));
+  }
+  function hesapla() {
+    var r = window.PR_ales.puanHesapla({
+      sayDogru: val("say-dogru"),
+      sayYanlis: val("say-yanlis"),
+      sozDogru: val("soz-dogru"),
+      sozYanlis: val("soz-yanlis")
+    });
+    $("detay-tablo").hidden = false;
+    $("p-say").textContent = fmt(r.say);
+    $("p-soz").textContent = fmt(r.soz);
+    $("p-ea").textContent = fmt(r.ea);
+    $("sonuc-deger").textContent = fmt(r.ea);
+    $("sonuc-alt").textContent = "Tahmini · Sayısal net " + fmt(r.netSayisal) +
+      ", Sözel net " + fmt(r.netSozel) + ".";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    $("btn-hesapla").addEventListener("click", hesapla);
+    ["say-dogru", "say-yanlis", "soz-dogru", "soz-yanlis"].forEach(function (id) {
+      $(id).addEventListener("input", hesapla);
+    });
+    hesapla();
+  });
+})();
+</script>
+</body>
+</html>

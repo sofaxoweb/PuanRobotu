@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSÜ Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="MSÜ puan hesaplama: doğru-yanlışlarını gir; SA, EA, SÖZ, GN tahmini puanlarını (100-500) anında öğren. Resmi ağırlık tablosuna göre, ücretsiz.">
+<link rel="canonical" href="https://puanrobotu.com/yks/msu-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="MSÜ Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="MSÜ netlerinden SA, EA, SÖZ, GN tahmini puanlarını hesapla.">
+<meta property="og:url" content="https://puanrobotu.com/yks/msu-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu MSÜ Puan Hesaplama",
+  "url": "https://puanrobotu.com/yks/msu-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "MSÜ doğru-yanlış sayılarından SA, EA, SÖZ ve GN tahmini puanlarını (100-500) hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "MSÜ puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. Bu araç, MEB'in yayımladığı resmi ağırlık tablosunu kullanan şeffaf bir tahmin yapar."}},
+    {"@type": "Question", "name": "MSÜ'de hangi puan türleri var?", "acceptedAnswer": {"@type": "Answer", "text": "Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel). Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır."}},
+    {"@type": "Question", "name": "MSÜ'de OBP eklenir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır."}},
+    {"@type": "Question", "name": "MSÜ'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür."}},
+    {"@type": "Question", "name": "MSÜ'ye girmek Harp Okuluna girmek için yeterli mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır."}},
+    {"@type": "Question", "name": "Bu hesaplama ne kadar güvenilir?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi ağırlık tablosuna dayalı şeffaf bir tahmindir."}},
+    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/" aria-current="page">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/yks/">Üniversite Giriş</a> › MSÜ Puan Hesaplama</p></div>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">MSÜ 2026 hazırlık</p>
+      <h1>MSÜ Puan Hesaplama</h1>
+      <p class="lede">MSÜ'deki <strong>doğru–yanlış</strong> sayılarını gir; <strong>SA, EA, SÖZ ve GN</strong> puan türlerinde <strong>tahmini puanını (100–500)</strong> anında öğren. Resmî test ağırlıklarına göre, OBP'siz.</p>
+      <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
+    </div>
+  </section>
+
+  <div class="wrap sayfa-iki-sutun">
+  <article>
+  <section id="arac" class="tool-section" aria-labelledby="arac-baslik">
+    <div class="wrap">
+      <h2 id="arac-baslik">MSÜ Puan Hesaplama Aracı</h2>
+      <p class="section-intro">MSÜ 120 sorudan oluşur: Türkçe 40, Temel Matematik 40, Fen Bilimleri 20, Sosyal Bilimler 20. Her test için <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını yaz.</p>
+
+      <div id="form-hata" class="form-hata" role="alert" hidden></div>
+
+      <div class="calc-grid">
+        <div class="calc-table-wrap">
+          <table class="calc-table">
+            <caption class="sr-only">Testlere göre doğru ve yanlış giriş tablosu</caption>
+            <thead>
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">Doğru</th>
+                <th scope="col">Yanlış</th>
+                <th scope="col">Boş</th>
+                <th scope="col">Net</th>
+              </tr>
+            </thead>
+            <tbody id="test-satirlari"></tbody>
+          </table>
+          <div class="calc-actions">
+            <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+            <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
+          </div>
+        </div>
+
+        <aside class="sonuc-paneli" aria-live="polite" aria-label="Hesaplama sonuçları">
+          <h3>Sonuçların</h3>
+          <div class="sonuc-bos" id="sonuc-bos">
+            <p>Henüz hesaplama yapmadın.<br>Değerleri girince sonucun burada görünecek.</p>
+          </div>
+          <div class="sonuc-dolu" id="sonuc-dolu" hidden>
+            <dl class="puan-turu-sonuclari">
+              <div><dt>MSÜ-SA <small>(Sayısal)</small></dt><dd id="r-sa" class="vurgu">–</dd></div>
+              <div><dt>MSÜ-EA <small>(Eşit Ağırlık)</small></dt><dd id="r-ea">–</dd></div>
+              <div><dt>MSÜ-SÖ <small>(Sözel)</small></dt><dd id="r-soz">–</dd></div>
+              <div><dt>MSÜ-GN <small>(Genel)</small></dt><dd id="r-gn">–</dd></div>
+            </dl>
+            <p class="uyari" id="gecerlilik-uyari" hidden>⚠️ Uyarı: Puanın hesaplanamayabilir — Temel Matematik veya Türkçe'den en az 0,5 net gerekir.</p>
+            <p class="sonuc-not">Tahmini değerlerdir; resmi sonuç ÖSYM sonuç ekranında açıklanır.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="tahmin-notu">
+    <strong>Önemli:</strong> Bu sonuçlar <strong>tahminidir</strong>. Gerçek MSÜ puanı, ÖSYM'nin sınav sonrası açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Ayrıca MSÜ tek başına yerleştirme için yeterli değildir — Harp Okulları AYT, Astsubay MYO'lar TYT puanı da ister.
+  </div>
+
+  <section class="wrap content">
+    <h2>MSÜ Puanı Nasıl Hesaplanıyor?</h2>
+    <h3>Adım 1 — Netleri bul</h3>
+    <p>Her test için: <strong>Net = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. 4 yanlış, 1 doğruyu götürür.</p>
+    <h3>Adım 2 — Test ağırlıklarıyla topla</h3>
+    <p>Netler, her puan türünün resmî test ağırlıklarıyla çarpılır ve 100–500 ölçeğine yerleştirilir:</p>
+    <table class="bilgi-tablosu">
+      <caption>MSÜ puan türü test ağırlıkları (%)</caption>
+      <thead><tr><th scope="col">Puan Türü</th><th scope="col">Türkçe</th><th scope="col">Tem. Mat.</th><th scope="col">Fen</th><th scope="col">Sosyal</th><th scope="col">Kullanım</th></tr></thead>
+      <tbody>
+        <tr><td><strong>MSÜ-SA</strong></td><td>25</td><td>35</td><td>30</td><td>10</td><td>Harp Okulları</td></tr>
+        <tr><td><strong>MSÜ-EA</strong></td><td>35</td><td>35</td><td>10</td><td>20</td><td>Harp Okulları</td></tr>
+        <tr><td><strong>MSÜ-SÖ</strong></td><td>35</td><td>20</td><td>10</td><td>35</td><td>Harp Okulları</td></tr>
+        <tr><td><strong>MSÜ-GN</strong></td><td>37</td><td>37</td><td>13</td><td>13</td><td>Astsubay MYO</td></tr>
+      </tbody>
+    </table>
+    <p class="dipnot"><strong>Dipnot — GN ağırlıkları:</strong> MSÜ-GN test ağırlıklarında kaynaklar çelişiyor; MEB'in yayımladığı resmî tablo 37/37/13/13 derken bazı siteler TYT ile aynı 33/33/17/17 oranını veriyor. Bu araç, resmî tabloyu esas alır (37/37/13/13). Resmî kılavuzda değişiklik olursa sayfa güncellenir.</p>
+    <h3>Adım 3 — OBP yok</h3>
+    <p>MSÜ puanına <strong>OBP eklenmez</strong>; puan yalnızca sınav netlerinden hesaplanır.</p>
+
+    <h2>Çalışılmış Örnek</h2>
+    <p>Bir adayın sonuçları: Türkçe 30 doğru 8 yanlış (net 28), Temel Matematik 25 doğru 4 yanlış (net 24), Fen 12 doğru 4 yanlış (net 11), Sosyal 10 doğru 4 yanlış (net 9).</p>
+    <ul>
+      <li>MSÜ-SA: 100 + 28×2,5 + 24×3,5 + 11×6 + 9×2 = <strong>338,0</strong></li>
+      <li>MSÜ-EA: 100 + 28×3,5 + 24×3,5 + 11×2 + 9×4 = <strong>340,0</strong></li>
+      <li>MSÜ-SÖ: 100 + 28×3,5 + 24×2 + 11×2 + 9×7 = <strong>331,0</strong></li>
+      <li>MSÜ-GN: 100 + 28×3,7 + 24×3,7 + 11×2,6 + 9×2,6 = <strong>344,4</strong></li>
+    </ul>
+    <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+    <h2>İpuçları</h2>
+    <ul>
+      <li><strong>Hedef okula göre çalış:</strong> Harp Okulu hedefliyorsan puan türüne uygun testlere (SA için Matematik+Fen) ağırlık ver; Astsubay MYO için GN dengesine dikkat et.</li>
+      <li><strong>MSÜ = ilk kapı:</strong> MSÜ'den çağrı almak yetmez; Harp Okulları için AYT'ye, Astsubay MYO için TYT'ye de hazırlan. Fiziki yeterlilik ve mülakatı unutma.</li>
+      <li><strong>Geçerlilik kuralı:</strong> Temel Matematik veya Türkçe'den en az 0,5 netin yoksa puanın hesaplanmaz.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="sss">
+      <details>
+        <summary>MSÜ puanı nasıl hesaplanır?</summary>
+        <p>Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 4). Sonra netler, puan türünün resmi test ağırlıklarıyla çarpılıp toplanır ve 100–500 ölçeğine yerleştirilir. Bu araç, MEB'in yayımladığı resmi ağırlık tablosunu kullanan şeffaf bir tahmin yapar.</p>
+      </details>
+      <details>
+        <summary>MSÜ'de hangi puan türleri var?</summary>
+        <p>Dört puan türü vardır: MSÜ-SA (Sayısal), MSÜ-EA (Eşit Ağırlık), MSÜ-SÖ (Sözel) ve MSÜ-GN (Genel). Harp Okulları çağrılarında SA/EA/SÖ, Astsubay Meslek Yüksekokulları çağrılarında GN kullanılır.</p>
+      </details>
+      <details>
+        <summary>MSÜ'de OBP eklenir mi?</summary>
+        <p>Hayır. MSÜ puanına OBP eklenmez; puan yalnızca sınavdaki netlerden hesaplanır.</p>
+      </details>
+      <details>
+        <summary>MSÜ'de yanlış doğruyu götürür mü?</summary>
+        <p>Evet. MSÜ'de de ÖSYM'nin standart kuralı geçerlidir: 4 yanlış, 1 doğruyu götürür.</p>
+      </details>
+      <details>
+        <summary>MSÜ'ye girmek Harp Okuluna girmek için yeterli mi?</summary>
+        <p>Hayır. MSÜ, askeri okullara çağrı için ilk aşamadır; Harp Okulları ayrıca AYT, Astsubay MYO'lar ayrıca TYT puanı ister. Fiziki yeterlilik ve mülakat aşamaları da vardır.</p>
+      </details>
+      <details>
+        <summary>Bu hesaplama ne kadar güvenilir?</summary>
+        <p>Bu araç bir tahmin aracıdır. Gerçek puan, sınav sonrası ÖSYM'nin açıkladığı ulusal ortalama ve standart sapmalarla hesaplanır. Buradaki sonuç, resmi ağırlık tablosuna dayalı şeffaf bir tahmindir.</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
+        <p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez veya saklanmaz.</p>
+      </details>
+    </div>
+
+    <h2>Sonraki Adımlar</h2>
+    <ul>
+      <li><a href="/yks/puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — TYT/AYT/YDT tahmini puanlarını hesapla</li>
+      <li><a href="/yks/tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
+    </ul>
+  </section>
+  </article>
+  <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-msu" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+  <section id="ilgili-araclar" data-arac="yks-msu" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Giriş Araçları</h3>
+      <ul>
+        <li><a href="/yks/puan-hesaplama/">YKS Puan Hesaplama</a></li>
+        <li><a href="/yks/obp-hesaplama/">OBP Hesaplama</a></li>
+        <li><a href="/yks/tercih-robotu/">YKS Tercih Robotu</a></li>
+        <li><a href="/yks/taban-puanlari/">Üniversite Taban Puanları</a></li>
+        <li><a href="/yks/msu-puan-hesaplama/">MSÜ Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/yks-msu.js"></script>
+</body>
+</html>

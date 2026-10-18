@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çan Eğrisi Hesaplama | PuanRobotu</title>
+<meta name="description" content="Sınıf ortalaması ve standart sapmayla z ve T puanını bul, çan eğrisine göre harf notunu tahmin et. Bağıl değerlendirme için ücretsiz hesaplama aracı.">
+<link rel="canonical" href="https://puanrobotu.com/universite-not/can-egrisi-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Çan Eğrisi Hesaplama | PuanRobotu">
+<meta property="og:description" content="z ve T puanını bul, çan eğrisine göre harf notunu tahmin et. Bağıl değerlendirme aracı, ücretsiz.">
+<meta property="og:url" content="https://puanrobotu.com/universite-not/can-egrisi-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu Çan Eğrisi Hesaplama",
+  "url": "https://puanrobotu.com/universite-not/can-egrisi-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "Sınıf ortalaması ve standart sapmayla z/T puanı ve tahmini harf notu bulan ücretsiz çan eğrisi aracı."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Çan eğrisi nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50."}},
+    {"@type": "Question", "name": "Aynı not farklı derste farklı harf getirir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, çan eğrisinde bu normaldir. Kolay sınavda sınıf ortalaması yüksekse 70 puan düşük harf getirebilir; zor sınavda aynı 70 yüksek harf getirebilir."}},
+    {"@type": "Question", "name": "T puanından harfe nasıl geçilir?", "acceptedAnswer": {"@type": "Answer", "text": "Her üniversitenin senatosu T aralıklarını kendisi belirler; ulusal tek tablo yoktur. Bu araçtaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir ve düzenlenebilir."}},
+    {"@type": "Question", "name": "Standart sapma neyi gösterir?", "acceptedAnswer": {"@type": "Answer", "text": "Sınıfın notlarının ortalamadan ne kadar dağıldığını gösterir. Sapma büyükse notlar yaygındır, küçükse herkes birbirine yakındır."}},
+    {"@type": "Question", "name": "z puanı negatifse ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altında olduğunu gösterir; T puanın 40 olur."}},
+    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/" aria-current="page">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/universite-not/">Üniversite Notları</a> › Çan Eğrisi Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">📝 Üniversite Notları</p>
+      <h1>Çan Eğrisi Hesaplama</h1>
+      <p class="lede">Notunu, sınıf ortalamasını ve standart sapmayı gir: <strong>z puanın</strong>, <strong>T puanın</strong> ve sınıf içindeki göreli konumunla birlikte <strong>tahmini harf notunu</strong> gör.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">Çan Eğrisi Hesaplama Aracı</h2>
+        <p>Kendi notunu ve sınıfın istatistiklerini yaz. T→harf aralıklarını okuluna göre düzenleyebilirsin.</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="not">Kendi Notun (0–100)</label>
+            <input type="number" id="not" min="0" max="100" step="0.5" value="70">
+          </div>
+          <div class="form-alan">
+            <label for="ortalama">Sınıf Ortalaması</label>
+            <input type="number" id="ortalama" min="0" max="100" step="0.5" value="55">
+          </div>
+          <div class="form-alan">
+            <label for="sapma">Standart Sapma</label>
+            <input type="number" id="sapma" min="0.1" max="50" step="0.5" value="10">
+          </div>
+        </div>
+        <h3>T → Harf Aralıkları (Örnek — Düzenlenebilir)</h3>
+        <div class="form-satir" id="bant-duzenle"></div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">z Puanı</div>
+          <div class="sonuc-deger" id="sonuc-z">—</div>
+          <div class="sonuc-etiket">T Puanı</div>
+          <div class="sonuc-deger" id="sonuc-t">—</div>
+          <div class="sonuc-etiket">Tahmini Harf (örnek aralığa göre)</div>
+          <div class="sonuc-deger" id="sonuc-harf">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Değerleri girin.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> z ve T puanları matematiksel olarak kesindir; ancak <strong>T→harf aralıklarını her üniversitenin senatosu belirler</strong> ve ulusal tek bir tablo yoktur. Buradaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir — okulunun gerçek aralıklarını kullan.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>Nasıl Hesaplanır?</h2>
+      <p>Çan eğrisi (bağıl değerlendirme), notunu sınıfın dağılımına göre standartlaştırır. Standart model (İnönü Üniversitesi'nin yayımladığı yöntem):</p>
+      <p><strong>z = (Notun − Sınıf Ortalaması) ÷ Standart Sapma</strong></p>
+      <p><strong>T = 10 × z + 50</strong></p>
+      <p>z puanı, notunun ortalamadan kaç "standart sapma" uzakta olduğunu gösterir. T puanı ise bunu 50 ortalama, 10 sapma ölçeğine taşır — böylece farklı dersler karşılaştırılabilir hale gelir.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Notun 70, sınıf ortalaması 55, standart sapma 10 olsun:</p>
+      <ul>
+        <li>z = (70 − 55) ÷ 10 = <strong>1,5</strong></li>
+        <li>T = 10 × 1,5 + 50 = <strong>65</strong></li>
+        <li>Örnek aralıkta T ≥ 65 → tahmini harf <strong>AA</strong>; sınıfın en üst dilimindesin.</li>
+      </ul>
+      <p>Göreliliğin gücüne dikkat: aynı 70 puan, sınıf ortalaması 75 olsaydı z = −0,5 ve T = 45 olurdu — yani aynı not, kolay bir sınıfta ortalamanın altında kalırdı. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Dersin çan eğrisiyle mi yoksa mutlak sistemle mi değerlendirildiğini dönem başında hocana sor.</li>
+        <li>Eğri varsa mutlak nota değil, sınıf içindeki konumuna odaklan: ortalamanın 1 sapma üstü genelde üst harfleri getirir.</li>
+        <li>Standart sapma küçükse (herkes birbirine yakınsa) 1-2 puanlık fark bile harfi değiştirebilir.</li>
+        <li>T→harf aralıklarını okulunun senato kararından teyit et; bu sayfadaki aralıklar örnektir.</li>
+      </ul>
+
+      <h2>Sonraki Adımlar</h2>
+      <ul>
+        <li>Mutlak sistemle değerlendirilen derslerde 100'lük notunun harf karşılığı için <a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracını kullan.</li>
+        <li>Tüm derslerinin harfleriyle genel ortalamanı bulmak istersen <a href="/universite-not/gano-hesaplama/">GANO Hesaplama</a> aracına bak.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>Çan eğrisi nedir?</summary><p>Bağıl değerlendirmedir: harf notun, ham puanının sınıfın ortalamasına ve dağılımına göre belirlenir. Formül: z = (Notun − Ortalama) ÷ Standart Sapma; T = 10 × z + 50.</p></details>
+        <details><summary>Aynı not farklı derste farklı harf getirir mi?</summary><p>Evet, çan eğrisinde bu normaldir. Kolay sınavda sınıf ortalaması yüksekse 70 puan düşük harf getirebilir; zor sınavda aynı 70 yüksek harf getirebilir.</p></details>
+        <details><summary>T puanından harfe nasıl geçilir?</summary><p>Her üniversitenin senatosu T aralıklarını kendisi belirler; ulusal tek tablo yoktur. Bu araçtaki AA≥65, BB≥55, CC≥45, DD≥35 aralıkları yaygın bir örnektir ve düzenlenebilir.</p></details>
+        <details><summary>Standart sapma neyi gösterir?</summary><p>Sınıfın notlarının ortalamadan ne kadar dağıldığını gösterir. Sapma büyükse notlar yaygındır, küçükse herkes birbirine yakındır.</p></details>
+        <details><summary>z puanı negatifse ne olur?</summary><p>Notunun ortalamanın altında olduğu anlamına gelir. z = −1, ortalamanın 1 standart sapma altında olduğunu gösterir; T puanın 40 olur.</p></details>
+        <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="not-canegrisi" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="not-canegrisi" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Notları</h3>
+      <ul>
+        <li><a href="/universite-not/vize-final-hesaplama/">Vize–Final Hesaplama</a></li>
+        <li><a href="/universite-not/gano-hesaplama/">GANO / AGNO Hesaplama</a></li>
+        <li><a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a></li>
+        <li><a href="/universite-not/can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></li>
+        <li><a href="/universite-not/aof-not-hesaplama/">AÖF Not Hesaplama</a></li>
+        <li><a href="/universite-not/not-donusumu/">4,00 – 100 Not Dönüşümü</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/not-canegrisi.js"></script>
+</body>
+</html>

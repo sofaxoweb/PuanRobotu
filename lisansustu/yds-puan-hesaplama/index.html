@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YDS Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan.">
+<link rel="canonical" href="https://puanrobotu.com/lisansustu/yds-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="YDS Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan.">
+<meta property="og:url" content="https://puanrobotu.com/lisansustu/yds-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu YDS Puan Hesaplama",
+  "url": "https://puanrobotu.com/lisansustu/yds-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "YDS puan hesaplama: doğru sayını gir, 100 üzerinden YDS puanını ve A–E dil seviyeni anında öğren. Yanlış cezası yok — her doğru 1,25 puan."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "YDS'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. ÖSYM kılavuzuna göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur."}},
+    {"@type": "Question", "name": "YDS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder."}},
+    {"@type": "Question", "name": "e-YDS puanı normal YDS ile aynı mı hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, formül aynıdır: doğru sayısı × 1,25. e-YDS'deki deneme (pilot) sorular puanlamaya katılmaz."}},
+    {"@type": "Question", "name": "YDS puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "Kullanım yerine göre değişir: TUS, DUS ve EUS yerleştirmelerinde sonuç, sınav tarihinden itibaren 5 yıl geçerlidir."}},
+    {"@type": "Question", "name": "A, B, C, D, E seviyeleri ne anlama gelir?", "acceptedAnswer": {"@type": "Answer", "text": "A 90–100, B 80–89, C 70–79, D 60–69, E 50–59 puan aralıklarına denk gelir. Çoğu kurum en az C seviyesi veya 70 puan ister."}},
+    {"@type": "Question", "name": "70 puan için kaç doğru gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "56 doğru gerekir (56 × 1,25 = 70). Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru yeterlidir."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/" aria-current="page">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lisansustu/">Lisansüstü</a> › YDS Puan Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">Lisansüstü</p>
+      <h1>YDS Puan Hesaplama</h1>
+      <p class="lede">YDS'de kaç doğru yaptığını yaz, 100 üzerinden puanını ve A–E dil seviyeni anında öğren. Yanlış cevap puanı düşürmez.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">YDS Puan Hesaplama Aracı</h2>
+        <p>Doğru ve yanlış sayılarını gir; puan ve dil seviyen hemen hesaplansın. (80 soru üzerinden)</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="dogru">Doğru Sayısı</label>
+            <input type="number" id="dogru" min="0" max="80" value="52">
+          </div>
+          <div class="form-alan">
+            <label for="yanlis">Yanlış Sayısı</label>
+            <input type="number" id="yanlis" min="0" max="80" value="20">
+          </div>
+          <div class="form-alan">
+            <label>Boş Sayısı</label>
+            <div class="hesaplanan" id="bos">8</div>
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">YDS Puanın</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Değerleri girin.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Not:</strong> Bu sonuç <strong>kesindir, tahmin değildir.</strong> ÖSYM kılavuzuna (2026-YDS/1, madde 3.8) göre YDS'de yanlış cevap cezası yoktur ve puan doğrudan <strong>doğru sayısı × 1,25</strong> ile hesaplanır. Buradaki sonuç, resmi sonuç belgendeki puanla birebir aynı çıkar.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>YDS Puanı Nasıl Hesaplanır?</h2>
+      <p>YDS (Yabancı Dil Bilgisi Seviye Tespit Sınavı) 80 çoktan seçmeli sorudan oluşur ve süresi 180 dakikadır. Puanlama, ÖSYM'nin başvuru kılavuzunda açıkça yazdığı tek bir kurala dayanır:</p>
+      <p><strong>YDS Puanı = Doğru Sayısı × 1,25</strong></p>
+      <p>Yani her doğru cevap 1,25 puan eder; 80 doğrunun tamamı 100 puana denk gelir. En kritik nokta şudur: <strong>YDS'de yanlış cevap cezası yoktur.</strong> Kılavuzun 3.8 maddesi şöyle der: "Değerlendirme sırasında yalnız doğru cevaplar dikkate alınacak, yanlış cevaplar dikkate alınmayacaktır." Bu yüzden boş bıraktığın sorular da yanlışların da puanı etkilemez.</p>
+      <h3>YDS Dil Seviyeleri</h3>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Seviye</th><th>Puan Aralığı</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>90 – 100</td></tr>
+          <tr><td>B</td><td>80 – 89</td></tr>
+          <tr><td>C</td><td>70 – 79</td></tr>
+          <tr><td>D</td><td>60 – 69</td></tr>
+          <tr><td>E</td><td>50 – 59</td></tr>
+        </tbody>
+      </table>
+      <p>Puanın kullanım yerine göre barajlar değişir: doktora ve doçentlik başvurularında genellikle en az <strong>55 puan</strong> istenir. TUS, DUS ve EUS yerleştirmelerinde ise yabancı dil sonucunun <strong>sınav tarihinden itibaren 5 yıl</strong> içinde alınmış olması gerekir. e-YDS'de de aynı formül geçerlidir; yalnızca puanlamaya katılmayan deneme (pilot) sorular bulunur.</p>
+      <p>İngilizce dışında bir alanda sınava gireceksen <a href="/lisansustu/yokdil-puan-hesaplama/">YÖKDİL puan hesaplama</a> aracını, akademik kariyer için gereken diğer sınavda <a href="/lisansustu/ales-puan-hesaplama/">ALES puan hesaplama</a> aracını kullanabilirsin.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Bir adayın 52 doğrusu, 20 yanlışı ve 8 boşu olsun:</p>
+      <ul>
+        <li>Yanlış cezası olmadığı için yanlışlar ve boşlar hesaba katılmaz.</li>
+        <li>Puan = 52 × 1,25 = <strong>65,00</strong></li>
+        <li>65 puan, 60–69 aralığına girdiği için <strong>D seviyesi</strong> demektir.</li>
+      </ul>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Yanlış cezası olmadığı için <strong>hiçbir soruyu boş bırakma</strong>; emin olmadıklarında bile işaretle.</li>
+        <li>Doktora veya doçentlik hedefin varsa baraj 55 — hedefini 60+ olarak koy, sınırda kalma.</li>
+        <li>e-YDS'deki deneme soruları puana etki etmez; zor bir soruyla karşılaşınca moralini bozma.</li>
+        <li>Kelime bilgisi ve okuduğunu anlama soruları toplamın yarısından fazlasını oluşturur; çalışmanı buraya yoğunlaştır.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>YDS'de yanlış doğruyu götürür mü?</summary><p>Hayır. ÖSYM kılavuzuna göre YDS'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur.</p></details>
+        <details><summary>YDS puanı nasıl hesaplanır?</summary><p>Doğru sayını 1,25 ile çarp: YDS Puanı = Doğru Sayısı × 1,25. 80 soruluk sınavda 80 doğru 100 puan eder.</p></details>
+        <details><summary>e-YDS puanı normal YDS ile aynı mı hesaplanır?</summary><p>Evet, formül aynıdır: doğru sayısı × 1,25. e-YDS'deki deneme (pilot) sorular puanlamaya katılmaz.</p></details>
+        <details><summary>YDS puanı kaç yıl geçerli?</summary><p>Kullanım yerine göre değişir: TUS, DUS ve EUS yerleştirmelerinde sonuç, sınav tarihinden itibaren 5 yıl geçerlidir.</p></details>
+        <details><summary>A, B, C, D, E seviyeleri ne anlama gelir?</summary><p>A 90–100, B 80–89, C 70–79, D 60–69, E 50–59 puan aralıklarına denk gelir. Çoğu kurum en az C seviyesi veya 70 puan ister.</p></details>
+        <details><summary>70 puan için kaç doğru gerekir?</summary><p>56 doğru gerekir (56 × 1,25 = 70). Doktora ve doçentlik için istenen 55 puan barajı için 44 doğru yeterlidir.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yds" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="yds" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Lisansüstü</h3>
+      <ul>
+        <li><a href="/lisansustu/ales-puan-hesaplama/">ALES Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/dgs-puan-hesaplama/">DGS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yds-puan-hesaplama/" aria-current="page">YDS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yokdil-puan-hesaplama/">YÖKDİL Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlıdır.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/hesap-yds.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function fmt(x) { return x.toFixed(2).replace(".", ","); }
+  function hesapla() {
+    var d = Math.max(0, Math.min(80, Math.floor(Number($("dogru").value) || 0)));
+    var y = Math.max(0, Math.min(80 - d, Math.floor(Number($("yanlis").value) || 0)));
+    $("yanlis").value = y;
+    $("bos").textContent = 80 - d - y;
+    var p = window.PR_yds.puanHesapla(d);
+    var s = window.PR_yds.seviye(p);
+    $("sonuc-deger").textContent = fmt(p);
+    $("sonuc-alt").textContent = d + " doğru ile " +
+      (s ? s + " seviyesi" : "50 puanın altında (seviye yok)") +
+      ". Yanlış cevabın puana etkisi yoktur.";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    $("btn-hesapla").addEventListener("click", hesapla);
+    $("dogru").addEventListener("input", hesapla);
+    $("yanlis").addEventListener("input", hesapla);
+    hesapla();
+  });
+})();
+</script>
+</body>
+</html>

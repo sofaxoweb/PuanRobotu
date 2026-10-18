@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Takdir–Teşekkür Hesaplama | PuanRobotu</title>
+<meta name="description" content="Takdir teşekkür hesaplama: dönem ortalamanı, devamsızlığını ve disiplin durumunu gir; MEB Madde 160 koşullarıyla takdir mi teşekkür mü alacağını öğren.">
+<link rel="canonical" href="https://puanrobotu.com/lgs/takdir-tesekkur-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Takdir–Teşekkür Hesaplama | PuanRobotu">
+<meta property="og:description" content="Dönem ortalamanı gir, MEB'in resmi koşullarına göre takdir mi teşekkür mü alacağını öğren.">
+<meta property="og:url" content="https://puanrobotu.com/lgs/takdir-tesekkur-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+.kosul-listesi { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .6rem; }
+.kosul-listesi li { display: flex; gap: .6rem; align-items: flex-start; padding: .6rem .8rem; border-radius: .5rem; background: rgba(0,0,0,.03); }
+.kosul-isaret { font-weight: 800; font-size: 1.1rem; line-height: 1.4; flex: none; }
+.kosul-tamam .kosul-isaret { color: #1a7f37; }
+.kosul-eksik .kosul-isaret { color: #b42318; }
+.kosul-eksik { background: rgba(180,35,24,.06); }
+.belge-takdir { color: #b8860b; }
+.belge-tesekkur { color: #1a6fb5; }
+.belge-yok { color: #666; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu Takdir–Teşekkür Hesaplama",
+  "url": "https://puanrobotu.com/lgs/takdir-tesekkur-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "Dönem ortalaması, devamsızlık ve disiplin durumuna göre takdir veya teşekkür belgesi durumunu hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Takdir belgesi için ortalama kaç olmalı?", "acceptedAnswer": {"@type": "Answer", "text": "MEB yönetmeliğine göre dönem ağırlıklı ortalamanın en az 85,00 olması gerekir. Ayrıca tüm derslerden başarılı olman, özürsüz devamsızlığının 5 günden fazla olmaması ve disiplin cezanın bulunmaması şarttır."}},
+    {"@type": "Question", "name": "Teşekkür belgesi için ortalama kaç olmalı?", "acceptedAnswer": {"@type": "Answer", "text": "Dönem ağırlıklı ortalamanın 70,00 ile 84,99 arasında olması gerekir. Takdirde olduğu gibi zayıf dersin olmaması, 5 günden fazla özürsüz devamsızlığın bulunmaması ve disiplin cezası almaman şarttır."}},
+    {"@type": "Question", "name": "Devamsızlık takdir veya teşekkür almama engel mi?", "acceptedAnswer": {"@type": "Answer", "text": "Özürsüz devamsızlığın 5 günü geçerse evet, engeldir. 5 gün ve altı devamsızlık belge almaya engel değildir; ancak bu sınır aşılırsa ortalaman kaç olursa olsun belge alamazsın."}},
+    {"@type": "Question", "name": "Bir dersten zayıfım varsa belge alabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Yönetmelik, tüm derslerden başarılı olmayı şart koşar. Tek bir zayıf ders bile olsa, ortalaman 100 olsa dahi takdir veya teşekkür belgesi alamazsın."}},
+    {"@type": "Question", "name": "Disiplin cezası alırsam belge alabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Belge için davranış puanının 100 olması gerekir; kınama veya uzaklaştırma gibi bir disiplin cezası davranış puanını düşürür ve belge almanı engeller."}},
+    {"@type": "Question", "name": "Ortalamam 84,95 ise takdir mi teşekkür mü alırım?", "acceptedAnswer": {"@type": "Answer", "text": "Teşekkür belgesi alırsın. Takdir sınırı keskindir: 85,00 ve üzeri takdir, 84,99 ve altı (70,00'den büyük olmak şartıyla) teşekkürdür. 84,95 bu yüzden teşekkürdür."}},
+    {"@type": "Question", "name": "Ortaokulda da aynı kurallar geçerli mi?", "acceptedAnswer": {"@type": "Answer", "text": "Bu sayfadaki eşikler MEB Ortaöğretim Kurumları Yönetmeliği Madde 160'a dayanır. Ortaokullarda (5–8. sınıf) aynı eşiklerin uygulandığı yaygın olarak kabul edilir; ancak kesin bilgi için okul idarenden teyit almanı öneririz."}},
+    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; girdiğin hiçbir bilgi sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/" aria-current="page">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lgs/">Ortaokul</a> › Takdir–Teşekkür Hesaplama</p></div>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">MEB Madde 160 koşullarıyla</p>
+      <h1>Takdir–Teşekkür Hesaplama</h1>
+      <p class="lede">Dönem <strong>ağırlıklı ortalamanı</strong>, <strong>devamsızlığını</strong> ve <strong>disiplin durumunu</strong> gir; MEB'in resmi koşullarına göre <strong>takdir</strong> mi <strong>teşekkür</strong> mü alacağını öğren. Hangi koşulun sağlanmadığını da tek tek gösterir.</p>
+      <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
+    </div>
+  </section>
+
+  <div class="wrap sayfa-iki-sutun">
+  <article>
+  <section id="arac" class="tool-section" aria-labelledby="arac-baslik">
+    <div class="wrap">
+      <h2 id="arac-baslik">Takdir–Teşekkür Hesaplama Aracı</h2>
+      <p class="section-intro">Karnendeki bilgileri gir; aracın 4 resmi koşulu tek tek kontrol etsin.</p>
+
+      <div id="form-hata" class="form-hata" role="alert" hidden></div>
+
+      <div class="calc-grid">
+        <form id="takdir-form" class="calc-table-wrap" novalidate>
+          <div class="form-satir">
+            <div class="form-alan">
+              <label for="ort">Dönem ağırlıklı ortalaman</label>
+              <input type="number" id="ort" min="0" max="100" step="0.01" inputmode="decimal" placeholder="örn. 88,20">
+            </div>
+            <div class="form-alan">
+              <label for="zayif">Zayıf dersin var mı?</label>
+              <select id="zayif">
+                <option value="hayir">Hayır</option>
+                <option value="evet">Evet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-satir">
+            <div class="form-alan">
+              <label for="devamsizlik">Özürsüz devamsızlık (gün)</label>
+              <input type="number" id="devamsizlik" min="0" step="1" inputmode="numeric" placeholder="örn. 3">
+            </div>
+            <div class="form-alan">
+              <label for="disiplin">Disiplin cezan</label>
+              <select id="disiplin">
+                <option value="yok">Yok</option>
+                <option value="kinama">Kınama</option>
+                <option value="uzaklastirma">Okuldan uzaklaştırma</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-actions">
+            <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+            <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
+          </div>
+        </form>
+
+        <aside class="sonuc-paneli" aria-live="polite" aria-label="Hesaplama sonuçları">
+          <h3>Sonuçların</h3>
+          <div class="sonuc-bos" id="sonuc-bos">
+            <p>Henüz hesaplama yapmadın.<br>Değerleri girince sonucun burada görünecek.</p>
+          </div>
+          <div class="sonuc-dolu" id="sonuc-dolu" hidden>
+            <dl>
+              <div><dt>Belgen</dt><dd id="s-belge" class="vurgu">–</dd></div>
+            </dl>
+            <ul class="kosul-listesi" id="kosul-listesi"></ul>
+            <p class="sonuc-not">Koşullar MEB Ortaöğretim Kurumları Yönetmeliği Madde 160'a göredir.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="tahmin-notu">
+    <strong>Dürüstlük notu:</strong> Bu sayfadaki eşikler, MEB <strong>Ortaöğretim</strong> Kurumları Yönetmeliği Madde 160'a dayanır. Ortaokullarda (5–8. sınıf) aynı eşiklerin uygulandığı yaygın olarak kabul edilir; ancak ortaokula özel yönetmelik metni kaynağımızda doğrudan incelenmemiştir. Kesin bilgi için okul idarenden teyit al.
+  </div>
+
+  <section class="wrap content">
+    <h2>Nasıl Kullanılır?</h2>
+    <ol class="adimlar">
+      <li><strong>Bilgilerini gir:</strong> Karnendeki dönem ağırlıklı ortalamanı, özürsüz devamsızlık gününü yaz; zayıf ders ve disiplin durumunu seç.</li>
+      <li><strong>Hesapla'ya bas:</strong> Araç, MEB'in 4 resmi koşulunu tek tek kontrol eder.</li>
+      <li><strong>Sonucunu yorumla:</strong> Hangi belgeyi alacağını ve her koşulun sağlanıp sağlanmadığını gör. Sağlanmayan koşul varsa hangisi olduğu açıkça yazar.</li>
+    </ol>
+
+    <h2>Belge Nasıl Belirleniyor? (4 Resmi Koşul)</h2>
+    <p>MEB yönetmeliğine göre belge alabilmek için <strong>dört koşulun hepsi</strong> aynı anda sağlanmalıdır:</p>
+    <ol>
+      <li><strong>Ortalama:</strong> Dönem ağırlıklı ortalaman en az <strong>70,00</strong> olmalı.</li>
+      <li><strong>Başarı:</strong> <strong>Tüm derslerden</strong> başarılı olmalısın — tek bir zayıf ders bile belgeyi engeller.</li>
+      <li><strong>Devamsızlık:</strong> <strong>Özürsüz</strong> devamsızlığın <strong>5 günden fazla</strong> olmamalı.</li>
+      <li><strong>Davranış:</strong> Davranış puanın <strong>100</strong> olmalı; yani disiplin cezan bulunmamalı.</li>
+    </ol>
+    <p>Dört koşul da sağlanıyorsa belge, ortalamana göre belirlenir:</p>
+    <ul>
+      <li><strong>85,00 ve üzeri → Takdir Belgesi</strong></li>
+      <li><strong>70,00 – 84,99 → Teşekkür Belgesi</strong></li>
+      <li>Koşullardan biri bile sağlanmazsa <strong>belge verilmez</strong>.</li>
+    </ul>
+
+    <h3>Çalışılmış Örnek</h3>
+    <p>Bir öğrencinin dönem bilgileri: ağırlıklı ortalama <strong>88,20</strong>, zayıf ders <strong>yok</strong>, özürsüz devamsızlık <strong>3 gün</strong>, disiplin cezası <strong>yok</strong>.</p>
+    <ul>
+      <li>Ortalama koşulu: 88,20 ≥ 70,00 ✓</li>
+      <li>Zayıf ders koşulu: zayıf yok ✓</li>
+      <li>Devamsızlık koşulu: 3 ≤ 5 ✓</li>
+      <li>Disiplin koşulu: ceza yok ✓</li>
+      <li>4 koşul da sağlandı ve 88,20 ≥ 85,00 → <strong>Takdir Belgesi</strong></li>
+    </ul>
+    <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+    <h2>Sınır Değerlere Dikkat</h2>
+    <ul>
+      <li><strong>84,95 ortalama → Teşekkür.</strong> Takdir sınırı keskindir: 85,00'ın altı, 70,00'ın üstü teşekkürdür.</li>
+      <li><strong>6 gün özürsüz devamsızlık → belge yok.</strong> Ortalaman 100 bile olsa 5 gün sınırı aşılınca belge verilmez.</li>
+      <li><strong>Tek zayıf ders → belge yok.</strong> Ortalama tek başına yeterli değildir; tüm derslerden başarılı olma şartı kesindir.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="sss">
+      <details>
+        <summary>Takdir belgesi için ortalama kaç olmalı?</summary>
+        <p>Dönem ağırlıklı ortalamanın en az 85,00 olması gerekir. Ayrıca tüm derslerden başarılı olman, özürsüz devamsızlığının 5 günden fazla olmaması ve disiplin cezanın bulunmaması şarttır.</p>
+      </details>
+      <details>
+        <summary>Teşekkür belgesi için ortalama kaç olmalı?</summary>
+        <p>Dönem ağırlıklı ortalamanın 70,00 ile 84,99 arasında olması gerekir. Takdirde olduğu gibi zayıf dersin olmaması, 5 günden fazla özürsüz devamsızlığın bulunmaması ve disiplin cezası almaman şarttır.</p>
+      </details>
+      <details>
+        <summary>Devamsızlık takdir veya teşekkür almama engel mi?</summary>
+        <p>Özürsüz devamsızlığın 5 günü geçerse evet, engeldir. 5 gün ve altı devamsızlık belge almaya engel değildir; ancak bu sınır aşılırsa ortalaman kaç olursa olsun belge alamazsın.</p>
+      </details>
+      <details>
+        <summary>Bir dersten zayıfım varsa belge alabilir miyim?</summary>
+        <p>Hayır. Yönetmelik, tüm derslerden başarılı olmayı şart koşar. Tek bir zayıf ders bile olsa, ortalaman 100 olsa dahi takdir veya teşekkür belgesi alamazsın.</p>
+      </details>
+      <details>
+        <summary>Disiplin cezası alırsam belge alabilir miyim?</summary>
+        <p>Hayır. Belge için davranış puanının 100 olması gerekir; kınama veya uzaklaştırma gibi bir disiplin cezası davranış puanını düşürür ve belge almanı engeller.</p>
+      </details>
+      <details>
+        <summary>Ortalamam 84,95 ise takdir mi teşekkür mü alırım?</summary>
+        <p>Teşekkür belgesi alırsın. Takdir sınırı keskindir: 85,00 ve üzeri takdir, 84,99 ve altı (70,00'den büyük olmak şartıyla) teşekkürdür. 84,95 bu yüzden teşekkürdür.</p>
+      </details>
+      <details>
+        <summary>Ortaokulda da aynı kurallar geçerli mi?</summary>
+        <p>Bu sayfadaki eşikler MEB Ortaöğretim Kurumları Yönetmeliği Madde 160'a dayanır. Ortaokullarda (5–8. sınıf) aynı eşiklerin uygulandığı yaygın olarak kabul edilir; ancak kesin bilgi için okul idarenden teyit almanı öneririz.</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
+        <p>Hayır. Tüm hesaplama tarayıcında yapılır; girdiğin hiçbir bilgi sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz.</p>
+      </details>
+    </div>
+
+    <h2>Sonraki Adımlar</h2>
+    <p>Belgeni öğrendin — şimdi sınav hedeflerine odaklan:</p>
+    <ul>
+      <li><a href="/lgs/puan-hesaplama/"><strong>LGS Puan Hesaplama</strong></a> — LGS netinden tahmini puanını ve yüzdelik dilimini öğren</li>
+      <li><a href="/lgs/tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> — puanına ve dilimine göre girebileceğin liseleri listele</li>
+    </ul>
+  </section>
+  </article>
+  <aside class="kenarcubugu" id="kenar-cubugu" data-arac="lgs-takdir" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+  <section id="ilgili-araclar" data-arac="lgs-takdir" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ortaokul Araçları</h3>
+      <ul>
+        <li><a href="/lgs/puan-hesaplama/">LGS Puan Hesaplama</a></li>
+        <li><a href="/lgs/tercih-robotu/">LGS Tercih Robotu</a></li>
+        <li><a href="/lgs/taban-puanlari/">LGS Taban Puanları</a></li>
+        <li><a href="/lgs/bursluluk-puan-hesaplama/">Bursluluk Puan Hesaplama</a></li>
+        <li><a href="/lgs/takdir-tesekkur-hesaplama/">Takdir–Teşekkür Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/lgs-takdir.js"></script>
+</body>
+</html>

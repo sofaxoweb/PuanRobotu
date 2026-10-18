@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GANO / AGNO Hesaplama | PuanRobotu</title>
+<meta name="description" content="Harf notların ve ders kredilerinle GANO/AGNO ortalamanı (4,00 üzerinden) hesapla. Dinamik ders satırları, anında sonuç. Ücretsiz GANO hesaplama aracı.">
+<link rel="canonical" href="https://puanrobotu.com/universite-not/gano-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="GANO / AGNO Hesaplama | PuanRobotu">
+<meta property="og:description" content="Harf notların ve kredilerinle genel not ortalamanı (4,00 üzerinden) hesapla. Ücretsiz, anında sonuç.">
+<meta property="og:url" content="https://puanrobotu.com/universite-not/gano-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu GANO / AGNO Hesaplama",
+  "url": "https://puanrobotu.com/universite-not/gano-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "Harf notları ve ders kredileriyle GANO/AGNO ortalamanı (4,00 üzerinden) hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "GANO nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her dersin harf notu katsayısı (AA=4,00 … FF=0,00) kredisiyle çarpılır ve toplam krediye bölünür: GANO = Σ(katsayı × kredi) ÷ Σ(kredi)."}},
+    {"@type": "Question", "name": "FF aldığım ders ortalamayı nasıl etkiler?", "acceptedAnswer": {"@type": "Answer", "text": "FF'nin katsayısı 0'dır ama kredisi paydaya girer; yani ortalamanı düşürür. Dersi tekrar alıp yükseltmek, GANO'yu toparlamanın en etkili yoludur."}},
+    {"@type": "Question", "name": "GANO ile AGNO aynı şey mi?", "acceptedAnswer": {"@type": "Answer", "text": "Genelde aynı formülle hesaplanır; GANO tüm programı kapsar. Bazı okullarda AGNO'ya hazırlık gibi özel program dersleri de dahil edilir — okulunun yönetmeliğine bak."}},
+    {"@type": "Question", "name": "DC ve DD ile ders geçilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Üniversiteye göre değişir: bazı okullarda DC/DD şartlı geçme sayılır (genelde GANO 2,00 ve üzeriyse), bazılarında kalma anlamına gelir. Kesin kural okulunun yönetmeliğindedir."}},
+    {"@type": "Question", "name": "Harf katsayıları her üniversitede aynı mı?", "acceptedAnswer": {"@type": "Answer", "text": "AA=4,00 … FF=0,00 dizilimi yaygındır ve resmi yönetmeliklerde doğrulanmıştır; ancak bazı okullar FD, DC, DD gibi harfleri kullanmaz. Bu araçtaki liste en yaygın tam settir."}},
+    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/" aria-current="page">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/universite-not/">Üniversite Notları</a> › GANO / AGNO Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">📝 Üniversite Notları</p>
+      <h1>GANO / AGNO Hesaplama</h1>
+      <p class="lede">Derslerinin <strong>harf notlarını</strong> ve <strong>kredilerini</strong> gir; genel not ortalamanı (4,00 üzerinden) anında öğren. İstediğin kadar ders satırı ekleyebilirsin.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">GANO Hesaplama Aracı</h2>
+        <p>Her ders için harf notunu seç ve kredisini yaz. Satır ekleyip çıkarabilirsin; sonuç anında güncellenir.</p>
+        <div id="ders-listesi"></div>
+        <p><button type="button" id="ders-ekle" class="btn btn-ghost">+ Ders Ekle</button></p>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">Genel Not Ortalaman (GANO)</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Dersleri girin.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> Harf katsayıları (AA=4,00 … FF=0,00) çoğu üniversitede aynıdır; ancak bazı okullar FD, DC, DD gibi harfleri kullanmaz. Şartlı geçme (DC/DD) kuralları da okuldan okula değişir — kesin bilgi için öğrenci işleri yönetmeliğine bak.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>Nasıl Hesaplanır?</h2>
+      <p>GANO (Genel Ağırlıklı Not Ortalaması), her dersin harf notu değerinin kredisiyle ağırlıklandırılmış ortalamasıdır:</p>
+      <p><strong>GANO = Σ(harf katsayısı × ders kredisi) ÷ Σ(kredi)</strong></p>
+      <p>Harf katsayıları (resmi yönetmeliklerde doğrulanmıştır): AA=4,00 · BA=3,50 · BB=3,00 · CB=2,50 · CC=2,00 · DC=1,50 · DD=1,00 · FD=0,50 · FF=0,00.</p>
+      <p>Kritik nokta: <strong>FF aldığın dersin katsayısı 0'dır ama kredisi paydaya girer</strong> — yani kaldığın her ders ortalamanı aşağı çeker. Kredi yükseldikçe dersin GANO üzerindeki etkisi büyür.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Üç dersin olsun: 4 kredilik dersten BA, 3 kredilik dersten BB, 2 kredilik dersten FF.</p>
+      <ul>
+        <li>BA: 3,50 × 4 = <strong>14,0</strong></li>
+        <li>BB: 3,00 × 3 = <strong>9,0</strong></li>
+        <li>FF: 0,00 × 2 = <strong>0,0</strong></li>
+        <li>GANO = 23,0 ÷ 9 = <strong>2,56</strong></li>
+      </ul>
+      <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Kredisi yüksek derslere öncelik ver: 6 kredilik bir dersteki harf, 2 kredilik dersten 3 kat etkilidir.</li>
+        <li>FF ile kaldığın dersleri tekrar alıp yükseltmek, GANO'yu toparlamanın en hızlı yoludur.</li>
+        <li>DC/DD "şartlı geçme" ise GANO'nu 2,00'nin üstünde tut; altına düşersen bu dersler kalmaya dönebilir.</li>
+        <li>Burs, yatay geçiş ve yüksek lisans başvurularındaki GANO eşiklerini dönem başında öğren.</li>
+      </ul>
+
+      <h2>Sonraki Adımlar</h2>
+      <ul>
+        <li>GANO'nu KPSS veya ALES başvurusu için 100'lük sisteme çevirmen gerekirse <a href="/universite-not/not-donusumu/">4,00 – 100 Not Dönüşümü</a> aracı YÖK tablosuyla resmi karşılığı verir.</li>
+        <li>100'lük sınav notlarının harf karşılıklarını merak ediyorsan <a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracına bak.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>GANO nasıl hesaplanır?</summary><p>Her dersin harf notu katsayısı (AA=4,00 … FF=0,00) kredisiyle çarpılır ve toplam krediye bölünür: GANO = Σ(katsayı × kredi) ÷ Σ(kredi).</p></details>
+        <details><summary>FF aldığım ders ortalamayı nasıl etkiler?</summary><p>FF'nin katsayısı 0'dır ama kredisi paydaya girer; yani ortalamanı düşürür. Dersi tekrar alıp yükseltmek, GANO'yu toparlamanın en etkili yoludur.</p></details>
+        <details><summary>GANO ile AGNO aynı şey mi?</summary><p>Genelde aynı formülle hesaplanır; GANO tüm programı kapsar. Bazı okullarda AGNO'ya hazırlık gibi özel program dersleri de dahil edilir — okulunun yönetmeliğine bak.</p></details>
+        <details><summary>DC ve DD ile ders geçilir mi?</summary><p>Üniversiteye göre değişir: bazı okullarda DC/DD şartlı geçme sayılır (genelde GANO 2,00 ve üzeriyse), bazılarında kalma anlamına gelir. Kesin kural okulunun yönetmeliğindedir.</p></details>
+        <details><summary>Harf katsayıları her üniversitede aynı mı?</summary><p>AA=4,00 … FF=0,00 dizilimi yaygındır ve resmi yönetmeliklerde doğrulanmıştır; ancak bazı okullar FD, DC, DD gibi harfleri kullanmaz. Bu araçtaki liste en yaygın tam settir.</p></details>
+        <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="not-gano" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="not-gano" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Notları</h3>
+      <ul>
+        <li><a href="/universite-not/vize-final-hesaplama/">Vize–Final Hesaplama</a></li>
+        <li><a href="/universite-not/gano-hesaplama/">GANO / AGNO Hesaplama</a></li>
+        <li><a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a></li>
+        <li><a href="/universite-not/can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></li>
+        <li><a href="/universite-not/aof-not-hesaplama/">AÖF Not Hesaplama</a></li>
+        <li><a href="/universite-not/not-donusumu/">4,00 – 100 Not Dönüşümü</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/not-gano.js"></script>
+</body>
+</html>

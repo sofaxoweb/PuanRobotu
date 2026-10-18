@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PuanRobotu — Sınav Puan Hesaplama Araçları (LGS, YKS, KPSS, ALES…)</title>
+<meta name="description" content="PuanRobotu: LGS, YKS, KPSS, DGS, ALES ve daha fazlası için ücretsiz sınav puan hesaplama araçları. Doğru-yanlışı gir, netini ve tahmini puanını anında öğren.">
+<link rel="canonical" href="https://puanrobotu.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="PuanRobotu — Sınav Puan Hesaplama Araçları">
+<meta property="og:description" content="LGS, YKS, KPSS, DGS, ALES ve daha fazlası için ücretsiz puan hesaplama araçları.">
+<meta property="og:url" content="https://puanrobotu.com/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PuanRobotu",
+  "url": "https://puanrobotu.com/",
+  "inLanguage": "tr",
+  "description": "Türkiye'deki sınavlar için ücretsiz puan ve not hesaplama araçları: LGS, YKS, KPSS, DGS, ALES, YDS ve daha fazlası."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "PuanRobotu nedir?", "acceptedAnswer": {"@type": "Answer", "text": "PuanRobotu, Türkiye'deki sınavlar için ücretsiz hesaplama araçları sunan bir platformdur: LGS, YKS, KPSS, DGS, ALES, YDS/YÖKDİL, TUS/DUS puan hesaplayıcıları ile vize-final, GANO gibi not araçları tek çatı altındadır."}},
+    {"@type": "Question", "name": "Hesaplamalar ne kadar doğru?", "acceptedAnswer": {"@type": "Answer", "text": "Araçlar, ÖSYM ve MEB'in resmi puanlama mantığına (net formülü, katsayılar, puan aralıkları) göre çalışır. Nihai puan, sınav sonrası açıklanan Türkiye geneli istatistiklere bağlı olduğundan sonuçlar 'tahmini' olarak sunulur ve her sayfada bu açıkça belirtilir."}},
+    {"@type": "Question", "name": "PuanRobotu ücretsiz mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, tüm hesaplama araçları tamamen ücretsizdir ve hesap açmanız gerekmez."}},
+    {"@type": "Question", "name": "Girdiğim veriler saklanıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplamalar tarayıcınızda yapılır; girdiğiniz hiçbir veri sunucuya gönderilmez veya saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Ücretsiz sınav hesaplama araçları</p>
+      <h1>Sınav Puanını Saniyeler İçinde Hesapla</h1>
+      <p class="lede">LGS'den YKS'ye, KPSS'den ALES'e — <strong>24 hesaplama aracı</strong> tek adreste. Doğru ve yanlış sayılarını gir, netini ve tahmini puanını anında öğren.</p>
+      <div class="arama-kutu">
+        <span class="arama-simge" aria-hidden="true">🔍</span>
+        <input type="search" id="arama" placeholder="Ara: lgs, kpss, vize final, gano…" autocomplete="off" aria-label="Araç ara">
+        <div class="arama-sonuc" id="arama-sonuc" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum">
+    <div class="wrap">
+      <h2>Kategoriler</h2>
+      <p>Hangi aşamadaysan, araçların orada. Kategorini seç:</p>
+      <div class="kategori-kartlari">
+        <a class="kategori-kart" href="/lgs/">
+          <span class="kikon">🎒</span>
+          <strong>Ortaokul</strong>
+          <small>LGS puan, tercih robotu, taban puanlar, bursluluk</small>
+          <span class="ksayi">5 araç</span>
+        </a>
+        <a class="kategori-kart" href="/yks/">
+          <span class="kikon">🎓</span>
+          <strong>Üniversite Giriş</strong>
+          <small>YKS (TYT–AYT–YDT), OBP, tercih robotu, MSÜ</small>
+          <span class="ksayi">5 araç</span>
+        </a>
+        <a class="kategori-kart" href="/universite-not/">
+          <span class="kikon">📝</span>
+          <strong>Üniversite Notları</strong>
+          <small>Vize-final, GANO, harf notu, çan eğrisi, AÖF</small>
+          <span class="ksayi">6 araç</span>
+        </a>
+        <a class="kategori-kart" href="/lisansustu/">
+          <span class="kikon">📚</span>
+          <strong>Lisansüstü &amp; Akademik</strong>
+          <small>ALES, DGS, YDS, YÖKDİL puan hesaplama</small>
+          <span class="ksayi">4 araç</span>
+        </a>
+        <a class="kategori-kart" href="/kamu-sinavlari/">
+          <span class="kikon">🏛️</span>
+          <strong>Kamu &amp; Mesleki Sınavlar</strong>
+          <small>KPSS, ÖABT, TUS, DUS puan hesaplama</small>
+          <span class="ksayi">4 araç</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum bolum-soluk">
+    <div class="wrap">
+      <h2>En Çok Kullanılan Araçlar</h2>
+      <div class="arac-kartlari">
+        <a class="arac-kart" href="/lgs/puan-hesaplama/">
+          <span class="arac-kart-ikon">🎒</span>
+          <strong>LGS Puan Hesaplama</strong>
+          <small>Net, tahmini puan (100–500) ve yüzdelik dilim</small>
+        </a>
+        <a class="arac-kart" href="/yks/puan-hesaplama/">
+          <span class="arac-kart-ikon">🎓</span>
+          <strong>YKS Puan Hesaplama</strong>
+          <small>TYT, SAY, SÖZ, EA ve DİL tahmini puanları</small>
+        </a>
+        <a class="arac-kart" href="/kamu-sinavlari/kpss-puan-hesaplama/">
+          <span class="arac-kart-ikon">🏛️</span>
+          <strong>KPSS Puan Hesaplama</strong>
+          <small>P1, P2, P3 tahmini puanları</small>
+        </a>
+        <a class="arac-kart" href="/universite-not/vize-final-hesaplama/">
+          <span class="arac-kart-ikon">📝</span>
+          <strong>Vize–Final Hesaplama</strong>
+          <small>Finalden kaç alman gerektiğini bul</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum">
+    <div class="wrap">
+      <h2>Neden PuanRobotu?</h2>
+      <ul>
+        <li><strong>Resmi mantık:</strong> Her araç, ilgili kurumun (MEB, ÖSYM, YÖK) resmi puanlama formülüne göre çalışır.</li>
+        <li><strong>Dürüst tahmin:</strong> Sonuçların neden "tahmini" olduğu her sayfada açıkça anlatılır — kesin puan vadi yok.</li>
+        <li><strong>Gizlilik:</strong> Hesaplama tarayıcında yapılır; verilerin hiçbir yere gönderilmez.</li>
+        <li><strong>Hız:</strong> Kayıt yok, bekleme yok, reklam engeli yok.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum bolum-soluk sss">
+    <div class="wrap">
+      <h2>Sık Sorulan Sorular</h2>
+      <details>
+        <summary>PuanRobotu nedir?</summary>
+        <p>Türkiye'deki sınavlar için ücretsiz hesaplama araçları sunan bir platformdur: LGS, YKS, KPSS, DGS, ALES, YDS/YÖKDİL, TUS/DUS puan hesaplayıcıları ile vize-final, GANO gibi not araçları tek çatı altındadır.</p>
+      </details>
+      <details>
+        <summary>Hesaplamalar ne kadar doğru?</summary>
+        <p>Araçlar, ÖSYM ve MEB'in resmi puanlama mantığına (net formülü, katsayılar, puan aralıkları) göre çalışır. Nihai puan sınav sonrası istatistiklere bağlı olduğundan sonuçlar "tahmini" olarak sunulur.</p>
+      </details>
+      <details>
+        <summary>PuanRobotu ücretsiz mi?</summary>
+        <p>Evet, tüm araçlar tamamen ücretsizdir ve hesap açmanız gerekmez.</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler saklanıyor mu?</summary>
+        <p>Hayır. Tüm hesaplamalar tarayıcınızda yapılır; girdiğiniz hiçbir veri sunucuya gönderilmez veya saklanmaz.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Popüler Araçlar</h3>
+      <ul>
+        <li><a href="/lgs/puan-hesaplama/">LGS Puan Hesaplama</a></li>
+        <li><a href="/yks/puan-hesaplama/">YKS Puan Hesaplama</a></li>
+        <li><a href="/kamu-sinavlari/kpss-puan-hesaplama/">KPSS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/ales-puan-hesaplama/">ALES Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/dgs-puan-hesaplama/">DGS Puan Hesaplama</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Not Araçları</h3>
+      <ul>
+        <li><a href="/universite-not/vize-final-hesaplama/">Vize–Final Hesaplama</a></li>
+        <li><a href="/universite-not/gano-hesaplama/">GANO Hesaplama</a></li>
+        <li><a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a></li>
+        <li><a href="/yks/obp-hesaplama/">OBP Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

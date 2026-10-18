@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YÖKDİL Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="YÖKDİL puan hesaplama: doğru sayını gir, 100 üzerinden puanını ve A–E dil seviyeni anında öğren. Fen, Sağlık, Sosyal fark etmez — yanlış doğruyu götürmez.">
+<link rel="canonical" href="https://puanrobotu.com/lisansustu/yokdil-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="YÖKDİL Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="YÖKDİL puan hesaplama: doğru sayını gir, 100 üzerinden puanını ve A–E dil seviyeni anında öğren. Fen, Sağlık, Sosyal fark etmez — yanlış doğruyu götürmez.">
+<meta property="og:url" content="https://puanrobotu.com/lisansustu/yokdil-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu YÖKDİL Puan Hesaplama",
+  "url": "https://puanrobotu.com/lisansustu/yokdil-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "YÖKDİL puan hesaplama: doğru sayını gir, 100 üzerinden puanını ve A–E dil seviyeni anında öğren. Fen, Sağlık, Sosyal fark etmez — yanlış doğruyu götürmez."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "YÖKDİL'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. ÖSYM kılavuzuna göre YÖKDİL'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur."}},
+    {"@type": "Question", "name": "Alan seçimi YÖKDİL puanını etkiler mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Fen, Sağlık veya Sosyal alan seçimi yalnızca okuma metinlerinin içeriğini değiştirir; puan formülü (doğru × 1,25) her alanda aynıdır."}},
+    {"@type": "Question", "name": "YÖKDİL puanı kaç yıl geçerli?", "acceptedAnswer": {"@type": "Answer", "text": "Lisansüstü eğitim ve hazırlık sınıfı muafiyeti için 5 yıl geçerlidir; öğretim görevlisi ve doçentlik başvurularında süresiz kabul edilir."}},
+    {"@type": "Question", "name": "YDS ile YÖKDİL aynı şey mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, farklı sınavlardır ama puanlama mantığı aynıdır (doğru × 1,25, ceza yok). Birçok kurumda eşdeğer kabul edilir; başvuracağın kurumun şartını kontrol et."}},
+    {"@type": "Question", "name": "e-YÖKDİL'de hesaplama farklı mı?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, formül aynıdır: doğru sayısı × 1,25. e-YÖKDİL'deki deneme (pilot) sorular puanlamaya katılmaz."}},
+    {"@type": "Question", "name": "55 puan için kaç doğru gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "44 doğru gerekir (44 × 1,25 = 55). 70 puan için 56, 80 puan için 64 doğru gerekir."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/" aria-current="page">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lisansustu/">Lisansüstü</a> › YÖKDİL Puan Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">Lisansüstü</p>
+      <h1>YÖKDİL Puan Hesaplama</h1>
+      <p class="lede">YÖKDİL'de doğru sayını gir, 100 üzerinden puanını ve dil seviyeni hemen öğren. Alan seçimi puanı değiştirmez.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">YÖKDİL Puan Hesaplama Aracı</h2>
+        <p>Alanını seç, doğru ve yanlış sayılarını gir; puanın hemen hesaplansın. (80 soru üzerinden)</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="alan">Alan</label>
+            <select id="alan">
+              <option value="fen">Fen Bilimleri</option>
+              <option value="saglik">Sağlık Bilimleri</option>
+              <option value="sosyal">Sosyal Bilimler</option>
+            </select>
+          </div>
+          <div class="form-alan">
+            <label for="dogru">Doğru Sayısı</label>
+            <input type="number" id="dogru" min="0" max="80" value="64">
+          </div>
+          <div class="form-alan">
+            <label for="yanlis">Yanlış Sayısı</label>
+            <input type="number" id="yanlis" min="0" max="80" value="10">
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">YÖKDİL Puanın</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Değerleri girin.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Not:</strong> Bu sonuç <strong>kesindir, tahmin değildir.</strong> ÖSYM kılavuzuna (2026-YÖKDİL/2, madde 3.8) göre YÖKDİL'de yanlış cevap cezası yoktur ve puan doğrudan <strong>doğru sayısı × 1,25</strong> ile hesaplanır — hangi alanı seçtiğin fark etmez. Buradaki sonuç, resmi sonuç belgendeki puanla birebir aynı çıkar.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>YÖKDİL Puanı Nasıl Hesaplanır?</h2>
+      <p>YÖKDİL (Yükseköğretim Kurumları Yabancı Dil Sınavı) 80 sorudan oluşur ve süresi 180 dakikadır. İngilizce için Fen Bilimleri, Sağlık Bilimleri ve Sosyal Bilimler alanlarından birini seçersin; Almanca, Arapça ve Fransızca dillerinde yalnızca Sosyal Bilimler alanı bulunur.</p>
+      <p>Puanlama YDS ile aynı mantıktadır: <strong>YÖKDİL Puanı = Doğru Sayısı × 1,25</strong> ve <strong>yanlış cevap cezası yoktur</strong> (kılavuz 3.8: "Değerlendirme sırasında yalnız doğru cevaplar dikkate alınacak, yanlış cevaplar dikkate alınmayacaktır."). En sık sorulan sorunun cevabı: <strong>alan seçimi puanı etkilemez</strong> — alan yalnızca okuma parçalarının içeriğini değiştirir, formül her alanda aynıdır.</p>
+      <h3>YÖKDİL Dil Seviyeleri</h3>
+      <table class="bilgi-tablosu">
+        <thead><tr><th>Seviye</th><th>Puan Aralığı</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>90 – 100</td></tr>
+          <tr><td>B</td><td>80 – 89</td></tr>
+          <tr><td>C</td><td>70 – 79</td></tr>
+          <tr><td>D</td><td>60 – 69</td></tr>
+          <tr><td>E</td><td>50 – 59</td></tr>
+        </tbody>
+      </table>
+      <p>Geçerlilik süresi kullanım yerine göre değişir: lisansüstü eğitim ve hazırlık sınıfı muafiyeti için sonuç <strong>5 yıl</strong> geçerlidir; öğretim görevlisi ve doçentlik başvurularında ise <strong>süresiz</strong> kabul edilir (kılavuz 1.7).</p>
+      <p>Genel yabancı dil sınavı için <a href="/lisansustu/yds-puan-hesaplama/">YDS puan hesaplama</a> aracını, akademik kariyerin diğer basamağı için <a href="/lisansustu/ales-puan-hesaplama/">ALES puan hesaplama</a> aracını kullanabilirsin.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Sağlık Bilimleri alanından giren bir adayın 64 doğrusu olsun:</p>
+      <ul>
+        <li>Yanlış cezası olmadığı için yalnızca doğrular sayılır; alanın puana etkisi yoktur.</li>
+        <li>Puan = 64 × 1,25 = <strong>80,00</strong></li>
+        <li>80 puan, 80–89 aralığına girdiği için <strong>B seviyesi</strong> demektir.</li>
+      </ul>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Yanlış cezası olmadığı için <strong>hiçbir soruyu boş bırakma</strong>.</li>
+        <li>Kendi alanını seç: sağlıkçıysan Sağlık Bilimleri metinleri sana daha tanıdık gelir, bu da netlerini artırır.</li>
+        <li>Lisansüstü başvurularında çoğu program en az 55–60 puan ister; hedefini buna göre belirle.</li>
+        <li>e-YÖKDİL'deki deneme soruları puana katılmaz; sınav anında zor soruya takılıp kalma.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>YÖKDİL'de yanlış doğruyu götürür mü?</summary><p>Hayır. ÖSYM kılavuzuna göre YÖKDİL'de değerlendirme sırasında yalnız doğru cevaplar dikkate alınır; yanlış cevapların puana hiçbir etkisi yoktur.</p></details>
+        <details><summary>Alan seçimi YÖKDİL puanını etkiler mi?</summary><p>Hayır. Fen, Sağlık veya Sosyal alan seçimi yalnızca okuma metinlerinin içeriğini değiştirir; puan formülü (doğru × 1,25) her alanda aynıdır.</p></details>
+        <details><summary>YÖKDİL puanı kaç yıl geçerli?</summary><p>Lisansüstü eğitim ve hazırlık sınıfı muafiyeti için 5 yıl geçerlidir; öğretim görevlisi ve doçentlik başvurularında süresiz kabul edilir.</p></details>
+        <details><summary>YDS ile YÖKDİL aynı şey mi?</summary><p>Hayır, farklı sınavlardır ama puanlama mantığı aynıdır (doğru × 1,25, ceza yok). Birçok kurumda eşdeğer kabul edilir; başvuracağın kurumun şartını kontrol et.</p></details>
+        <details><summary>e-YÖKDİL'de hesaplama farklı mı?</summary><p>Hayır, formül aynıdır: doğru sayısı × 1,25. e-YÖKDİL'deki deneme (pilot) sorular puanlamaya katılmaz.</p></details>
+        <details><summary>55 puan için kaç doğru gerekir?</summary><p>44 doğru gerekir (44 × 1,25 = 55). 70 puan için 56, 80 puan için 64 doğru gerekir.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yokdil" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="yokdil" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Lisansüstü</h3>
+      <ul>
+        <li><a href="/lisansustu/ales-puan-hesaplama/">ALES Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/dgs-puan-hesaplama/">DGS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yds-puan-hesaplama/">YDS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yokdil-puan-hesaplama/" aria-current="page">YÖKDİL Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlıdır.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/hesap-yokdil.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function fmt(x) { return x.toFixed(2).replace(".", ","); }
+  function alanAdi(v) {
+    return v === "saglik" ? "Sağlık Bilimleri" : v === "sosyal" ? "Sosyal Bilimler" : "Fen Bilimleri";
+  }
+  function hesapla() {
+    var d = Math.max(0, Math.min(80, Math.floor(Number($("dogru").value) || 0)));
+    var y = Math.max(0, Math.min(80 - d, Math.floor(Number($("yanlis").value) || 0)));
+    $("yanlis").value = y;
+    var p = window.PR_yokdil.puanHesapla(d);
+    var s = window.PR_yokdil.seviye(p);
+    $("sonuc-deger").textContent = fmt(p);
+    $("sonuc-alt").textContent = alanAdi($("alan").value) + " alanında " + d + " doğru ile " +
+      (s ? s + " seviyesi" : "50 puanın altında (seviye yok)") +
+      ". Alan seçimi puanı değiştirmez.";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    $("btn-hesapla").addEventListener("click", hesapla);
+    $("dogru").addEventListener("input", hesapla);
+    $("yanlis").addEventListener("input", hesapla);
+    $("alan").addEventListener("change", hesapla);
+    hesapla();
+  });
+})();
+</script>
+</body>
+</html>

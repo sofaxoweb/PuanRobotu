@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBP Hesaplama | PuanRobotu</title>
+<meta name="description" content="OBP hesaplama: diploma notunu gir, Ortaöğretim Başarı Puanını (250-500) ve YKS yerleştirme puanına katkısını öğren. Kırık OBP dahil, ücretsiz.">
+<link rel="canonical" href="https://puanrobotu.com/yks/obp-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="OBP Hesaplama | PuanRobotu">
+<meta property="og:description" content="Diploma notundan OBP'ni ve YKS yerleştirme puanına katkısını anında hesapla.">
+<meta property="og:url" content="https://puanrobotu.com/yks/obp-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu OBP Hesaplama",
+  "url": "https://puanrobotu.com/yks/obp-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "Diploma notundan OBP (250-500) ve YKS yerleştirme puanına katkıyı hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "OBP nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "OBP (Ortaöğretim Başarı Puanı), diploma notunun (100'lük sistem) 5 katıdır. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. OBP 250–500 aralığındadır."}},
+    {"@type": "Question", "name": "OBP YKS puanına nasıl eklenir?", "acceptedAnswer": {"@type": "Answer", "text": "Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Yani OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı her puan türünde aynıdır."}},
+    {"@type": "Question", "name": "Kırık OBP nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir önceki yıl YKS ile herhangi bir yükseköğretim programına yerleşen adayların OBP katsayısı, ertesi yıl yarıya iner: ×0,06. Örneğin OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer."}},
+    {"@type": "Question", "name": "Kırık OBP ne zaman uygulanmaz?", "acceptedAnswer": {"@type": "Answer", "text": "Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak kırık OBP'ye yol açmaz. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir."}},
+    {"@type": "Question", "name": "5'lik sistemdeki diploma notumla OBP hesaplayabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, doğrudan çeviremezsin. Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin; basit bir ×20 çarpımı doğru sonuç vermez."}},
+    {"@type": "Question", "name": "OBP en fazla kaç puan getirir?", "acceptedAnswer": {"@type": "Answer", "text": "Diploma notu 100 olan birinin OBP'si 500'dür ve yerleştirme puanına en fazla 60 puan ekler (kırık OBP'de en fazla 30 puan)."}} ,
+    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/" aria-current="page">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/yks/">Üniversite Giriş</a> › OBP Hesaplama</p></div>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">YKS 2026 hazırlık</p>
+      <h1>OBP Hesaplama</h1>
+      <p class="lede">Diploma notunu gir; <strong>OBP'ni (250–500)</strong> ve <strong>YKS yerleştirme puanına katkısını</strong> anında öğren. Kırık OBP durumunu da hesaba katar.</p>
+      <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
+    </div>
+  </section>
+
+  <div class="wrap sayfa-iki-sutun">
+  <article>
+  <section id="arac" class="tool-section" aria-labelledby="arac-baslik">
+    <div class="wrap">
+      <h2 id="arac-baslik">OBP Hesaplama Aracı</h2>
+      <p class="section-intro">100'lük sistemdeki <strong>diploma notunu</strong> yaz. Geçen yıl bir programa yerleştiysen <strong>kırık OBP</strong> kutusunu işaretle.</p>
+
+      <div id="form-hata" class="form-hata" role="alert" hidden></div>
+
+      <div class="calc-grid">
+        <div class="calc-table-wrap">
+          <div class="form-satir">
+            <div class="form-alan">
+              <label for="diploma-notu">Diploma notun (50–100)</label>
+              <input type="number" id="diploma-notu" min="50" max="100" step="0.01" inputmode="decimal" placeholder="örn. 78">
+            </div>
+            <div class="form-alan form-onay">
+              <label><input type="checkbox" id="kirik-obp"> Kırık OBP <small>(geçen yıl bir programa yerleştim)</small></label>
+            </div>
+          </div>
+          <div class="calc-actions">
+            <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+            <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
+          </div>
+        </div>
+
+        <aside class="sonuc-paneli" aria-live="polite" aria-label="Hesaplama sonuçları">
+          <h3>Sonuçların</h3>
+          <div class="sonuc-bos" id="sonuc-bos">
+            <p>Henüz hesaplama yapmadın.<br>Diploma notunu girince sonucun burada görünecek.</p>
+          </div>
+          <div class="sonuc-dolu" id="sonuc-dolu" hidden>
+            <dl>
+              <div><dt>OBP'n</dt><dd id="r-obp" class="vurgu">–</dd></div>
+              <div><dt>Yerleştirme Katkısı</dt><dd id="r-katki">–</dd></div>
+            </dl>
+            <p class="sonuc-not" id="r-durum"></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="tahmin-notu">
+    <strong>Önemli:</strong> OBP formülü resmîdir (diploma notu × 5); ancak yerleştirme puanının tamamı sınav puanına da bağlıdır ve o <strong>tahminidir</strong>. Gerçek yerleştirme puanın ÖSYM sonuç ekranında açıklanır.
+  </div>
+
+  <section class="wrap content">
+    <h2>OBP Nasıl Hesaplanır?</h2>
+    <p><strong>OBP = Diploma Notu × 5.</strong> Diploma notun 100'lük sistemde 50 ile 100 arasındadır; dolayısıyla OBP 250–500 aralığında çıkar. Bu formül MEB ve ÖSYM kılavuzlarında açıkça yazar — tahmin değil, kesin kuraldır.</p>
+    <h3>Yerleştirme puanına katkısı</h3>
+    <p><strong>Yerleştirme Puanı = Sınav Puanı + OBP × 0,12.</strong> Katkı her puan türünde (TYT, SAY, EA, SÖZ, DİL) aynıdır. Diploma notu 78 olan birinin OBP'si 390, katkısı 46,8 puandır. En yüksek katkı: diploma 100 → OBP 500 → +60 puan.</p>
+    <h3>Kırık OBP</h3>
+    <p>Bir önceki yıl merkezi yerleştirme, açıköğretim veya özel yetenekle <strong>herhangi bir programa yerleşen</strong> adayda katsayı yarıya iner: <strong>×0,06</strong>. OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer — yaklaşık 23 puanlık kayıp, on binlerce sıra demektir. Sadece tercih yapıp yerleşememek veya mezuna kalmak kırık OBP yapmaz; yalnızca takip eden yıl için geçerlidir.</p>
+
+    <h2>Çalışılmış Örnek</h2>
+    <p>Diploma notu 78 olan bir öğrenci (MEB'in resmî örneğindeki sayılar):</p>
+    <ul>
+      <li>OBP = 78 × 5 = <strong>390</strong></li>
+      <li>Normal katkı = 390 × 0,12 = <strong>46,8 puan</strong></li>
+      <li>Geçen yıl yerleşmiş olsaydı (kırık): 390 × 0,06 = <strong>23,4 puan</strong></li>
+    </ul>
+
+    <h2>İpuçları</h2>
+    <ul>
+      <li><strong>OBP her yıl işler:</strong> Diploma notun 9. sınıftan itibaren oluşur; son yıl "nasıl olsa YKS var" diye salmak OBP'ni düşürür.</li>
+      <li><strong>Okul birinciliği avantajı:</strong> Okul birincilerine ek kontenjan avantajı vardır; detaylar her yıl kılavuzda açıklanır.</li>
+      <li><strong>Kırık OBP hesabı:</strong> "Önce bir yere yerleşeyim, seneye tekrar denerim" planı yapıyorsan kaybı önceden hesapla — <a href="/yks/puan-hesaplama/">YKS Puan Hesaplama</a> aracında kırık OBP seçeneği de var.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="sss">
+      <details>
+        <summary>OBP nasıl hesaplanır?</summary>
+        <p>OBP (Ortaöğretim Başarı Puanı), diploma notunun (100'lük sistem) 5 katıdır. Örneğin diploma notu 78 olan bir öğrencinin OBP'si 390'dır. OBP 250–500 aralığındadır.</p>
+      </details>
+      <details>
+        <summary>OBP YKS puanına nasıl eklenir?</summary>
+        <p>Yerleştirme puanı = Sınav puanı + OBP × 0,12 formülüyle hesaplanır. Yani OBP'n 390 ise yerleştirme puanına 46,8 puan eklenir. Bu katkı her puan türünde aynıdır.</p>
+      </details>
+      <details>
+        <summary>Kırık OBP nedir?</summary>
+        <p>Bir önceki yıl YKS ile herhangi bir yükseköğretim programına yerleşen adayların OBP katsayısı, ertesi yıl yarıya iner: ×0,06. Örneğin OBP'si 390 olan birinde katkı 46,8'den 23,4'e düşer.</p>
+      </details>
+      <details>
+        <summary>Kırık OBP ne zaman uygulanmaz?</summary>
+        <p>Sadece tercih yapıp yerleşememek, sınava hiç girmemek veya mezuna kalmak kırık OBP'ye yol açmaz. Katsayı ancak bir programa fiilen yerleşildiğinde düşer ve yalnızca takip eden yıl için geçerlidir.</p>
+      </details>
+      <details>
+        <summary>5'lik sistemdeki diploma notumla OBP hesaplayabilir miyim?</summary>
+        <p>Hayır, doğrudan çeviremezsin. Okulunun resmi 100'lük sistem karşılığını öğrenip onu girmelisin; basit bir ×20 çarpımı doğru sonuç vermez.</p>
+      </details>
+      <details>
+        <summary>OBP en fazla kaç puan getirir?</summary>
+        <p>Diploma notu 100 olan birinin OBP'si 500'dür ve yerleştirme puanına en fazla 60 puan ekler (kırık OBP'de en fazla 30 puan).</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
+        <p>Hayır. Tüm hesaplama tarayıcında yapılır; diploma notun hiçbir sunucuya gönderilmez veya saklanmaz.</p>
+      </details>
+    </div>
+
+    <h2>Sonraki Adımlar</h2>
+    <ul>
+      <li><a href="/yks/puan-hesaplama/"><strong>YKS Puan Hesaplama</strong></a> — OBP katkın dahil tahmini ham ve yerleştirme puanlarını hesapla</li>
+      <li><a href="/yks/tercih-robotu/"><strong>YKS Tercih Robotu</strong></a> — puanına göre hedefleyebileceğin üniversiteleri listele</li>
+    </ul>
+  </section>
+  </article>
+  <aside class="kenarcubugu" id="kenar-cubugu" data-arac="yks-obp" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+  <section id="ilgili-araclar" data-arac="yks-obp" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Giriş Araçları</h3>
+      <ul>
+        <li><a href="/yks/puan-hesaplama/">YKS Puan Hesaplama</a></li>
+        <li><a href="/yks/obp-hesaplama/">OBP Hesaplama</a></li>
+        <li><a href="/yks/tercih-robotu/">YKS Tercih Robotu</a></li>
+        <li><a href="/yks/taban-puanlari/">Üniversite Taban Puanları</a></li>
+        <li><a href="/yks/msu-puan-hesaplama/">MSÜ Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/yks-obp.js"></script>
+</body>
+</html>

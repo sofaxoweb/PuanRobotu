@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGS Tercih Robotu 2026 | Puanına Göre Lise Bul</title>
+<meta name="description" content="LGS tercih robotu: puanını veya yüzdelik dilimini gir, ilini seç, girebileceğin liseleri taban puan ve yüzdelik dilimleriyle listele. Ücretsiz, hızlı.">
+<link rel="canonical" href="https://puanrobotu.com/lgs/tercih-robotu/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="LGS Tercih Robotu 2026 | Puanına Göre Lise Bul">
+<meta property="og:description" content="Puanını gir, sana uygun liseleri saniyeler içinde listele.">
+<meta property="og:url" content="https://puanrobotu.com/lgs/tercih-robotu/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu LGS Tercih Robotu",
+  "url": "https://puanrobotu.com/lgs/tercih-robotu/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "LGS puan veya yüzdelik dilimine göre 81 ilde lise öneren ücretsiz tercih robotu."
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/" aria-current="page">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lgs/">Ortaokul</a> › LGS Tercih Robotu</p></div>
+  <section class="hero hero-kisa">
+    <div class="wrap">
+      <p class="kicker">LGS 2026 tercih dönemi</p>
+      <h1>LGS Tercih Robotu</h1>
+      <p class="lede">Puanını veya yüzdelik dilimini gir, ilini seç — sana uygun liseler <strong>taban puan ve yüzdelik dilimleriyle</strong> sıralansın.</p>
+    </div>
+  </section>
+
+  <div class="wrap sayfa-iki-sutun">
+  <article>
+  <section class="tool-section" aria-labelledby="robot-baslik">
+    <div class="wrap">
+      <h2 id="robot-baslik">Tercih Listeni Oluştur</h2>
+
+      <div class="robot-form">
+        <div class="form-satir">
+          <fieldset class="puan-turu">
+            <legend>Ne ile arama yapacaksın?</legend>
+            <label><input type="radio" name="tur" value="puan" checked> Puanım (100–500)</label>
+            <label><input type="radio" name="tur" value="dilim"> Yüzdelik dilimim</label>
+          </fieldset>
+        </div>
+        <div class="form-satir form-uc">
+          <div class="form-alan">
+            <label for="girdi-deger">Puanın</label>
+            <input type="number" id="girdi-deger" inputmode="decimal" min="100" max="500" step="1" placeholder="örn. 420">
+          </div>
+          <div class="form-alan">
+            <label for="girdi-il">İl</label>
+            <select id="girdi-il"><option value="">İl seç…</option></select>
+          </div>
+          <div class="form-alan">
+            <label for="girdi-okultur">Okul türü <span class="opsiyonel">(opsiyonel)</span></label>
+            <select id="girdi-okultur">
+              <option value="">Tümü</option>
+              <option>Fen Lisesi</option>
+              <option>Anadolu Lisesi</option>
+              <option>Sosyal Bilimler Lisesi</option>
+              <option>Anadolu İmam Hatip Lisesi</option>
+              <option>Mesleki ve Teknik Anadolu Lisesi</option>
+            </select>
+          </div>
+        </div>
+        <div id="robot-hata" class="form-hata" role="alert" hidden></div>
+        <div class="calc-actions">
+          <button type="button" id="btn-listele" class="btn btn-primary">Liseleri Listele</button>
+        </div>
+      </div>
+
+      <div id="robot-sonuc" class="robot-sonuc" aria-live="polite" hidden>
+        <div class="sonuc-ozet">
+          <p id="ozet-metin"></p>
+          <div class="sonuc-paylas">
+            <button type="button" id="btn-yazdir" class="btn btn-small">Yazdır / PDF</button>
+            <button type="button" id="btn-wp" class="btn btn-small">WhatsApp ile Paylaş</button>
+          </div>
+        </div>
+        <div class="lejant">
+          <span class="rozet rozet-guvenli">Şansın yüksek</span>
+          <span class="rozet rozet-hedef">Hedef</span>
+          <span class="rozet rozet-zorlu">Zorlu</span>
+        </div>
+        <ul id="okul-listesi" class="okul-listesi"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap content">
+    <h2>Tercih Robotu Nasıl Çalışır?</h2>
+    <ol class="adimlar">
+      <li><strong>Puanını veya dilimini gir:</strong> Puan girersen araç onu yüzdelik dilime çevirir; dilim biliyorsan doğrudan girebilirsin. Tercihte dilim, puandan daha güvenilirdir.</li>
+      <li><strong>İlini seç:</strong> 81 ilin 2025 yerleştirme taban puan ve dilim verileriyle eşleşen okullar bulunur.</li>
+      <li><strong>Listeni incele:</strong> Okullar taban puana göre en iyiden başlayarak sıralanır. <em>Şansın yüksek</em> rozeti diliminin rahatça yettiği, <em>Hedef</em> rozeti sınırda olduğun, <em>Zorlu</em> rozeti ise üstten denemen gereken okulları gösterir.</li>
+    </ol>
+
+    <h2>Bilmen Gerekenler</h2>
+    <ul>
+      <li><strong>Veriler 2025 yerleştirmesine aittir</strong> (kontenjanlar 2026). Taban puanlar her yıl değişir; bu liste bir ön eleme aracıdır, resmi tercih yerine geçmez.</li>
+      <li>Resmi tercihlerini <strong>e-Okul</strong> üzerinden, ortaokul müdürlüğüne onaylatarak yapmalısın.</li>
+      <li>Merkezi sınavla alan okullarda en fazla <strong>10 tercih</strong> hakkın var; listeni dengeli kur: birkaç güvenli, birkaç hedef, birkaç zorlu okul.</li>
+      <li>Detaylı taban puan tabloları için <a href="taban-puanlari/">81 ilin LGS taban puanları</a> sayfasına bakabilirsin.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="sss">
+      <details>
+        <summary>Tercih robotu resmi tercih yerine geçer mi?</summary>
+        <p>Hayır. Bu araç, puanına uygun okulları bulmana yardım eden bir ön eleme aracıdır. Resmi tercih başvurusu yalnızca e-Okul üzerinden yapılır ve ortaokul müdürlüğüne onaylatılır.</p>
+      </details>
+      <details>
+        <summary>Puanımla mı, dilimimle mi arama yapmalıyım?</summary>
+        <p>Diliminle. Puanlar sınavın zorluğuna göre yıldan yıla değişir; yüzdelik dilim daha istikrarlıdır ve okulların taban dilimleri tercihte asıl referanstır.</p>
+      </details>
+      <details>
+        <summary>Listede kaç okul olmalı?</summary>
+        <p>Merkezi yerleştirmede en fazla 10 tercih yapabilirsin. Dengeli bir liste için 3–4 güvenli, 3–4 hedef ve 2–3 zorlu okul önerilir.</p>
+      </details>
+      <details>
+        <summary>Taban puanlar her yıl aynı mı kalır?</summary>
+        <p>Hayır. Okulun popülaritesine, kontenjan değişimine ve o yılın sınav zorluğuna göre taban puan ve dilimler değişir. Bu listedeki veriler 2025 yerleştirmesine aittir.</p>
+      </details>
+    </div>
+  </section>
+  </article>
+  <aside class="kenarcubugu" id="kenar-cubugu" data-arac="lgs-tercih" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+  <section id="ilgili-araclar" data-arac="lgs-tercih" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ortaokul Araçları</h3>
+      <ul>
+        <li><a href="/lgs/puan-hesaplama/">LGS Puan Hesaplama</a></li>
+        <li><a href="/lgs/tercih-robotu/">LGS Tercih Robotu</a></li>
+        <li><a href="/lgs/taban-puanlari/">LGS Taban Puanları</a></li>
+        <li><a href="/lgs/bursluluk-puan-hesaplama/">Bursluluk Puan Hesaplama</a></li>
+        <li><a href="/lgs/takdir-tesekkur-hesaplama/">Takdir–Teşekkür Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/lgs-tercih.js"></script>
+</body>
+</html>

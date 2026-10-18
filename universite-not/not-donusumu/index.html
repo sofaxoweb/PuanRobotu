@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4,00 – 100 Not Dönüşümü | PuanRobotu</title>
+<meta name="description" content="YÖK resmi tablosuyla 4,00'lük notunu 100'lük sisteme çevir — ya da tersini. İki yönlü, enterpolasyonlu, ücretsiz not dönüşümü aracı.">
+<link rel="canonical" href="https://puanrobotu.com/universite-not/not-donusumu/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="4,00 – 100 Not Dönüşümü | PuanRobotu">
+<meta property="og:description" content="YÖK resmi tablosuyla 4,00'lük notu 100'lük sisteme çevir — ya da tersini. Çift yönlü, ücretsiz.">
+<meta property="og:url" content="https://puanrobotu.com/universite-not/not-donusumu/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu 4,00 – 100 Not Dönüşümü",
+  "url": "https://puanrobotu.com/universite-not/not-donusumu/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "YÖK resmi tablosuna göre 4,00'lük notu 100'lük sisteme (ve tersini) çeviren ücretsiz çift yönlü araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "4,00'lük not 100'lük sisteme nasıl çevrilir?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK'ün resmi dönüşüm tablosuna göre birebir karşılık bulunur; tabloda olmayan ara değerler doğrusal enterpolasyonla hesaplanır. Örneğin 3,50 → 88,33."}},
+    {"@type": "Question", "name": "Bu tabloyu kim hazırladı?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK'ün yayımladığı resmi not dönüşüm tablosudur. Bazı üniversiteler kendi tablolarını kullanır; başvuru yapacağın kurumun istediği tabloyu teyit et."}},
+    {"@type": "Question", "name": "3,55 gibi ara değerler nasıl hesaplanıyor?", "acceptedAnswer": {"@type": "Answer", "text": "Tablonun iki komşu satırı arasında doğrusal enterpolasyon yapılır: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır ve 89,50 bulunur."}},
+    {"@type": "Question", "name": "100'lük notu 4,00'e çevirmek neden gerekli?", "acceptedAnswer": {"@type": "Answer", "text": "KPSS, ALES, yüksek lisans ve bazı iş başvuruları 100'lük sistem ister; diploma notun 4,00'lükse bu araçla resmi karşılığını bulursun."}},
+    {"@type": "Question", "name": "1,00'ın altı neden çevrilmiyor?", "acceptedAnswer": {"@type": "Answer", "text": "YÖK tablosu 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; bu aralığın dışı tablo dışıdır ve araç uydurma değer üretmez."}},
+    {"@type": "Question", "name": "Girdiğim not bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/" aria-current="page">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/universite-not/">Üniversite Notları</a> › 4,00 – 100 Not Dönüşümü</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">📝 Üniversite Notları</p>
+      <h1>4,00 – 100 Not Dönüşümü</h1>
+      <p class="lede">YÖK'ün <strong>resmi dönüşüm tablosuna</strong> göre 4,00'lük notunu 100'lük sisteme çevir — ya da tersini. İki yönlü, ara değerlerde enterpolasyonlu.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">Not Dönüşümü Aracı</h2>
+        <p>İki kutudan birine notunu yaz; diğeri otomatik dolar.</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="not4">4,00 Ölçeğinde Not</label>
+            <input type="number" id="not4" min="1" max="4" step="0.01" value="3">
+          </div>
+          <div class="form-alan">
+            <label for="not100">100 Ölçeğinde Not</label>
+            <input type="number" id="not100" min="30" max="100" step="0.01" value="">
+          </div>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">Dönüşüm Sonucu</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Notunu gir.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> Bu araç <strong>YÖK'ün resmi tablosunu</strong> kullanır; ancak bazı üniversiteler kendi dönüşüm tablolarını yayımlar (farklı karşılıklar verebilir). Başvuru yapacağın kurumun hangi tabloyu istediğini teyit et.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>Nasıl Hesaplanır?</h2>
+      <p>YÖK'ün not dönüşüm tablosu, 4,00'lük sistemdeki her değerin 100'lük karşılığını verir. Tabloda birebir yazmayan ara değerler (ör. 3,55), iki komşu satır arasında <strong>doğrusal enterpolasyonla</strong> bulunur — bu, tablonun kendi mantığıyla tutarlıdır çünkü satırlar arası artış neredeyse sabittir (0,01 başına ≈ 0,23).</p>
+      <p>Tablo 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar. Bu aralığın dışındaki değerler için araç sonuç üretmez; uydurma değer vermek yerine tablo dışını açıkça belirtir.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>GANO'n 3,50 olsun ve KPSS başvurusu için 100'lük karşılığını öğrenmek iste:</p>
+      <ul>
+        <li>Tabloda 3,50 satırı: <strong>88,33</strong> → birebir karşılık.</li>
+        <li>Tersi de çalışır: 88,33 yaz → <strong>3,50</strong> bulunur.</li>
+        <li>Ara değer: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır → <strong>89,50</strong>.</li>
+      </ul>
+      <p>Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+
+      <h2>YÖK Tablosu (Kilit Satırlar)</h2>
+      <table class="bilgi-tablosu" id="yok-tablo">
+        <caption>YÖK resmi not dönüşüm tablosu — kilit satırlar</caption>
+      </table>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Başvuruda istenen tabloyu teyit et: YÖK tablosu ile üniversitenin kendi tablosu farklı sonuç verebilir.</li>
+        <li>Yuvarlama farklarına dikkat: 88,33 ile 88,5 aynı şey değildir; transkriptindeki resmi değeri kullan.</li>
+        <li>ALES/KPSS gibi sınavlarda puan türü hesaplanırken 100'lük karşılığın kullanıldığını unutma.</li>
+      </ul>
+
+      <h2>Sonraki Adımlar</h2>
+      <ul>
+        <li>Henüz GANO'nu hesaplamadıysan <a href="/universite-not/gano-hesaplama/">GANO Hesaplama</a> aracıyla 4,00'lük ortalamanı bul, sonra buraya yaz.</li>
+        <li>100'lük notlarının harf karşılıkları için <a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a> aracına bak.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>4,00'lük not 100'lük sisteme nasıl çevrilir?</summary><p>YÖK'ün resmi dönüşüm tablosuna göre birebir karşılık bulunur; tabloda olmayan ara değerler doğrusal enterpolasyonla hesaplanır. Örneğin 3,50 → 88,33.</p></details>
+        <details><summary>Bu tabloyu kim hazırladı?</summary><p>YÖK'ün yayımladığı resmi not dönüşüm tablosudur. Bazı üniversiteler kendi tablolarını kullanır; başvuru yapacağın kurumun istediği tabloyu teyit et.</p></details>
+        <details><summary>3,55 gibi ara değerler nasıl hesaplanıyor?</summary><p>Tablonun iki komşu satırı arasında doğrusal enterpolasyon yapılır: 3,55, 3,50 (88,33) ile 3,60 (90,66) satırlarının tam ortasıdır ve 89,50 bulunur.</p></details>
+        <details><summary>100'lük notu 4,00'e çevirmek neden gerekli?</summary><p>KPSS, ALES, yüksek lisans ve bazı iş başvuruları 100'lük sistem ister; diploma notun 4,00'lükse bu araçla resmi karşılığını bulursun.</p></details>
+        <details><summary>1,00'ın altı neden çevrilmiyor?</summary><p>YÖK tablosu 1,00 (30,00) ile 4,00 (100,00) aralığını kapsar; bu aralığın dışı tablo dışıdır ve araç uydurma değer üretmez.</p></details>
+        <details><summary>Girdiğim not bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notun hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="not-donusum" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="not-donusum" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Notları</h3>
+      <ul>
+        <li><a href="/universite-not/vize-final-hesaplama/">Vize–Final Hesaplama</a></li>
+        <li><a href="/universite-not/gano-hesaplama/">GANO / AGNO Hesaplama</a></li>
+        <li><a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a></li>
+        <li><a href="/universite-not/can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></li>
+        <li><a href="/universite-not/aof-not-hesaplama/">AÖF Not Hesaplama</a></li>
+        <li><a href="/universite-not/not-donusumu/">4,00 – 100 Not Dönüşümü</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/not-donusum.js"></script>
+</body>
+</html>

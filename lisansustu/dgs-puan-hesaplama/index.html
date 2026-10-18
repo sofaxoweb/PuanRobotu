@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DGS Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli.">
+<link rel="canonical" href="https://puanrobotu.com/lisansustu/dgs-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="DGS Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli.">
+<meta property="og:url" content="https://puanrobotu.com/lisansustu/dgs-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu DGS Puan Hesaplama",
+  "url": "https://puanrobotu.com/lisansustu/dgs-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "DGS puan hesaplama: sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren. ÖBP ve kırık ÖBP destekli."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "DGS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. DGS-SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; DGS-SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; DGS-EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP formülüyle toplanır."}},
+    {"@type": "Question", "name": "DGS'de yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür."}},
+    {"@type": "Question", "name": "ÖBP nedir, nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur."}},
+    {"@type": "Question", "name": "Kırık ÖBP nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. Diploma ortalamasına göre 7–12 puan kayıp demektir."}},
+    {"@type": "Question", "name": "Her iki testten de net yapmak zorunda mıyım?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz."}},
+    {"@type": "Question", "name": "DGS puanı neden 100 üzerinden değil?", "acceptedAnswer": {"@type": "Answer", "text": "DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/" aria-current="page">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lisansustu/">Lisansüstü</a> › DGS Puan Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">Lisansüstü</p>
+      <h1>DGS Puan Hesaplama</h1>
+      <p class="lede">Sayısal ve sözel netlerini gir, tahmini DGS-SAY, DGS-SÖZ ve DGS-EA puanlarını öğren.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">DGS Puan Hesaplama Aracı</h2>
+        <p>Her bölüm için doğru-yanlış sayılarını ve diploma ortalamanı gir.</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="say-dogru">Sayısal Doğru</label>
+            <input type="number" id="say-dogru" min="0" max="50" value="30">
+          </div>
+          <div class="form-alan">
+            <label for="say-yanlis">Sayısal Yanlış</label>
+            <input type="number" id="say-yanlis" min="0" max="50" value="5">
+          </div>
+        </div>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="soz-dogru">Sözel Doğru</label>
+            <input type="number" id="soz-dogru" min="0" max="50" value="28">
+          </div>
+          <div class="form-alan">
+            <label for="soz-yanlis">Sözel Yanlış</label>
+            <input type="number" id="soz-yanlis" min="0" max="50" value="4">
+          </div>
+        </div>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="diploma">Diploma Ortalaması (100'lük)</label>
+            <input type="number" id="diploma" min="0" max="100" value="85">
+          </div>
+          <div class="form-alan">
+            <label for="kirik">Kırık ÖBP</label>
+            <select id="kirik">
+              <option value="hayir">Hayır — ilk kez giriyorum</option>
+              <option value="evet">Evet — geçen yıl yerleştim</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">Tahmini DGS Puanların</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Değerleri girin.</div>
+        </div>
+        <table class="bilgi-tablosu" id="detay-tablo" hidden>
+          <thead><tr><th>Puan Türü</th><th>Tahmini Puan</th></tr></thead>
+          <tbody>
+            <tr><td>DGS-SAY (Sayısal)</td><td id="p-say">—</td></tr>
+            <tr><td>DGS-SÖZ (Sözel)</td><td id="p-soz">—</td></tr>
+            <tr><td>DGS-EA (Eşit Ağırlık)</td><td id="p-ea">—</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> Bu sonuçlar bir <strong>tahmindir</strong>. Gerçek standart puanlar, sınav sonrası açıklanan resmi istatistiklerle (o yılın bölüm ortalaması ve standart sapması) hesaplanır; bu istatistikler sınavdan önce bilinemez. Aşağıda tahmin modelinin dayanaklarını açıkça yazdık.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>DGS Puanı Nasıl Hesaplanır?</h2>
+      <p>DGS (Dikey Geçiş Sınavı) tek oturumda yapılır: 50 sayısal + 50 sözel olmak üzere 100 soru, 135 dakika. Hesaplama üç adımda ilerler:</p>
+      <p><strong>1. Net:</strong> Her bölüm kendi içinde değerlendirilir: <strong>Net = Doğru − Yanlış/4</strong>. Yani 4 yanlış 1 doğruyu götürür; yanlışlar yalnızca kendi bölümünün netini düşürür, boşlar etki etmez.</p>
+      <p><strong>2. Standart puan:</strong> Her bölümün neti, ortalaması 50 ve standart sapması 10 olan standart puana (SP) çevrilir.</p>
+      <p><strong>3. Ağırlıklı toplam</strong> (ÖSYM DGS kılavuzu Tablo-A'daki resmi katsayılar):</p>
+      <ul>
+        <li><strong>DGS-SAY</strong> = 3 × Sayısal SP + 0,6 × Sözel SP + 0,6 × ÖBP</li>
+        <li><strong>DGS-SÖZ</strong> = 0,6 × Sayısal SP + 3 × Sözel SP + 0,6 × ÖBP</li>
+        <li><strong>DGS-EA</strong> = 1,8 × Sayısal SP + 1,8 × Sözel SP + 0,6 × ÖBP</li>
+      </ul>
+      <p><strong>ÖBP</strong> (Ön lisans Başarı Puanı) = diploma not ortalaman × 0,8. 50'nin altındaki ortalamalar 50 sayılır; bu yüzden ÖBP 40 ile 80 arasında olur. <strong>Kırık ÖBP:</strong> bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine <strong>0,45</strong> uygulanır — diploma ortalamana göre 7–12 puan kayıp demektir.</p>
+      <p>İki kritik fark: DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm <strong>yoktur</strong> — puan doğrudan ağırlıklı toplamdır, tipik bant 150–350 arasıdır. Ve her iki testten de <strong>en az 1 net</strong> yapılmazsa hiçbir puan türü hesaplanmaz.</p>
+      <h3>Bu Tahmin Nasıl Hesaplanıyor? (Şeffaflık)</h3>
+      <p>ÖSYM'nin o yıla ait istatistikleri sınavdan önce bilinmediği için bu araç, standart puanları yayımlanmış gerçek verilere dayalı şeffaf bir doğrusal modelle tahmin eder: <strong>SP(net) = 50 + 2 × (net − 25)</strong>. Dayanaklar:</p>
+      <ul>
+        <li>Arif Hoca'nın DGS hukuk analizi: iyi ÖBP'li (≈70) bir adayda <strong>75–76 toplam net ≈ 315–316 EA puanı</strong> getirmiştir. Modelimiz aynı senaryoda EA <strong>313,8</strong> üretir — tutarlı.</li>
+        <li>2026 DGS taban puanları: örneğin Bilgisayar Mühendisliği SAY taban <strong>316,69</strong>, modelimizde ≈76 net bandına denk gelir — tutarlı.</li>
+      </ul>
+      <p>Lisansüstü hedefin için <a href="/lisansustu/ales-puan-hesaplama/">ALES puan hesaplama</a> aracını, dil puanı için <a href="/lisansustu/yds-puan-hesaplama/">YDS puan hesaplama</a> aracını kullanabilirsin.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Sayısalda 30 doğru 5 yanlış, sözelde 28 doğru 4 yanlış yapan; diploma ortalaması 85 olan bir aday:</p>
+      <ul>
+        <li>Sayısal net = 30 − 5/4 = <strong>28,75</strong>; Sözel net = 28 − 4/4 = <strong>27</strong></li>
+        <li>ÖBP = 85 × 0,8 = <strong>68</strong></li>
+        <li>Tahmini standart puanlar: Sayısal 57,5 — Sözel 54</li>
+        <li><strong>DGS-SAY ≈ 245,70</strong> · <strong>DGS-SÖZ ≈ 237,30</strong> · <strong>DGS-EA ≈ 241,50</strong> (tahmini)</li>
+      </ul>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li><strong>1 net kuralını</strong> unutma: her iki testten de en az 1 net yapmadan puanın hesaplanmaz.</li>
+        <li>ÖBP 40–80 arası 12 puana kadar fark yaratır; diploma ortalamanı yüksek tutmak bedava puandır.</li>
+        <li>Kırık ÖBP cezası 7–12 puan arasıdır — geçen yıl yerleştiysen bu kaybı net hedefine ekle.</li>
+        <li>SAY hedefin varsa sayısal nete yüklen: katsayısı 3, sözelin katkısı yanında çok küçük kalır.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>DGS puanı nasıl hesaplanır?</summary><p>Önce her bölümün neti bulunur (Doğru − Yanlış/4), netler standart puana çevrilir. DGS-SAY = 3×SayısalSP + 0,6×SözelSP + 0,6×ÖBP; DGS-SÖZ = 0,6×SayısalSP + 3×SözelSP + 0,6×ÖBP; DGS-EA = 1,8×SayısalSP + 1,8×SözelSP + 0,6×ÖBP formülüyle toplanır.</p></details>
+        <details><summary>DGS'de yanlış doğruyu götürür mü?</summary><p>Evet. Her 4 yanlış 1 doğruyu götürür (Net = Doğru − Yanlış/4). Yanlışlar yalnızca kendi bölümünün netini düşürür.</p></details>
+        <details><summary>ÖBP nedir, nasıl hesaplanır?</summary><p>Ön lisans Başarı Puanı = diploma not ortalaması × 0,8. 50'nin altındaki ortalamalar 50 sayılır, bu yüzden ÖBP 40 ile 80 arasında olur.</p></details>
+        <details><summary>Kırık ÖBP nedir?</summary><p>Bir önceki yıl DGS ile bir programa yerleşen adaylarda ÖBP katsayısı 0,6 yerine 0,45 uygulanır. Diploma ortalamasına göre 7–12 puan kayıp demektir.</p></details>
+        <details><summary>Her iki testten de net yapmak zorunda mıyım?</summary><p>Evet. ÖSYM kuralına göre sayısal ve sözel testlerin her birinden en az 1 net yapılmazsa hiçbir puan türü hesaplanmaz.</p></details>
+        <details><summary>DGS puanı neden 100 üzerinden değil?</summary><p>DGS'de KPSS ve ALES'teki gibi 100'lük ölçeğe dönüşüm yoktur; puan, standart puanların katsayılarla doğrudan ağırlıklı toplamıdır. Tipik puan bandı 150–350 arasıdır.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="dgs" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="dgs" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Lisansüstü</h3>
+      <ul>
+        <li><a href="/lisansustu/ales-puan-hesaplama/">ALES Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/dgs-puan-hesaplama/" aria-current="page">DGS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yds-puan-hesaplama/">YDS Puan Hesaplama</a></li>
+        <li><a href="/lisansustu/yokdil-puan-hesaplama/">YÖKDİL Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/hesap-dgs.js"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function fmt(x) { return x.toFixed(2).replace(".", ","); }
+  function val(id, max) {
+    return Math.max(0, Math.min(max, Number($(id).value) || 0));
+  }
+  function hesapla() {
+    var g = {
+      sayDogru: val("say-dogru", 50),
+      sayYanlis: val("say-yanlis", 50),
+      sozDogru: val("soz-dogru", 50),
+      sozYanlis: val("soz-yanlis", 50),
+      diploma: Math.max(0, Math.min(100, Number($("diploma").value) || 0)),
+      kirik: $("kirik").value === "evet"
+    };
+    var r = window.PR_dgs.puanHesapla(g);
+    if (!r) {
+      $("sonuc-deger").textContent = "—";
+      $("sonuc-alt").textContent = "Puan hesaplanamadı: her iki testten de en az 1 net gerekir (ÖSYM kuralı).";
+      $("detay-tablo").hidden = true;
+      return;
+    }
+    $("detay-tablo").hidden = false;
+    $("p-say").textContent = fmt(r.say);
+    $("p-soz").textContent = fmt(r.soz);
+    $("p-ea").textContent = fmt(r.ea);
+    $("sonuc-deger").textContent = fmt(r.ea);
+    $("sonuc-alt").textContent = "Tahmini · Sayısal net " + fmt(r.netSayisal) +
+      ", Sözel net " + fmt(r.netSozel) + ", ÖBP " + fmt(r.obp) +
+      (g.kirik ? " (kırık ÖBP ×0,45)" : "") + ".";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    $("btn-hesapla").addEventListener("click", hesapla);
+    ["say-dogru", "say-yanlis", "soz-dogru", "soz-yanlis", "diploma", "kirik"].forEach(function (id) {
+      $(id).addEventListener("input", hesapla);
+      $(id).addEventListener("change", hesapla);
+    });
+    hesapla();
+  });
+})();
+</script>
+</body>
+</html>

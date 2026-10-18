@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bursluluk (İOKBS) Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="İOKBS bursluluk puanı hesaplama: 4 testin doğru-yanlışını gir, netini ve tahmini bursluluk puanını (100-500) anında öğren. MEB formülüne uygun, ücretsiz.">
+<link rel="canonical" href="https://puanrobotu.com/lgs/bursluluk-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Bursluluk (İOKBS) Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="Doğru-yanlış sayılarını gir, İOKBS netini ve tahmini bursluluk puanını (100-500) anında hesapla.">
+<meta property="og:url" content="https://puanrobotu.com/lgs/bursluluk-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu Bursluluk (İOKBS) Puan Hesaplama",
+  "url": "https://puanrobotu.com/lgs/bursluluk-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "İOKBS doğru-yanlış sayılarından net ve tahmini bursluluk puanı (100-500) hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "İOKBS puanı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Önce her testin neti bulunur: Net = Doğru − (Yanlış ÷ 3). Sonra her net, 3 katsayısıyla çarpılıp toplanır (en fazla 300). MEB bu ağırlıklı toplamı, o yılın Türkiye geneli ortalama ve standart sapmasını kullanarak 100–500 ölçeğine dönüştürür."}},
+    {"@type": "Question", "name": "Bursluluk sınavında 3 yanlış 1 doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. MEB İOKBS Kılavuzu'na göre her testte ham puan, doğru sayısından yanlış sayısının üçte biri çıkarılarak bulunur. Yani 3 yanlış, 1 doğruyu götürür."}},
+    {"@type": "Question", "name": "İOKBS'de hangi testler var, kaç soru soruluyor?", "acceptedAnswer": {"@type": "Answer", "text": "4 test vardır ve her biri 25 sorudan oluşur: Türkçe, Matematik, Fen Bilimleri ve Sosyal Bilimler. Sınav toplam 100 soru, 120 dakika ve tek oturum olarak yapılır."}},
+    {"@type": "Question", "name": "Bursluluk kazanmak için kaç puan gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Puanın yanında ailenin gelir durumu gibi başvuru koşulları da değerlendirilir."}},
+    {"@type": "Question", "name": "Bu hesaplama ne kadar doğru?", "acceptedAnswer": {"@type": "Answer", "text": "Bu araç bir tahmin aracıdır. Gerçek İOKBS puanı, sınav sonrası açıklanan ulusal ortalama ve standart sapma ile hesaplanır. Buradaki sonuç, MEB'in resmi formül mantığına dayalı şeffaf bir tahmindir; resmi sonuç yerine geçmez."}},
+    {"@type": "Question", "name": "İOKBS'ye kimler başvurabilir?", "acceptedAnswer": {"@type": "Answer", "text": "5, 6, 7, 8, hazırlık, 9, 10 ve 11. sınıf öğrencileri başvurabilir. Kişi başına düşen ailenin gelirinin belirlenen sınırın altında olması ve bir önceki yılı başarıyla geçmiş olma şartı aranır. Başvuru ücretsizdir ve okul aracılığıyla e-Okul üzerinden yapılır."}},
+    {"@type": "Question", "name": "Girdiğim veriler bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/" aria-current="page">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lgs/">Ortaokul</a> › Bursluluk (İOKBS) Puan Hesaplama</p></div>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">İOKBS 2026 hazırlık</p>
+      <h1>Bursluluk (İOKBS) Puan Hesaplama</h1>
+      <p class="lede">4 testin <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>netini</strong> ve <strong>tahmini bursluluk puanını (100–500)</strong> saniyeler içinde öğren. Hesaplama, MEB İOKBS Kılavuzu'ndaki resmi puanlama mantığına göre yapılır — sonucun neden "tahmini" olduğunu aşağıda açıkça anlatıyoruz.</p>
+      <a class="btn btn-primary" href="#arac">Hemen Hesapla</a>
+    </div>
+  </section>
+
+  <div class="wrap sayfa-iki-sutun">
+  <article>
+  <section id="arac" class="tool-section" aria-labelledby="arac-baslik">
+    <div class="wrap">
+      <h2 id="arac-baslik">Bursluluk Puan Hesaplama Aracı</h2>
+      <p class="section-intro">Her test için <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını yaz. Boş bıraktıkların otomatik hesaplanır, sonuçlar anında güncellenir.</p>
+
+      <div id="form-hata" class="form-hata" role="alert" hidden></div>
+
+      <div class="calc-grid">
+        <div class="calc-table-wrap">
+          <table class="calc-table">
+            <caption class="sr-only">Testlere göre doğru ve yanlış giriş tablosu</caption>
+            <thead>
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">Doğru</th>
+                <th scope="col">Yanlış</th>
+                <th scope="col">Boş</th>
+                <th scope="col">Net</th>
+              </tr>
+            </thead>
+            <tbody id="ders-satirlari"></tbody>
+          </table>
+          <div class="calc-actions">
+            <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+            <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
+          </div>
+        </div>
+
+        <aside class="sonuc-paneli" aria-live="polite" aria-label="Hesaplama sonuçları">
+          <h3>Sonuçların</h3>
+          <div class="sonuc-bos" id="sonuc-bos">
+            <p>Henüz hesaplama yapmadın.<br>Değerleri girince sonucun burada görünecek.</p>
+          </div>
+          <div class="sonuc-dolu" id="sonuc-dolu" hidden>
+            <dl>
+              <div><dt>Toplam Net</dt><dd id="s-net">–</dd></div>
+              <div><dt>Ağırlıklı Toplam</dt><dd id="s-agirlikli">–</dd></div>
+              <div><dt>Tahmini Bursluluk Puanı</dt><dd id="s-puan" class="vurgu">–</dd></div>
+            </dl>
+            <p class="sonuc-not">Tahmini değerdir; resmi sonuç MEB tarafından açıklanır.</p>
+            <div class="sonuc-paylas">
+              <button type="button" id="btn-kopyala" class="btn btn-small">Sonucu Kopyala</button>
+              <button type="button" id="btn-whatsapp" class="btn btn-small">WhatsApp ile Paylaş</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="tahmin-notu">
+    <strong>Önemli:</strong> Bu sonuç bir <strong>tahmindir</strong>. Gerçek İOKBS puanı, sınav sonrası MEB'in hesapladığı ulusal ortalama ve standart sapmayla bulunur; bu istatistikler sınavdan önce bilinemez.
+  </div>
+
+  <section class="wrap content">
+    <h2>Nasıl Kullanılır?</h2>
+    <ol class="adimlar">
+      <li><strong>Doğru ve yanlışlarını gir:</strong> Deneme sınavındaki veya tahmini doğru-yanlış sayılarını her testin satırına yaz. Boş bıraktığın sorular otomatik hesaplanır.</li>
+      <li><strong>Hesapla'ya bas:</strong> Yazdıkça sonuçlar otomatik güncellenir; dilersen butonu da kullanabilirsin.</li>
+      <li><strong>Sonucunu yorumla:</strong> Netini, ağırlıklı toplamını ve tahmini bursluluk puanını gör. Sonucu kopyalayabilir veya WhatsApp ile paylaşabilirsin.</li>
+    </ol>
+
+    <h2>Sonuçların Ne Anlama Geliyor?</h2>
+    <ul>
+      <li><strong>Net:</strong> Her testte <em>Doğru − (Yanlış ÷ 3)</em> formülüyle bulunan değerlerin toplamı. İOKBS'de 3 yanlış, 1 doğruyu götürür.</li>
+      <li><strong>Ağırlıklı Toplam:</strong> Her testin netinin 3 katsayısıyla çarpılıp toplanmış hali (en fazla 300). 4 testin katsayısı da aynıdır, yani her test puana eşit ağırlıkla katılır.</li>
+      <li><strong>Tahmini Bursluluk Puanı (100–500):</strong> Ağırlıklı toplamın 100–500 ölçeğine dönüştürülmüş hali. MEB'in gerçek hesaplaması sınav sonrası ulusal verilerle yapılır; bu yüzden sonuç "tahmini"dir.</li>
+    </ul>
+
+    <h2>Puan Nasıl Hesaplanıyor? (Formül ve Yöntem)</h2>
+    <h3>Adım 1 — Netleri bul</h3>
+    <p>Her test için: <strong>Net = Doğru Sayısı − (Yanlış Sayısı ÷ 3)</strong>. Boş bırakılan sorular neti etkilemez.</p>
+    <h3>Adım 2 — Katsayılarla ağırlıklandır</h3>
+    <p>4 testin katsayısı da 3'tür. En yüksek ağırlıklı toplam 300'dür:</p>
+    <p><strong>Ağırlıklı Toplam = (Türkçe + Matematik + Fen + Sosyal) × 3</strong></p>
+    <h3>Adım 3 — 100–500 ölçeğine dönüştür (tahmini)</h3>
+    <p>MEB, ağırlıklı toplamı o yılın Türkiye geneli ortalaması ve standart sapmasını kullanarak 100–500 aralığına ölçekler. Bu ulusal veriler sınavdan önce bilinemez. Bu araç şu şeffaf yaklaşımı kullanır:</p>
+    <p><strong>Tahmini Puan ≈ 100 + 400 × (Ağırlıklı Toplam ÷ 300)</strong></p>
+
+    <h3>Çalışılmış Örnek</h3>
+    <p>Bir öğrencinin deneme sonuçları: Türkçe 20 doğru 5 yanlış, Matematik 15 doğru 6 yanlış, Fen Bilimleri 18 doğru 3 yanlış, Sosyal Bilimler 16 doğru 4 yanlış.</p>
+    <ul>
+      <li>Netler: Türkçe 18,33 — Matematik 13,00 — Fen 17,00 — Sosyal 14,67. <strong>Toplam net: 63,00</strong></li>
+      <li>Ağırlıklı toplam: (18,33 + 13,00 + 17,00 + 14,67) × 3 = <strong>189,00</strong></li>
+      <li>Tahmini bursluluk puanı: 100 + 400 × (189,00 ÷ 300) = <strong>352</strong></li>
+    </ul>
+    <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+    <h2>İOKBS Test Yapısı</h2>
+    <table class="bilgi-tablosu">
+      <caption>İOKBS testleri, soru sayıları ve katsayıları</caption>
+      <thead><tr><th scope="col">Test</th><th scope="col">Soru Sayısı</th><th scope="col">Katsayı</th></tr></thead>
+      <tbody>
+        <tr><td>Türkçe</td><td>25</td><td><strong>3</strong></td></tr>
+        <tr><td>Matematik</td><td>25</td><td><strong>3</strong></td></tr>
+        <tr><td>Fen Bilimleri</td><td>25</td><td><strong>3</strong></td></tr>
+        <tr><td>Sosyal Bilimler</td><td>25</td><td><strong>3</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Sınav tek oturumda, 100 soru ve 120 dakika olarak yapılır. Katsayılar eşit olduğu için her test puana aynı ağırlıkla katılır — çalışmanı dengeli dağıtmak en mantıklı stratejidir.</p>
+
+    <h2>Bu Aracın Sınırları (Dürüstlük Bölümü)</h2>
+    <ul>
+      <li><strong>Tahmini sonuç:</strong> Gerçek ve resmi bursluluk puanın yalnızca MEB'in açıkladığı sonuç belgesinde yazar. Bu araç, resmi formülün mantığını kullanan şeffaf bir tahmindir.</li>
+      <li><strong>Standart sapma bilinmiyor:</strong> MEB'in gerçek hesaplamasındaki ulusal ortalama ve standart sapma, sınavdan önce kimse tarafından bilinemez.</li>
+      <li><strong>Kazanma puanı sabit değil:</strong> Bursluluk için gereken taban puan; kontenjana, sınıf düzeyine ve o yılki başvuru yoğunluğuna göre değişir. Puan tek başına yeterli değildir; gelir şartı gibi başvuru koşulları da aranır.</li>
+      <li><strong>Kılavuz değişebilir:</strong> MEB her yıl İOKBS Kılavuzu'nu yayımlar. Soru sayısı, katsayı veya kurallarda değişiklik olursa bu sayfa güncellenir.</li>
+    </ul>
+
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="sss">
+      <details>
+        <summary>İOKBS puanı nasıl hesaplanır?</summary>
+        <p>Üç adımda: (1) Her testin neti bulunur: Net = Doğru − (Yanlış ÷ 3). (2) Netler 3 katsayısıyla çarpılıp toplanır (en fazla 300). (3) MEB bu toplamı Türkiye geneli ortalama ve standart sapmayla 100–500 ölçeğine dönüştürür.</p>
+      </details>
+      <details>
+        <summary>Bursluluk sınavında 3 yanlış 1 doğruyu götürür mü?</summary>
+        <p>Evet. MEB İOKBS Kılavuzu'na göre ham puan, doğru sayısından yanlış sayısının üçte birinin çıkarılmasıyla bulunur.</p>
+      </details>
+      <details>
+        <summary>İOKBS'de hangi testler var, kaç soru soruluyor?</summary>
+        <p>4 test vardır ve her biri 25 sorudan oluşur: Türkçe, Matematik, Fen Bilimleri ve Sosyal Bilimler. Sınav toplam 100 soru, 120 dakika ve tek oturum olarak yapılır.</p>
+      </details>
+      <details>
+        <summary>Bursluluk kazanmak için kaç puan gerekir?</summary>
+        <p>Sabit bir baraj puanı yoktur; taban puan kontenjana, sınıf düzeyine ve başvuru yoğunluğuna göre yıldan yıla değişir. Ayrıca ailenin gelir durumu gibi başvuru koşullarının da sağlanması gerekir.</p>
+      </details>
+      <details>
+        <summary>Bu hesaplama ne kadar doğru?</summary>
+        <p>Formül mantığı MEB'in resmi yöntemiyle aynıdır, ancak gerçek puan ulusal istatistiklere bağlı olduğu için sonuç tahmini niteliktedir. Resmi sonuç yerine geçmez.</p>
+      </details>
+      <details>
+        <summary>İOKBS'ye kimler başvurabilir?</summary>
+        <p>5, 6, 7, 8, hazırlık, 9, 10 ve 11. sınıf öğrencileri başvurabilir. Kişi başına düşen ailenin gelirinin belirlenen sınırın altında olması ve bir önceki yılı başarıyla geçmiş olma şartı aranır. Başvuru ücretsizdir ve okul aracılığıyla e-Okul üzerinden yapılır.</p>
+      </details>
+      <details>
+        <summary>Girdiğim veriler bir yere gönderiliyor mu?</summary>
+        <p>Hayır. Tüm hesaplama tarayıcında yapılır; doğru-yanlış sayıların hiçbir sunucuya gönderilmez, saklanmaz veya üçüncü kişilerle paylaşılmaz.</p>
+      </details>
+    </div>
+
+    <h2>Sonraki Adımlar</h2>
+    <p>Bursluluk hedefinin yanında lise hedefini de planla:</p>
+    <ul>
+      <li><a href="/lgs/puan-hesaplama/"><strong>LGS Puan Hesaplama</strong></a> — LGS netinden tahmini puanını ve yüzdelik dilimini öğren</li>
+      <li><a href="/lgs/tercih-robotu/"><strong>LGS Tercih Robotu</strong></a> — puanına ve dilimine göre girebileceğin liseleri listele</li>
+      <li><a href="/lgs/taban-puanlari/"><strong>81 İlin LGS Taban Puanları</strong></a> — okul bazında taban puan ve kontenjan tabloları</li>
+    </ul>
+  </section>
+  </article>
+  <aside class="kenarcubugu" id="kenar-cubugu" data-arac="lgs-bursluluk" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+  <section id="ilgili-araclar" data-arac="lgs-bursluluk" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ortaokul Araçları</h3>
+      <ul>
+        <li><a href="/lgs/puan-hesaplama/">LGS Puan Hesaplama</a></li>
+        <li><a href="/lgs/tercih-robotu/">LGS Tercih Robotu</a></li>
+        <li><a href="/lgs/taban-puanlari/">LGS Taban Puanları</a></li>
+        <li><a href="/lgs/bursluluk-puan-hesaplama/">Bursluluk Puan Hesaplama</a></li>
+        <li><a href="/lgs/takdir-tesekkur-hesaplama/">Takdir–Teşekkür Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/lgs-bursluluk.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AÖF Not Hesaplama | PuanRobotu</title>
+<meta name="description" content="Anadolu AÖF resmi formülüyle başarı notunu hesapla: Ara Sınav %30 + Dönem Sonu %70. 35 barajı kontrolü dahil. Ücretsiz AÖF not hesaplama aracı.">
+<link rel="canonical" href="https://puanrobotu.com/universite-not/aof-not-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="AÖF Not Hesaplama | PuanRobotu">
+<meta property="og:description" content="AÖF resmi formülüyle başarı notunu hesapla: Ara %30 + Dönem Sonu %70. 35 barajı kontrolü dahil.">
+<meta property="og:url" content="https://puanrobotu.com/universite-not/aof-not-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu AÖF Not Hesaplama",
+  "url": "https://puanrobotu.com/universite-not/aof-not-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "Anadolu AÖF resmi formülüyle (Ara %30 + Dönem Sonu %70) başarı notu hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "AÖF başarı notu nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları)."}},
+    {"@type": "Question", "name": "35 barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz."}},
+    {"@type": "Question", "name": "Harf notum neden hemen belli olmuyor?", "acceptedAnswer": {"@type": "Answer", "text": "35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine (çan eğrisi) göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır."}},
+    {"@type": "Question", "name": "Ara sınavım iyi ama finale girmedim, geçer miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Finalin ağırlığı %70 olduğu için genellikle hayır. Örneğin ara 80, final 0 ise başarı notu 24 olur ve FF alırsın."}},
+    {"@type": "Question", "name": "İstisna dersler var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60, ödevli derslerde %30+%20+%50 uygulanır. Bu araç standart %30/%70 modelini kullanır."}},
+    {"@type": "Question", "name": "Girdiğim notlar bir yere gönderiliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/" aria-current="page">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/universite-not/">Üniversite Notları</a> › AÖF Not Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">📝 Üniversite Notları</p>
+      <h1>AÖF Not Hesaplama</h1>
+      <p class="lede">Anadolu Üniversitesi Açıköğretim'in <strong>resmi formülüyle</strong> başarı notunu hesapla: Ara Sınav %30 + Dönem Sonu %70. <strong>35 barajı</strong> kontrolü dahildir.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">AÖF Not Hesaplama Aracı</h2>
+        <p>Ara sınav ve dönem sonu notlarını gir; başarı notun ve durumun anında görünsün.</p>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="ara">Ara Sınav Notu (0–100)</label>
+            <input type="number" id="ara" min="0" max="100" step="0.5" value="60">
+          </div>
+          <div class="form-alan">
+            <label for="donemsonu">Dönem Sonu Notu (0–100)</label>
+            <input type="number" id="donemsonu" min="0" max="100" step="0.5" value="80">
+          </div>
+        </div>
+        <div class="sonuc-kutusu" id="sonuc" aria-live="polite">
+          <div class="sonuc-etiket">Başarı Notun</div>
+          <div class="sonuc-deger" id="sonuc-deger">—</div>
+          <div class="sonuc-alt" id="sonuc-alt">Notları girin.</div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> 35 ve üzeri puanlarda harf notu, dersin <strong>bağıl değerlendirmesine (çan eğrisi)</strong> göre belirlenir — aynı puan farklı derste farklı harf getirebilir. Bu araçtaki harf tahmini kabaca fikir verir; kesin harf notu öğrenci bilgi sisteminde açıklanır.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>Nasıl Hesaplanır?</h2>
+      <p>Anadolu Üniversitesi Senato kararlarına göre AÖF başarı notu:</p>
+      <p><strong>Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70</strong></p>
+      <p>İki kritik kural var:</p>
+      <ul>
+        <li><strong>35 barajı:</strong> Başarı notun 35'in altında kalırsa harf notun otomatik <strong>FF</strong> olur. Eğri, ortalama — hiçbiri kurtarmaz.</li>
+        <li><strong>Bağıl harf:</strong> 35 ve üzeri puanlarda harf notu, o dersin çan eğrisine göre belirlenir. Yani 74 puan bir derste BB, başka bir derste CB olabilir.</li>
+      </ul>
+      <p>İstisnalar: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60; ödevli derslerde ara %30 + ödev %20 + dönem sonu %50 uygulanır. Bu araç standart %30/%70 modelini kullanır.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Ara sınavın 60, dönem sonu notun 80 olsun:</p>
+      <ul>
+        <li>Ara katkı: 60 × 0,30 = <strong>18</strong></li>
+        <li>Dönem sonu katkı: 80 × 0,70 = <strong>56</strong></li>
+        <li>Başarı notu: 18 + 56 = <strong>74</strong> (35 barajının üstünde ✓)</li>
+      </ul>
+      <p>74 puanla harf notun dersin eğrisine göre belirlenir; kaba tahmin BB–CB bandı civarıdır. Bu örneği yukarıdaki araca girerek doğrulayabilirsin.</p>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li>Finalin ağırlığı %70: ara sınavın iyi olsa bile dönem sonuna girmemek neredeyse kesin FF demektir.</li>
+        <li>Önce 35 barajını garantile; harf hedefini sonra kovalamaya başla.</li>
+        <li>Dersin geçmiş dönem harf dağılımını öğren — aynı puanın hangi harfe denk geldiğini gösterir.</li>
+        <li>Ödevli ders alıyorsan ağırlıkların farklı olduğunu unutma (%30+%20+%50).</li>
+      </ul>
+
+      <h2>Sonraki Adımlar</h2>
+      <ul>
+        <li>Çan eğrisinin harfini nasıl belirlediğini merak ediyorsan <a href="/universite-not/can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a> aracıyla z/T puanını incele.</li>
+        <li>Tüm derslerinin harfleriyle genel ortalaman için <a href="/universite-not/gano-hesaplama/">GANO Hesaplama</a> aracını kullan.</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>AÖF başarı notu nasıl hesaplanır?</summary><p>Resmî formül: Başarı Notu = Ara Sınav × 0,30 + Dönem Sonu × 0,70 (Anadolu Üniversitesi Senato kararları).</p></details>
+        <details><summary>35 barajı nedir?</summary><p>Başarı notun 35'in altında kalırsa harf notun otomatik FF olur; çan eğrisi bile kurtarmaz.</p></details>
+        <details><summary>Harf notum neden hemen belli olmuyor?</summary><p>35 ve üzeri puanlarda harf, dersin bağıl değerlendirmesine (çan eğrisi) göre belirlenir; aynı puan farklı derste farklı harf getirebilir. Kesin harf öğrenci bilgi sisteminde açıklanır.</p></details>
+        <details><summary>Ara sınavım iyi ama finale girmedim, geçer miyim?</summary><p>Finalin ağırlığı %70 olduğu için genellikle hayır. Örneğin ara 80, final 0 ise başarı notu 24 olur ve FF alırsın.</p></details>
+        <details><summary>İstisna dersler var mı?</summary><p>Evet: İngilizce öğretmenliği programının İngilizce derslerinde %40/%60, ödevli derslerde %30+%20+%50 uygulanır. Bu araç standart %30/%70 modelini kullanır.</p></details>
+        <details><summary>Girdiğim notlar bir yere gönderiliyor mu?</summary><p>Hayır. Tüm hesaplama tarayıcında yapılır; notların hiçbir sunucuya gönderilmez ve saklanmaz.</p></details>
+      </section>
+    </article>
+
+    <!-- ============ KENAR ÇUBUĞU (otomatik dolar) ============ -->
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="not-aof" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <!-- ============ İLGİLİ HESAPLAYICILAR (otomatik dolar) ============ -->
+  <section id="ilgili-araclar" data-arac="not-aof" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Üniversite Notları</h3>
+      <ul>
+        <li><a href="/universite-not/vize-final-hesaplama/">Vize–Final Hesaplama</a></li>
+        <li><a href="/universite-not/gano-hesaplama/">GANO / AGNO Hesaplama</a></li>
+        <li><a href="/universite-not/harf-notu-hesaplama/">Harf Notu Hesaplama</a></li>
+        <li><a href="/universite-not/can-egrisi-hesaplama/">Çan Eğrisi Hesaplama</a></li>
+        <li><a href="/universite-not/aof-not-hesaplama/">AÖF Not Hesaplama</a></li>
+        <li><a href="/universite-not/not-donusumu/">4,00 – 100 Not Dönüşümü</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/not-aof.js"></script>
+</body>
+</html>

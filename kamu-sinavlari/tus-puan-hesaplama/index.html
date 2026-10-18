@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUS Puan Hesaplama | PuanRobotu</title>
+<meta name="description" content="TUS puan hesaplama: TTBT ve KTBT doğru–yanlışlarını gir, tahmini K ve T puanlarını ve 45 baraj durumunu öğren. 2026 formatına uygun.">
+<link rel="canonical" href="https://puanrobotu.com/kamu-sinavlari/tus-puan-hesaplama/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="TUS Puan Hesaplama | PuanRobotu">
+<meta property="og:description" content="Temel ve Klinik netlerinden tahmini TUS K/T puanını hesapla. En yüksek puan 85, baraj 45.">
+<meta property="og:url" content="https://puanrobotu.com/kamu-sinavlari/tus-puan-hesaplama/">
+<meta name="theme-color" content="#16294d">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PuanRobotu TUS Puan Hesaplama",
+  "url": "https://puanrobotu.com/kamu-sinavlari/tus-puan-hesaplama/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "tr",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "description": "TUS Temel ve Klinik netlerinden tahmini K ve T puanlarını hesaplayan ücretsiz araç."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "TUS'ta yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Her testte Ham Puan = Doğru − (Yanlış ÷ 4) uygulanır. Boş bırakılan soru ham puanı etkilemez."}},
+    {"@type": "Question", "name": "K ve T puanları arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "K (klinik ağırlıklı) = TTBT %40 + KTBT %60; T (temel ağırlıklı) = TTBT %60 + KTBT %40 ağırlıkla hesaplanır. Hangi uzmanlık dalının hangi puanı kullandığı, TUS kılavuzundaki kontenjan tablosunda yazar."}},
+    {"@type": "Question", "name": "TUS'ta en yüksek puan kaç?", "acceptedAnswer": {"@type": "Answer", "text": "85. ÖSYM, ağırlıklı puanı 85 tavanına dönüştürür; en yüksek ağırlıklı puanı yapan aday 85 alır."}},
+    {"@type": "Question", "name": "45 barajı nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Tercih yapabilmek için ilgili puan türünden en az 45 almak gerekir. 45'in altındaki puanla yerleştirme tercihinde bulunulamaz."}},
+    {"@type": "Question", "name": "TUS için YDS şart mı?", "acceptedAnswer": {"@type": "Answer", "text": "Yerleştirme için evet: son 5 yıl içinde alınmış en az 50 YDS (veya eşdeğeri) puanı gerekir. Puanın kendisine OBP ya da diploma notu eklenmez; puan %100 sınav performansına dayanır."}},
+    {"@type": "Question", "name": "Sonuç neden “tahmini”?", "acceptedAnswer": {"@type": "Answer", "text": "Resmi puan, sınav sonrası her oturumun ortalama ve standart sapmasıyla hesaplanır. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar; her dönem katsayılar sınavın zorluğuna göre değişir."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="PuanRobotu ana sayfa">
+      <img src="/assets/img/logo.svg" alt="PuanRobotu logo" width="36" height="36">
+      <span>PuanRobotu</span>
+    </a>
+    <button id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav aria-label="Ana gezinme" class="site-nav" id="site-nav">
+      <a href="/lgs/">Ortaokul</a>
+      <a href="/yks/">Üniversite Giriş</a>
+      <a href="/universite-not/">Üniversite Notları</a>
+      <a href="/lisansustu/">Lisansüstü</a>
+      <a href="/kamu-sinavlari/" aria-current="page">Kamu Sınavları</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/kamu-sinavlari/">Kamu Sınavları</a> › TUS Puan Hesaplama</p></div>
+
+  <div class="wrap sayfa-iki-sutun">
+    <article>
+      <p class="kicker">Kamu Sınavları</p>
+      <h1>TUS Puan Hesaplama</h1>
+      <p class="lede">Temel Tıp Bilimleri (TTBT) ve Klinik Tıp Bilimleri (KTBT) oturumlarındaki <strong>doğru</strong> ve <strong>yanlış</strong> sayılarını gir; <strong>tahmini K ve T puanlarını</strong> ile <strong>45 baraj</strong> durumunu öğren.</p>
+
+      <!-- ============ HESAPLAYICI ============ -->
+      <section class="hesap-kart" aria-labelledby="hesap-baslik">
+        <h2 id="hesap-baslik">TUS Puan Hesaplama Aracı</h2>
+        <p>Her iki oturum için doğru ve yanlış sayılarını yaz. Sonuçlar anında güncellenir.</p>
+        <div id="form-hata" class="form-hata" role="alert" hidden></div>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="ttbt-dogru">TTBT — Doğru <span class="opsiyonel">(100 soru)</span></label>
+            <input type="number" id="ttbt-dogru" min="0" max="100" step="1" inputmode="numeric" placeholder="0">
+          </div>
+          <div class="form-alan">
+            <label for="ttbt-yanlis">TTBT — Yanlış</label>
+            <input type="number" id="ttbt-yanlis" min="0" max="100" step="1" inputmode="numeric" placeholder="0">
+          </div>
+        </div>
+        <div class="form-satir">
+          <div class="form-alan">
+            <label for="ktbt-dogru">KTBT — Doğru <span class="opsiyonel">(100 soru)</span></label>
+            <input type="number" id="ktbt-dogru" min="0" max="100" step="1" inputmode="numeric" placeholder="0">
+          </div>
+          <div class="form-alan">
+            <label for="ktbt-yanlis">KTBT — Yanlış</label>
+            <input type="number" id="ktbt-yanlis" min="0" max="100" step="1" inputmode="numeric" placeholder="0">
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" id="btn-hesapla" class="btn btn-primary">Hesapla</button>
+          <button type="button" id="btn-temizle" class="btn btn-ghost">Temizle</button>
+        </div>
+        <div class="sonuc-kutusu" aria-live="polite">
+          <div class="sonuc-etiket">Tahmini TUS Puanların</div>
+          <div id="sonuc-tablo"><p class="sonuc-alt">Her iki oturumun doğru–yanlışlarını gir.</p></div>
+        </div>
+      </section>
+      <div class="tahmin-notu">
+        <strong>Önemli:</strong> Bu sonuçlar birer <strong>tahmindir</strong>. ÖSYM, resmi puanı sınav sonrası hesaplar: ham puanlar önce standart puana çevrilir (ortalama 50, standart sapma 10), ağırlıklarla birleştirilir ve 85 tavanına dönüştürülür. Bu dönüşümdeki oturum istatistikleri sınavdan önce bilinemez. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar.
+      </div>
+
+      <!-- ============ REHBER İÇERİK ============ -->
+      <h2>TUS Puanı Nasıl Hesaplanır?</h2>
+      <p>TUS, iki ayrı oturumda yapılır: <strong>Temel Tıp Bilimleri Testi (TTBT)</strong> 100 soru / 135 dakika ve <strong>Klinik Tıp Bilimleri Testi (KTBT)</strong> 100 soru / 135 dakika.</p>
+      <h3>Adım 1 — Ham puanları bul</h3>
+      <p>Her test için: <strong>Ham Puan = Doğru Sayısı − (Yanlış Sayısı ÷ 4)</strong>. Yanlışlar doğruyu götürür; boşlar etkilemez.</p>
+      <h3>Adım 2 — Standart puana çevir (ÖSYM yapar)</h3>
+      <p>Her testin ham puanı, o oturumun ortalaması 50 ve standart sapması 10 olacak şekilde standart puana dönüştürülür.</p>
+      <h3>Adım 3 — Ağırlıklı puanı bul</h3>
+      <p>Resmi ağırlıklar (2026 TUS kılavuzu):</p>
+      <ul>
+        <li><strong>K Puanı</strong> (klinik ağırlıklı) = TTBT × %40 + KTBT × %60</li>
+        <li><strong>T Puanı</strong> (temel ağırlıklı) = TTBT × %60 + KTBT × %40</li>
+      </ul>
+      <p><small><em>Not: İnternetteki bazı eski kaynaklarda K için %50–%50, T için %70–%30 yazıyor; bu değerler güncel değildir. Güncel kılavuzdaki ağırlıklar yukarıdakilerdir.</em></small></p>
+      <h3>Adım 4 — 85 tavanına dönüştür (tahmini)</h3>
+      <p>Resmi formül ağırlıklı puanı 85 tavanına ölçekler; en yüksek ağırlıklı puanı yapan aday 85 alır. Bu araç, resmi formülün ihtiyaç duyduğu oturum istatistikleri yerine <strong>2026 Mart TUS dönemine ait yayınlanmış ampirik katsayıları</strong> kullanır: K ≈ 40,3 + 0,207 × TTBT ham + 0,277 × KTBT ham; T ≈ 41,8 + 0,294 × TTBT ham + 0,175 × KTBT ham. Bu katsayılar döneme özeldir; her TUS'ta sınavın zorluğuna göre değişir.</p>
+      <h3>45 barajı</h3>
+      <p>Tercih yapabilmek için ilgili puan türünden <strong>en az 45</strong> almak gerekir. Ayrıca yerleştirme için son 5 yıl içinde alınmış <strong>en az 50 YDS</strong> (veya eşdeğeri) puanı şarttır. TUS puanına OBP veya diploma notu eklenmez.</p>
+
+      <h2>Çalışılmış Örnek</h2>
+      <p>Bir adayın sonuçları: TTBT 70 doğru 20 yanlış, KTBT 60 doğru 30 yanlış.</p>
+      <ul>
+        <li>TTBT ham: 70 − (20 ÷ 4) = <strong>65</strong></li>
+        <li>KTBT ham: 60 − (30 ÷ 4) = <strong>52,5</strong></li>
+        <li>Tahmini K: 40,3 + (0,207 × 65) + (0,277 × 52,5) = <strong>≈ 68,30</strong> ✓ 45 baraj üstü</li>
+        <li>Tahmini T: 41,8 + (0,294 × 65) + (0,175 × 52,5) = <strong>≈ 70,10</strong> ✓ 45 baraj üstü</li>
+      </ul>
+      <p>Bu örneği yukarıdaki araca girerek aynı sonucu aldığını doğrulayabilirsin.</p>
+
+      <h2>İpuçları</h2>
+      <ul>
+        <li><strong>Hedef branşa göre çalış:</strong> Klinik branş hedefliyorsan KTBT'ye (K'da %60), temel bilimler hedefliyorsan TTBT'ye (T'de %60) ağırlık ver.</li>
+        <li><strong>Yanlışların maliyetini bil:</strong> 4 yanlış 1 doğruyu götürür; bilmediğin soruda rastgele işaretleme ham puanını eritir.</li>
+        <li><strong>Barajı hafife alma:</strong> 45 barajı düşük görünür ama standart sapma daralırsa ham puanın aynı kalsa bile puanın düşebilir.</li>
+        <li><strong>YDS'yi erkenden hallet:</strong> Yerleştirme için 5 yıl geçerli 50+ YDS puanı şart; sınava son ay bırakma.</li>
+      </ul>
+
+      <h2>Sonraki Adımlar</h2>
+      <ul>
+        <li><a href="/kamu-sinavlari/dus-puan-hesaplama/"><strong>DUS Puan Hesaplama</strong></a> — diş hekimliğinde uzmanlık için K/T puanı tahmini</li>
+        <li><a href="/kamu-sinavlari/kpss-puan-hesaplama/"><strong>KPSS Puan Hesaplama</strong></a> — kamu kadroları için P1/P2/P3 tahmini</li>
+      </ul>
+
+      <!-- ============ SSS ============ -->
+      <section class="sss" aria-labelledby="sss-baslik">
+        <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
+        <details><summary>TUS'ta yanlış doğruyu götürür mü?</summary><p>Evet. Her testte Ham Puan = Doğru − (Yanlış ÷ 4) uygulanır. Boş bırakılan soru ham puanı etkilemez.</p></details>
+        <details><summary>K ve T puanları arasındaki fark nedir?</summary><p>K (klinik ağırlıklı) = TTBT %40 + KTBT %60; T (temel ağırlıklı) = TTBT %60 + KTBT %40 ağırlıkla hesaplanır. Hangi uzmanlık dalının hangi puanı kullandığı, TUS kılavuzundaki kontenjan tablosunda yazar.</p></details>
+        <details><summary>TUS'ta en yüksek puan kaç?</summary><p>85. ÖSYM, ağırlıklı puanı 85 tavanına dönüştürür; en yüksek ağırlıklı puanı yapan aday 85 alır.</p></details>
+        <details><summary>45 barajı nedir?</summary><p>Tercih yapabilmek için ilgili puan türünden en az 45 almak gerekir. 45'in altındaki puanla yerleştirme tercihinde bulunulamaz.</p></details>
+        <details><summary>TUS için YDS şart mı?</summary><p>Yerleştirme için evet: son 5 yıl içinde alınmış en az 50 YDS (veya eşdeğeri) puanı gerekir. Puanın kendisine OBP ya da diploma notu eklenmez; puan %100 sınav performansına dayanır.</p></details>
+        <details><summary>Sonuç neden “tahmini”?</summary><p>Resmi puan, sınav sonrası her oturumun ortalama ve standart sapmasıyla hesaplanır. Bu araç, 2026 Mart TUS dönemine ait yayınlanmış ampirik katsayılarla tahmin yapar; her dönem katsayılar sınavın zorluğuna göre değişir.</p></details>
+      </section>
+    </article>
+
+    <aside class="kenarcubugu" id="kenar-cubugu" data-arac="tus" aria-label="Aynı kategorideki araçlar"></aside>
+  </div>
+
+  <section id="ilgili-araclar" data-arac="tus" aria-label="İlgili hesaplayıcılar"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>PuanRobotu</h3>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/lgs/">Ortaokul</a></li>
+        <li><a href="/yks/">Üniversite Giriş</a></li>
+        <li><a href="/universite-not/">Üniversite Notları</a></li>
+        <li><a href="/lisansustu/">Lisansüstü</a></li>
+        <li><a href="/kamu-sinavlari/">Kamu Sınavları</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kamu Sınavı Araçları</h3>
+      <ul>
+        <li><a href="/kamu-sinavlari/kpss-puan-hesaplama/">KPSS Puan Hesaplama</a></li>
+        <li><a href="/kamu-sinavlari/oabt-puan-hesaplama/">ÖABT Puan Hesaplama</a></li>
+        <li><a href="/kamu-sinavlari/tus-puan-hesaplama/">TUS Puan Hesaplama</a></li>
+        <li><a href="/kamu-sinavlari/dus-puan-hesaplama/">DUS Puan Hesaplama</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-alt">
+    <div class="wrap">© 2026 PuanRobotu — Tüm hesaplamalar bilgilendirme amaçlı tahmindir.</div>
+  </div>
+</footer>
+
+<script src="/assets/js/tools.js"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/tus-puan.js"></script>
+</body>
+</html>
