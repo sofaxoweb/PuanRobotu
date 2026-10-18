@@ -97,7 +97,15 @@ window.PR_TOOLS = [
     aciklama: "Temel ve Klinik netlerinden tahmini TUS puanını hesapla." },
   { id: "dus",         cat: "kamu", ad: "DUS Puan Hesaplama",          url: "/kamu-sinavlari/dus-puan-hesaplama/",
     kw: ["dus puan hesaplama", "diş hekimliği uzmanlık puan"],
-    aciklama: "DUS netlerinden tahmini uzmanlık puanını hesapla." }
+    aciklama: "DUS netlerinden tahmini uzmanlık puanını hesapla." },
+
+  /* ---- Ehliyet ---- */
+  { id: "ehliyet-puan", cat: "ehliyet", ad: "Ehliyet Sınav Puanı Hesaplama", url: "/ehliyet/puan-hesaplama/",
+    kw: ["ehliyet sınav puanı hesaplama", "ehliyet puanı hesaplama", "ehliyet sınavı kaç puan"],
+    aciklama: "4 dersten doğru sayılarını gir, ehliyet e-sınav puanını ve geçme durumunu öğren." },
+  { id: "ehliyet-deneme", cat: "ehliyet", ad: "Ehliyet Deneme Sınavı", url: "/ehliyet/deneme-sinavi/",
+    kw: ["ehliyet deneme sınavı", "ehliyet test çöz", "ehliyet çıkmış sorular"],
+    aciklama: "Gerçek formatta 50 soruluk interaktif ehliyet deneme sınavı: 45 dakika, anında sonuç." }
 ];
 
 /* Kategori → araç listesi (sidebar ve hub'lar için) */
