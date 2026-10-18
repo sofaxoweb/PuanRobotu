@@ -22,8 +22,16 @@
   "@type": "WebSite",
   "name": "PuanRobotu",
   "url": "https://lgspuan-hesaplama.com/",
-  "inLanguage": "tr",
-  "description": "Türkiye'deki sınavlar için ücretsiz puan ve not hesaplama araçları: LGS, YKS, KPSS, DGS, ALES, YDS ve daha fazlası."
+  "inLanguage": "tr-TR",
+  "description": "LGS, YKS, KPSS, DGS, ALES ve daha fazlası için ücretsiz sınav puan hesaplama araçları.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://lgspuan-hesaplama.com/?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 <script type="application/ld+json">
