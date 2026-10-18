@@ -48,3 +48,16 @@
 - Registry'yi (`tools.js`) ve `site.js`'i değiştirme (hata varsa rapor et, kendin düzeltme).
 - Harici font, harici JS kütüphanesi, görsel placeholder kullanma.
 - "Kesin puan", "garantili" gibi vaatler YASAK — her sonuç tahmini.
+
+## Sayfa bitince (ZORUNLU son adım)
+
+Sayfayı template'den doldurduktan sonra kök dizinde şunu çalıştır:
+
+```
+python3 _template/fix-subpath.py
+```
+
+Bu script, sayfadaki `/assets/...` ve `/kategori/...` gibi kök-mutlak (root-absolute)
+`href`/`src` yollarını sayfanın derinliğine göre **göreli (relative)** yollara çevirir.
+Böylece site hem `github.io/PuanRobotu/` alt yolunda hem de kök domainde çalışır.
+Script 0 root-absolute referans kaldığını rapor etmeli.

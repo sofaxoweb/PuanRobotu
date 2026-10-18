@@ -2,6 +2,22 @@
 (function () {
   "use strict";
 
+  /* Alt-yol (subpath) uyumu: site /PuanRobotu/ gibi bir alt yolda da,
+     kök domainde de çalışsın diye tüm üretilen bağlantılara önek eklenir. */
+  var BASE = (function () {
+    try {
+      var s = document.currentScript && document.currentScript.src;
+      if (s) {
+        var path = new URL(s).pathname;
+        var i = path.indexOf("/assets/js/site.js");
+        if (i >= 0) return path.slice(0, i);
+      }
+    } catch (e) {}
+    return "";
+  })();
+  function U(p) { return BASE + p; }
+  window.PR_U = U;
+
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -35,7 +51,7 @@
       } else {
         results.innerHTML = hits.map(function (t) {
           var cat = window.PR_catById(t.cat);
-          return '<a class="arama-oge" href="' + t.url + '">' +
+          return '<a class="arama-oge" href="' + U(t.url) + '">' +
             '<span class="arama-ikon">' + (cat ? cat.ikon : "🧮") + "</span>" +
             '<span class="arama-metin"><strong>' + esc(t.ad) + "</strong>" +
             "<small>" + esc(t.aciklama) + "</small></span>" +
@@ -69,12 +85,12 @@
     if (!cat) return;
 
     var others = window.PR_toolsByCat(catId).filter(function (t) { return t.id !== toolId; });
-    var html = '<div class="kenarcubugu-baslik">' + cat.ikon + " " + esc(cat.ad) + " Araçları</div><ul class="kenarcubugu-liste">";
+    var html = '<div class="kenarcubugu-baslik">' + cat.ikon + " " + esc(cat.ad) + ' Araçları</div><ul class="kenarcubugu-liste">';
     html += others.map(function (t) {
-      return '<li><a href="' + t.url + '">' + esc(t.ad) + "</a></li>";
+      return '<li><a href="' + U(t.url) + '">' + esc(t.ad) + "</a></li>";
     }).join("");
     html += "</ul>";
-    html += '<a class="kenarcubugu-tumu" href="/' + cat.slug + '/">Tüm ' + esc(cat.ad) + " araçları →</a>";
+    html += '<a class="kenarcubugu-tumu" href="' + U('/' + cat.slug + '/') + '">Tüm ' + esc(cat.ad) + " araçları →</a>";
     aside.innerHTML = html;
   }
 
@@ -106,7 +122,7 @@
       '<div class="arac-kartlari">' +
       picks.map(function (t) {
         var cat = window.PR_catById(t.cat);
-        return '<a class="arac-kart" href="' + t.url + '">' +
+        return '<a class="arac-kart" href="' + U(t.url) + '">' +
           '<span class="arac-kart-ikon">' + (cat ? cat.ikon : "🧮") + "</span>" +
           "<strong>" + esc(t.ad) + "</strong>" +
           "<small>" + esc(t.aciklama) + "</small></a>";
@@ -120,7 +136,7 @@
       var catId = box.getAttribute("data-kategori-kartlar");
       var tools = window.PR_toolsByCat(catId);
       box.innerHTML = tools.map(function (t) {
-        return '<a class="arac-kart arac-kart-buyuk" href="' + t.url + '">' +
+        return '<a class="arac-kart arac-kart-buyuk" href="' + U(t.url) + '">' +
           "<strong>" + esc(t.ad) + "</strong>" +
           "<small>" + esc(t.aciklama) + "</small>" +
           '<span class="arac-kart-ok">Hesapla →</span></a>';

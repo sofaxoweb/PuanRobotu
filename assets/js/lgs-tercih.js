@@ -161,7 +161,8 @@ if (typeof document !== 'undefined') {
     function veriYukle(slug, cb) {
       if (veriOnbellek[slug]) { cb(veriOnbellek[slug]); return; }
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', '/lgs/data/' + slug + '.json', true);
+      var U = window.PR_U || function (p) { return p; };
+      xhr.open('GET', U('/lgs/data/') + slug + '.json', true);
       xhr.onreadystatechange = function () {
         if (xhr.readyState !== 4) return;
         if (xhr.status === 200) {
