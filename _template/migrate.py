@@ -135,10 +135,10 @@ for fname in os.listdir(f"{SRC}/taban-puanlari"):
     html = asset_yollari(html, "../")
     html = re.sub(r'<script src="\.\./sehir\.js"></script>',
                   '<script src="/assets/js/tools.js"></script>\n<script src="/assets/js/site.js"></script>\n<script src="/assets/js/lgs-sehir.js"></script>', html)
-    # canonical: /taban-puanlari/X.html -> /lgs/taban-puanlari/X/
-    slug = fname[:-5]
+    # canonical: /taban-puanlari/X.html -> /lgs/taban-puanlari/X.html
+    # (dosya .html oldugu icin canonical de .html olmali; slash varyanti 404 veriyor — 2026-10-20 duzeltmesi)
     html = html.replace(f"https://puanrobotu.com/taban-puanlari/{fname}",
-                        f"https://puanrobotu.com/lgs/taban-puanlari/{slug}/")
+                        f"https://puanrobotu.com/lgs/taban-puanlari/{fname}")
     html = header_footer_degistir(html)
     html = kirinti_ekle(html, '<div class="wrap"><p class="kirinti"><a href="/">Ana Sayfa</a> › <a href="/lgs/">Ortaokul</a> › <a href="/lgs/taban-puanlari/">Taban Puanları</a></p></div>')
     html = ilgili_ekle(html, "lgs-taban")
