@@ -44,7 +44,9 @@
     {"@type": "Question", "name": "Denemede yanlış doğruyu götürür mü?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Gerçek e-Sınavda olduğu gibi denemede de yanlışlar doğruyu götürmez; puan yalnızca doğru sayının 2 katıdır."}},
     {"@type": "Question", "name": "Süre bitince ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Sayaç 45:00'dan geriye sayar; süre dolunca sınav otomatik bitirilir ve o ana kadar işaretlediklerin değerlendirilir."}},
     {"@type": "Question", "name": "Aynı sorular tekrar gelir mi?", "acceptedAnswer": {"@type": "Answer", "text": "200 soruluk bankadan her denemede ders dağılımına göre tekrarsız 50 soru seçilir; aynı denemede bir soru iki kez gelmez. Şıklar da her soruda karıştırılır."}},
-    {"@type": "Question", "name": "Sonuçta yanlışlarımı görebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Sınav bitince toplam puanın ve GEÇTİ/KALDI sonucunla birlikte ders bazında tablonu ve yanlış ile boş bıraktığın soruların doğru cevaplarını açıklamalarıyla görürsün."}}
+    {"@type": "Question", "name": "Sonuçta yanlışlarımı görebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Sınav bitince toplam puanın ve GEÇTİ/KALDI sonucunla birlikte ders bazında tablonu ve yanlış ile boş bıraktığın soruların doğru cevaplarını açıklamalarıyla görürsün."}},
+    {"@type": "Question", "name": "Denemede animasyonlu soru var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Bankadaki 200 sorunun tamamı metin tabanlıdır. Gerçek e-Sınavda ise 5 ile 10 arasında animasyonlu (videolu) soru yer alır; bunlar trafik senaryolarını izleyip karar vermeni ister ve diğer sorular gibi 2 puan değerindedir."}},
+    {"@type": "Question", "name": "Sınava hazır olduğumu nasıl anlarım?", "acceptedAnswer": {"@type": "Answer", "text": "Kesin bir ölçüsü yok ama güçlü işaretler şunlardır: üst üste birkaç denemede 35 ve üzeri doğru (70+ puan) yapmak, denemeyi süre dolmadan bitirebilmek ve yanlışlarının tek bir derste toplanmaması. Yanlışların tek derste toplanıyorsa önce o dersin konularına dön; ders bazındaki sonuç tablon bunu açıkça gösterir."}}
   ]
 }
 </script>
@@ -105,7 +107,7 @@
     <article>
       <p class="kicker">Ehliyet</p>
       <h1>Ehliyet Deneme Sınavı</h1>
-      <p class="yazar">Son güncelleme: 21 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
+      <p class="yazar">Son güncelleme: 23 Ekim 2026 · Yazar: PuanRobotu Editör Ekibi</p>
       <p class="lede"><strong>Gerçek e-Sınav formatında 50 soruluk ücretsiz deneme:</strong> 200 soruluk bankadan ders dağılımına göre (Trafik 23, İlk Yardım 12, Araç Tekniği 9, Trafik Adabı 6) seçilen sorular, 45 dakikalık süre, bitirince anında puan + GEÇTİ/KALDI sonucu ve yanlışlarının açıklamaları.</p>
 
       <div class="tahmin-notu">
@@ -144,6 +146,17 @@
   <figcaption>Her soru 2 puandır; 35 doğru 70 puanla barajı geçmeni sağlar.</figcaption>
 </figure>
 
+
+      <h2>Denemeden En Yüksek Verimi Almak</h2>
+      <p>Deneme sadece puan ölçmez; doğru kullanılırsa hangi konuda eksik olduğunu da söyler. Şu sırayla çalış:</p>
+      <ol>
+        <li><strong>Süreyi hisset.</strong> 50 soru için 45 dakikan var; bu, soru başına yaklaşık 54 saniye demek. Takıldığın soruyu boş bırakıp devam et — tüm sorular aynı sayfada listelenir, sonda boşlarına geri dönebilirsin. Zamanı tek soruda eritmek, bildiğin soruları yetiştirememekten daha pahalıdır.</li>
+        <li><strong>Boş bırakma.</strong> Yanlış cevap doğruyu götürmediği için işaretsiz soru kesin sıfırdır. Emin olamadığında, elediklerinin dışında kalan en yakın şıkkı işaretle.</li>
+        <li><strong>Sonuç tablosunu oku.</strong> Ders bazında doğru/yanlış/boş sayıların, yanlışlarının nerede toplandığını gösterir. Yanlışlar tek derste yoğunlaşıyorsa eksiğin o konudadır; dört derse dağılmışsa sorun daha çok süre ve dikkat yönetimidir.</li>
+        <li><strong>Açıklamaları atlama.</strong> Yanlış ve boş sorularının doğru cevabı açıklamalarıyla birlikte verilir. Aynı konudan ikinci kez yanlış yapmak, ilk açıklamanın okunmadığının işaretidir.</li>
+        <li><strong>Tekrarla doğrula.</strong> Tek bir deneme yanıltır; üst üste denemelerde tablonun nasıl değiştiğine bak. Hazır olup olmadığının işaretleri aşağıdaki sık sorulan sorularda.</li>
+      </ol>
+
       <h2>Soru Dağılımı</h2>
       <p>Deneme, gerçek e-Sınavın ders dağılımını birebir uygular:</p>
       <div class="tablo-kaydir">
@@ -158,7 +171,28 @@
         </tbody>
       </table>
 </div>
+
+      <p><strong>Bankadaki soruların kapsadığı başlıca konular:</strong></p>
+      <ul>
+        <li><strong>Trafik ve Çevre:</strong> trafik işaret ve levhaları, hız sınırları ve takip mesafesi, kavşaklarda geçiş hakkı, park etme ve duraklama, sollama ve şerit kullanımı, belgeler, ceza puanı ve yaptırımlar, çevre dostu ve ekonomik sürüş.</li>
+        <li><strong>İlk Yardım:</strong> olay yeri güvenliği ve 112 bildirimi, bilinç ve solunum kontrolü, kalp masajı ve suni solunum, kanamalar ve turnike, kırık, çıkık ve burkulmalar, yaralı taşıma, yanık ve donma, zehirlenmeler, şok, bayılma ve epilepsi, boğulmalarda Heimlich manevrası.</li>
+        <li><strong>Araç Tekniği:</strong> motorun temel parçaları, soğutma ve yağlama sistemleri, fren sistemi, lastikler, akü ve elektrik sistemi, gösterge paneli uyarı lambaları, egzoz dumanı, yakıt tasarrufu ve periyodik bakım.</li>
+        <li><strong>Trafik Adabı:</strong> tamamı günlük trafik senaryolarından oluşur: sabır ve hoşgörü, yayalara ve dezavantajlı yol kullanıcılarına öncelik, öfke kontrolü, yardımlaşma, çevre ve gürültü duyarlılığı, emniyet kemeri, telefon ve yorgunluk gibi riskler, toplu taşımaya saygı, acil araçlara yol verme.</li>
+      </ul>
       <p>Puanını önceden tahmin etmek istersen <a href="../puan-hesaplama/">ehliyet puan hesaplama</a> aracına doğru sayılarını girebilirsin.</p>
+
+      <h2>Gerçek e-Sınav Hakkında Bilmen Gerekenler</h2>
+      <p>Deneme provadır; gerçeği MEB e-Sınav merkezlerinde, randevuyla yapılır. Kurallarını önceden bilmek sınav günü sürprizini azaltır:</p>
+      <ul>
+        <li><strong>Sınav hakkı:</strong> Yazılı (e-Sınav) için toplam 4 hakkın var. Randevuna gitmezsen de 1 hakkın kullanılmış sayılır; 4 hakkın dolarsa dosyan kapanır ve kursa yeniden kayıt gerekir.</li>
+        <li><strong>Kalırsan:</strong> Yeni randevuyu en erken 15 gün sonraya alabilirsin ve 45 gün içinde sınava girmen gerekir; girmezsen bir hakkın daha yanar.</li>
+        <li><strong>Sonuçlar:</strong> Sınav bitiminde salon çıkışındaki kiosk cihazından ve e-Devlet üzerinden sonucunu hemen öğrenebilirsin.</li>
+        <li><strong>Animasyonlu sorular:</strong> Gerçek sınavda 5 ile 10 arasında animasyonlu (videolu) soru çıkar; bu denemedeki sorular metin tabanlıdır. Videolu sorular da diğerleri gibi 2 puan değerindedir.</li>
+      </ul>
+
+      <h2>Yazılı Sınavı Geçince Sıradaki Adım</h2>
+      <p>70 ve üzeri puanla yazılı sınavı geçen adayı direksiyon (uygulama) sınavı bekler; sınav tarihi ve planlaması, kayıtlı olduğun sürücü kursu üzerinden yapılır. Direksiyon sınavında da başarılı olan adayın sürücü sertifikası düzenlenir ve belgesini Nüfus Müdürlüğünden alır. Tüm araçları <a href="../">ehliyet sayfasında</a> bulabilirsin.</p>
+
             <!-- ============ SSS ============ -->
       <section class="sss" aria-labelledby="sss-baslik">
         <h2 id="sss-baslik">Sık Sorulan Sorular</h2>
@@ -167,6 +201,8 @@
         <details><summary>Süre bitince ne olur?</summary><p>Sayaç 45:00'dan geriye sayar; süre dolunca sınav otomatik bitirilir ve o ana kadar işaretlediklerin değerlendirilir.</p></details>
         <details><summary>Aynı sorular tekrar gelir mi?</summary><p>200 soruluk bankadan her denemede ders dağılımına göre tekrarsız 50 soru seçilir; aynı denemede bir soru iki kez gelmez. Şıklar da her soruda karıştırılır.</p></details>
         <details><summary>Sonuçta yanlışlarımı görebilir miyim?</summary><p>Evet. Sınav bitince toplam puanın ve GEÇTİ/KALDI sonucunla birlikte ders bazında tablonu ve yanlış ile boş bıraktığın soruların doğru cevaplarını açıklamalarıyla görürsün.</p></details>
+        <details><summary>Denemede animasyonlu soru var mı?</summary><p>Hayır. Bankadaki 200 sorunun tamamı metin tabanlıdır. Gerçek e-Sınavda ise 5 ile 10 arasında animasyonlu (videolu) soru yer alır; bunlar trafik senaryolarını izleyip karar vermeni ister ve diğer sorular gibi 2 puan değerindedir.</p></details>
+        <details><summary>Sınava hazır olduğumu nasıl anlarım?</summary><p>Kesin bir ölçüsü yok ama güçlü işaretler şunlardır: üst üste birkaç denemede 35 ve üzeri doğru (70+ puan) yapmak, denemeyi süre dolmadan bitirebilmek ve yanlışlarının tek bir derste toplanmaması. Yanlışların tek derste toplanıyorsa önce o dersin konularına dön; ders bazındaki sonuç tablon bunu açıkça gösterir.</p></details>
       </section>
 
       <p><small>Yasal uyarı: Bu sayfadaki deneme ve içerik bilgilendirme amaçlıdır; MEB'in resmi sınav ve değerlendirme süreçlerinin yerini tutmaz.</small></p>
